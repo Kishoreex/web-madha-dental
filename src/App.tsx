@@ -358,7 +358,7 @@ import AcademicCalendar from "./pages/academics/AcademicCalendar";
   </a>
 
               {/* Desktop Navigation */}
-              <div className="hidden xl:flex flex-1 justify-center items-center gap-2">
+              <div className="hidden lg:flex flex-1 justify-center items-center gap-2">
                 {navItems.map((item) => (
                   <div key={item.name} className="relative group">
                   <Link
@@ -440,7 +440,7 @@ import AcademicCalendar from "./pages/academics/AcademicCalendar";
               </div>
 
               {/* CTA Buttons */}
-              <div className="hidden xl:flex items-center gap-4">
+             <div className="hidden lg:flex items-center gap-4">
               <a
       href="#admissions"
       className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold px-5 py-2.5 hover:shadow-xl transition"
@@ -455,37 +455,96 @@ import AcademicCalendar from "./pages/academics/AcademicCalendar";
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="xl:hidden p-2 text-neutral-700 hover:text-medical-blue transition-colors"
+                className="lg:hidden p-2 text-neutral-700 hover:text-medical-blue transition-colors"
               >
                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
           </div>
 
-          {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="xl:hidden bg-white border-t border-neutral-100 py-4 px-4 max-h-[70vh] overflow-y-auto scrollbar-hide">
-              <div className="flex flex-col gap-2">
-                {navItems.map((item) => (
+        {/* Mobile Menu */}
+{isMobileMenuOpen && (
+  <div className="lg:hidden bg-white border-t border-neutral-100 py-4 px-4 max-h-[75vh] overflow-y-auto">
+    {navItems.map((item) => (
+      <details key={item.name} className="border-b border-gray-100">
+        <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 font-medium text-gray-700">
+          <span>{item.name}</span>
+          {item.submenu && <ChevronDown className="w-4 h-4" />}
+        </summary>
+
+        {item.submenu && (
+          <div className="pl-4 pb-2">
+            {item.submenu.map((sub) => (
+              <div key={sub.name}>
+                {sub.submenu ? (
+                  <details className="ml-2">
+                    <summary className="flex cursor-pointer list-none items-center justify-between py-2 text-sm text-gray-600">
+                      {sub.name}
+                      <ChevronDown className="w-4 h-4" />
+                    </summary>
+
+                    <div className="ml-4">
+                      {sub.submenu.map((child) =>
+                        child.target ? (
+                          <a
+                            key={child.name}
+                            href={child.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block py-2 text-sm text-gray-500 hover:text-blue-600"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {child.name}
+                          </a>
+                        ) : (
+                          <Link
+                            key={child.name}
+                            to={child.href}
+                            className="block py-2 text-sm text-gray-500 hover:text-blue-600"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {child.name}
+                          </Link>
+                        )
+                      )}
+                    </div>
+                  </details>
+                ) : sub.target ? (
                   <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-between px-4 py-3 text-neutral-700 hover:text-medical-blue hover:bg-medical-blue/5 rounded-lg transition-colors"
+                    href={sub.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2 text-sm text-gray-600 hover:text-blue-600"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.name}
-                    {item.submenu && <ChevronDown className="w-4 h-4" />}
+                    {sub.name}
                   </a>
-                ))}
-                <a href="#admissions" className="premium-button mt-4">
-                  <span className="flex items-center justify-center gap-2 w-full">
-                    <GraduationCap className="w-5 h-5" />
-                    Apply Now
-                  </span>
-                </a>
+                ) : (
+                  <Link
+                    to={sub.href}
+                    className="block py-2 text-sm text-gray-600 hover:text-blue-600"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {sub.name}
+                  </Link>
+                )}
               </div>
-            </div>
-          )}
+            ))}
+          </div>
+        )}
+      </details>
+    ))}
+
+    <Link
+      to="/admissions/bds"
+      className="premium-button mt-4 flex justify-center"
+      onClick={() => setIsMobileMenuOpen(false)}
+    >
+      <GraduationCap className="w-5 h-5 mr-2" />
+      Apply Now
+    </Link>
+  </div>
+)}
         </nav>
       </>
     );
