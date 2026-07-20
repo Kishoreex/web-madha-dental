@@ -53,17 +53,19 @@ const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   {images.map((image, index) => (
 
-    <div
-      key={image.id}
-      onClick={() => setSelectedImage(index)}
-      className="overflow-hidden rounded-xl shadow-lg cursor-pointer group"
-    >
+<div
+  key={image.id}
+  onClick={() => setSelectedImage(index)}
+  data-aos="zoom-in"
+  data-aos-delay={(index % 8) * 80}
+  data-aos-duration="600"
+  className="overflow-hidden rounded-xl shadow-lg cursor-pointer group"
+>
 
       <img
         src={image.src}
         alt=""
-        className="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
-      />
+      className="w-full h-64 object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-700" />
 
     </div>
 
@@ -72,7 +74,7 @@ const [selectedImage, setSelectedImage] = useState<number | null>(null);
 </div>
 {selectedImage !== null && (
 
-<div className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center">
+<div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-[9999] flex items-center justify-center animate-fadeIn">
 
     {/* Close */}
 

@@ -13,10 +13,11 @@ export default function Gallery() {
 
           {/* Heading */}
 
-          <div
-            className="text-center mb-12"
-            data-aos="fade-up"
-          >
+         <div
+  className="text-center mb-12"
+  data-aos="fade-up"
+  data-aos-duration="800"
+>
 
             <span className="badge mb-4">
               Gallery
@@ -43,13 +44,16 @@ export default function Gallery() {
 
             {galleryAlbums.map((album) => (
 
-              <Link
-                key={album.id}
-                to={`/gallery/${album.folder}`}
-                className="group"
-              >
+       <Link
+  key={album.id}
+  to={`/gallery/${album.folder}`}
+  className="group"
+  data-aos="zoom-in-up"
+  data-aos-duration="700"
+  data-aos-delay={album.id * 100}
+>
 
-            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 bg-white h-full flex flex-col">
+            <div className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 bg-white h-full flex flex-col">
 
                   <img
                     src={album.cover}

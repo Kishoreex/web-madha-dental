@@ -66,9 +66,10 @@ import ProgrammeOutcomes from "./pages/academics/ProgrammeOutcomes";
     image?: string;
   }
 
-  // MDCH Image URLs from existing website
-
-
+//Research
+import ResearchHome from "./pages/research/ResearchHome";
+import GrantsReceived from "./pages/research/GrantsReceived";
+import ResearchProjects from "./pages/research/ResearchProjects";
   // Navigation Component
   const Navigation = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -273,7 +274,61 @@ import ProgrammeOutcomes from "./pages/academics/ProgrammeOutcomes";
       { name: "Gallery", href: "/gallery" },
       { name: "Campus Life & Facilities"},
       { name: "Outreach & Collaboration Activities", href: "#faculty" },
-      { name: "Research", href: "#research" },
+     {
+  name: "Research",
+  href: "#",
+  submenu: [
+    {
+      name: "Research Home",
+      href: "/research/home",
+    },
+ {
+  name: "Research Promotion Policy",
+  href: "/pdf/research/Research_Promotion_Policy.pdf",
+  target: "_blank",
+},
+{
+  name: "Code of Research Ethics",
+  href: "/pdf/research/Code_of_Research_Ethics.pdf",
+  target: "_blank",
+},
+   {
+  name: "Research Committee",
+  href: "/pdf/research/Research_Committee.pdf",
+  target: "_blank",
+},
+{
+  name: "Institutional Ethics Committee",
+  href: "/pdf/research/Institutional_Ethics_Committee.pdf",
+  target: "_blank",
+},
+   {
+  name: "Institutional Review Board",
+  href: "/pdf/research/Institutional_Review_Board.pdf",
+  target: "_blank",
+},
+    {
+      name: "Research Projects",
+      href: "/research/projects",
+    },
+    {
+      name: "Publications",
+      href: "/research/publications",
+    },
+    {
+      name: "Books",
+      href: "/research/books",
+    },
+    {
+      name: "Grants Received",
+      href: "/research/grants",
+    },
+    {
+      name: "Seminars & Workshops",
+      href: "/research/seminars",
+    },
+  ],
+},
       { name: "Student Support", href: "#campus" },
       
       {
@@ -1794,6 +1849,21 @@ import ProgrammeOutcomes from "./pages/academics/ProgrammeOutcomes";
       path="/hospital/services"
       element={<HospitalServices />}
   />
+
+//research 
+
+<Route
+  path="/research/home"
+  element={<ResearchHome />}
+/>
+<Route
+  path="/research/grants"
+  element={<GrantsReceived />}
+/>
+<Route
+  path="/research/projects"
+  element={<ResearchProjects />}
+/>
 //acadamics 
 <Route
   path="/academics/calendar"
