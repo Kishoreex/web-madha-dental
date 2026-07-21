@@ -70,6 +70,9 @@ import ProgrammeOutcomes from "./pages/academics/ProgrammeOutcomes";
 import ResearchHome from "./pages/research/ResearchHome";
 import GrantsReceived from "./pages/research/GrantsReceived";
 import ResearchProjects from "./pages/research/ResearchProjects";
+import Publications from "./pages/research/Publications";
+import Books from "./pages/research/Books";
+import Seminars from "./pages/research/Seminars";
   // Navigation Component
   const Navigation = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -1851,7 +1854,10 @@ import ResearchProjects from "./pages/research/ResearchProjects";
   />
 
 //research 
-
+<Route
+  path="/research/publications"
+  element={<Publications />}
+/>
 <Route
   path="/research/home"
   element={<ResearchHome />}
@@ -1869,6 +1875,7 @@ import ResearchProjects from "./pages/research/ResearchProjects";
   path="/academics/calendar"
   element={<AcademicCalendar />}
 />
+<Route path="/research/seminars" element={<Seminars />} />
 <Route
   path="/academics/regulations"
   element={<AcademicRegulations />}
@@ -1884,6 +1891,7 @@ import ResearchProjects from "./pages/research/ResearchProjects";
 
     
 />
+<Route path="/research/books" element={<Books />} />
 <Route
   path="/academics/committee"
   element={<AcademicCommittee />}
