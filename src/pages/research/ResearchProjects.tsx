@@ -40,8 +40,7 @@ Madha Dental College & Hospital actively promotes research by encouraging facult
   
 
 {/* 2022-23 */}
-<section className="container mx-auto px-6 pb-20">
-
+<section className="container mx-auto px-6 pt-16 pb-20">
   <div
     data-aos="fade-up"
     className="bg-white rounded-2xl shadow-xl overflow-hidden"
@@ -54,7 +53,7 @@ Madha Dental College & Hospital actively promotes research by encouraging facult
       </h2>
 
       <p className="text-blue-100 mt-2">
-        Faculty Research Projects funded during the academic year 2022–23.
+ Faculty Research Projects undertaken during the academic year 2022–23.
       </p>
 
     </div>
@@ -359,7 +358,7 @@ Madha Dental College & Hospital actively promotes research by encouraging facult
       </h2>
 
       <p className="text-green-100 mt-2">
-        Faculty Research Projects funded during the academic year 2023–24.
+       Faculty Research Projects undertaken during the academic year 2023–24.
       </p>
 
     </div>
