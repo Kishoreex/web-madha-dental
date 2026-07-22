@@ -1,4 +1,4 @@
-import logo from "../assets/images/logo/logo.jpg";
+import logo from "../assets/images/logo/mdch-logo.png";
 
 import heroBanner from "../assets/images/hero/hero-banner.jpg";
 import banner1 from "../assets/images/hero/banner-1.jpg";

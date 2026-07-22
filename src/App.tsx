@@ -460,7 +460,18 @@ import Seminars from "./pages/research/Seminars";
     }}
   />
         {/* Top Bar */}
-        <div className={`hidden lg:block bg-gradient-to-r from-medical-navy to-medical-blue text-white transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'py-2'}`}>
+       <div
+className={`hidden lg:block
+bg-gradient-to-r from-medical-navy to-medical-blue
+text-white
+transition-all duration-500
+overflow-hidden
+${
+isScrolled
+? "-translate-y-full opacity-0 h-0"
+: "translate-y-0 opacity-100 py-2"
+}`}
+>
           <div className="container-custom flex justify-between items-center text-sm">
             <div className="flex items-center gap-6">
               <a href="tel:+917273901234" className="flex items-center gap-2 hover:text-medical-sky transition-colors">
@@ -489,38 +500,60 @@ import Seminars from "./pages/research/Seminars";
         </div>
 
         {/* Main Navigation */}
-  <nav
-    className={`sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled
-        ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-gray-100"
-        : "bg-white"
-    }`}
-  >
-          <div className="container-custom">
-          <div
-    className={`flex items-center justify-between transition-all duration-300 ${
-      isScrolled ? "h-16" : "h-20"
-    }`}
-  >
-              {/* Logo */}
-          <a
-    href="#home"
-    className="flex items-center flex-shrink-0"
-  >
+<nav
+  className={`fixed left-1/2 -translate-x-1/2 z-50
+  transition-all duration-500
+  ${
+  isScrolled
+? "top-7 w-[99%] max-w-[1600px] rounded-2xl bg-white/80 backdrop-blur-2xl shadow-2xl border border-white/30"
+: "top-8 w-[99%] max-w-[1600px] rounded-2xl bg-white shadow-lg"
+  }`}
+>
+<div className="max-w-[1600px] mx-auto px-6">
+       <div
+className={`flex items-center justify-between transition-all duration-500 ${
+isScrolled ? "h-[70px]" : "h-[82px]"
+}`}
+>
+           {/* Logo */}
+<Link
+  to="/"
+  className="flex items-center gap-3 flex-shrink-0"
+>
   <img
-      src={IMAGES.logo}
-      alt="MDCH Logo"
-      className="h-14 w-auto"
+    src={IMAGES.logo}
+    alt="MDCH Logo"
+    className={`transition-all duration-500 ${
+      isScrolled ? "h-12 w-12" : "h-16 w-16"
+    } object-contain`}
   />
-  </a>
+
+  <div className="leading-tight">
+    <h1
+      className={`font-extrabold text-[#163B74] tracking-tight transition-all duration-300 ${
+        isScrolled ? "text-lg" : "text-xl"
+      }`}
+    >
+      MADHA DENTAL
+    </h1>
+
+    <p
+      className={`font-semibold text-gray-600 transition-all duration-300 ${
+        isScrolled ? "text-xs" : "text-sm"
+      }`}
+    >
+      COLLEGE & HOSPITAL
+    </p>
+  </div>
+</Link>
 
               {/* Desktop Navigation */}
-              <div className="hidden xl:flex flex-1 justify-center items-center gap-2">
+         <div className="hidden xl:flex flex-1 justify-center items-center gap-2 px-8">
                 {navItems.map((item) => (
                   <div key={item.name} className="relative group">
-                  <Link
-    to={item.href}
-    className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-neutral-700 hover:text-medical-blue transition-colors rounded-lg hover:bg-medical-blue/5"
+<Link
+  to={item.href}
+  className="flex items-center gap-1 px-4 py-2 text-[15px] font-medium text-neutral-700 hover:text-medical-blue hover:bg-medical-blue/5 rounded-xl transition-all"
     onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
     onMouseLeave={() => setActiveDropdown(null)}
   >
@@ -600,7 +633,18 @@ import Seminars from "./pages/research/Seminars";
               <div className="hidden xl:flex items-center gap-4">
               <a
       href="#admissions"
-      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold px-5 py-2.5 hover:shadow-xl transition"
+className="inline-flex items-center gap-2
+rounded-xl
+bg-gradient-to-r from-blue-600 to-blue-500
+text-white
+font-semibold
+px-6
+py-3
+text-sm
+whitespace-nowrap
+hover:scale-105
+hover:shadow-2xl
+transition-all duration-300"
   >
                   <span className="flex items-center gap-2">
                     <GraduationCap className="w-4 h-4" />
@@ -685,7 +729,10 @@ import Seminars from "./pages/research/Seminars";
     ];
 
     return (
-      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+<section
+id="home"
+className="relative min-h-screen flex items-center overflow-hidden pt-28"
+>
         {/* Background Slider */}
         <div className="absolute inset-0">
           {slides.map((slide, index) => (
