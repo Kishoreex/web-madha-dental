@@ -505,14 +505,14 @@ isScrolled
   transition-all duration-500
   ${
   isScrolled
-? "top-7 w-[99%] max-w-[1600px] rounded-2xl bg-white/80 backdrop-blur-2xl shadow-2xl border border-white/30"
-: "top-8 w-[99%] max-w-[1600px] rounded-2xl bg-white shadow-lg"
+? "top-8 w-[90%] max-w-[1600px] rounded-2xl bg-white/80 backdrop-blur-2xl shadow-2xl border border-white/30"
+: "top-9 w-[90%] max-w-[1600px] rounded-2xl bg-white shadow-lg"
   }`}
 >
 <div className="max-w-[1600px] mx-auto px-6">
        <div
 className={`flex items-center justify-between transition-all duration-500 ${
-isScrolled ? "h-[70px]" : "h-[82px]"
+isScrolled ? "h-[56px]" : "h-[64px]"
 }`}
 >
            {/* Logo */}
@@ -524,14 +524,14 @@ isScrolled ? "h-[70px]" : "h-[82px]"
     src={IMAGES.logo}
     alt="MDCH Logo"
     className={`transition-all duration-500 ${
-      isScrolled ? "h-12 w-12" : "h-16 w-16"
+   isScrolled ? "h-9 w-9" : "h-12 w-12"
     } object-contain`}
   />
 
   <div className="leading-tight">
     <h1
       className={`font-extrabold text-[#163B74] tracking-tight transition-all duration-300 ${
-        isScrolled ? "text-lg" : "text-xl"
+       isScrolled ? "text-base" : "text-lg"
       }`}
     >
       MADHA DENTAL
@@ -539,7 +539,7 @@ isScrolled ? "h-[70px]" : "h-[82px]"
 
     <p
       className={`font-semibold text-gray-600 transition-all duration-300 ${
-        isScrolled ? "text-xs" : "text-sm"
+   isScrolled ? "text-[10px]" : "text-xs"
       }`}
     >
       COLLEGE & HOSPITAL
@@ -553,7 +553,7 @@ isScrolled ? "h-[70px]" : "h-[82px]"
                   <div key={item.name} className="relative group">
 <Link
   to={item.href}
-  className="flex items-center gap-1 px-4 py-2 text-[15px] font-medium text-neutral-700 hover:text-medical-blue hover:bg-medical-blue/5 rounded-xl transition-all"
+  className="flex items-center gap-1 px-3 py-1.5 text-[14px] font-medium text-neutral-700 hover:text-medical-blue hover:bg-medical-blue/5 rounded-xl transition-all"
     onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
     onMouseLeave={() => setActiveDropdown(null)}
   >
@@ -562,7 +562,7 @@ isScrolled ? "h-[70px]" : "h-[82px]"
                   </Link>
                 {item.submenu && activeDropdown === item.name && (
     <div
-      className="absolute top-full left-0 w-64 bg-white rounded-xl shadow-premium border border-neutral-100 py-2 z-50"
+    className="absolute top-full left-0 w-56 bg-white rounded-lg shadow-xl border border-neutral-200 py-1 z-50"
       onMouseEnter={() => setActiveDropdown(item.name)}
       onMouseLeave={() => {
         setActiveDropdown(null);
@@ -580,7 +580,7 @@ isScrolled ? "h-[70px]" : "h-[82px]"
               href={subItem.href}
               target={subItem.target}
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-4 py-3 hover:bg-medical-blue/5"
+            className="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-blue-50 rounded-md mx-1 transition-all"
             >
               {subItem.name}
               {subItem.submenu && <ChevronRight className="w-4 h-4" />}
@@ -588,7 +588,7 @@ isScrolled ? "h-[70px]" : "h-[82px]"
           ) : (
             <Link
               to={subItem.href}
-              className="flex items-center justify-between px-4 py-3 hover:bg-medical-blue/5"
+         className="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-blue-50 rounded-md mx-1 transition-all"
             >
               {subItem.name}
               {subItem.submenu && <ChevronRight className="w-4 h-4" />}
@@ -597,7 +597,21 @@ isScrolled ? "h-[70px]" : "h-[82px]"
 
           {subItem.submenu &&
             activeSubDropdown === subItem.name && (
-              <div className="absolute left-full top-0 w-56 bg-white rounded-xl shadow-premium border border-neutral-100 py-2">
+<div
+className={`
+  absolute top-0 w-44
+  bg-white rounded-lg
+  shadow-lg
+  border border-neutral-200
+  py-1
+  ${
+    item.name === "More" ||
+    item.name === "Affiliation & Accreditation"
+      ? "right-full mr-0.5"
+      : "left-full ml-0.5"
+  }
+`}
+>
                 {subItem.submenu.map((child) =>
                   child.target ? (
                     <a
@@ -605,7 +619,7 @@ isScrolled ? "h-[70px]" : "h-[82px]"
                       href={child.href}
                       target={child.target}
                       rel="noopener noreferrer"
-                      className="block px-4 py-3 hover:bg-medical-blue/5"
+               className="block px-3 py-2 text-[12px] leading-5 rounded-md mx-1 hover:bg-blue-50 transition-all"
                     >
                       {child.name}
                     </a>
@@ -613,7 +627,7 @@ isScrolled ? "h-[70px]" : "h-[82px]"
                     <Link
                       key={child.name}
                       to={child.href}
-                      className="block px-4 py-3 hover:bg-medical-blue/5"
+                  className="block px-3 py-2 text-[12px] leading-5 rounded-md mx-1 hover:bg-blue-50 transition-all"
                     >
                       {child.name}
                     </Link>
@@ -638,16 +652,16 @@ rounded-xl
 bg-gradient-to-r from-blue-600 to-blue-500
 text-white
 font-semibold
-px-6
-py-3
-text-sm
+px-4
+py-2
+text-[13px]
 whitespace-nowrap
 hover:scale-105
 hover:shadow-2xl
 transition-all duration-300"
   >
                   <span className="flex items-center gap-2">
-                    <GraduationCap className="w-4 h-4" />
+                   <GraduationCap className="w-3.5 h-3.5" />
                     Apply Now
                   </span>
                 </a>
@@ -804,10 +818,7 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
                 <Play className="w-5 h-5" />
                 Virtual Tour
               </a>
-              <a href="#prospectus" className="inline-flex items-center gap-2 px-6 py-4 text-white font-medium hover:text-medical-sky transition-colors">
-                <Download className="w-5 h-5" />
-                Prospectus
-              </a>
+              
             </div>
 
             {/* Stats */}
@@ -1741,16 +1752,16 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
 
               {/* Map Placeholder */}
               <div className="glass-card overflow-hidden h-64">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5!2d80.1!3d13.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAwJzAwLjAiTiA4MMKwMDYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="MDCH Location"
-                />
+             <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.698111163057!2d80.08383301106683!3d12.991150587273124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528ab1c6803f5b%3A0x2d1ec24ba6bf360e!2sMadha%20Dental%20College%20%26%20Hospital!5e0!3m2!1sen!2sin!4v1784702547632!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  loading="lazy"
+  allowFullScreen
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Madha Dental College & Hospital"
+/>
               </div>
             </div>
           </div>
