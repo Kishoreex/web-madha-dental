@@ -19,7 +19,8 @@
     Leaf,
     Scissors
   } from 'lucide-react';
-
+// Afllication 
+import ISO from "./pages/affiliation/ISO";
   //About
   import AboutMDCH from "./pages/about/AboutMDCH";
   import VisionMission from "./pages/about/VisionMission";
@@ -231,6 +232,8 @@ import Seminars from "./pages/research/Seminars";
     },
   ],
 },
+
+
     {
     name: 'Departments',
     href: '#departments',
@@ -269,7 +272,113 @@ import Seminars from "./pages/research/Seminars";
     ],
   },
       { name: 'Hospital', href: "/hospital/services", },
-    
+    {
+  name: "Affiliation & Accreditation",
+  href: "#",
+  submenu: [
+   {
+  name: "University",
+  href: "/pdf/affiliation/university.pdf",
+  target: "_blank",
+},
+  {
+  name: "DCI",
+  href: "/pdf/affiliation/DCI.pdf",
+  target: "_blank",
+},
+    {
+      name: "ISO",
+      href: "/affiliation/iso",
+    },
+    {
+      name: "NIRF",
+      href: "#",
+      submenu: [
+        {
+          name: "2026",
+          href: "/pdf/nrif/2026.pdf",
+          target: "_blank",
+        },
+        {
+          name: "2025",
+          href: "/pdf/nrif/2025.pdf",
+          target: "_blank",
+        },
+        {
+          name: "2024",
+          href: "/pdf/nrif/2024.pdf",
+          target: "_blank",
+        },
+      ],
+    },
+{
+  name: "IQAC",
+  href: "#",
+  submenu: [
+    {
+      name: "IIQA",
+      href: "/pdf/iqac/IIQA.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Vision & Mission",
+      href: "/iqac/vision-mission",
+    },
+    {
+      name: "Composition of IQAC",
+      href: "/pdf/iqac/Composition_of_IQAC.pdf",
+      target: "_blank",
+    },
+    {
+      name: "IQAC Minutes",
+      href: "/pdf/iqac/IQAC_Minutes.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Self-Declaration",
+      href: "/pdf/iqac/Self_Declaration.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Undertaking",
+      href: "/pdf/iqac/Undertaking.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Criteria",
+      href: "/iqac/criteria",
+    },
+    {
+      name: "Self Study Report",
+      href: "/pdf/iqac/Self_Study_Report.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Policies",
+      href: "/iqac/policies",
+    },
+    {
+      name: "Committees",
+      href: "/iqac/committees",
+    },
+    {
+      name: "Annual Report",
+      href: "/iqac/annual-report",
+    },
+    {
+      name: "Institutional Distinctiveness",
+      href: "/pdf/iqac/Institutional_Distinctiveness.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Institutional Best Practices",
+      href: "/pdf/iqac/Institutional_Best_Practices.pdf",
+      target: "_blank",
+    },
+  ],
+},
+  ],
+},
     {
     name: "More",
     href: "#",
@@ -334,27 +443,7 @@ import Seminars from "./pages/research/Seminars";
 },
       { name: "Student Support", href: "#campus" },
       
-      {
-    name: "NRIF",
-    href: "#",
-    submenu: [
-      {
-        name: "2026",
-        href: "/pdf/nrif/2026.pdf",
-        target: "_blank",
-      },
-      {
-        name: "2025",
-        href: "/pdf/nrif/2025.pdf",
-        target: "_blank",
-      },
-      {
-        name: "2024",
-        href: "/pdf/nrif/2024.pdf",
-        target: "_blank",
-      },
-    ],
-  },
+      
   { name: "Alumni", href: "#contact" },
   { name: "Feedback", href: "#contact" },
       { name: "Contact Us", href: "#contact" },
@@ -1890,6 +1979,10 @@ import Seminars from "./pages/research/Seminars";
     element={<BDS />}
 
     
+/>
+<Route
+  path="/affiliation/iso"
+  element={<ISO />}
 />
 <Route path="/research/books" element={<Books />} />
 <Route
