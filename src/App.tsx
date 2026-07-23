@@ -28,7 +28,8 @@ import ISO from "./pages/affiliation/ISO";
   import Trust from "./pages/about/Trust";
   import Management from "./pages/about/ManagementTeam";
   import Principal from "./pages/about/PrincipalDesk";
-
+//iiaq
+import IQACVisionMission from "./pages/iqac/VisionMission";
   //Admission 
   import BDS from "./pages/admissions/BDS";
 import MDS from "./pages/admissions/MDS";
@@ -814,10 +815,15 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
                   Explore Programs
                 </span>
               </a>
-              <a href="#gallery" className="inline-flex items-center gap-2 px-6 py-4 text-white font-medium hover:text-medical-sky transition-colors">
-                <Play className="w-5 h-5" />
-                Virtual Tour
-              </a>
+      <a
+  href="https://www.youtube.com/embed/557Lgg49BVQ?autoplay=1"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-6 py-4 text-white font-medium hover:text-medical-sky transition-colors"
+>
+  <Play className="w-5 h-5 fill-current" />
+  Virtual Tour
+</a>
               
             </div>
 
@@ -1969,6 +1975,11 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
 
         <Routes>
           <Route path="/" element={<HomePage />} />
+          //iiaq
+          <Route
+  path="/iqac/vision-mission"
+  element={<IQACVisionMission />}
+/>
   // About
   <Route
     path="/about/mdch"
