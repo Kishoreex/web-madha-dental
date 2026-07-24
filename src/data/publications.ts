@@ -41,5 +41,855 @@ export const publications: Publication[] = [
     authors: "Veronica Arunakumari, RT Selvi, I Porkodi, BS Priya",
     journal: "Indian Journal of Contemporary Dentistry",
     year: "2018"
-  }
+  },
+   {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 5,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 6,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 7,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 8,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 9,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 10,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    {
+    sno: 4,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
 ];

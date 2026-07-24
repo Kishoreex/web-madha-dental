@@ -32,7 +32,7 @@ const Seminars = () => {
 
      <div className="rounded-2xl shadow-lg bg-white overflow-hidden">
 
-  <div className="overflow-auto max-h-[700px]">
+<div className="overflow-x-auto">
 
     <table className="min-w-full">
 

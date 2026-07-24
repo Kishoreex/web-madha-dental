@@ -777,8 +777,7 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
         </div>
 
         {/* Content */}
-  <div
-    className="container-custom relative z-10 py-20 lg:py-32"
+<div className="container-custom relative z-10 py-10 lg:py-16"
     style={{
       transform: `translateY(${scrollY * 0.2}px)`,
       opacity: Math.max(1 - scrollY / 600, 0),
@@ -1021,7 +1020,7 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
           </div>
 
           {/* Timeline */}
-          <div className="relative py-12">
+          <div className="relative py-6">
             <h3 className="heading-3 text-center mb-12">Our Journey Through Time</h3>
             <div className="relative">
               {/* Timeline Line */}
