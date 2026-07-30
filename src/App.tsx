@@ -511,162 +511,211 @@ isScrolled
   }`}
 >
 <div className="max-w-[1600px] mx-auto px-6">
-       <div
-className={`flex items-center justify-between transition-all duration-500 ${
-isScrolled ? "h-[56px]" : "h-[64px]"
+<div
+className={`transition-all duration-500 ${
+isScrolled ? "py-5" : "py-5"
 }`}
 >
-           {/* Logo */}
+       
+              {/* Desktop Navigation */}
+{/* Desktop Navigation */}
+<div className="hidden xl:grid grid-cols-[1fr_auto_1fr] items-center w-full">
+
+  {/* Left Menu */}
+<div className="flex items-center justify-end gap-2 pr-12 self-start pt-15">
+
+    {navItems.slice(0, 5).map((item) => (
+    <div
+  key={item.name}
+  className="relative"
+  onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
+  onMouseLeave={() => setActiveDropdown(null)}
+>
+
+  <Link
+    to={item.href}
+    className="flex items-center gap-1 px-3 py-2 text-[14px] font-medium text-neutral-700 hover:text-blue-700 transition"
+  >
+          {item.name}
+          {item.submenu && <ChevronDown className="w-4 h-4" />}
+        </Link>
+{item.submenu && activeDropdown === item.name && (
+  <div className="absolute top-full left-0 pt-2 w-72 z-[9999]">
+  <div className="bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
+    {item.submenu.map((sub: any) => (
+      <div key={sub.name} className="relative group">
+        {sub.target ? (
+          <a
+            href={sub.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+          >
+            {sub.name}
+            {sub.submenu && <ChevronRight className="w-4 h-4" />}
+          </a>
+        ) : (
+          <Link
+            to={sub.href || "#"}
+            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+          >
+            {sub.name}
+            {sub.submenu && <ChevronRight className="w-4 h-4" />}
+          </Link>
+        )}
+
+        {sub.submenu && (
+          <div className="absolute left-full top-0 hidden group-hover:block w-72 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
+            {sub.submenu.map((child: any) =>
+              child.target ? (
+                <a
+                  key={child.name}
+                  href={child.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-3 hover:bg-blue-50"
+                >
+                  {child.name}
+                </a>
+              ) : (
+                <Link
+                  key={child.name}
+                  to={child.href}
+                  className="block px-4 py-3 hover:bg-blue-50"
+                >
+                  {child.name}
+                </Link>
+              )
+            )}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+   </div>
+)}
+      </div>
+    ))}
+</div>
+
+{/* Center Logo */}
+
 <Link
   to="/"
-  className="flex items-center gap-3 flex-shrink-0"
+  className="flex flex-col items-center justify-center text-center"
 >
   <img
     src={IMAGES.logo}
     alt="MDCH Logo"
     className={`transition-all duration-500 ${
-   isScrolled ? "h-9 w-9" : "h-12 w-12"
-    } object-contain`}
+      isScrolled ? "h-14 w-14" : "h-24 w-24"
+    } object-contain mb-2`}
   />
 
-  <div className="leading-tight">
-    <h1
-      className={`font-extrabold text-[#163B74] tracking-tight transition-all duration-300 ${
-       isScrolled ? "text-base" : "text-lg"
-      }`}
-    >
-      MADHA DENTAL
-    </h1>
+  <h1
+    className={`font-['Marcellus'] text-[#163B74] leading-none transition-all duration-500 ${
+      isScrolled ? "text-xl" : "text-3xl"
+    }`}
+  >
+    MADHA DENTAL COLLEGE
+  </h1>
 
-    <p
-      className={`font-semibold text-gray-600 transition-all duration-300 ${
-   isScrolled ? "text-[10px]" : "text-xs"
-      }`}
-    >
-      COLLEGE & HOSPITAL
-    </p>
-  </div>
+  <p
+    className={`font-['Cormorant_Garamond'] text-gray-600 tracking-[0.30em] uppercase transition-all duration-500 ${
+      isScrolled ? "text-[10px]" : "text-sm"
+    }`}
+  >
+    & Hospital
+  </p>
+
+  <div className="w-24 h-[2px] bg-blue-700 mt-2 rounded-full"></div>
 </Link>
 
-              {/* Desktop Navigation */}
-         <div className="hidden xl:flex flex-1 justify-center items-center gap-2 px-8">
-                {navItems.map((item) => (
-                  <div key={item.name} className="relative group">
-<Link
-  to={item.href}
-  className="flex items-center gap-1 px-3 py-1.5 text-[14px] font-medium text-neutral-700 hover:text-medical-blue hover:bg-medical-blue/5 rounded-xl transition-all"
-    onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
-    onMouseLeave={() => setActiveDropdown(null)}
-  >
-                      {item.name}
-                      {item.submenu && <ChevronDown className="w-4 h-4" />}
-                  </Link>
-                {item.submenu && activeDropdown === item.name && (
-    <div
-    className="absolute top-full left-0 w-56 bg-white rounded-lg shadow-xl border border-neutral-200 py-1 z-50"
-      onMouseEnter={() => setActiveDropdown(item.name)}
-      onMouseLeave={() => {
-        setActiveDropdown(null);
-        setActiveSubDropdown(null);
-      }}
-    >
-      {item.submenu.map((subItem) => (
-        <div
-          key={subItem.name}
-          className="relative"
-          onMouseEnter={() => setActiveSubDropdown(subItem.name)}
-        >
-          {subItem.target ? (
-            <a
-              href={subItem.href}
-              target={subItem.target}
-              rel="noopener noreferrer"
-            className="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-blue-50 rounded-md mx-1 transition-all"
-            >
-              {subItem.name}
-              {subItem.submenu && <ChevronRight className="w-4 h-4" />}
-            </a>
-          ) : (
-            <Link
-              to={subItem.href}
-         className="flex items-center justify-between px-3 py-2 text-[13px] hover:bg-blue-50 rounded-md mx-1 transition-all"
-            >
-              {subItem.name}
-              {subItem.submenu && <ChevronRight className="w-4 h-4" />}
-            </Link>
-          )}
-
-          {subItem.submenu &&
-            activeSubDropdown === subItem.name && (
-<div
-className={`
-  absolute top-0 w-44
-  bg-white rounded-lg
-  shadow-lg
-  border border-neutral-200
-  py-1
-  ${
-    item.name === "More" ||
-    item.name === "Affiliation & Accreditation"
-      ? "right-full mr-0.5"
-      : "left-full ml-0.5"
-  }
-`}
+{/* Right Menu */}
+<div className="flex items-center justify-start gap-2 pl-12 self-start pt-15">
+    {navItems.slice(5).map((item) => (
+ <div
+  key={item.name}
+  className="relative"
+  onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
+  onMouseLeave={() => setActiveDropdown(null)}
 >
-                {subItem.submenu.map((child) =>
-                  child.target ? (
-                    <a
-                      key={child.name}
-                      href={child.href}
-                      target={child.target}
-                      rel="noopener noreferrer"
-               className="block px-3 py-2 text-[12px] leading-5 rounded-md mx-1 hover:bg-blue-50 transition-all"
-                    >
-                      {child.name}
-                    </a>
-                  ) : (
-                    <Link
-                      key={child.name}
-                      to={child.href}
-                  className="block px-3 py-2 text-[12px] leading-5 rounded-md mx-1 hover:bg-blue-50 transition-all"
-                    >
-                      {child.name}
-                    </Link>
-                  )
-                )}
-              </div>
-            )}
-        </div>
-      ))}
-    </div>
-  )}
-                  </div>
-                ))}
-              </div>
 
-              {/* CTA Buttons */}
-              <div className="hidden xl:flex items-center gap-4">
-              <a
-      href="#admissions"
-className="inline-flex items-center gap-2
-rounded-xl
-bg-gradient-to-r from-blue-600 to-blue-500
-text-white
-font-semibold
-px-4
-py-2
-text-[13px]
-whitespace-nowrap
-hover:scale-105
-hover:shadow-2xl
-transition-all duration-300"
+  <Link
+    to={item.href}
+    className="flex items-center gap-1 px-3 py-2 text-[14px] font-medium text-neutral-700 hover:text-blue-700 transition"
   >
-                  <span className="flex items-center gap-2">
-                   <GraduationCap className="w-3.5 h-3.5" />
-                    Apply Now
-                  </span>
+          {item.name}
+          {item.submenu && <ChevronDown className="w-4 h-4" />}
+        </Link>
+{item.submenu && activeDropdown === item.name && (
+  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 z-[9999]">
+    {item.submenu.map((sub: any) => (
+      <div key={sub.name} className="relative group">
+        {sub.target ? (
+          <a
+            href={sub.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+          >
+            {sub.name}
+            {sub.submenu && <ChevronRight className="w-4 h-4" />}
+          </a>
+        ) : (
+          <Link
+            to={sub.href || "#"}
+            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+          >
+            {sub.name}
+            {sub.submenu && <ChevronRight className="w-4 h-4" />}
+          </Link>
+        )}
+
+        {sub.submenu && (
+          <div className="absolute left-full top-0 hidden group-hover:block w-72 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
+            {sub.submenu.map((child: any) =>
+              child.target ? (
+                <a
+                  key={child.name}
+                  href={child.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-3 hover:bg-blue-50"
+                >
+                  {child.name}
                 </a>
-              </div>
+              ) : (
+                <Link
+                  key={child.name}
+                  to={child.href}
+                  className="block px-4 py-3 hover:bg-blue-50"
+                >
+                  {child.name}
+                </Link>
+              )
+            )}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+)}
+      </div>
+    ))}
+<a
+  href="#admissions"
+  className="ml-3 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold px-4 py-2 text-[13px] whitespace-nowrap hover:scale-105 hover:shadow-2xl transition-all duration-300"
+>
+  <GraduationCap className="w-3.5 h-3.5" />
+  Apply Now
+</a>
+
+  </div>
+
+</div>
+
+        
 
               {/* Mobile Menu Button */}
               <button
@@ -800,31 +849,7 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
               and compassionate healthcare since 2006. Join Tamil Nadu's premier dental institution.
             </p>
 
-            {/* CTA Buttons */}
-  <div className="hero-reveal delay-3 flex flex-wrap gap-4 mb-12">
-              <a href="#admissions" className="premium-button">
-                <span className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5" />
-                  Apply Now
-                </span>
-              </a>
-              <a href="#programs" className="secondary-button bg-white/10 text-white border-white/30 hover:bg-white hover:text-medical-navy">
-                <span className="flex items-center gap-2">
-                  <BookOpen className="w-5 h-5" />
-                  Explore Programs
-                </span>
-              </a>
-      <a
-  href="https://www.youtube.com/embed/557Lgg49BVQ?autoplay=1"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 px-6 py-4 text-white font-medium hover:text-medical-sky transition-colors"
->
-  <Play className="w-5 h-5 fill-current" />
-  Virtual Tour
-</a>
-              
-            </div>
+       
 
             {/* Stats */}
           <div
