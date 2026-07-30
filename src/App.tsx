@@ -384,6 +384,113 @@ import Seminars from "./pages/research/Seminars";
     name: "More",
     href: "#",
     submenu: [
+          {
+  name: "Affiliation & Accreditation",
+  href: "#",
+  submenu: [
+   {
+  name: "University",
+  href: "/pdf/affiliation/university.pdf",
+  target: "_blank",
+},
+  {
+  name: "DCI",
+  href: "/pdf/affiliation/DCI.pdf",
+  target: "_blank",
+},
+    {
+      name: "ISO",
+      href: "/affiliation/iso",
+    },
+    {
+      name: "NIRF",
+      href: "#",
+      submenu: [
+        {
+          name: "2026",
+          href: "/pdf/nrif/2026.pdf",
+          target: "_blank",
+        },
+        {
+          name: "2025",
+          href: "/pdf/nrif/2025.pdf",
+          target: "_blank",
+        },
+        {
+          name: "2024",
+          href: "/pdf/nrif/2024.pdf",
+          target: "_blank",
+        },
+      ],
+    },
+{
+  name: "IQAC",
+  href: "#",
+  submenu: [
+    {
+      name: "IIQA",
+      href: "/pdf/iqac/IIQA.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Vision & Mission",
+      href: "/iqac/vision-mission",
+    },
+    {
+      name: "Composition of IQAC",
+      href: "/pdf/iqac/Composition_of_IQAC.pdf",
+      target: "_blank",
+    },
+    {
+      name: "IQAC Minutes",
+      href: "/pdf/iqac/IQAC_Minutes.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Self-Declaration",
+      href: "/pdf/iqac/Self_Declaration.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Undertaking",
+      href: "/pdf/iqac/Undertaking.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Criteria",
+      href: "/iqac/criteria",
+    },
+    {
+      name: "Self Study Report",
+      href: "/pdf/iqac/Self_Study_Report.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Policies",
+      href: "/iqac/policies",
+    },
+    {
+      name: "Committees",
+      href: "/iqac/committees",
+    },
+    {
+      name: "Annual Report",
+      href: "/iqac/annual-report",
+    },
+    {
+      name: "Institutional Distinctiveness",
+      href: "/pdf/iqac/Institutional_Distinctiveness.pdf",
+      target: "_blank",
+    },
+    {
+      name: "Institutional Best Practices",
+      href: "/pdf/iqac/Institutional_Best_Practices.pdf",
+      target: "_blank",
+    },
+  ],
+},
+  ],
+},
       { name: "Gallery", href: "/gallery" },
       { name: "Campus Life & Facilities"},
       { name: "Outreach & Collaboration Activities", href: "#faculty" },
@@ -444,7 +551,7 @@ import Seminars from "./pages/research/Seminars";
 },
       { name: "Student Support", href: "#campus" },
       
-      
+
   { name: "Alumni", href: "#contact" },
   { name: "Feedback", href: "#contact" },
       { name: "Contact Us", href: "#contact" },
@@ -473,7 +580,7 @@ isScrolled
 : "translate-y-0 opacity-100 py-2"
 }`}
 >
-          <div className="container-custom flex justify-between items-center text-sm">
+ <div className="container-custom flex justify-between items-center text-sm">
             <div className="flex items-center gap-6">
               <a href="tel:+917273901234" className="flex items-center gap-2 hover:text-medical-sky transition-colors">
                 <Phone className="w-4 h-4" />
@@ -506,30 +613,30 @@ isScrolled
   transition-all duration-500
   ${
   isScrolled
-? "top-8 w-[90%] max-w-[1600px] rounded-2xl bg-white/80 backdrop-blur-2xl shadow-2xl border border-white/30"
-: "top-9 w-[90%] max-w-[1600px] rounded-2xl bg-white shadow-lg"
+? "top-8 w-[90%] max-w-[1600px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-[0_12px_35px_rgba(0,0,0,0.08)] border border-white/30"
+: "top-9 w-[90%] max-w-[1600px] rounded-2xl bg-white shadow-[0_12px_35px_rgba(0,0,0,0.08)]"
   }`}
 >
 <div className="max-w-[1600px] mx-auto px-6">
 <div
 className={`transition-all duration-500 ${
-isScrolled ? "py-5" : "py-5"
+isScrolled ? "py-1" : "py-2"
 }`}
 >
-       
-              {/* Desktop Navigation */}
+      
 {/* Desktop Navigation */}
-<div className="hidden xl:grid grid-cols-[1fr_auto_1fr] items-center w-full">
+<div className="hidden xl:grid grid-cols-[minmax(0,1fr)_320px_minmax(0,1fr)] items-center w-full">
 
   {/* Left Menu */}
-<div className="flex items-center justify-end gap-2 pr-12 self-start pt-15">
-
-    {navItems.slice(0, 5).map((item) => (
+<div className="flex items-center justify-end gap-2 pr-12 self-start pt-1">
+{navItems.slice(0, 4).map((item) => (
     <div
   key={item.name}
   className="relative"
   onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
-  onMouseLeave={() => setActiveDropdown(null)}
+onMouseLeave={() => {
+  setTimeout(() => setActiveDropdown(null), 150);
+}}
 >
 
   <Link
@@ -540,7 +647,7 @@ isScrolled ? "py-5" : "py-5"
           {item.submenu && <ChevronDown className="w-4 h-4" />}
         </Link>
 {item.submenu && activeDropdown === item.name && (
-  <div className="absolute top-full left-0 pt-2 w-72 z-[9999]">
+  <div className="absolute top-full left-0 pt-2 w-56 z-[9999]">
   <div className="bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
     {item.submenu.map((sub: any) => (
       <div key={sub.name} className="relative group">
@@ -549,7 +656,7 @@ isScrolled ? "py-5" : "py-5"
             href={sub.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+          className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
           >
             {sub.name}
             {sub.submenu && <ChevronRight className="w-4 h-4" />}
@@ -557,7 +664,7 @@ isScrolled ? "py-5" : "py-5"
         ) : (
           <Link
             to={sub.href || "#"}
-            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+         className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
           >
             {sub.name}
             {sub.submenu && <ChevronRight className="w-4 h-4" />}
@@ -565,7 +672,7 @@ isScrolled ? "py-5" : "py-5"
         )}
 
         {sub.submenu && (
-          <div className="absolute left-full top-0 hidden group-hover:block w-72 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
+          <div className="absolute left-full top-0 hidden group-hover:block w-56 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
             {sub.submenu.map((child: any) =>
               child.target ? (
                 <a
@@ -573,7 +680,7 @@ isScrolled ? "py-5" : "py-5"
                   href={child.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-3 hover:bg-blue-50"
+              className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
                 >
                   {child.name}
                 </a>
@@ -581,7 +688,7 @@ isScrolled ? "py-5" : "py-5"
                 <Link
                   key={child.name}
                   to={child.href}
-                  className="block px-4 py-3 hover:bg-blue-50"
+                 className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
                 >
                   {child.name}
                 </Link>
@@ -597,48 +704,62 @@ isScrolled ? "py-5" : "py-5"
       </div>
     ))}
 </div>
-
 {/* Center Logo */}
-
 <Link
   to="/"
-  className="flex flex-col items-center justify-center text-center"
+  className="w-[320px] flex flex-col items-center justify-center text-center shrink-0 -mt-2"
 >
   <img
     src={IMAGES.logo}
     alt="MDCH Logo"
-    className={`transition-all duration-500 ${
-      isScrolled ? "h-14 w-14" : "h-24 w-24"
-    } object-contain mb-2`}
+    className={`object-contain transition-all duration-500 ${
+      isScrolled ? "w-14 h-14" : "w-20 h-20"
+    }`}
   />
 
-  <h1
-    className={`font-['Marcellus'] text-[#163B74] leading-none transition-all duration-500 ${
-      isScrolled ? "text-xl" : "text-3xl"
-    }`}
-  >
-    MADHA DENTAL COLLEGE
-  </h1>
+<h1
+  className={`mt-1 font-['Cormorant_Garamond'] font-semibold tracking-[0.06em] text-[#143C78] whitespace-nowrap leading-none transition-all duration-500 ${
+    isScrolled ? "text-[22px]" : "text-[28px]"
+  }`}
+  style={{
+    textShadow: "0 1px 2px rgba(0,0,0,0.08)",
+  }}
+>
+  MADHA DENTAL COLLEGE
+</h1>
+<div className="flex items-center justify-center my-2">
+  <div className="w-10 h-px bg-gradient-to-r from-transparent to-[#C8A64B]" />
 
-  <p
-    className={`font-['Cormorant_Garamond'] text-gray-600 tracking-[0.30em] uppercase transition-all duration-500 ${
-      isScrolled ? "text-[10px]" : "text-sm"
-    }`}
-  >
-    & Hospital
+  <div className="mx-2 flex items-center">
+    <div className="w-2 h-2 rotate-45 bg-[#D4AF37] border border-[#9E7A1A]"></div>
+
+    <div className="w-14 h-[3px] bg-gradient-to-r from-[#F7E08A] via-[#D4AF37] to-[#9E7A1A] rounded-full shadow-sm"></div>
+
+    <div className="w-2 h-2 rotate-45 bg-[#D4AF37] border border-[#9E7A1A]"></div>
+  </div>
+
+  <div className="w-10 h-px bg-gradient-to-l from-transparent to-[#C8A64B]" />
+</div>
+
+<p
+  className={`uppercase tracking-[0.7em] text-[#8A8A8A] font-medium transition-all duration-500 ${
+    isScrolled ? "text-[9px]" : "text-[15px]"
+  }`}
+>
+    Hospital
   </p>
-
-  <div className="w-24 h-[2px] bg-blue-700 mt-2 rounded-full"></div>
 </Link>
 
 {/* Right Menu */}
 <div className="flex items-center justify-start gap-2 pl-12 self-start pt-15">
-    {navItems.slice(5).map((item) => (
+{navItems.slice(4, 8).filter(item => item.name !== "Affiliation & Accreditation").map((item) => (
  <div
   key={item.name}
   className="relative"
   onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
-  onMouseLeave={() => setActiveDropdown(null)}
+onMouseLeave={() => {
+  setTimeout(() => setActiveDropdown(null), 150);
+}}
 >
 
   <Link
@@ -649,7 +770,7 @@ isScrolled ? "py-5" : "py-5"
           {item.submenu && <ChevronDown className="w-4 h-4" />}
         </Link>
 {item.submenu && activeDropdown === item.name && (
-  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 z-[9999]">
+  <div className="absolute top-full left-0 pt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 z-[9999]">
     {item.submenu.map((sub: any) => (
       <div key={sub.name} className="relative group">
         {sub.target ? (
@@ -657,7 +778,7 @@ isScrolled ? "py-5" : "py-5"
             href={sub.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+       className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
           >
             {sub.name}
             {sub.submenu && <ChevronRight className="w-4 h-4" />}
@@ -665,7 +786,7 @@ isScrolled ? "py-5" : "py-5"
         ) : (
           <Link
             to={sub.href || "#"}
-            className="flex items-center justify-between px-4 py-3 hover:bg-blue-50"
+className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
           >
             {sub.name}
             {sub.submenu && <ChevronRight className="w-4 h-4" />}
@@ -673,15 +794,14 @@ isScrolled ? "py-5" : "py-5"
         )}
 
         {sub.submenu && (
-          <div className="absolute left-full top-0 hidden group-hover:block w-72 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
-            {sub.submenu.map((child: any) =>
+        <div className="absolute right-full top-0 hidden group-hover:block w-56 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">   {sub.submenu.map((child: any) =>
               child.target ? (
                 <a
                   key={child.name}
                   href={child.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-3 hover:bg-blue-50"
+                className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
                 >
                   {child.name}
                 </a>
@@ -689,7 +809,7 @@ isScrolled ? "py-5" : "py-5"
                 <Link
                   key={child.name}
                   to={child.href}
-                  className="block px-4 py-3 hover:bg-blue-50"
+            className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
                 >
                   {child.name}
                 </Link>
