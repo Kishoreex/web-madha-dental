@@ -613,11 +613,17 @@ isScrolled
   transition-all duration-500
   ${
   isScrolled
-? "top-8 w-[90%] max-w-[1600px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-[0_12px_35px_rgba(0,0,0,0.08)] border border-white/30"
-: "top-9 w-[90%] max-w-[1600px] rounded-2xl bg-white shadow-[0_12px_35px_rgba(0,0,0,0.08)]"
+    ? "top-4 w-[90%] max-w-[1600px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-[0_12px_35px_rgba(0,0,0,0.12)] border border-white/30"
+    : "top-9 w-[90%] max-w-[1600px] bg-transparent shadow-none border-0"
+}`}
+>
+<div
+  className={`max-w-[1600px] mx-auto px-6 transition-all duration-500 ${
+    isScrolled
+      ? "rounded-2xl"
+      : ""
   }`}
 >
-<div className="max-w-[1600px] mx-auto px-6">
 <div
 className={`transition-all duration-500 ${
 isScrolled ? "py-1" : "py-2"
@@ -641,7 +647,11 @@ onMouseLeave={() => {
 
   <Link
     to={item.href}
-    className="flex items-center gap-1 px-3 py-2 text-[14px] font-medium text-neutral-700 hover:text-blue-700 transition"
+    className={`flex items-center gap-1 px-3 py-2 text-[14px] font-medium transition ${
+  isScrolled
+    ? "text-neutral-700 hover:text-blue-700"
+    : "text-white hover:text-yellow-300"
+}`}
   >
           {item.name}
           {item.submenu && <ChevronDown className="w-4 h-4" />}
@@ -718,11 +728,13 @@ onMouseLeave={() => {
   />
 
 <h1
-  className={`mt-1 font-['Cormorant_Garamond'] font-semibold tracking-[0.06em] text-[#143C78] whitespace-nowrap leading-none transition-all duration-500 ${
-    isScrolled ? "text-[22px]" : "text-[28px]"
-  }`}
+ className={`mt-1 font-['Cormorant_Garamond'] font-bold italic tracking-[0.03em] ${
+  isScrolled ? "text-[#143C78]" : "text-white"
+} whitespace-nowrap leading-none transition-all duration-500 ${
+  isScrolled ? "text-[23px]" : "text-[31px]"
+}`}
   style={{
-    textShadow: "0 1px 2px rgba(0,0,0,0.08)",
+    textShadow: "0 2px 6px rgba(0,0,0,0.12)",
   }}
 >
   MADHA DENTAL COLLEGE
@@ -742,12 +754,17 @@ onMouseLeave={() => {
 </div>
 
 <p
-  className={`uppercase tracking-[0.7em] text-[#8A8A8A] font-medium transition-all duration-500 ${
-    isScrolled ? "text-[9px]" : "text-[15px]"
-  }`}
+ className={`mt-1 font-['Cormorant_Garamond'] font-semibold italic tracking-[0.25em] ${
+  isScrolled ? "text-[#6F7F95]" : "text-white/90"
+} whitespace-nowrap leading-none transition-all duration-500 ${
+  isScrolled ? "text-[13px]" : "text-[20px]"
+}`}
+  style={{
+    textShadow: "0 1px 3px rgba(0,0,0,0.08)",
+  }}
 >
-    Hospital
-  </p>
+  Hospital
+</p>
 </Link>
 
 {/* Right Menu */}
@@ -764,7 +781,11 @@ onMouseLeave={() => {
 
   <Link
     to={item.href}
-    className="flex items-center gap-1 px-3 py-2 text-[14px] font-medium text-neutral-700 hover:text-blue-700 transition"
+   className={`flex items-center gap-1 px-3 py-2 text-[14px] font-medium transition ${
+  isScrolled
+    ? "text-neutral-700 hover:text-blue-700"
+    : "text-white hover:text-yellow-300"
+}`}
   >
           {item.name}
           {item.submenu && <ChevronDown className="w-4 h-4" />}
