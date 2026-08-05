@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marcellus&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -278,4 +280,89 @@
     width: 100%;
   }
 
+}/* Premium Luxury Gold Ribbon */
+
+.premium-divider {
+  position: relative;
+  width: 150px;
+  height: 5px;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #6b4a00 0%,
+    #b8860b 10%,
+    #ffd54f 25%,
+    #fff3b0 50%,
+    #ffd54f 75%,
+    #b8860b 90%,
+    #6b4a00 100%
+  );
+
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 -1px 0 rgba(0,0,0,.25) inset,
+    0 0 10px rgba(255,215,0,.45),
+    0 0 20px rgba(255,215,0,.25);
+
+  overflow: visible;
+}
+
+/* Metallic shine animation */
+
+.premium-divider::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-60%;
+  width:45%;
+  height:100%;
+
+  background:linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.9),
+      transparent
+  );
+
+  transform:skewX(-25deg);
+
+  animation:goldShine 3.5s infinite;
+}
+
+/* Center diamond */
+
+.premium-divider::after{
+  content:"";
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  width:10px;
+  height:10px;
+
+  transform:translate(-50%,-50%) rotate(45deg);
+
+  background:linear-gradient(
+      135deg,
+      #fff9d6,
+      #ffd54f,
+      #b8860b
+  );
+
+  border:1px solid rgba(255,255,255,.7);
+
+  box-shadow:
+      0 0 8px rgba(255,215,0,.8),
+      0 0 16px rgba(255,215,0,.45);
+}
+
+@keyframes goldShine{
+  from{
+      left:-60%;
+  }
+  to{
+      left:130%;
+  }
 }

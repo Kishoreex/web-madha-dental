@@ -558,7 +558,104 @@ import Seminars from "./pages/research/Seminars";
     ],
   },
     ];
+const DesktopMenu = ({ items }: { items: any[] }) => (
+  <>
+    {items.map((item) => (
+      <div
+        key={item.name}
+        className="relative group"
+      >
+        {/* Main Menu */}
+        {item.target ? (
+          <a
+            href={item.href}
+            target={item.target}
+            rel="noopener noreferrer"
+     className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
+              isScrolled
+                ? "text-gray-800 hover:text-blue-700"
+                : "text-white hover:text-cyan-300"
+            }`}
+          >
+            {item.name}
+            {item.submenu && <ChevronDown className="w-3.5 h-3.5" />}
+          </a>
+        ) : (
+          <Link
+            to={item.href}
+className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
+              isScrolled
+                ? "text-gray-800 hover:text-blue-700"
+                : "text-white hover:text-cyan-300"
+            }`}
+          >
+            {item.name}
+            {item.submenu && <ChevronDown className="w-4 h-4" />}
+          </Link>
+        )}
 
+        {/* Dropdown */}
+        {item.submenu && (
+          <div className="absolute left-0 top-full hidden group-hover:block bg-white rounded-xl shadow-xl min-w-[180px] py-1.5 z-50">
+            {item.submenu.map((sub: any) => (
+<div
+  key={sub.name}
+  className="relative group/sub"
+>
+                {sub.target ? (
+                  <a
+                    href={sub.href}
+                    target={sub.target}
+                    rel="noopener noreferrer"
+className="flex justify-between items-center px-2.5 py-1.5 text-[13px] font-medium font-['Manrope'] tracking-tight hover:bg-blue-50 hover:text-blue-700 transition-all duration-200 text-gray-700 whitespace-nowrap"
+                  >
+                    {sub.name}
+                    {sub.submenu && <ChevronRight className="w-3.5 h-3.5" />}
+                  </a>
+                ) : (
+                  <Link
+                    to={sub.href}
+                   className="flex justify-between items-center px-2.5 py-1.5 text-[13px] hover:bg-blue-50 text-gray-700"
+                  >
+                    {sub.name}
+                    {sub.submenu && <ChevronRight className="w-3.5 h-3.5" />}
+                  </Link>
+                )}
+
+                {/* Third Level */}
+               {sub.submenu && (
+  <div className="absolute right-full top-0 mr-1 hidden group-hover/sub:block bg-white rounded-xl shadow-xl min-w-[220px] py-1.5 border border-gray-100 z-[999]">
+                    {sub.submenu.map((child: any) =>
+                      child.target ? (
+                        <a
+                          key={child.name}
+                          href={child.href}
+                          target={child.target}
+                          rel="noopener noreferrer"
+                  className="block px-2.5 py-1.5 text-[13px] font-medium font-['Manrope'] tracking-tight hover:bg-blue-50 text-gray-700"
+                        >
+                          {child.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={child.name}
+                          to={child.href}
+className="block px-2.5 py-1.5 text-[13px] font-medium font-['Manrope'] tracking-tight hover:bg-blue-50 text-gray-700"
+                        >
+                          {child.name}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </>
+);
     return (
       <>
       <div
@@ -631,233 +728,84 @@ isScrolled ? "py-1" : "py-2"
 >
       
 {/* Desktop Navigation */}
-<div className="hidden xl:grid grid-cols-[minmax(0,1fr)_320px_minmax(0,1fr)] items-center w-full">
+<div className="hidden xl:flex items-center justify-between w-full -ml-6">
 
-  {/* Left Menu */}
-<div className="flex items-center justify-end gap-2 pr-12 self-start pt-1">
-{navItems.slice(0, 4).map((item) => (
-    <div
-  key={item.name}
-  className="relative"
-  onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
-onMouseLeave={() => {
-  setTimeout(() => setActiveDropdown(null), 150);
-}}
->
-
+  {/* Left Logo */}
   <Link
-    to={item.href}
-    className={`flex items-center gap-1 px-3 py-2 text-[14px] font-medium transition ${
-  isScrolled
-    ? "text-neutral-700 hover:text-blue-700"
-    : "text-white hover:text-yellow-300"
-}`}
+    to="/"
+    className="flex items-center gap-4 shrink-0"
   >
-          {item.name}
-          {item.submenu && <ChevronDown className="w-4 h-4" />}
-        </Link>
-{item.submenu && activeDropdown === item.name && (
-  <div className="absolute top-full left-0 pt-2 w-56 z-[9999]">
-  <div className="bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
-    {item.submenu.map((sub: any) => (
-      <div key={sub.name} className="relative group">
-        {sub.target ? (
-          <a
-            href={sub.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
-          >
-            {sub.name}
-            {sub.submenu && <ChevronRight className="w-4 h-4" />}
-          </a>
-        ) : (
-          <Link
-            to={sub.href || "#"}
-         className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
-          >
-            {sub.name}
-            {sub.submenu && <ChevronRight className="w-4 h-4" />}
-          </Link>
-        )}
-
-        {sub.submenu && (
-          <div className="absolute left-full top-0 hidden group-hover:block w-56 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">
-            {sub.submenu.map((child: any) =>
-              child.target ? (
-                <a
-                  key={child.name}
-                  href={child.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-              className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
-                >
-                  {child.name}
-                </a>
-              ) : (
-                <Link
-                  key={child.name}
-                  to={child.href}
-                 className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
-                >
-                  {child.name}
-                </Link>
-              )
-            )}
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-   </div>
-)}
-      </div>
-    ))}
-</div>
-{/* Center Logo */}
-<Link
-  to="/"
-  className="w-[320px] flex flex-col items-center justify-center text-center shrink-0 -mt-2"
->
-  <img
-    src={IMAGES.logo}
-    alt="MDCH Logo"
-    className={`object-contain transition-all duration-500 ${
-      isScrolled ? "w-14 h-14" : "w-20 h-20"
-    }`}
-  />
-
-<h1
- className={`mt-1 font-['Cormorant_Garamond'] font-bold italic tracking-[0.03em] ${
-  isScrolled ? "text-[#143C78]" : "text-white"
-} whitespace-nowrap leading-none transition-all duration-500 ${
-  isScrolled ? "text-[23px]" : "text-[31px]"
+    <img
+      src={IMAGES.logo}
+      alt="MDCH Logo"
+className={`object-contain rounded-full transition-all duration-500 ${
+  isScrolled ? "w-16 h-16" : "w-24 h-24"
 }`}
+style={{
+  filter: `
+    drop-shadow(0 0 8px rgba(255,255,255,.95))
+    drop-shadow(0 0 18px rgb(255, 255, 255))
+    drop-shadow(0 0 30px rgb(255, 255, 255))
+  `,
+}}
+    />
+<div className="flex flex-col -ml-2">
+<h1
+  className={`uppercase transition-all duration-500 ${
+    isScrolled
+      ? "text-[#163B72] text-[23px]"
+      : "text-white text-[23px]"
+  }`}
   style={{
-    textShadow: "0 2px 6px rgba(0,0,0,0.12)",
+    fontFamily: "'Cinzel', serif",
+    fontWeight: 700,
+    letterSpacing: "0.08em",
+    lineHeight: "1",
+    textShadow: isScrolled
+      ? "none"
+      : "0 3px 15px rgba(0,0,0,.45)",
   }}
 >
   MADHA DENTAL COLLEGE
 </h1>
-<div className="flex items-center justify-center my-2">
-  <div className="w-10 h-px bg-gradient-to-r from-transparent to-[#C8A64B]" />
 
-  <div className="mx-2 flex items-center">
-    <div className="w-2 h-2 rotate-45 bg-[#D4AF37] border border-[#9E7A1A]"></div>
-
-    <div className="w-14 h-[3px] bg-gradient-to-r from-[#F7E08A] via-[#D4AF37] to-[#9E7A1A] rounded-full shadow-sm"></div>
-
-    <div className="w-2 h-2 rotate-45 bg-[#D4AF37] border border-[#9E7A1A]"></div>
-  </div>
-
-  <div className="w-10 h-px bg-gradient-to-l from-transparent to-[#C8A64B]" />
+  {/* Premium Gold Divider */}
+<div className="flex justify-center mt-1 mb-1">
+    <div className="premium-divider"></div>
 </div>
-
 <p
- className={`mt-1 font-['Cormorant_Garamond'] font-semibold italic tracking-[0.25em] ${
-  isScrolled ? "text-[#6F7F95]" : "text-white/90"
-} whitespace-nowrap leading-none transition-all duration-500 ${
-  isScrolled ? "text-[13px]" : "text-[20px]"
-}`}
+  className={`uppercase transition-all duration-500 ${
+    isScrolled
+      ? "text-[#6B7280] text-[12px]"
+      : "text-white text-[12px]"
+  }`}
   style={{
-    textShadow: "0 1px 3px rgba(0,0,0,0.08)",
+    fontFamily: "'Inter', sans-serif",
+    fontWeight: 900,
+    letterSpacing: "0.85em",
+    lineHeight: 1,
+    marginTop: "8px",      // was -8px
+    textAlign: "center",
   }}
 >
-  Hospital
+  HOSPITAL
 </p>
-</Link>
+</div>
+  </Link>
 
-{/* Right Menu */}
-<div className="flex items-center justify-start gap-2 pl-12 self-start pt-15">
-{navItems.slice(4, 8).filter(item => item.name !== "Affiliation & Accreditation").map((item) => (
- <div
-  key={item.name}
-  className="relative"
-  onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
-onMouseLeave={() => {
-  setTimeout(() => setActiveDropdown(null), 150);
-}}
->
+  {/* Right Menu */}
+<div className="flex items-center gap-1 ml-6">
+  <DesktopMenu items={navItems} />
 
   <Link
-    to={item.href}
-   className={`flex items-center gap-1 px-3 py-2 text-[14px] font-medium transition ${
-  isScrolled
-    ? "text-neutral-700 hover:text-blue-700"
-    : "text-white hover:text-yellow-300"
-}`}
+    to="/admissions/process"
+  className="ml-6 px-5 py-2.5 whitespace-nowrap rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[14px] font-semibold hover:scale-105 transition"
   >
-          {item.name}
-          {item.submenu && <ChevronDown className="w-4 h-4" />}
-        </Link>
-{item.submenu && activeDropdown === item.name && (
-  <div className="absolute top-full left-0 pt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 z-[9999]">
-    {item.submenu.map((sub: any) => (
-      <div key={sub.name} className="relative group">
-        {sub.target ? (
-          <a
-            href={sub.href}
-            target="_blank"
-            rel="noopener noreferrer"
-       className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
-          >
-            {sub.name}
-            {sub.submenu && <ChevronRight className="w-4 h-4" />}
-          </a>
-        ) : (
-          <Link
-            to={sub.href || "#"}
-className="flex items-center justify-between px-3 py-2 hover:bg-blue-50 text-[13px]"
-          >
-            {sub.name}
-            {sub.submenu && <ChevronRight className="w-4 h-4" />}
-          </Link>
-        )}
-
-        {sub.submenu && (
-        <div className="absolute right-full top-0 hidden group-hover:block w-56 bg-white rounded-xl shadow-2xl border border-gray-200 py-2">   {sub.submenu.map((child: any) =>
-              child.target ? (
-                <a
-                  key={child.name}
-                  href={child.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
-                >
-                  {child.name}
-                </a>
-              ) : (
-                <Link
-                  key={child.name}
-                  to={child.href}
-            className="block px-3 py-2 hover:bg-blue-50 text-[13px]"
-                >
-                  {child.name}
-                </Link>
-              )
-            )}
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-)}
-      </div>
-    ))}
-<a
-  href="#admissions"
-  className="ml-3 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold px-4 py-2 text-[13px] whitespace-nowrap hover:scale-105 hover:shadow-2xl transition-all duration-300"
->
-  <GraduationCap className="w-3.5 h-3.5" />
-  Apply Now
-</a>
-
-  </div>
-
+    Apply Now
+  </Link>
 </div>
 
-        
-
+</div>
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -954,7 +902,7 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
       transition: "transform 0.1s linear",
     }}
   />
-              <div className="absolute inset-0 bg-gradient-to-r from-medical-navy/90 via-medical-navy/70 to-medical-blue/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-medical-navy/80 via-medical-navy/50 to-medical-blue/30" />
             </div>
           ))}
         </div>
@@ -967,25 +915,41 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
         </div>
 
         {/* Content */}
-<div className="container-custom relative z-10 py-10 lg:py-16"
+<div
+className="container-custom relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-24"
     style={{
       transform: `translateY(${scrollY * 0.2}px)`,
       opacity: Math.max(1 - scrollY / 600, 0),
     }}
   >
-          <div className="max-w-5xl lg:-ml-10 xl:-ml-16">
-            {/* Badge */}<div className="hero-reveal inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6"><Sparkles className="w-4 h-4 text-accent-gold" />
+<div className="max-w-5xl lg:-ml-32 xl:-ml-40 2xl:-ml-48">
+            {/* Badge */}<div className="hero-reveal inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-sm mb-5"><Sparkles className="w-4 h-4 text-accent-gold" />
               <span>DCI Recognized | TN Dr.M.G.R Medical University Affiliated</span>
             </div>
 
             {/* Headline */}
-          <h1 className="hero-reveal delay-1 heading-1 text-white mb-6">
+<h1
+className="
+hero-reveal
+delay-1
+font-bold
+text-white
+leading-tight
+tracking-tight
+mb-5
+text-4xl
+md:text-5xl
+xl:text-[56px]
+2xl:text-[60px]
+max-w-3xl
+"
+>
               Shaping the Future of{' '}
               <span className="text-medical-sky">Dental Excellence</span>
             </h1>
 
             {/* Subheadline */}
-          <p className="hero-reveal delay-2 body-large text-white/90 mb-8 max-w-2xl">
+          <p className="hero-reveal delay-2 text-lg lg:text-xl text-white/90 mb-8 max-w-xl">
               Delivering world-class dental education, advanced clinical training, innovative research,
               and compassionate healthcare since 2006. Join Tamil Nadu's premier dental institution.
             </p>
@@ -998,7 +962,7 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 animate-slide-up animate-delay-500"
   >
               {stats.map((stat, index) => (
-                <div key={index} className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                <div key={index} className="text-center p-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                 <div className="text-2xl lg:text-3xl font-bold text-white mb-1">
 
     {stat.value === "17+" && (
@@ -1533,7 +1497,6 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
             ))}
           </div>
 
-          {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, idx) => (
       <div
