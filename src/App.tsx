@@ -7,6 +7,10 @@
   import CountUp from "react-countup";
   import { useInView } from "react-intersection-observer";
   import GlowCard from "./components/GlowCard";
+import Login from "./admin/pages/Login";
+import Dashboard from "./admin/pages/Dashboard";
+import AddNews from "./admin/pages/AddNews";
+import ManageNews from "./admin/pages/ManageNews";
   //Menu 
   import {
     Menu, X, Phone, Mail, MapPin, Clock, ChevronDown, ChevronRight,
@@ -807,39 +811,324 @@ style={{
 
 </div>
               {/* Mobile Menu Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="xl:hidden p-2 text-neutral-700 hover:text-medical-blue transition-colors"
-              >
-                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+          {/* Mobile Header */}
+<div className="xl:hidden flex items-center justify-between w-full">
+
+  {/* Logo */}
+  <Link
+    to="/"
+    onClick={() => setIsMobileMenuOpen(false)}
+    className="flex items-center gap-2"
+  >
+    <img
+      src={IMAGES.logo}
+      alt="Madha Dental College"
+      className="w-12 h-12 object-contain"
+    />
+
+    <div className="flex flex-col">
+      <span
+        className="text-[13px] font-bold leading-none text-[#163B72]"
+        style={{
+          fontFamily: "'Cinzel', serif",
+          letterSpacing: "0.04em",
+        }}
+      >
+        MADHA DENTAL
+      </span>
+
+      <span
+        className="text-[9px] font-black tracking-[0.28em] text-gray-500 mt-1"
+      >
+        COLLEGE & HOSPITAL
+      </span>
+    </div>
+  </Link>
+
+  {/* Right Side */}
+  <div className="flex items-center gap-2">
+
+    {/* Apply */}
+    <Link
+      to="/admissions/process"
+      className="px-3 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[11px] font-bold"
+    >
+      Apply
+    </Link>
+
+    {/* Menu */}
+    <button
+      onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-[#163B72]"
+      aria-label="Toggle mobile menu"
+    >
+      {isMobileMenuOpen ? (
+        <X className="w-5 h-5" />
+      ) : (
+        <Menu className="w-5 h-5" />
+      )}
+    </button>
+
+  </div>
+
+</div>
             </div>
           </div>
 
           {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="xl:hidden bg-white border-t border-neutral-100 py-4 px-4 max-h-[70vh] overflow-y-auto scrollbar-hide">
-              <div className="flex flex-col gap-2">
-                {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-between px-4 py-3 text-neutral-700 hover:text-medical-blue hover:bg-medical-blue/5 rounded-lg transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
+        {/* MOBILE MENU */}
+{isMobileMenuOpen && (
+  <div className="xl:hidden fixed inset-x-0 top-[68px] bottom-0 z-[9998] bg-white">
+
+    <div className="h-full overflow-y-auto px-4 py-5 pb-10">
+
+      {/* Mobile Menu Header */}
+      <div className="flex items-center justify-between mb-5">
+        <div>
+          <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">
+            Explore MDCH
+          </p>
+
+          <h2 className="text-xl font-bold text-[#163B72]">
+            Menu
+          </h2>
+        </div>
+
+        <button
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center"
+        >
+          <X className="w-5 h-5 text-gray-600" />
+        </button>
+      </div>
+
+
+      {/* Home */}
+      <Link
+        to="/"
+        onClick={() => setIsMobileMenuOpen(false)}
+        className="flex items-center justify-between px-4 py-4 mb-2 rounded-xl bg-blue-50 text-[#163B72] font-semibold"
+      >
+        <span>Home</span>
+        <ChevronRight className="w-4 h-4" />
+      </Link>
+
+
+      {/* Menu Items */}
+      <div className="space-y-2">
+
+        {navItems
+          .filter((item) => item.name !== "Home")
+          .map((item) => {
+
+            const isOpen = activeDropdown === item.name;
+
+            return (
+              <div
+                key={item.name}
+                className="border border-gray-100 rounded-xl overflow-hidden"
+              >
+
+                {/* Main Item */}
+                <button
+                  onClick={() => {
+                    if (item.submenu) {
+                      setActiveDropdown(
+                        isOpen ? null : item.name
+                      );
+                    } else {
+                      setIsMobileMenuOpen(false);
+                    }
+                  }}
+                  className="w-full flex items-center justify-between px-4 py-4 text-left"
+                >
+
+                  <span className="text-[14px] font-semibold text-gray-800">
                     {item.name}
-                    {item.submenu && <ChevronDown className="w-4 h-4" />}
-                  </a>
-                ))}
-                <a href="#admissions" className="premium-button mt-4">
-                  <span className="flex items-center justify-center gap-2 w-full">
-                    <GraduationCap className="w-5 h-5" />
-                    Apply Now
                   </span>
-                </a>
+
+                  {item.submenu && (
+                    <ChevronDown
+                      className={`w-4 h-4 text-gray-500 transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
+
+                </button>
+
+
+                {/* First Level */}
+                {isOpen && item.submenu && (
+                  <div className="bg-gray-50 border-t border-gray-100 px-3 py-2">
+
+                    {item.submenu.map((sub: any) => {
+
+                      const hasChildren = !!sub.submenu;
+
+                      const subOpen =
+                        activeSubDropdown ===
+                        `${item.name}-${sub.name}`;
+
+                      return (
+                        <div key={sub.name}>
+
+                          {/* Submenu Item */}
+                          {hasChildren ? (
+
+                            <button
+                              onClick={() =>
+                                setActiveSubDropdown(
+                                  subOpen
+                                    ? null
+                                    : `${item.name}-${sub.name}`
+                                )
+                              }
+                              className="w-full flex items-center justify-between px-3 py-3 text-left"
+                            >
+
+                              <span className="text-[13px] font-medium text-gray-700">
+                                {sub.name}
+                              </span>
+
+                              <ChevronDown
+                                className={`w-4 h-4 transition-transform ${
+                                  subOpen
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                              />
+
+                            </button>
+
+                          ) : (
+
+                            sub.target ? (
+
+                              <a
+                                href={sub.href}
+                                target={sub.target}
+                                rel="noopener noreferrer"
+                                onClick={() =>
+                                  setIsMobileMenuOpen(false)
+                                }
+                                className="block px-3 py-3 text-[13px] text-gray-700"
+                              >
+                                {sub.name}
+                              </a>
+
+                            ) : (
+
+                              <Link
+                                to={sub.href}
+                                onClick={() =>
+                                  setIsMobileMenuOpen(false)
+                                }
+                                className="block px-3 py-3 text-[13px] text-gray-700"
+                              >
+                                {sub.name}
+                              </Link>
+
+                            )
+
+                          )}
+
+
+                          {/* Third Level */}
+                          {hasChildren && subOpen && (
+                            <div className="ml-3 mb-2 border-l-2 border-blue-100">
+
+                              {sub.submenu.map((child: any) => (
+
+                                child.target ? (
+
+                                  <a
+                                    key={child.name}
+                                    href={child.href}
+                                    target={child.target}
+                                    rel="noopener noreferrer"
+                                    onClick={() =>
+                                      setIsMobileMenuOpen(false)
+                                    }
+                                    className="block px-4 py-2 text-[12px] text-gray-600"
+                                  >
+                                    {child.name}
+                                  </a>
+
+                                ) : (
+
+                                  <Link
+                                    key={child.name}
+                                    to={child.href}
+                                    onClick={() =>
+                                      setIsMobileMenuOpen(false)
+                                    }
+                                    className="block px-4 py-2 text-[12px] text-gray-600"
+                                  >
+                                    {child.name}
+                                  </Link>
+
+                                )
+
+                              ))}
+
+                            </div>
+                          )}
+
+                        </div>
+                      );
+                    })}
+
+                  </div>
+                )}
+
               </div>
-            </div>
-          )}
+            );
+          })}
+
+      </div>
+
+
+      {/* Apply Now */}
+      <Link
+        to="/admissions/process"
+        onClick={() => setIsMobileMenuOpen(false)}
+        className="mt-5 flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold"
+      >
+        <GraduationCap className="w-5 h-5" />
+        Apply Now
+      </Link>
+
+
+      {/* Contact */}
+      <div className="mt-5 p-4 rounded-xl bg-[#163B72] text-white">
+
+        <p className="text-xs text-white/60 mb-2">
+          CONTACT
+        </p>
+
+        <a
+          href="tel:+917273901234"
+          className="flex items-center gap-2 text-sm mb-2"
+        >
+          <Phone className="w-4 h-4 text-cyan-300" />
+          +91 72739 01234
+        </a>
+
+        <a
+          href="tel:+917274901234"
+          className="flex items-center gap-2 text-sm"
+        >
+          <Phone className="w-4 h-4 text-cyan-300" />
+          +91 72749 01234
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+)}
         </nav>
       </>
     );
@@ -2099,7 +2388,7 @@ max-w-3xl
   }
     return (
       <div className="min-h-screen bg-white">
-        <Navigation />
+      {!window.location.pathname.startsWith("/admin") && <Navigation />}
 
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -2210,6 +2499,12 @@ max-w-3xl
   path="/academics/add-on"
   element={<AddOnPrograms />}
 />
+<Route path="/admin" element={<Login />} />
+
+<Route path="/admin/dashboard" element={<Dashboard />} />
+<Route path="/admin/add-news" element={<AddNews />} />
+
+<Route path="/admin/manage-news" element={<ManageNews />} />
 <Route
   path="/admissions/process"
   element={<AdmissionProcess />}
@@ -2217,10 +2512,12 @@ max-w-3xl
   //Gallery
   <Route path="/gallery" element={<Gallery />} />
   <Route path="/gallery/:folder" element={<GalleryAlbum />} />
-        </Routes>
+   </Routes>
 
-        <Footer />
-        {showTopButton && (
+{!window.location.pathname.startsWith("/admin") && <Footer />}
+
+{!window.location.pathname.startsWith("/admin") &&
+showTopButton && (
 
     <button
       onClick={scrollToTop}
