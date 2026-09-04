@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MadhaDentalAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0e9631b4c7e71ccd840a108459ca3859a9db173")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9e126a6d8f222c608e2e9f84facc6123417e5a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MadhaDentalAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MadhaDentalAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

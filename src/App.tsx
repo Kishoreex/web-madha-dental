@@ -1,6 +1,6 @@
   import { useState, useEffect } from 'react';
   import ConservativeDentistry from "./pages/departments/ConservativeDentistry";
-  import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
   import { IMAGES } from "./data/images";
   import AOS from "aos";
   import "aos/dist/aos.css";
@@ -82,6 +82,9 @@ import Seminars from "./pages/research/Seminars";
   // Navigation Component
   const Navigation = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
+const isHospitalPage = location.pathname === "/hospital/services";
+const isGalleryPage = location.pathname === "/gallery" || location.pathname.startsWith("/gallery/");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -576,9 +579,9 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
             target={item.target}
             rel="noopener noreferrer"
      className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-              isScrolled
-                ? "text-gray-800 hover:text-blue-700"
-                : "text-white hover:text-cyan-300"
+   isScrolled || isHospitalPage || isGalleryPage
+  ? "text-black hover:text-blue-700"
+  : "text-white hover:text-cyan-300"
             }`}
           >
             {item.name}
@@ -588,9 +591,9 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
           <Link
             to={item.href}
 className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-              isScrolled
-                ? "text-gray-800 hover:text-blue-700"
-                : "text-white hover:text-cyan-300"
+            isScrolled || isHospitalPage || isGalleryPage
+  ? "text-black hover:text-blue-700"
+  : "text-white hover:text-cyan-300"
             }`}
           >
             {item.name}
@@ -756,9 +759,9 @@ style={{
 <div className="flex flex-col -ml-2">
 <h1
   className={`uppercase transition-all duration-500 ${
-    isScrolled
-      ? "text-[#163B72] text-[23px]"
-      : "text-white text-[23px]"
+isScrolled || isHospitalPage || isGalleryPage
+  ? "text-black text-[23px]"
+  : "text-white text-[23px]"
   }`}
   style={{
     fontFamily: "'Cinzel', serif",
@@ -779,9 +782,9 @@ style={{
 </div>
 <p
   className={`uppercase transition-all duration-500 ${
-    isScrolled
-      ? "text-[#6B7280] text-[12px]"
-      : "text-white text-[12px]"
+isScrolled || isHospitalPage || isGalleryPage
+  ? "text-black text-[12px]"
+  : "text-white text-[12px]"
   }`}
   style={{
     fontFamily: "'Inter', sans-serif",
@@ -1329,16 +1332,26 @@ max-w-3xl
      <section id="about" className="pt-24 pb-8 bg-gradient-to-b from-white to-neutral-50">
       <div className="max-w-[1600px] mx-auto px-4 lg:px-6">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="badge mb-4">About MDCH</div>
-            <h2 className="heading-2 text-neutral-900 mb-4">
-              A Legacy of Dental <span className="gradient-text">Excellence</span>
-            </h2>
-            <p className="body-large max-w-2xl mx-auto">
-              Madha Dental College & Hospital is a premier dental institution affiliated to
-              The Tamil Nadu Dr.M.G.R. Medical University and recognized by the Dental Council of India.
-            </p>
-          </div>
+         <div
+  className="text-center mb-14"
+  data-aos="fade-up"
+>
+  <p className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">
+    About MDCH
+  </p>
+
+  <h2 className="font-['Cormorant_Garamond'] text-[32px] font-semibold leading-tight tracking-[-0.01em] text-neutral-900 sm:text-[52px] lg:text-[45px]">
+    A Legacy of Dental Excellence
+  </h2>
+
+  <div className="mx-auto mt-5 mb-6 h-[2px] w-14 bg-blue-700" />
+
+  <p className="mx-auto max-w-3xl font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[20px]">
+    Madha Dental College &amp; Hospital is a premier dental institution
+    affiliated to The Tamil Nadu Dr.M.G.R. Medical University and
+    recognized by the Dental Council of India.
+  </p>
+</div>
 
           {/* Main Content Grid */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -1390,7 +1403,7 @@ max-w-3xl
                 </div>
                 <div>
                   <h3 className="heading-4 text-neutral-900 mb-2">Our Vision</h3>
-                  <p className="text-neutral-600 leading-relaxed">
+                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                     Madha Dental College and Hospital is committed to foster students with an updated
                     knowledge of recent technological advances and state-of-art dental skills to provide
                     comprehensive quality oral healthcare to all patients including the underprivileged
@@ -1405,7 +1418,7 @@ max-w-3xl
                 </div>
                 <div>
                   <h3 className="heading-4 text-neutral-900 mb-2">Our Mission</h3>
-                  <p className="text-neutral-600 leading-relaxed">
+                    <p className="text-neutral-600 leading-relaxed">
                     To produce competent dental professionals who demonstrate the highest quality of
                     clinical care, ethical conduct, and professional behavior. We aim to serve the
                     community with compassion while advancing dental science through research and innovation.
@@ -1439,8 +1452,12 @@ max-w-3xl
           </div>
 
           {/* Timeline */}
-          <div className="relative py-6">
-            <h3 className="heading-3 text-center mb-12">Our Journey Through Time</h3>
+          <div className="relative py-2">
+<h3
+  className="text-center mb-12 text-black font-['Montserrat'] font-extrabold text-[34px] tracking-[0.01em]"
+>
+  Our Journey Through Time
+</h3>
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-medical-blue via-medical-sky to-medical-blue hidden md:block" />
@@ -1474,7 +1491,7 @@ max-w-3xl
         <div className="overflow-hidden leading-none">
     <svg
       viewBox="0 0 1440 120"
-      className="w-full h-16 lg:h-24 fill-neutral-50"
+className="w-full h-6 lg:h-8 fill-neutral-50"
       preserveAspectRatio="none"
     >
       <path d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,120L0,120Z" />
@@ -1533,11 +1550,11 @@ max-w-3xl
     ];
 
     return (
-   <section id="programs" className="pt-12 pb-24 bg-white">
+<section id="programs" className="pt-6 pb-10 bg-white">
         <div className="container-custom">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="badge mb-4">Academic Programs</div>
+            <div   className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">Academic Programs</div>
             <h2 className="heading-2 text-neutral-900 mb-4">
               World-Class <span className="gradient-text">Dental Education</span>
             </h2>
@@ -1645,11 +1662,11 @@ max-w-3xl
     : departments.slice(0, 9);
 
     return (
-      <section id="departments" className="section-padding bg-neutral-50">
+<section id="departments" className="pt-10 pb-4 bg-neutral-50">
         <div className="container-custom">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="badge mb-4">Departments</div>
+            <div className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">Departments</div>
             <h2 className="heading-2 text-neutral-900 mb-4">
               Academic <span className="gradient-text">Departments</span>
             </h2>
@@ -1686,7 +1703,7 @@ max-w-3xl
             ))}
           </div>
         </div>
-        <div className="mt-10 text-center">
+       <div className="mt-6 text-center">
     {!showAll && (
       <button
         onClick={() => setShowAll(true)}
@@ -1701,118 +1718,7 @@ max-w-3xl
   };
 
   // Hospital Section
-  const HospitalSection = () => {
-    const services = [
-      { title: 'Dental Specialties', icon: <Stethoscope />, description: '300+ dental chairs across all specialties' },
-      { title: 'Diagnostic Services', icon: <Scan />, description: 'Digital radiology and advanced imaging' },
-      { title: 'Emergency Care', icon: <Activity />, description: '24/7 dental emergency services' },
-      { title: 'Operation Theatre', icon: <Syringe />, description: 'Modern surgical facilities' },
-      { title: 'Advanced Equipment', icon: <Microscope />, description: 'State-of-the-art dental technology' },
-      { title: 'Patient Care', icon: <Heart />, description: 'Compassionate care for all patients' },
-    ];
 
-    const stats = [
-      { value: '300+', label: 'Dental Chairs' },
-      { value: '100+', label: 'Expert Doctors' },
-      { value: '40,000+', label: 'Patients Annually' },
-      { value: '24/7', label: 'Emergency Care' },
-    ];
-
-    return (
-      <section id="hospital" className="section-padding bg-white">
-        <div className="container-custom">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="badge mb-4">Hospital Services</div>
-            <h2 className="heading-2 text-neutral-900 mb-4">
-              Advanced <span className="gradient-text">Healthcare Services</span>
-            </h2>
-            <p className="body-large max-w-2xl mx-auto">
-              Madha Dental College and Hospital stands as a contemporary, multi-specialty dental
-              institution offering comprehensive oral health care services.
-            </p>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, idx) => (
-            <div
-    data-aos="zoom-in"
-    data-aos-delay={idx * 120}key={idx} className="text-center p-6 bg-gradient-to-br from-medical-blue/5 to-medical-sky/5 rounded-2xl border border-medical-blue/10">
-              <div className="text-3xl lg:text-4xl font-bold text-medical-blue mb-2">
-
-    {stat.value === "300+" && (
-      <>
-        <CountUp
-          end={300}
-          duration={2}
-          enableScrollSpy
-          scrollSpyOnce
-        />
-        +
-      </>
-    )}
-
-    {stat.value === "100+" && (
-      <>
-        <CountUp
-          end={100}
-          duration={2}
-          enableScrollSpy
-          scrollSpyOnce
-        />
-        +
-      </>
-    )}
-
-    {stat.value === "40,000+" && (
-      <>
-        <CountUp
-          end={40000}
-          separator=","
-          duration={3}
-          enableScrollSpy
-          scrollSpyOnce
-        />
-        +
-      </>
-    )}
-
-    {stat.value === "24/7" && "24/7"}
-
-  </div>
-                <div className="text-neutral-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, idx) => (
-      <div
-        data-aos="flip-left"
-        data-aos-delay={idx * 120} key={idx} className="glass-card p-6 card-hover">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-medical-blue to-medical-sky flex items-center justify-center text-white mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="font-semibold text-neutral-900 mb-2">{service.title}</h3>
-                <p className="text-neutral-600 text-sm">{service.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-12 text-center">
-            <a href="#contact" className="premium-button">
-              <span className="flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                Book an Appointment
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-    );
-  };
 
   // Admissions Section
   const AdmissionsSection = () => {
@@ -1839,11 +1745,11 @@ max-w-3xl
     ];
 
     return (
-      <section id="admissions" className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+<section id="admissions" className="pt-8 pb-6 bg-gradient-to-b from-neutral-50 to-white">
         <div className="container-custom">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="badge mb-4">Admissions 2026</div>
+         <div className="text-center mb-10">
+            <div   className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">Admissions 2026</div>
             <h2 className="heading-2 text-neutral-900 mb-4">
               Begin Your <span className="gradient-text">Dental Journey</span>
             </h2>
@@ -1974,11 +1880,11 @@ max-w-3xl
     ];
 
     return (
-      <section id="campus" className="section-padding bg-white">
+ <section id="campus" className="pt-8 pb-6 bg-white">
         <div className="container-custom">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="badge mb-4">Campus Life</div>
+            <div   className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">Campus Life</div>
             <h2 className="heading-2 text-neutral-900 mb-4">
               Life at <span className="gradient-text">MDCH</span>
             </h2>
@@ -2006,7 +1912,7 @@ max-w-3xl
           </div>
 
           {/* Image Gallery Preview */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
             {[IMAGES.banner1, IMAGES.banner2, IMAGES.banner3, IMAGES.heroBanner].map((img, idx) => (
               <div key={idx} className="relative rounded-xl overflow-hidden group cursor-pointer aspect-video">
                 <img src={img} alt={`Campus ${idx + 1}`} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
@@ -2037,11 +1943,11 @@ max-w-3xl
     };
 
     return (
-      <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="pt-8 pb-16 bg-white">
         <div className="container-custom">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="badge mb-4">Contact Us</div>
+            <div  className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">Contact Us</div>
             <h2 className="heading-2 text-neutral-900 mb-4">
               Get in <span className="gradient-text">Touch</span>
             </h2>
@@ -2318,7 +2224,7 @@ max-w-3xl
         <AboutSection />
         <ProgramsSection />
         <DepartmentsSection />
-        <HospitalSection />
+
         <AdmissionsSection />
       
         <CampusLifeSection />

@@ -5,8 +5,7 @@ export default function HospitalServices() {
     <div className="bg-white">
 
       {/* Header */}
-
-      <section className="pt-12 pb-8">
+<section className="pt-24 pb-8">
 
         <div className="max-w-5xl mx-auto px-6">
 
