@@ -15,6 +15,9 @@ import ManageNews from "./admin/pages/ManageNews";
   import Departments from "./pages/departments/Departments";
   import OralMedicine from "./pages/departments/OralMedicine";
   import PediatricDentistry from "./pages/departments/PediatricDentistry";
+import OralPathology from "./pages/departments/OralPathology";
+import Periodontology from "./pages/departments/Periodontology";
+import PublicHealthDentistry from "./pages/departments/PublicHealthDentistry";
   import {
     Menu, X, Phone, Mail, MapPin, Clock, ChevronDown, ChevronRight,
     Award, Users, BookOpen, Stethoscope, GraduationCap, Building2, Microscope,
@@ -271,10 +274,10 @@ const isDepartmentPage =
         name: 'Oral and Maxillofacial Surgery',
         href: '#dept-oral-surgery',
       },
-      {
-        name: 'Oral Pathology and Oral Microbiology',
-        href: '#dept-oral-pathology',
-      },
+{
+  name: 'Oral Pathology & Microbiology',
+  href: '/departments/oral-pathology',
+},
       {
         name: 'Orthodontics and Dentofacial Orthopedics',
         href: '#dept-orthodontics',
@@ -626,7 +629,7 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
             {item.submenu.map((sub: any) => (
 <div
   key={sub.name}
-  className="relative group/sub"
+    className="relative group/sub"
 >
                 {sub.target ? (
                   <a
@@ -1714,10 +1717,15 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
              <div className="mt-4 pt-4 border-t border-neutral-100 opacity-0 group-hover:opacity-100 transition-opacity">
 <Link
   to={
-    dept.name === "Conservative Dentistry & Endodontics"
-      ? "/departments/conservative-dentistry"
+    dept.name === "Oral Pathology & Microbiology"
+      ? "/departments/oral-pathology"
+
+   : dept.name === "Public Health Dentistry"
+      ? "/departments/public-health-dentistry"
       : dept.name === "Oral Medicine & Radiology"
       ? "/departments/oral-medicine"
+      : dept.name === "Periodontology"
+      ? "/departments/periodontology"
       : dept.name === "Pediatric & Preventive Dentistry"
       ? "/departments/pediatric-dentistry"
       : "#"
@@ -2439,10 +2447,19 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
 <Route path="/admin/add-news" element={<AddNews />} />
 <Route path="/departments" element={<Departments />} />
 
-  <Route
-    path="/departments/conservative-dentistry"
-    element={<ConservativeDentistry />}
-  />
+<Route
+  path="/departments/oral-pathology"
+  element={<OralPathology />}
+/>
+
+<Route
+  path="/departments/periodontology"
+  element={<Periodontology />}
+/>
+<Route
+  path="/departments/public-health-dentistry"
+  element={<PublicHealthDentistry />}
+/>
 <Route
   path="/departments/oral-medicine"
   element={<OralMedicine />}
