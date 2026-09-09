@@ -12,6 +12,9 @@ import Dashboard from "./admin/pages/Dashboard";
 import AddNews from "./admin/pages/AddNews";
 import ManageNews from "./admin/pages/ManageNews";
   //Menu 
+  import Departments from "./pages/departments/Departments";
+  import OralMedicine from "./pages/departments/OralMedicine";
+  import PediatricDentistry from "./pages/departments/PediatricDentistry";
   import {
     Menu, X, Phone, Mail, MapPin, Clock, ChevronDown, ChevronRight,
     Award, Users, BookOpen, Stethoscope, GraduationCap, Building2, Microscope,
@@ -84,7 +87,16 @@ import Seminars from "./pages/research/Seminars";
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
 const isHospitalPage = location.pathname === "/hospital/services";
-const isGalleryPage = location.pathname === "/gallery" || location.pathname.startsWith("/gallery/");
+
+const isGalleryPage =
+  location.pathname === "/gallery" ||
+  location.pathname.startsWith("/gallery/");
+
+const isDepartmentPage =
+  location.pathname === "/departments" ||
+  location.pathname.startsWith("/departments/");
+
+
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -155,11 +167,7 @@ const isGalleryPage = location.pathname === "/gallery" || location.pathname.star
     {
       name: "Admission Process",
       href: "/admissions/process",
-    },
-
-  
-
-  
+    }, 
 
     {
       name: "Brochure",
@@ -254,10 +262,11 @@ const isGalleryPage = location.pathname === "/gallery" || location.pathname.star
         name: 'Prosthodontics',
         href: '#dept-prosthodontics',
       },
-      {
-        name: 'Oral Medicine and Radiology',
-        href: '#dept-oral-medicine',
-      },
+{
+  name: 'Oral Medicine and Radiology',
+  href: '/departments/oral-medicine',
+ 
+},
       {
         name: 'Oral and Maxillofacial Surgery',
         href: '#dept-oral-surgery',
@@ -572,34 +581,44 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
         key={item.name}
         className="relative group"
       >
-        {/* Main Menu */}
-        {item.target ? (
-          <a
-            href={item.href}
-            target={item.target}
-            rel="noopener noreferrer"
-     className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-   isScrolled || isHospitalPage || isGalleryPage
-  ? "text-black hover:text-blue-700"
-  : "text-white hover:text-cyan-300"
-            }`}
-          >
-            {item.name}
-            {item.submenu && <ChevronDown className="w-3.5 h-3.5" />}
-          </a>
-        ) : (
-          <Link
-            to={item.href}
-className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-            isScrolled || isHospitalPage || isGalleryPage
-  ? "text-black hover:text-blue-700"
-  : "text-white hover:text-cyan-300"
-            }`}
-          >
-            {item.name}
-            {item.submenu && <ChevronDown className="w-4 h-4" />}
-          </Link>
-        )}
+      {/* Main Menu */}
+{item.submenu ? (
+  <button
+    type="button"
+    className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
+      isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
+        ? "text-black hover:text-blue-700"
+        : "text-white hover:text-cyan-300"
+    }`}
+  >
+    {item.name}
+    <ChevronDown className="w-4 h-4" />
+  </button>
+) : item.target ? (
+  <a
+    href={item.href}
+    target={item.target}
+    rel="noopener noreferrer"
+    className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
+      isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
+        ? "text-black hover:text-blue-700"
+        : "text-white hover:text-cyan-300"
+    }`}
+  >
+    {item.name}
+  </a>
+) : (
+  <Link
+    to={item.href}
+    className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
+      isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
+        ? "text-black hover:text-blue-700"
+        : "text-white hover:text-cyan-300"
+    }`}
+  >
+    {item.name}
+  </Link>
+)}
 
         {/* Dropdown */}
         {item.submenu && (
@@ -620,15 +639,16 @@ className="flex justify-between items-center px-2.5 py-1.5 text-[13px] font-medi
                     {sub.submenu && <ChevronRight className="w-3.5 h-3.5" />}
                   </a>
                 ) : (
-                  <Link
-                    to={sub.href}
-                   className="flex justify-between items-center px-2.5 py-1.5 text-[13px] hover:bg-blue-50 text-gray-700"
-                  >
-                    {sub.name}
-                    {sub.submenu && <ChevronRight className="w-3.5 h-3.5" />}
-                  </Link>
-                )}
-
+  <a
+    href={sub.href}
+    onClick={(e) => {
+      e.stopPropagation();
+    }}
+    className="block w-full px-3 py-2 text-[13px] font-medium font-['Manrope'] text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-200 whitespace-nowrap cursor-pointer"
+  >
+    {sub.name}
+  </a>
+)}
                 {/* Third Level */}
                {sub.submenu && (
   <div className="absolute right-full top-0 mr-1 hidden group-hover/sub:block bg-white rounded-xl shadow-xl min-w-[220px] py-1.5 border border-gray-100 z-[999]">
@@ -759,7 +779,7 @@ style={{
 <div className="flex flex-col -ml-2">
 <h1
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isGalleryPage
+isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
   ? "text-black text-[23px]"
   : "text-white text-[23px]"
   }`}
@@ -782,7 +802,7 @@ isScrolled || isHospitalPage || isGalleryPage
 </div>
 <p
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isGalleryPage
+isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
   ? "text-black text-[12px]"
   : "text-white text-[12px]"
   }`}
@@ -1691,14 +1711,22 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
                     <p className="text-sm text-neutral-600">{dept.description}</p>
                   </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-neutral-100 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Link
-    to="/departments/conservative-dentistry"
-    className="text-sm text-medical-blue font-medium flex items-center gap-2 hover:gap-3 transition-all"
-  >
-    Explore Department <ArrowRight className="w-4 h-4" />
-  </Link>
-                </div>
+             <div className="mt-4 pt-4 border-t border-neutral-100 opacity-0 group-hover:opacity-100 transition-opacity">
+<Link
+  to={
+    dept.name === "Conservative Dentistry & Endodontics"
+      ? "/departments/conservative-dentistry"
+      : dept.name === "Oral Medicine & Radiology"
+      ? "/departments/oral-medicine"
+      : dept.name === "Pediatric & Preventive Dentistry"
+      ? "/departments/pediatric-dentistry"
+      : "#"
+  }
+  className="text-sm text-medical-blue font-medium flex items-center gap-2 hover:gap-3 transition-all"
+>
+  Explore Department <ArrowRight className="w-4 h-4" />
+</Link>
+</div>
               </div>
             ))}
           </div>
@@ -2409,6 +2437,20 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
 
 <Route path="/admin/dashboard" element={<Dashboard />} />
 <Route path="/admin/add-news" element={<AddNews />} />
+<Route path="/departments" element={<Departments />} />
+
+  <Route
+    path="/departments/conservative-dentistry"
+    element={<ConservativeDentistry />}
+  />
+<Route
+  path="/departments/oral-medicine"
+  element={<OralMedicine />}
+/>
+<Route
+  path="/departments/pediatric-dentistry"
+  element={<PediatricDentistry />}
+/>
 
 <Route path="/admin/manage-news" element={<ManageNews />} />
 <Route
