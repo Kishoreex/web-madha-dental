@@ -18,6 +18,9 @@ import ManageNews from "./admin/pages/ManageNews";
 import OralPathology from "./pages/departments/OralPathology";
 import Periodontology from "./pages/departments/Periodontology";
 import PublicHealthDentistry from "./pages/departments/PublicHealthDentistry";
+import OralMaxillofacialSurgery from "./pages/departments/OralSurgery";
+
+import BasicMedicalSciences from "./pages/departments/BasicMedicalSciences";
   import {
     Menu, X, Phone, Mail, MapPin, Clock, ChevronDown, ChevronRight,
     Award, Users, BookOpen, Stethoscope, GraduationCap, Building2, Microscope,
@@ -272,7 +275,7 @@ const isDepartmentPage =
 },
       {
         name: 'Oral and Maxillofacial Surgery',
-        href: '#dept-oral-surgery',
+        href: '/departments/oral-surgery',
       },
 {
   name: 'Oral Pathology & Microbiology',
@@ -284,11 +287,11 @@ const isDepartmentPage =
       },
 
       // Last Item
-      {
-        name: 'View All Departments →',
-        href: '#departments',
-        isViewAll: true,
-      },
+    {
+  name: 'View All Departments →',
+  href: '/departments',
+  isViewAll: true,
+},
     ],
   },
       { name: 'Hospital', href: "/hospital/services", },
@@ -1719,7 +1722,9 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
   to={
     dept.name === "Oral Pathology & Microbiology"
       ? "/departments/oral-pathology"
-
+: dept.name === "Oral & Maxillofacial Surgery"
+  ? "/departments/oral-surgery"
+      
    : dept.name === "Public Health Dentistry"
       ? "/departments/public-health-dentistry"
       : dept.name === "Oral Medicine & Radiology"
@@ -1728,6 +1733,8 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
       ? "/departments/periodontology"
       : dept.name === "Pediatric & Preventive Dentistry"
       ? "/departments/pediatric-dentistry"
+        : dept.name === "Basic Medical Sciences"
+  ? "/departments/basic-medical-sciences"
       : "#"
   }
   className="text-sm text-medical-blue font-medium flex items-center gap-2 hover:gap-3 transition-all"
@@ -2407,6 +2414,14 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
     element={<BDS />}
 
     
+/>
+<Route
+  path="/departments/oral-surgery"
+  element={<OralMaxillofacialSurgery />}
+/>
+<Route
+  path="/departments/basic-medical-sciences"
+  element={<BasicMedicalSciences />}
 />
 <Route
   path="/affiliation/iso"

@@ -13,7 +13,7 @@ export default function HospitalServices() {
             className="text-center mb-12"
             data-aos="fade-up"
           >
-            <span className="badge mb-4">
+            <span className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">
               Hospital Services
             </span>
 

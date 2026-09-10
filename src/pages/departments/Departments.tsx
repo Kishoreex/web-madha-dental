@@ -79,7 +79,7 @@ const departments = [
 
 export default function Departments() {
   return (
-    <section id="departments" className="pt-10 pb-10 bg-neutral-50">
+<section id="departments" className="pt-24 pb-10 bg-neutral-50">
       <div className="container-custom">
 
         {/* Section Header */}
