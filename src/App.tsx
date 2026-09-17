@@ -1,5 +1,5 @@
   import { useState, useEffect } from 'react';
-  import ConservativeDentistry from "./pages/departments/ConservativeDentistry";
+
 import { Routes, Route, Link, useLocation } from "react-router-dom";
   import { IMAGES } from "./data/images";
   import AOS from "aos";
@@ -19,6 +19,8 @@ import OralPathology from "./pages/departments/OralPathology";
 import Periodontology from "./pages/departments/Periodontology";
 import PublicHealthDentistry from "./pages/departments/PublicHealthDentistry";
 import OralMaxillofacialSurgery from "./pages/departments/OralSurgery";
+import Prosthodontics from "./pages/departments/Prosthodontics";
+import ConservativeDentistry from "./pages/departments/ConservativeDentistry";
 
 import BasicMedicalSciences from "./pages/departments/BasicMedicalSciences";
   import {
@@ -265,9 +267,9 @@ const isDepartmentPage =
     href: '/departments/conservative-dentistry',
   },
       {
-        name: 'Prosthodontics',
-        href: '#dept-prosthodontics',
-      },
+  name: 'Prosthodontics',
+  href: '/departments/prosthodontics',
+},
 {
   name: 'Oral Medicine and Radiology',
   href: '/departments/oral-medicine',
@@ -1724,7 +1726,8 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
       ? "/departments/oral-pathology"
 : dept.name === "Oral & Maxillofacial Surgery"
   ? "/departments/oral-surgery"
-      
+     : dept.name === "Conservative Dentistry and Endodontics"
+  ? "/departments/conservative-dentistry"
    : dept.name === "Public Health Dentistry"
       ? "/departments/public-health-dentistry"
       : dept.name === "Oral Medicine & Radiology"
@@ -1735,6 +1738,9 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
       ? "/departments/pediatric-dentistry"
         : dept.name === "Basic Medical Sciences"
   ? "/departments/basic-medical-sciences"
+
+    : dept.name === "Prosthodontics"
+  ? "/departments/prosthodontics"
       : "#"
   }
   className="text-sm text-medical-blue font-medium flex items-center gap-2 hover:gap-3 transition-all"
@@ -2420,6 +2426,10 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
   element={<OralMaxillofacialSurgery />}
 />
 <Route
+  path="/departments/conservative-dentistry"
+  element={<ConservativeDentistry />}
+/>
+<Route
   path="/departments/basic-medical-sciences"
   element={<BasicMedicalSciences />}
 />
@@ -2474,6 +2484,10 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
 <Route
   path="/departments/public-health-dentistry"
   element={<PublicHealthDentistry />}
+/>
+<Route
+  path="/departments/prosthodontics"
+  element={<Prosthodontics />}
 />
 <Route
   path="/departments/oral-medicine"
