@@ -1165,6 +1165,35 @@ isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
     );
   };
 
+  // Scroll to top whenever the page/route changes
+const ScrollToTop = () => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.substring(1);
+
+      setTimeout(() => {
+        const element = document.getElementById(id);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 50);
+    } else {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+    }
+  }, [pathname, hash]);
+
+  return null;
+};
   // Hero Section
   const HeroSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -1203,8 +1232,8 @@ isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
 
     return (
 <section
-id="home"
-className="relative min-h-screen flex items-center overflow-hidden pt-28"
+  id="home"
+  className="relative min-h-[100svh] lg:min-h-screen flex items-center overflow-hidden pt-20 lg:pt-28"
 >
         {/* Background Slider */}
         <div className="absolute inset-0">
@@ -1236,15 +1265,17 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
 
         {/* Content */}
 <div
-className="container-custom relative z-10 pt-24 pb-16 lg:pt-32 lg:pb-20"
+  className="container-custom relative z-10 pt-16 pb-12 lg:pt-32 lg:pb-20"
     style={{
       transform: `translateY(${scrollY * 0.2}px)`,
       opacity: Math.max(1 - scrollY / 600, 0),
     }}
   >
 <div className="max-w-5xl lg:-ml-32 xl:-ml-40 2xl:-ml-48">
-            {/* Badge */}<div className="hero-reveal inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-xs mb-4"><Sparkles className="w-4 h-4 text-accent-gold" />
-              <span>DCI Recognized | TN Dr.M.G.R Medical University Affiliated</span>
+            {/* Badge */}<div className="hero-reveal inline-flex items-center gap-2 px-3 py-2 lg:py-1.5 bg-white/10 backdrop-blur-md rounded-2xl lg:rounded-full text-white/90 text-[11px] lg:text-xs mb-4 max-w-full"><Sparkles className="w-4 h-4 text-accent-gold" />
+           <span className="leading-5">
+  DCI Recognized | TN Dr.M.G.R Medical University Affiliated
+</span>
             </div>
 
             {/* Headline */}
@@ -1257,7 +1288,8 @@ text-white
 leading-tight
 tracking-tight
 mb-4
-text-3xl
+text-[34px]
+leading-[1.08]
 md:text-4xl
 xl:text-[48px]
 2xl:text-[52px]
@@ -1269,7 +1301,7 @@ max-w-3xl
             </h1>
 
             {/* Subheadline */}
-          <p className="hero-reveal delay-2 text-base lg:text-lg text-white/90 mb-6 max-w-xl">
+     <p className="hero-reveal delay-2 text-[15px] leading-6 lg:text-lg lg:leading-relaxed text-white/90 mb-5 lg:mb-6 max-w-xl">
               Delivering world-class dental education, advanced clinical training, innovative research,
               and compassionate healthcare since 2006. Join Tamil Nadu's premier dental institution.
             </p>
@@ -1279,11 +1311,11 @@ max-w-3xl
             {/* Stats */}
           <div
     ref={ref}
-    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 animate-slide-up animate-delay-500"
+  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5 lg:gap-3 animate-slide-up animate-delay-500"
   >
               {stats.map((stat, index) => (
-                <div key={index} className="text-center p-2.5 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="text-xl lg:text-2xl font-bold text-white mb-1">
+                <div key={index} className="text-center p-3 lg:p-2.5 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                <div className="text-[25px] lg:text-2xl font-bold text-white mb-1">
 
     {stat.value === "17+" && (
       <>
@@ -1316,7 +1348,7 @@ max-w-3xl
     )}
 
   </div>
-                  <div className="text-[11px] text-white/70 leading-tight">{stat.label}</div>
+                  <div className="text-[11px] lg:text-[11px] text-white/70 leading-tight">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -2150,23 +2182,41 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
 
   // Footer
   const Footer = () => {
-    const quickLinks = [
-      { name: 'About Us', href: '#about' },
-      { name: 'Admissions', href: '#admissions' },
-      { name: 'Programs', href: '#programs' },
-      { name: 'Departments', href: '#departments' },
-      { name: 'Hospital', href: '#hospital' },
-      { name: 'Gallery', href: '#gallery' },
-    ];
+const quickLinks = [
+  { name: 'About Us', href: '/about/mdch' },
+  { name: 'Admissions', href: '/admissions/process' },
+  { name: 'Programs', href: '/admissions/bds' },
+  { name: 'Departments', href: '/departments' },
+  { name: 'Hospital', href: '/hospital/services' },
+  { name: 'Gallery', href: '/gallery' },
+];
 
-    const departments = [
-      'Conservative Dentistry',
-      'Prosthodontics',
-      'Orthodontics',
-      'Periodontology',
-      'Oral Surgery',
-      'Pedodontics',
-    ];
+const departments = [
+  {
+    name: 'Conservative Dentistry',
+    href: '/departments/conservative-dentistry',
+  },
+  {
+    name: 'Prosthodontics',
+    href: '/departments/prosthodontics',
+  },
+  {
+    name: 'Orthodontics',
+    href: '/departments/orthodontics',
+  },
+  {
+    name: 'Periodontology',
+    href: '/departments/periodontology',
+  },
+  {
+    name: 'Oral Surgery',
+    href: '/departments/oral-surgery',
+  },
+  {
+    name: 'Pedodontics',
+    href: '/departments/pediatric-dentistry',
+  },
+];
 
     return (
       <footer className="bg-gradient-to-b from-medical-navy to-neutral-900 text-white">
@@ -2200,13 +2250,16 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <div>
               <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {quickLinks.map((link, idx) => (
-                  <li key={idx}>
-                    <a href={link.href} className="text-white/70 hover:text-medical-sky transition-colors">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
+           {quickLinks.map((link, idx) => (
+  <li key={idx}>
+    <Link
+      to={link.href}
+      className="text-white/70 hover:text-medical-sky transition-colors"
+    >
+      {link.name}
+    </Link>
+  </li>
+))}
               </ul>
             </div>
 
@@ -2214,13 +2267,16 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <div>
               <h4 className="font-semibold text-lg mb-6">Departments</h4>
               <ul className="space-y-3">
-                {departments.map((dept, idx) => (
-                  <li key={idx}>
-                    <a href="#departments" className="text-white/70 hover:text-medical-sky transition-colors">
-                      {dept}
-                    </a>
-                  </li>
-                ))}
+        {departments.map((dept, idx) => (
+  <li key={idx}>
+    <Link
+      to={dept.href}
+      className="text-white/70 hover:text-medical-sky transition-colors"
+    >
+      {dept.name}
+    </Link>
+  </li>
+))}
               </ul>
             </div>
 
@@ -2255,10 +2311,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <p className="text-white/50 text-sm text-center md:text-left">
               &copy; 2026 Madha Dental College & Hospital. All Rights Reserved.
             </p>
-            <div className="flex gap-6 text-sm text-white/50">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            </div>
+         
           </div>
         </div>
       </footer>
@@ -2341,11 +2394,14 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
       </div>
     );
   }
-    return (
-      <div className="min-h-screen bg-white">
-      {!window.location.pathname.startsWith("/admin") && <Navigation />}
+  return (
+  <div className="min-h-screen bg-white">
 
-        <Routes>
+    <ScrollToTop />
+
+    {!window.location.pathname.startsWith("/admin") && <Navigation />}
+
+    <Routes>
           <Route path="/" element={<HomePage />} />
           //iiaq
           <Route
