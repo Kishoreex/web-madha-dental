@@ -77,7 +77,7 @@ export default function Trust() {
               </span>
             </h2>
 
-            <p className="body-large text-neutral-600 max-w-3xl mx-auto">
+               <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
               The Trust has been transforming lives through quality
               education, social commitment and academic excellence
               since 1996.
@@ -96,14 +96,14 @@ export default function Trust() {
 
             <div className="space-y-6 text-[17px] leading-8 text-slate-600 text-justify">
 
-              <p>
+                 <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 Soosaiya Peter Educational Trust was founded by the
                 philanthropist and business tycoon Dr. S. Peter on
                 October 3, 1996 in Chennai. This is a registered
                 self-financing Christian Minority Trust.
               </p>
 
-              <p>
+                 <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 The Soosaiya Peter Educational Trust under the inspiring
                 leadership of Dr. S. Peter, Founder and Chairman of
                 Madha Group of Institutions, has made remarkable strides
@@ -111,32 +111,32 @@ export default function Trust() {
                 sense of social commitment.
               </p>
 
-              <p>
+           <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 Over the years, the Madha Group has extended its wings
                 in Engineering, Management, Medicine, Dentistry,
                 Paramedicine, Education and Arts & Science.
               </p>
 
-              <p>
+                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 Today the Trust proudly manages a cluster of
                 institutions offering courses in Engineering,
                 Management, Medical, Dental, Paramedical and Education.
               </p>
 
-              <p>
+                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 Madha Dental College, Madha College of Nursing, Madha
                 College of Physiotherapy and Madha Institute of
                 Engineering & Technology have been rendering excellent
                 service to students helping them achieve their dreams.
               </p>
 
-              <p>
+                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 Recognizing the notable service rendered in education,
                 the Mother Teresa Excellence Award for the year 2006 was
                 awarded to Founder Chairman Dr. S. Peter.
               </p>
 
-              <p>
+                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 The phenomenal growth of the Trust reflects its
                 unwavering commitment towards educational excellence,
                 innovation and social responsibility.

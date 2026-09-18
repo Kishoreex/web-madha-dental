@@ -1517,37 +1517,47 @@ max-w-3xl
           </div>
 
        {/* Floating Bubble Journey */}
+{/* Floating Bubble Journey */}
 <div className="relative py-10">
 
   {/* Heading */}
-  <div className="text-center mb-14">
-    <h3 className="font-['Montserrat'] text-[30px] sm:text-[36px] font-extrabold text-neutral-900">
-      Our Journey Through Time
+  <div className="text-center mb-16">
+     <h3 className="font-['Cormorant_Garamond'] text-[32px] font-semibold leading-tight tracking-[-0.01em] text-neutral-900 sm:text-[52px] lg:text-[45px]">
+   Our Journey Through Time
     </h3>
 
     <div className="mx-auto mt-4 h-[3px] w-16 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400" />
   </div>
 
-  {/* Journey */}
-  <div className="relative max-w-7xl mx-auto px-2">
+  {/* Journey Area */}
+  <div className="relative max-w-7xl mx-auto px-4">
 
     {/* Connecting Line */}
-    <div className="absolute top-1/2 left-0 right-0 hidden lg:block">
-      <div className="h-[3px] bg-gradient-to-r from-blue-200 via-blue-500 to-cyan-400 rounded-full" />
+    <div className="absolute left-[5%] right-[5%] top-1/2 hidden lg:block -translate-y-1/2 z-0">
+      <div className="h-[2px] bg-gradient-to-r from-blue-200 via-blue-500 to-cyan-400 rounded-full" />
     </div>
 
-    {/* Bubbles */}
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4 items-center">
+    {/* Floating Bubbles */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-5 items-center">
 
       {timelineData.map((item, index) => {
 
-        const positions = [
-          "lg:-translate-y-8",
-          "lg:translate-y-7",
-          "lg:-translate-y-10",
-          "lg:translate-y-8",
-          "lg:-translate-y-7",
-          "lg:translate-y-6",
+        const floatDelays = [
+          "0s",
+          "0.8s",
+          "1.6s",
+          "0.4s",
+          "1.2s",
+          "2s",
+        ];
+
+        const floatDurations = [
+          "4.5s",
+          "5.2s",
+          "4.8s",
+          "5.5s",
+          "4.7s",
+          "5.3s",
         ];
 
         return (
@@ -1555,74 +1565,114 @@ max-w-3xl
             key={index}
             data-aos="zoom-in"
             data-aos-delay={index * 120}
-            className={`relative flex flex-col items-center ${positions[index]}`}
+            className="relative flex justify-center z-10"
           >
 
-            {/* Main Bubble */}
+            {/* Single Floating Bubble */}
             <div
               className="
+                group
                 relative
-                w-[150px] h-[150px]
-                sm:w-[170px] sm:h-[170px]
+                w-[155px]
+                h-[155px]
+                sm:w-[175px]
+                sm:h-[175px]
+                lg:w-[180px]
+                lg:h-[180px]
                 rounded-full
                 bg-white
                 border-[5px]
                 border-blue-100
-                shadow-[0_12px_40px_rgba(37,99,235,0.14)]
-                hover:border-blue-400
-                hover:shadow-[0_18px_50px_rgba(37,99,235,0.22)]
-                hover:-translate-y-2
-                transition-all duration-500
-                flex flex-col items-center justify-center
+                shadow-[0_15px_45px_rgba(37,99,235,0.16)]
+                flex
+                flex-col
+                items-center
+                justify-center
                 text-center
-                z-10
-                px-5
+                px-6
+                transition-all
+                duration-500
+                hover:scale-105
+                hover:border-blue-400
+                hover:shadow-[0_20px_55px_rgba(37,99,235,0.25)]
               "
+          style={{
+  animation: `mdchFloat${index} ${floatDurations[index]} ease-in-out infinite`,
+  animationDelay: floatDelays[index],
+}}
             >
 
-              {/* Year */}
-              <div
-                className="
-                  flex items-center justify-center
-                  w-[58px] h-[58px]
-                  rounded-full
-                  bg-gradient-to-br from-blue-600 to-cyan-400
-                  text-white
+              {/* Glow */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-blue-50 via-white to-cyan-50 opacity-80 group-hover:opacity-100 transition-opacity" />
+
+              {/* Content */}
+              <div className="relative z-10">
+
+                {/* Year */}
+                <div className="
                   font-['Montserrat']
-                  text-[13px]
+                  text-[22px]
+                  sm:text-[25px]
                   font-extrabold
-                  shadow-lg
-                  mb-3
-                "
-              >
-                {item.year}
+                  text-blue-700
+                  leading-none
+                  mb-2
+                ">
+                  {item.year}
+                </div>
+
+                {/* Small Divider */}
+                <div className="mx-auto mb-3 h-[2px] w-8 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400" />
+
+                {/* Title */}
+                <h4 className="
+                  font-['Montserrat']
+                  text-[12px]
+                  sm:text-[13px]
+                  font-extrabold
+                  text-neutral-900
+                  leading-tight
+                  mb-2
+                ">
+                  {item.title}
+                </h4>
+
+                {/* Description */}
+                <p className="
+                  font-['Montserrat']
+                  text-[9px]
+                  sm:text-[10px]
+                  leading-[1.45]
+                  text-neutral-500
+                ">
+                  {item.description}
+                </p>
+
               </div>
 
-              {/* Title */}
-              <h4 className="font-['Montserrat'] text-[12px] sm:text-[13px] font-extrabold text-neutral-900 leading-tight">
-                {item.title}
-              </h4>
+              {/* Small Decorative Dot */}
+              <div className="
+                absolute
+                top-5
+                right-7
+                w-2
+                h-2
+                rounded-full
+                bg-cyan-400
+                opacity-70
+              " />
 
-            </div>
+              <div className="
+                absolute
+                bottom-7
+                left-7
+                w-1.5
+                h-1.5
+                rounded-full
+                bg-blue-400
+                opacity-50
+              " />
 
-            {/* Description Bubble */}
-            <div
-              className="
-                mt-5
-                w-[165px] sm:w-[185px]
-                px-4 py-3
-                rounded-2xl
-                bg-white/90
-                backdrop-blur-sm
-                border border-neutral-100
-                shadow-[0_8px_25px_rgba(0,0,0,0.07)]
-                text-center
-                z-10
-              "
-            >
-              <p className="font-['Montserrat'] text-[11px] sm:text-[12px] leading-5 text-neutral-600">
-                {item.description}
-              </p>
             </div>
 
           </div>
@@ -1630,8 +1680,60 @@ max-w-3xl
       })}
 
     </div>
-
   </div>
+
+  {/* Floating Animation */}
+<style>
+  {`
+    @keyframes mdchFloat0 {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(8px, -14px); }
+      50%  { transform: translate(-5px, -24px); }
+      75%  { transform: translate(-10px, -10px); }
+      100% { transform: translate(0px, 0px); }
+    }
+
+    @keyframes mdchFloat1 {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(-10px, 12px); }
+      50%  { transform: translate(6px, 22px); }
+      75%  { transform: translate(12px, 5px); }
+      100% { transform: translate(0px, 0px); }
+    }
+
+    @keyframes mdchFloat2 {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(10px, -18px); }
+      50%  { transform: translate(-8px, -8px); }
+      75%  { transform: translate(-12px, 15px); }
+      100% { transform: translate(0px, 0px); }
+    }
+
+    @keyframes mdchFloat3 {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(-8px, 15px); }
+      50%  { transform: translate(10px, 25px); }
+      75%  { transform: translate(5px, -8px); }
+      100% { transform: translate(0px, 0px); }
+    }
+
+    @keyframes mdchFloat4 {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(12px, -12px); }
+      50%  { transform: translate(-5px, -26px); }
+      75%  { transform: translate(-10px, 5px); }
+      100% { transform: translate(0px, 0px); }
+    }
+
+    @keyframes mdchFloat5 {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(-12px, 10px); }
+      50%  { transform: translate(7px, 24px); }
+      75%  { transform: translate(10px, -10px); }
+      100% { transform: translate(0px, 0px); }
+    }
+  `}
+</style>
 
 </div>
 
@@ -1698,7 +1800,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <h2 className="heading-2 text-neutral-900 mb-4">
               World-Class <span className="gradient-text">Dental Education</span>
             </h2>
-            <p className="body-large max-w-2xl mx-auto">
+               <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
               Choose from our comprehensive range of undergraduate, postgraduate, and certificate
               programs designed to shape tomorrow's dental professionals.
             </p>
@@ -1811,7 +1913,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <h2 className="heading-2 text-neutral-900 mb-4">
               Academic <span className="gradient-text">Departments</span>
             </h2>
-            <p className="body-large max-w-2xl mx-auto">
+           <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
               State-of-the-art facilities across all dental specializations ensuring comprehensive
               education and patient care.
             </p>
@@ -1917,7 +2019,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <h2 className="heading-2 text-neutral-900 mb-4">
               Begin Your <span className="gradient-text">Dental Journey</span>
             </h2>
-            <p className="body-large max-w-2xl mx-auto">
+          <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
               Join Tamil Nadu's premier dental institution. Follow our streamlined admission process
               to secure your seat.
             </p>
@@ -2052,7 +2154,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <h2 className="heading-2 text-neutral-900 mb-4">
               Life at <span className="gradient-text">MDCH</span>
             </h2>
-            <p className="body-large max-w-2xl mx-auto">
+               <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
               Experience a vibrant campus life with world-class facilities that support both
               academic excellence and personal growth.
             </p>
@@ -2115,7 +2217,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
             <h2 className="heading-2 text-neutral-900 mb-4">
               Get in <span className="gradient-text">Touch</span>
             </h2>
-            <p className="body-large max-w-2xl mx-auto">
+               <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
               Have questions? Our admissions team is here to help you take the first step
               towards your dental career.
             </p>

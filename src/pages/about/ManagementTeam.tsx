@@ -14,7 +14,7 @@ export default function ManagementTeam() {
           {/* Heading */}
 
           <div
-            className="text-center mb-16"
+            className="text-center mb-8"
             data-aos="fade-up"
           >
 
@@ -29,11 +29,11 @@ export default function ManagementTeam() {
               </span>
             </h2>
 
-            <p className="body-large text-neutral-600 max-w-3xl mx-auto mt-6">
-              Our visionary leadership has transformed Madha Group into one of
-              the most respected educational institutions, committed to academic
-              excellence, innovation and service to society.
-            </p>
+        <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px] max-w-4xl mx-auto mt-4">
+  Our visionary leadership has transformed Madha Group into one of the
+  most respected educational institutions, committed to academic excellence,
+  innovation and service to society.
+</p>
 
           </div>
 
@@ -69,34 +69,33 @@ export default function ManagementTeam() {
                   Dr. Ln. S. Peter
                 </h2>
 
-                <p className="text-medical-blue font-semibold mb-8">
+                <p className="text-medical-blue font-semibold mb-5">
                   Madha Group of Academic Institutions
                 </p>
 
                 <div className="space-y-3 text-[17px] leading-8 text-slate-600 text-justify">
 
-                  <p>
+                    <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                     Dr. Ln. S. Peter is one of the early pioneers in the field
                     of education in Tamil Nadu. His educational journey began
                     with the establishment of an Engineering College in the year
                     1995 under the Soosaiya Peter Educational Trust.
                   </p>
 
-                  <p>
+                     <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                     Under his visionary leadership, the Madha Group expanded
                     into several prestigious educational institutions covering
                     Medicine, Dentistry, Physiotherapy, Nursing, Management,
                     Arts & Science along with CBSE and Matriculation schools.
                   </p>
 
-                  <p>
+                      <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                     His commitment towards quality education, discipline,
                     innovation and social responsibility has helped thousands of
                     students achieve academic excellence and successful careers
                     across various professional fields.
                   </p>
-
-                  <p>
+    <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                     Through his inspiring vision and dedication, Madha Group has
                     become one of the leading educational organizations in Tamil
                     Nadu, continuously striving to create future professionals
@@ -142,32 +141,32 @@ export default function ManagementTeam() {
         Ms. Mercy Florence Peter
       </h2>
 
-      <p className="text-medical-blue font-semibold mb-8">
+      <p className="text-medical-blue font-semibold mb-5">
       Madha Group of Academic Institutions
       </p>
 
       <div className="space-y-3 text-[17px] leading-8 text-slate-600 text-justify">
 
-        <p>
+         <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           Ms. Mercy Florence Peter is an engineer by profession,
           having completed her Undergraduate Degree in Electronics
           and Communication Engineering.
         </p>
 
-        <p>
+            <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           She earned her Post Graduate Degree (MS) in Management
           Information Systems from the New Jersey Institute of
           Technology, USA.
         </p>
 
-        <p>
+            <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           With her international academic exposure and modern
           leadership approach, she actively contributes to the
           strategic growth and academic excellence of Madha Group
           of Academic Institutions.
         </p>
 
-        <p>
+        <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           She is committed to promoting innovation, quality
           education, digital transformation and holistic student
           development while strengthening the institution's vision
@@ -213,34 +212,34 @@ export default function ManagementTeam() {
         Mr. Ajay Ravindra Kumar
       </h2>
 
-      <p className="text-medical-blue font-semibold mb-8">
+      <p className="text-medical-blue font-semibold mb-5">
        Madha Group of Academic Institutions
       </p>
 
       <div className="space-y-3 text-[17px] leading-8 text-slate-600 text-justify">
 
-        <p>
+          <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           Mr. Ajay Ravindra Kumar was one of the early employees of
           Tesla Inc., California, USA, where he worked during the
           company's start-up years and gained valuable experience in
           engineering, innovation and technology.
         </p>
 
-        <p>
+        <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           He holds an Undergraduate Degree in Electronics and
           Communication Engineering and a Post Graduate Degree (MS)
           in Information Technology Management from the University
           of Texas at Dallas, USA.
         </p>
 
-        <p>
+        <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           During his tenure at Tesla, he was part of the Engineering
           Team involved in the development of Tesla's revolutionary
           vehicle programs including the Roadster, Model S and
           Model X.
         </p>
 
-        <p>
+        <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
           He has also completed his Bachelor's Degree in Law (LL.B)
           from The Tamil Nadu Dr. Ambedkar Law University. His
           leadership combines global industrial expertise, innovation
