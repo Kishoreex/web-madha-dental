@@ -7,7 +7,7 @@ export default function ManagementTeam() {
    
 
       {/* Main Content */}
-      <section className="py-10 bg-white">
+<section className="pt-28 pb-10 bg-white">
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -18,7 +18,7 @@ export default function ManagementTeam() {
             data-aos="fade-up"
           >
 
-            <span className="badge mb-4">
+            <span className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">
               Management Team
             </span>
 
@@ -62,8 +62,7 @@ export default function ManagementTeam() {
 
               <div className="lg:col-span-2 p-10 lg:p-14">
 
-                <span className="inline-block bg-medical-blue/10 text-medical-blue px-4 py-2 rounded-full text-sm font-semibold mb-5">
-                  Founder & Chairman
+              <span className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">     Founder & Chairman
                 </span>
 
                 <h2 className="text-4xl font-bold text-medical-navy mb-2">
@@ -71,7 +70,7 @@ export default function ManagementTeam() {
                 </h2>
 
                 <p className="text-medical-blue font-semibold mb-8">
-                  Founder & Chairman, Madha Group of Academic Institutions
+                  Madha Group of Academic Institutions
                 </p>
 
                 <div className="space-y-3 text-[17px] leading-8 text-slate-600 text-justify">
@@ -136,8 +135,7 @@ export default function ManagementTeam() {
 
     <div className="lg:col-span-2 p-10 lg:p-14">
 
-      <span className="inline-block bg-medical-blue/10 text-medical-blue px-4 py-2 rounded-full text-sm font-semibold mb-5">
-        Vice Chairperson
+      <span className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">   Vice Chairperson
       </span>
 
       <h2 className="text-4xl font-bold text-medical-navy mb-2">
@@ -145,7 +143,7 @@ export default function ManagementTeam() {
       </h2>
 
       <p className="text-medical-blue font-semibold mb-8">
-        Vice Chairperson, Madha Group of Academic Institutions
+      Madha Group of Academic Institutions
       </p>
 
       <div className="space-y-3 text-[17px] leading-8 text-slate-600 text-justify">
@@ -208,8 +206,7 @@ export default function ManagementTeam() {
 
     <div className="lg:col-span-2 p-10 lg:p-14">
 
-      <span className="inline-block bg-medical-blue/10 text-medical-blue px-4 py-2 rounded-full text-sm font-semibold mb-5">
-        Managing Director
+        <span className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">     Managing Director
       </span>
 
       <h2 className="text-4xl font-bold text-medical-navy mb-2">
@@ -217,7 +214,7 @@ export default function ManagementTeam() {
       </h2>
 
       <p className="text-medical-blue font-semibold mb-8">
-        Managing Director, Madha Group of Academic Institutions
+       Madha Group of Academic Institutions
       </p>
 
       <div className="space-y-3 text-[17px] leading-8 text-slate-600 text-justify">

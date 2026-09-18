@@ -96,6 +96,12 @@ import Seminars from "./pages/research/Seminars";
     const location = useLocation();
 const isHospitalPage = location.pathname === "/hospital/services";
 
+const isPrincipalPage =
+  location.pathname === "/about/principal-desk";
+
+const isManagementPage =
+  location.pathname === "/about/management";
+
 const isGalleryPage =
   location.pathname === "/gallery" ||
   location.pathname.startsWith("/gallery/");
@@ -594,9 +600,9 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
   <button
     type="button"
     className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-      isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
-        ? "text-black hover:text-blue-700"
-        : "text-white hover:text-cyan-300"
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+  ? "text-black hover:text-blue-700"
+  : "text-white hover:text-cyan-300"
     }`}
   >
     {item.name}
@@ -607,22 +613,24 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
     href={item.href}
     target={item.target}
     rel="noopener noreferrer"
-    className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-      isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
-        ? "text-black hover:text-blue-700"
-        : "text-white hover:text-cyan-300"
-    }`}
+className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
+  isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+    ? "text-black hover:text-blue-700"
+    : "text-white hover:text-cyan-300"
+}`}
+   
   >
     {item.name}
   </a>
 ) : (
   <Link
     to={item.href}
-    className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-      isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
-        ? "text-black hover:text-blue-700"
-        : "text-white hover:text-cyan-300"
-    }`}
+className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
+  isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+    ? "text-black hover:text-blue-700"
+    : "text-white hover:text-cyan-300"
+}`}
+ 
   >
     {item.name}
   </Link>
@@ -787,7 +795,7 @@ style={{
 <div className="flex flex-col -ml-2">
 <h1
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
   ? "text-black text-[23px]"
   : "text-white text-[23px]"
   }`}
@@ -810,7 +818,7 @@ isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
 </div>
 <p
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isGalleryPage || isDepartmentPage
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
   ? "text-black text-[12px]"
   : "text-white text-[12px]"
   }`}
