@@ -533,7 +533,7 @@ const AdmissionProcess = () => {
           Advanced restorative and endodontic treatment.
         </p>
         <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
-          3 Seats
+          6 Seats
         </span>
       </div>
 <div
@@ -548,7 +548,7 @@ const AdmissionProcess = () => {
           Surgical management of oral and facial conditions.
         </p>
         <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
-          3 Seats
+          6 Seats
         </span>
       </div>
 
@@ -564,7 +564,7 @@ const AdmissionProcess = () => {
           Diagnosis and correction of irregular teeth and jaws.
         </p>
         <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
-          3 Seats
+          6 Seats
         </span>
       </div>
 
@@ -580,7 +580,7 @@ const AdmissionProcess = () => {
           Restoration and replacement of missing teeth.
         </p>
         <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
-          3 Seats
+          6 Seats
         </span>
       </div>
 
@@ -596,7 +596,7 @@ const AdmissionProcess = () => {
           Prevention and treatment of gum diseases.
         </p>
         <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
-          3 Seats
+          6 Seats
         </span>
       </div>
 
@@ -612,7 +612,7 @@ const AdmissionProcess = () => {
           Specialized dental care for children.
         </p>
         <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
-          3 Seats
+          6 Seats
         </span>
       </div>
 <div

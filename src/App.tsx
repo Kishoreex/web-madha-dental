@@ -21,7 +21,7 @@ import PublicHealthDentistry from "./pages/departments/PublicHealthDentistry";
 import OralMaxillofacialSurgery from "./pages/departments/OralSurgery";
 import Prosthodontics from "./pages/departments/Prosthodontics";
 import ConservativeDentistry from "./pages/departments/ConservativeDentistry";
-
+import Orthodontics from "./pages/departments/Orthodontics";
 import BasicMedicalSciences from "./pages/departments/BasicMedicalSciences";
   import {
     Menu, X, Phone, Mail, MapPin, Clock, ChevronDown, ChevronRight,
@@ -234,7 +234,7 @@ const isDepartmentPage =
       name: "Curriculum & Syllabus",
       href: "/academics/curriculum",
     },
-    {
+   /*  {
       name: "Value Added Courses",
       href: "/academics/value-added",
     },
@@ -252,14 +252,14 @@ const isDepartmentPage =
   href: "/pdf/career/Career_Guidance.pdf",
   target: "_blank",
 },
-    {
+   {
       name: "Programme Outcomes",
       href: "/academics/programme-outcomes",
     },
     {
       name: "Academic Committee",
       href: "/academics/committee",
-    },
+    },*/
   ],
 },
 
@@ -289,10 +289,10 @@ const isDepartmentPage =
   name: 'Oral Pathology & Microbiology',
   href: '/departments/oral-pathology',
 },
-      {
-        name: 'Orthodontics and Dentofacial Orthopedics',
-        href: '#dept-orthodontics',
-      },
+    {
+  name: 'Orthodontics and Dentofacial Orthopaedics',
+  href: '/departments/orthodontics',
+},
 
       // Last Item
     {
@@ -532,6 +532,7 @@ const isDepartmentPage =
       name: "Research Home",
       href: "/research/home",
     },
+    /*
  {
   name: "Research Promotion Policy",
   href: "/pdf/research/Research_Promotion_Policy.pdf",
@@ -560,12 +561,12 @@ const isDepartmentPage =
     {
       name: "Research Projects",
       href: "/research/projects",
-    },
+    },*/
     {
       name: "Publications",
       href: "/research/publications",
     },
-    {
+    /*{
       name: "Books",
       href: "/research/books",
     },
@@ -576,7 +577,7 @@ const isDepartmentPage =
     {
       name: "Seminars & Workshops",
       href: "/research/seminars",
-    },
+    },*/
   ],
 },
       { name: "Student Support", href: "#campus" },
@@ -2725,7 +2726,10 @@ if (!localStorage.getItem("mdch_loader_shown")) {
   path="/departments/oral-pathology"
   element={<OralPathology />}
 />
-
+<Route
+  path="/departments/orthodontics"
+  element={<Orthodontics />}
+/>
 <Route
   path="/departments/periodontology"
   element={<Periodontology />}

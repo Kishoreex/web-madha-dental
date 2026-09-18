@@ -90,57 +90,33 @@ export default function Trust() {
             className="bg-white rounded-3xl shadow-xl border border-gray-100 p-10"
             data-aos="fade-up"
           >
-            <h3 className="text-4xl font-bold text-medical-navy mb-6">
+            <h3 className="text-4xl font-bold text-medical-navy mb-5">
               About the Trust
             </h3>
 
             <div className="space-y-6 text-[17px] leading-8 text-slate-600 text-justify">
 
                  <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-                Soosaiya Peter Educational Trust was founded by the
-                philanthropist and business tycoon Dr. S. Peter on
-                October 3, 1996 in Chennai. This is a registered
-                self-financing Christian Minority Trust.
+               Founded on 3 October 1996 in Chennai by philanthropist and entrepreneur Dr. S. Peter, the Soosaiya Peter Educational Trust is a registered self-financing Christian Minority Trust dedicated to advancing higher education with a strong commitment to social responsibility.
               </p>
 
                  <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-                The Soosaiya Peter Educational Trust under the inspiring
-                leadership of Dr. S. Peter, Founder and Chairman of
-                Madha Group of Institutions, has made remarkable strides
-                over the decades to promote higher education with a deep
-                sense of social commitment.
+          Under the visionary leadership of its Founder and Chairman, the Trust has grown into the Madha Group of Institutions, establishing a distinguished presence across Engineering, Management, Medicine, Dentistry, Nursing, Physiotherapy, Paramedical Sciences, Education, and Arts & Science.
               </p>
 
            <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-                Over the years, the Madha Group has extended its wings
-                in Engineering, Management, Medicine, Dentistry,
-                Paramedicine, Education and Arts & Science.
+             Institutions including Madha Dental College & Hospital, Madha College of Nursing, Madha College of Physiotherapy, and Madha Institute of Engineering & Technology have enabled generations of students to pursue quality professional education and build meaningful careers.
               </p>
 
                 <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-                Today the Trust proudly manages a cluster of
-                institutions offering courses in Engineering,
-                Management, Medical, Dental, Paramedical and Education.
+              In recognition of his contribution to education, Dr. S. Peter was honoured with the Mother Teresa Excellence Award in 2006.
               </p>
 
                 <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-                Madha Dental College, Madha College of Nursing, Madha
-                College of Physiotherapy and Madha Institute of
-                Engineering & Technology have been rendering excellent
-                service to students helping them achieve their dreams.
+The Trust's journey reflects an enduring commitment to educational excellence, innovation, opportunity, and social advancement, with education serving as a catalyst for individual and societal progress.
               </p>
 
-                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-                Recognizing the notable service rendered in education,
-                the Mother Teresa Excellence Award for the year 2006 was
-                awarded to Founder Chairman Dr. S. Peter.
-              </p>
-
-                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-                The phenomenal growth of the Trust reflects its
-                unwavering commitment towards educational excellence,
-                innovation and social responsibility.
-              </p>
+        
 
             </div>
           </div>

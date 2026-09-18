@@ -10,7 +10,7 @@ const calendars = [
     year: "2024 - 2025",
     file: "/pdf/academic-calendar/2024-2025.pdf",
   },
-  {
+ /* {
     year: "2023 - 2024",
     file: "/pdf/academic-calendar/2023-2024.pdf",
   },
@@ -30,7 +30,7 @@ const calendars = [
   {
     year: "2018 - 2019",
     file: "/pdf/academic-calendar/2018-2019.pdf",
-  },
+  },*/
 ];
 
 const AcademicCalendar = () => {
