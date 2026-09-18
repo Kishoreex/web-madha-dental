@@ -1483,7 +1483,7 @@ max-w-3xl
                 </div>
                 <div>
                   <h3 className="heading-4 text-neutral-900 mb-2">Our Mission</h3>
-                    <p className="text-neutral-600 leading-relaxed">
+                  <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                     To produce competent dental professionals who demonstrate the highest quality of
                     clinical care, ethical conduct, and professional behavior. We aim to serve the
                     community with compassion while advancing dental science through research and innovation.
@@ -1516,40 +1516,124 @@ max-w-3xl
             </div>
           </div>
 
-          {/* Timeline */}
-          <div className="relative py-2">
-<h3
-  className="text-center mb-12 text-black font-['Montserrat'] font-extrabold text-[34px] tracking-[0.01em]"
->
-  Our Journey Through Time
-</h3>
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-medical-blue via-medical-sky to-medical-blue hidden md:block" />
+       {/* Floating Bubble Journey */}
+<div className="relative py-10">
 
-              <div className="space-y-8 md:space-y-0">
-                {timelineData.map((item, index) => (
-                  <div
-    key={index}
-    data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-    data-aos-delay={index * 100}
-    className={`relative flex items-center md:justify-center ${
-      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-    }`}
-  >
-                    <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
-                      <div className="glass-card p-6 card-hover">
-                        <div className="text-medical-blue font-bold text-lg mb-1">{item.year}</div>
-                        <div className="heading-4 text-neutral-900 mb-2">{item.title}</div>
-                        <p className="text-sm text-neutral-600">{item.description}</p>
-                      </div>
-                    </div>
-                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-4 border-medical-blue rounded-full z-10" />
-                  </div>
-                ))}
+  {/* Heading */}
+  <div className="text-center mb-14">
+    <h3 className="font-['Montserrat'] text-[30px] sm:text-[36px] font-extrabold text-neutral-900">
+      Our Journey Through Time
+    </h3>
+
+    <div className="mx-auto mt-4 h-[3px] w-16 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400" />
+  </div>
+
+  {/* Journey */}
+  <div className="relative max-w-7xl mx-auto px-2">
+
+    {/* Connecting Line */}
+    <div className="absolute top-1/2 left-0 right-0 hidden lg:block">
+      <div className="h-[3px] bg-gradient-to-r from-blue-200 via-blue-500 to-cyan-400 rounded-full" />
+    </div>
+
+    {/* Bubbles */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4 items-center">
+
+      {timelineData.map((item, index) => {
+
+        const positions = [
+          "lg:-translate-y-8",
+          "lg:translate-y-7",
+          "lg:-translate-y-10",
+          "lg:translate-y-8",
+          "lg:-translate-y-7",
+          "lg:translate-y-6",
+        ];
+
+        return (
+          <div
+            key={index}
+            data-aos="zoom-in"
+            data-aos-delay={index * 120}
+            className={`relative flex flex-col items-center ${positions[index]}`}
+          >
+
+            {/* Main Bubble */}
+            <div
+              className="
+                relative
+                w-[150px] h-[150px]
+                sm:w-[170px] sm:h-[170px]
+                rounded-full
+                bg-white
+                border-[5px]
+                border-blue-100
+                shadow-[0_12px_40px_rgba(37,99,235,0.14)]
+                hover:border-blue-400
+                hover:shadow-[0_18px_50px_rgba(37,99,235,0.22)]
+                hover:-translate-y-2
+                transition-all duration-500
+                flex flex-col items-center justify-center
+                text-center
+                z-10
+                px-5
+              "
+            >
+
+              {/* Year */}
+              <div
+                className="
+                  flex items-center justify-center
+                  w-[58px] h-[58px]
+                  rounded-full
+                  bg-gradient-to-br from-blue-600 to-cyan-400
+                  text-white
+                  font-['Montserrat']
+                  text-[13px]
+                  font-extrabold
+                  shadow-lg
+                  mb-3
+                "
+              >
+                {item.year}
               </div>
+
+              {/* Title */}
+              <h4 className="font-['Montserrat'] text-[12px] sm:text-[13px] font-extrabold text-neutral-900 leading-tight">
+                {item.title}
+              </h4>
+
             </div>
+
+            {/* Description Bubble */}
+            <div
+              className="
+                mt-5
+                w-[165px] sm:w-[185px]
+                px-4 py-3
+                rounded-2xl
+                bg-white/90
+                backdrop-blur-sm
+                border border-neutral-100
+                shadow-[0_8px_25px_rgba(0,0,0,0.07)]
+                text-center
+                z-10
+              "
+            >
+              <p className="font-['Montserrat'] text-[11px] sm:text-[12px] leading-5 text-neutral-600">
+                {item.description}
+              </p>
+            </div>
+
           </div>
+        );
+      })}
+
+    </div>
+
+  </div>
+
+</div>
 
        
         </div>
@@ -1621,7 +1705,8 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
           </div>
 
           {/* Programs Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
+           <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
           {programs.map((program, index) => (
     <div
       key={program.id}
@@ -1669,7 +1754,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
                   <Trophy className="w-4 h-4 text-accent-gold" />
                   MDS Specializations
                 </div>
-                <h3 className="heading-3 mb-4">9+ Specializations to Choose From</h3>
+                <h3 className="heading-3 mb-4">9 Specializations to Choose From</h3>
                 <p className="text-white/80 mb-6">
                   Our postgraduate programs offer deep specialization in every major field of dentistry,
                   preparing you for leadership roles in clinical practice, academics, and research.
