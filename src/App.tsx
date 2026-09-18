@@ -2334,8 +2334,11 @@ const departments = [
   }
 
   function App() {
-  const [showTopButton, setShowTopButton] = useState(false);
-  const [loading, setLoading] = useState(true);
+const [showTopButton, setShowTopButton] = useState(false);
+
+const [loading, setLoading] = useState(
+  !localStorage.getItem("mdch_loader_shown")
+);
   useEffect(() => {
 
     AOS.init({
@@ -2345,10 +2348,15 @@ const departments = [
       offset: 100,
     });
 
-    AOS.refresh();
+AOS.refresh();
+
+if (!localStorage.getItem("mdch_loader_shown")) {
+  localStorage.setItem("mdch_loader_shown", "true");
+
   setTimeout(() => {
     setLoading(false);
   }, 2000);
+}
     const handleScroll = () => {
       setShowTopButton(window.scrollY > 400);
     };
