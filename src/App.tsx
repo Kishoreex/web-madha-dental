@@ -1590,16 +1590,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
         icon: <Award className="w-8 h-8" />,
         color: 'from-medical-navy to-medical-blue',
       },
-      {
-        id: 'certificates',
-        title: 'Certificate Courses',
-        duration: '6 Months - 1 Year',
-        intake: 'Various',
-        description: 'Specialized certificate programs for dental professionals seeking to enhance their skills.',
-        features: ['Focused Training', 'Hands-on Practice', 'Industry Expert Faculty', 'Certification'],
-        icon: <BadgeCheck className="w-8 h-8" />,
-        color: 'from-accent-gold to-medical-blue',
-      },
+   
     ];
 
     const mdsSpecializations = [
@@ -1759,30 +1750,32 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
              <div className="mt-4 pt-4 border-t border-neutral-100 opacity-0 group-hover:opacity-100 transition-opacity">
 <Link
   to={
-    dept.name === "Oral Pathology & Microbiology"
-      ? "/departments/oral-pathology"
-: dept.name === "Oral & Maxillofacial Surgery"
-  ? "/departments/oral-surgery"
-     : dept.name === "Conservative Dentistry and Endodontics"
-  ? "/departments/conservative-dentistry"
-   : dept.name === "Public Health Dentistry"
-      ? "/departments/public-health-dentistry"
-      : dept.name === "Oral Medicine & Radiology"
-      ? "/departments/oral-medicine"
+    dept.name === "Conservative Dentistry & Endodontics"
+      ? "/departments/conservative-dentistry"
+      : dept.name === "Prosthodontics & Crown Bridge"
+      ? "/departments/prosthodontics"
+      : dept.name === "Orthodontics & Dentofacial Orthopedics"
+      ? "/departments/orthodontics"
       : dept.name === "Periodontology"
       ? "/departments/periodontology"
+      : dept.name === "Oral & Maxillofacial Surgery"
+      ? "/departments/oral-surgery"
+      : dept.name === "Oral Medicine & Radiology"
+      ? "/departments/oral-medicine"
       : dept.name === "Pediatric & Preventive Dentistry"
       ? "/departments/pediatric-dentistry"
-        : dept.name === "Basic Medical Sciences"
-  ? "/departments/basic-medical-sciences"
-
-    : dept.name === "Prosthodontics"
-  ? "/departments/prosthodontics"
-      : "#"
+      : dept.name === "Oral Pathology & Microbiology"
+      ? "/departments/oral-pathology"
+      : dept.name === "Public Health Dentistry"
+      ? "/departments/public-health-dentistry"
+      : dept.name === "Basic Medical Sciences"
+      ? "/departments/basic-medical-sciences"
+      : "/departments"
   }
   className="text-sm text-medical-blue font-medium flex items-center gap-2 hover:gap-3 transition-all"
 >
-  Explore Department <ArrowRight className="w-4 h-4" />
+  Explore Department
+  <ArrowRight className="w-4 h-4" />
 </Link>
 </div>
               </div>
