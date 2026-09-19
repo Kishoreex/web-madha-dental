@@ -58,6 +58,7 @@ import AcademicCalendar from "./pages/academics/AcademicCalendar";
 import AcademicRegulations from "./pages/academics/AcademicRegulations";
 import CircularsNotices from "./pages/academics/CircularsNotices";
 import AcademicCurriculum from "./pages/academics/AcademicCurriculum";
+import CareerGuidance from "./pages/academics/CareerGuidance";
 import AcademicCommittee from "./pages/academics/AcademicCommittee";
 import ValueAddedCourses from "./pages/academics/ValueAddedCourses";
 import AddOnPrograms from "./pages/academics/AddOnPrograms";
@@ -237,7 +238,10 @@ const isDepartmentPage =
     {
       name: "Curriculum & Syllabus",
       href: "/academics/curriculum",
-    },
+    },  {
+  name: "Career Guidance",
+  href: "/academics/career-guidance",
+},
    /*  {
       name: "Value Added Courses",
       href: "/academics/value-added",
@@ -251,11 +255,7 @@ const isDepartmentPage =
   href: "/pdf/capability/Capability_Enhancement_Programs.pdf",
   target: "_blank",
 },
-  {
-  name: "Career Guidance",
-  href: "/pdf/career/Career_Guidance.pdf",
-  target: "_blank",
-},
+
    {
       name: "Programme Outcomes",
       href: "/academics/programme-outcomes",
@@ -2659,6 +2659,11 @@ if (!localStorage.getItem("mdch_loader_shown")) {
 <Route
   path="/academics/calendar"
   element={<AcademicCalendar />}
+/>
+
+<Route
+  path="/academics/career-guidance"
+  element={<CareerGuidance />}
 />
 <Route path="/research/seminars" element={<Seminars />} />
 <Route

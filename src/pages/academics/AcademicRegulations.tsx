@@ -119,52 +119,7 @@ export default function AcademicRegulations() {
         </div>
       </section>
 
-      {/* Guidelines */}
-
-      <section className="bg-gray-50 py-20">
-
-        <div className="container-custom">
-
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Important Guidelines
-          </h2>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-            {[
-              "Minimum Attendance",
-              "Internal Assessment",
-              "University Examination",
-              "Clinical Requirements",
-              "Internship Rules",
-              "Promotion Criteria",
-            ].map((item) => (
-
-              <div
-                key={item}
-               className="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition-all duration-300"
-data-aos="zoom-in"
-              >
-                <FileText className="text-blue-700 mb-4"/>
-
-                <h3 className="font-bold mb-2">
-                  {item}
-                </h3>
-
-                <p className="text-gray-600">
-                  Refer to the official academic regulations
-                  for complete information.
-                </p>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
+  
 
       {/* Contact */}
 
