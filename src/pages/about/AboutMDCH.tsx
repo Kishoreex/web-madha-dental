@@ -95,8 +95,7 @@ data-aos="fade-up"
 data-aos-delay="100"
 >
 
-Madha Dental College & Hospital is a premier dental institution, affiliated to The Tamil Nadu Dr.M.G.R. Medical University and recognized by the Dental council of India. Started in the year 2006by the visionary organization, Soosaiya Peter Educational trust. The institution has evolved from a provider of BDS degree to providing Post Graduate MDS degrees across several dental specialties. Established with the goal of offering top-notch training facilities to generate dentists of the utmost quality, the institute has successfully realized this objective through the collaborative efforts of both the management and staff.
-</p>
+Madha Dental College & Hospital is a premier institution committed to excellence in dental education, clinical training, research, innovation, and community service. Affiliated with The Tamil Nadu Dr. M.G.R. Medical University and recognized by the Dental Council of India, the institution was established in 2006 under the Soosaiya Peter Educational Trust and has grown into a centre for undergraduate and postgraduate dental education across multiple specialties.</p>
 </div>
  </div>
         {/* Full Width Content */}
@@ -106,8 +105,7 @@ className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]"
 data-aos="fade-up"
 data-aos-delay="100"
 >
-The college prides itself of the intellectual congregation at its premises in the form of the experience and expertise of the faculty members, who have towered great heights in the field of dentistry at national and international levels.
-
+With experienced faculty, modern infrastructure, advanced clinical facilities, and a student-centric learning environment, the institution nurtures competent, ethical, and future-ready dental professionals. Academic excellence is reflected in university-level distinctions and subject toppers, while a growing culture of research has resulted in peer-reviewed publications, research grants, patents, and copyrights.
 </p>
 
 <p
@@ -116,17 +114,20 @@ data-aos="fade-up"
 data-aos-delay="100"
 >
 
-Madha Dental College places a strong emphasis on fostering a student-centric environment that promotes both academic excellence and personal growth. Through tailored academic programs, interactive learning platforms, and personalized mentorship, the college ensures that students receive individual attention and support. Beyond academics, extracurricular activities and counseling services are provided to encourage overall personal growth, ensuring that students graduate not only as skilled dental professionals but also as well-rounded individuals prepared for the challenges of the future.
+Madha Dental College & Hospital is equally committed to creating opportunities for students from diverse social and economic backgrounds, enabling them to access quality professional education, develop their skills, and progress towards meaningful and independent careers. Through education, mentorship, and a supportive institutional environment, the college seeks to contribute to individual advancement and broader social mobility.</p>
+<p
+className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]"
+data-aos="fade-up"
+data-aos-delay="100"
+>
+The institution encourages holistic development through sports, extracurricular activities, and professional forums, with students earning recognition at university and intercollegiate levels. Its sustained community outreach initiatives extend oral healthcare, education, screening, and preventive services to underserved communities.
 </p>
 <p
 className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]"
 data-aos="fade-up"
 data-aos-delay="100"
 >
-The institute has crossed many milestones in its journey since 2006. The institute carries out an extensive and holistic Community Outreach program within the Public Health Dentistry Department. We organize regular camps and offer complimentary services to the residents of villages in the Kundrathur area. This program has benefited more than 40000 people in the last five years alone. The institution releases an annual journal, with the 2019 edition being unveiled by the esteemed President of the Dental Council of India, Dr.Dibyantu Mazumdar. Most recently, the department of Oral & Maxillofacial Surgery started training students in advanced facial esthetics procedures.
-
-</p>
-
+The institution also publishes an annual journal, providing a platform for scholarly and research contributions. With nearly two decades of growth and achievement, Madha Dental College & Hospital continues to advance a vision that integrates academic excellence, clinical competence, research, innovation, social responsibility, and holistic development.</p>
 </div>
 
 

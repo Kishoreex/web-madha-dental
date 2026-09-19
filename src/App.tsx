@@ -49,8 +49,9 @@ import IQACVisionMission from "./pages/iqac/VisionMission";
   import BDS from "./pages/admissions/BDS";
 import MDS from "./pages/admissions/MDS";
 import AdmissionProcess from "./pages/admissions/AdmissionProcess";
-
+import Prospectus from "./pages/admissions/Prospectus";
 import EligibilityCriteria from "./pages/admissions/EligibilityCriteria";
+import FeeRefundPolicy from "./pages/admissions/FeeRefundPolicy";
 
 //Acadamics
 import AcademicCalendar from "./pages/academics/AcademicCalendar";
@@ -101,6 +102,11 @@ const isPrincipalPage =
 
 const isManagementPage =
   location.pathname === "/about/management";
+const isFeeRefundPage =
+  location.pathname === "/admissions/fee-refund-policy";
+
+const isProspectusPage =
+  location.pathname === "/admissions/prospectus";
 
 const isGalleryPage =
   location.pathname === "/gallery" ||
@@ -189,16 +195,14 @@ const isDepartmentPage =
       target: "_blank",
     },
 
-  {
+{
   name: "Prospectus",
-  href: "/pdf/Madha_Dental_College_Prospectus.pdf",
-  target: "_blank",
+  href: "/admissions/prospectus",
 },
 
-    {
+{
   name: "Fee Refund Policy",
-  href: "/pdf/FEE-REFUND-POLICY.pdf",
-  target: "_blank",
+  href: "/admissions/fee-refund-policy",
 },
 
   
@@ -601,7 +605,7 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
   <button
     type="button"
     className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
   ? "text-black hover:text-blue-700"
   : "text-white hover:text-cyan-300"
     }`}
@@ -615,7 +619,7 @@ isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGallery
     target={item.target}
     rel="noopener noreferrer"
 className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-  isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
     ? "text-black hover:text-blue-700"
     : "text-white hover:text-cyan-300"
 }`}
@@ -627,7 +631,7 @@ className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-[
   <Link
     to={item.href}
 className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-  isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
     ? "text-black hover:text-blue-700"
     : "text-white hover:text-cyan-300"
 }`}
@@ -796,7 +800,7 @@ style={{
 <div className="flex flex-col -ml-2">
 <h1
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
   ? "text-black text-[23px]"
   : "text-white text-[23px]"
   }`}
@@ -819,7 +823,7 @@ isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGallery
 </div>
 <p
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage
+isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
   ? "text-black text-[12px]"
   : "text-white text-[12px]"
   }`}
@@ -2700,6 +2704,14 @@ if (!localStorage.getItem("mdch_loader_shown")) {
 <Route
   path="/admissions/eligibility"
   element={<EligibilityCriteria />}
+/>
+<Route
+  path="/admissions/fee-refund-policy"
+  element={<FeeRefundPolicy />}
+/>
+<Route
+  path="/admissions/prospectus"
+  element={<Prospectus />}
 />
 <Route
   path="/academics/value-added"
