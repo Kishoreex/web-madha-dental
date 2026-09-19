@@ -1231,10 +1231,10 @@ const ScrollToTop = () => {
     }, [slides.length]);
 
     const stats = [
-      { value: '17+', label: 'Years of Excellence' },
+      { value: '19+', label: 'Years of Excellence' },
       { value: '100+', label: 'BDS Intake' },
       { value: '9+', label: 'MDS Specializations' },
-      { value: '40,000+', label: 'Patients Served Annually' },
+      { value: '1,50,000+', label: 'Patients Served Annually' },
       { value: '100+', label: 'Expert Faculty' },
       { value: '300+', label: 'Dental Chairs' },
     ];
@@ -1323,9 +1323,9 @@ max-w-3xl
                 <div key={index} className="text-center p-2.5 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                 <div className="text-xl lg:text-2xl font-bold text-white mb-1">
 
-    {stat.value === "17+" && (
+    {stat.value === "19+" && (
       <>
-        {inView && <CountUp end={17} duration={2} />}+
+        {inView && <CountUp end={19} duration={2} />}+
       </>
     )}
 
@@ -1341,9 +1341,9 @@ max-w-3xl
       </>
     )}
 
-    {stat.value === "40,000+" && (
+    {stat.value === "1,50,000+" && (
       <>
-        {inView && <CountUp end={40000} separator="," duration={3} />}+
+        {inView && <CountUp end={150000} separator="," duration={3} />}+
       </>
     )}
 
@@ -1389,8 +1389,9 @@ max-w-3xl
       { year: '2006', title: 'Foundation', description: 'Madha Dental College & Hospital established by Soosaiya Peter Educational Trust' },
       { year: '2008', title: 'DCI Recognition', description: 'Received recognition from Dental Council of India' },
       { year: '2012', title: 'MDS Programs', description: 'Launched postgraduate programs across multiple specializations' },
-      { year: '2018', title: 'NAAC Accreditation', description: 'Achieved NAAC accreditation with high standards' },
       { year: '2023', title: 'Excellence Award', description: 'University Gold Medals and statewide recognition' },
+      { year: '2024', title: 'NAAC Accreditation', description: 'Achieved NAAC accreditation with high standards' },
+    
       { year: 'Present', title: 'Growing Strong', description: 'Over 300 dental chairs, 100+ faculty, serving 40,000+ patients annually' },
     ];
 
@@ -1444,7 +1445,7 @@ max-w-3xl
                   <div>
                   <div className="text-3xl font-bold text-neutral-900">
     <CountUp
-      end={17}
+      end={19}
       duration={2.5}
       enableScrollSpy
       scrollSpyOnce

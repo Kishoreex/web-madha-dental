@@ -48,7 +48,7 @@ data-aos="fade-up"
         </span>
       </h2>
 
-      <p className="body-large max-w-3xl mx-auto text-neutral-600">
+      <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
         Madha Dental College & Hospital has been delivering excellence in
         dental education, research and patient care since 2006.
       </p>
@@ -71,7 +71,7 @@ className="rounded-3xl shadow-2xl w-full"
 <div className="absolute -bottom-8 -right-8 rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 p-6">
 
 <h3 className="text-4xl font-bold text-medical-blue">
-17+
+19+
 </h3>
 
 <p className="text-neutral-600">
@@ -90,7 +90,7 @@ data-aos="fade-left"
 </h3>
 
 <p
-className="text-[17px] leading-8 text-slate-600 text-justify"
+className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]"
 data-aos="fade-up"
 data-aos-delay="100"
 >
@@ -102,7 +102,7 @@ Madha Dental College & Hospital is a premier dental institution, affiliated to T
         {/* Full Width Content */}
           <div className="mt-16 space-y-5">
 <p
-className="text-[17px] leading-8 text-slate-600 text-justify"
+className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]"
 data-aos="fade-up"
 data-aos-delay="100"
 >
@@ -111,7 +111,7 @@ The college prides itself of the intellectual congregation at its premises in th
 </p>
 
 <p
-className="text-[17px] leading-8 text-slate-600 text-justify"
+className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]"
 data-aos="fade-up"
 data-aos-delay="100"
 >
@@ -119,7 +119,7 @@ data-aos-delay="100"
 Madha Dental College places a strong emphasis on fostering a student-centric environment that promotes both academic excellence and personal growth. Through tailored academic programs, interactive learning platforms, and personalized mentorship, the college ensures that students receive individual attention and support. Beyond academics, extracurricular activities and counseling services are provided to encourage overall personal growth, ensuring that students graduate not only as skilled dental professionals but also as well-rounded individuals prepared for the challenges of the future.
 </p>
 <p
-className="text-[17px] leading-8 text-slate-600 text-justify"
+className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]"
 data-aos="fade-up"
 data-aos-delay="100"
 >
@@ -136,14 +136,14 @@ data-aos-delay="100">
 
 <div className="glass-card p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
 <h3 className="text-4xl font-bold text-medical-blue">
-17+
+19+
 </h3>
 <p>Years</p>
 </div>
 
 <div className="glass-card p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
 <h3 className="text-4xl font-bold text-medical-blue">
-100+
+90+
 </h3>
 <p>Faculty</p>
 </div>
@@ -157,7 +157,7 @@ data-aos-delay="100">
 
 <div className="glass-card p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
 <h3 className="text-4xl font-bold text-medical-blue">
-40000+
+150000+
 </h3>
 <p>Patients</p>
 </div>
