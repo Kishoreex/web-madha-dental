@@ -79,43 +79,37 @@ const faculty = [
     designation: "Professor and Head",
     image: sivakumarImage,
     description:
-      "Dr. G. Sivakumar MDS, MBA (Hospital Management), PhD, MSW had completed his post-graduation from the Ragas Dental college, Chennai. With over of 28 years of experience in academics, clinical practice, research and administration. He has 67 publications in indexed journals with a high impact factor. Dr. Sivakumar is the recipient of several prestigious awards and fellowships, including the ISDR Dr. J.G. Kannappan Award for Best Paper Published in the Indian Journal of Dental Research and the Research Excellence Award in recognition of his contributions to Oral Pathology and dental research. His field of interest are Oral Cancers, OPMDs, Skin Lesions and Forensic Odontology.",
-  },
+   "Dr.G.SIVAKUMARMDS, MBA (Hospital Management), PhD, MSWhad completed his post-graduation from the Ragas Dental college,Chennai. With overof28 years of experience in academics, clinical practice, research and administration.He has 67publicationsinindexedjournalswithahighimpactfactor.Dr. Sivakumar is the recipient of several prestigious awards and fellowships, including the ISDR Dr. J.G. Kannappan Award for Best Paper Published in the Indian Journal of Dental Research and the Research Excellence Award in recognition of his contributions to Oral Pathology and dental research. His field of interest are Oral Cancers, OPMDs, Skin Lesions and Forensic Odontology."  },
    {
     name: "Dr. M. Sivakumar, MDS",
     designation: "Professor / Reader",
     image: mSivakumarImage,
     description:
-      "Dr. M. Sivakumar, MDS, has completed his post graduation from Rajah Muthaiah Dental College and Hospital with 13 years of teaching experience. He has over 30 publications in various national and International journals. He has also delivered guest lectures in various colleges and presented papers at national conferences. His academic interest is oriented towards Oral Oncology and Forensic Odontology.",
-  },
+   "Dr.M. SIVAKUMAR, MDS, has completed his post graduation fromRajah Muthaiah DentalCollegeandHospitalwith13 yearsofteachingexperience. He has over 30 publications in various national and International journals. He has also delivered guest lectures in variouscollegesandpresentedpapersatnationalconferences.Hisacademicinterestis oriented towards Oral Oncology and Forensic Odontology."  },
   {
      name: "Dr. R. Raghini, MDS",
     designation: "Reader",
     image: raghiniImage,
     description:
-      "Dr. R. Raghini, MDS, has completed her postgraduation from Saveetha Dental College & Hospital. With 9 years of teaching experience she has contributed in academics and oral cancer research. Her academic interest focuses on Oral Cancer Genetics and Forensic Odontology research. She has over 30 publications in national and international journals. She holds the lifetime membership of Indian Association Of Oral and Maxillofacial Pathology.",
-  },
+   "Dr. R. RAGHINI, MDS,has completed her postgraduationfromSaveetha DentalCollege&Hospital. She has contributed in academics and oral cancer research.HeracademicinterestfocusesonOral Cancer Genetics and Forensic Odontology research. Shehas over 30 publications in national and international journals. She holds the lifetime membership of Indian Association Of Oral and Maxillofacial Pathology."  },
   {
     name: "Dr. V. Hamsini, MDS",
     designation: "Senior Lecturer",
     image: hamsiniImage,
     description:
-      "Dr. Pavithra Dhandapani, MDS, pursued her post graduation from Ragas Dental College and Hospital. She has 4 years of teaching experience in Madha Dental College & Hospital. She has 10 publications in National and International Journals. Dr. Hamsini’s academic interest is focused on Oral Oncology and Forensic Odontology.",
-  },
+     "Dr.HAMSINI, MDS, pursued her post graduationfrom Ragas Dental College and Hospital. She is a member of Inidian Association of Forensic Odntology. She has 10 publications in National and International Journals. Dr. Hamsini’s academic interest is focused on Oral Oncology and Forensic Odontology." },
   {
     name: "Dr. R. Rajashree Ravindran, MDS",
     designation: "Senior Lecturer",
     image: rajashreeImage,
     description:
-      "Dr. A. I. Samu Fathima M.D.S,MBA, had completed her post-graduation from Madha Dental College and Hospital and has total teaching experience of 4 years. She has 10 publications in indexed journals. She holds lifetime membership in both IAFO (Indian association of forensic Odontology) and IDA (Indian Dental Association). Her core areas of research interests and academic pursuit focus on the evolving frontiers of forensic odontology and cancer genetics, combining clinical expertise with advanced diagnostic science to contribute to dental education.",
-  },
+   "Dr.R. RAJSHRI M.D.S,MBA, had completed her post-graduation from Madha Dental College and Hospital. She has 10 publications in indexed journals. She holds lifetime membership in both IAFO ( Indian association of forensic Odontology ) and IDA ( Indian Dental Association ). Her core areas of research interests and  academic pursuit focus on the evolving frontiers of forensic odontology and cancer genetics, combining clinical expertise with advanced diagnostic science to contribute to dental education."  },
   {
      name: "Dr. Aayisha Neloufar M.H, MDS",
     designation: "Senior Lecturer",
     image: aayishaImage,
     description:
-      "Dr. Aayisha Neloufar .M.H, MDS, has completed her postgraduation from Madha Dental College and Hospital. She was honored with Gold Medal by The Tamil Nadu Dr. M.G.R. Medical University for topping her post graduation. Her areas of professional interest include Oral Cancer, Oral Potentially Malignant Disorders (OPMDs), Forensic Dentistry, and Dental Laboratory Techniques.",
-  },
+    "Dr. AAYISHA NELOUFAR .M.H,MDS, has  completedher postgraduation from Madha Dental College and Hospital. She was honored with Gold Medal by The Tamil Nadu Dr. M.G.R. Medical University for topping her post graduation. Her areas of professional interest include Oral Cancer, Oral Potentially Malignant Disorders (OPMDs), Forensic Dentistry, and Dental Laboratory Techniques. "  },
 ];
 
 const outreach = [

@@ -87,56 +87,49 @@ const faculty = [
     designation: "Associate Professor",
     image: abilashaImage,
     description:
-      "Dr. S. Abilasha holds an M.Sc. in Medical Anatomy from Meenakshi Medical College, a Ph.D. in Medical Anatomy from Saveetha Medical College, and an MBA in Hospital Management from Alagappa University. She has 12 years and 2 months of teaching experience in Anatomy. She has 18 publications in indexed journals, along with one book publication and one book chapter. She has received around eight Best Paper Awards at national and international conferences and was awarded as Fellow of Basic Medical Sciences (FABMS). She has been invited as a guest speaker, chairperson, and resource person at various conferences. Her area of expertise includes Molecular Experimental Diabetology, with a specific focus on the protective effects of stevioside against high-fat diet-induced insulin resistance in skeletal muscle.",
-  },
+     "Dr. S. Abilasha holds an M.Sc. in Medical Anatomy from Meenakshi Medical College, a Ph.D. in Medical Anatomy from Saveetha Medical College, and an MBA in Hospital Management from Alagappa University. She has 18 publications in h indexed journals, along with one book publication and one book chapter. She has received around eight Best Paper Awards at national and international conferences and awarded as Fellow of Basic Medical Sciences (FABMS). She has been invited as a guest speaker, chairperson, and resource person at various conferences. Her area of expertise includes Molecular Experimental Diabetology, with a specific focus on the protective effects of stevioside against high-fat diet-induced insulin resistance in skeletal muscle. " },
   {
     department: "Department of Biochemistry",
     name: "Dr. Deepa R, M.Sc., M.Phil., Ph.D., MBA, FBMS",
     designation: "Professor",
     image: deepaImage,
     description:
-      "Dr. Deepa R. has 18 years of academic and teaching experience at the institution. She completed her post-graduation in Medical Biochemistry at the Dr. A.L.M. PG Institute of Basic Medical Sciences, University of Madras, and was awarded her Ph.D. by Bharathiar University. She also holds an MBA in Health Service Management from Anna University and qualified the Tamil Nadu State Eligibility Test (TNSET) for Lectureship in Life Sciences in 2016. Her scholarly contributions include 27 research and review articles published in peer-reviewed national and international journals, along with 15 book chapters. She has successfully supervised an ICMR-STS-funded student research project. Her professional contributions include serving as the Editor of the textbook 'Current Advances in Biosciences' and as a peer reviewer for Elsevier's 'Nutrition for Nurses'. She has also completed training in Laboratory Management Systems and Internal Audit in accordance with ISO 15189:2022, with a focus on NABL accreditation. Her key areas of research interest include diabetes mellitus, antioxidants, and phytomedicine.",
-  },
+    "Dr.Deepa R.completed her post-graduation in Medical Biochemistry at the Dr. A.L.M. PG Institute of Basic Medical Sciences, University of Madras, and was awarded her Ph.D. by Bharathiar University. She also holds an MBA in Health Service Management from Anna University and qualified the Tamil Nadu State Eligibility Test (TNSET) for Lectureship in Life Sciences in 2016. Her scholarly contributions include 27 research and review articles published in peer-reviewed national and international journals, along with 15 book chapters. She has successfully supervised an ICMR-STS-funded student research project. Her professional contributions include serving as the Editor of the textbook ‘Current Advances in Biosciences’ and as a peer reviewer for Elsevier’s ‘Nutrition for Nurses’. She has also completed training in Laboratory Management Systems and Internal Audit in accordance with ISO 15189:2022, with a focus on NABL accreditation. Her academic contributions have been recognized through the Best Paper Presentation, Young Scientist, and Outstanding Faculty Awards. Her key areas of research interest include diabetes mellitus, antioxidants, and phytomedicine." },
   {
     department: "Department of Biochemistry",
     name: "Mrs. Lakshmi Priya K, M.Sc",
     designation: "Lecturer",
     image: lakshmiImage,
     description:
-      "Mrs. Lakshmi Priya K. has 1 year and 6 months of teaching experience. She completed her postgraduate degree in Medical Biochemistry in 2023 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani. Her postgraduate research project focused on oral cancer, contributing to her research interests in cancer biology and scientific research. Her areas of academic and research interest include oral cancer, biochemistry laboratory techniques, and molecular biology techniques.",
-  },
+    "Mrs. Lakshmi Priya K. completed her postgraduate degree in Medical Biochemistry in 2023 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani. Her postgraduate research project focused on oral cancer, contributing to her research interests in cancer biology and scientific research. Her areas of academic and research interest include oral cancer, biochemistry laboratory techniques, and molecular biology techniques."  },
   {
     department: "Department of Microbiology",
     name: "Ms. A. Iswarya M.Sc.,",
     designation: "Lecturer",
     image: iswaryaImage,
     description:
-      "Ms. A. Iswarya has 5 years and 4 months of teaching experience. She completed her postgraduate degree in Medical Microbiology in 2020 from the Dr. A.L.M PG Institute of Basic Medical Sciences, Taramani. She is actively involved in teaching Microbiology to undergraduate and Postgraduate students, with an emphasis on developing their theoretical knowledge, practical skills and scientific understanding. Her areas of research include antimicrobial resistance, bacterial infections and emerging challenges in Clinical Microbiology. She has contributed to the field through six research publications in peer-reviewed journals, reflecting her active involvement in scientific research and academic advancement. She strives to contribute meaningfully to teaching, research, student development and the academic growth of the institution.",
-  },
+   "Ms. A. Iswarya completed her postgraduate degree in Medical Microbiology in 2020 from the Dr.A.L.M PG Institute of Basic Medical Sciences, Taramani. She is actively involved in teaching Microbiology to undergraduate and Postgraduate students, with an emphasis on developing their theoretical knowledge, practical skills and scientific understanding. Her areas of research include antimicrobial resistance, bacterial infections and emerging challenges in Clinical Microbiology. She has contributed to the field through six research publications in peer-reviewed journals, reflecting her active involvement in scientific research and academic advancement. She strives to contribute meaningfully to teaching, research, student development and the academic growth of the institution."  },
   {
     department: "Department of Microbiology",
     name: "Ms. Nikida R, M.Sc.,",
     designation: "Lecturer",
     image: nikidaImage,
     description:
-      "Ms. Nikida R. is a Lecturer in the Department of Microbiology at Madha Dental College and Hospital. She completed her M.Sc. in Medical Microbiology in 2026 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani. She has been actively involved in teaching and academic activities. Her areas of interest include Clinical Microbiology, academic teaching, and research. She is particularly interested in developing her research skills and contributing to evidence-based academic and scientific work in microbiology.",
-  },
+     "Ms. Nikida R. completed her M.Sc. in Medical Microbiology in 2026 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani.She has been actively involved in teaching and academic activities. Her areas of interest include Clinical Microbiology, academic teaching, and research. She is particularly interested in developing her research skills and contributing to evidence-based academic and scientific work in microbiology."  },
   {
     department: "Department of Pharmacology",
     name: "Dr. Vidyalakshmi K. M.Sc., Ph.D",
     designation: "Professor of Pharmacology",
     image: vidyalakshmiImage,
     description:
-      "Dr. Vidyalakshmi K. is an accomplished academician and Professor of Pharmacology with 27 years of teaching experience, including 14 years of dedicated association with Madha Dental College. She completed her postgraduate degree in Pharmacology in 1996 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani, Chennai and was awarded a Doctoral Degree from MAHER (Meenakshi Academy of Higher Education and Research) in 2012. Her research interests particularly focus on Herbal analgesics and anti-inflammatory drugs and she published eight research publications in high-impact-factor journals and also contributed three book chapters. She has been a resource person for colleges, with a special interest in translating pharmacological knowledge into clinically relevant applications.",
-  },
+    "Dr. Vidyalakshmi K. is an accomplished academician and Professor of Pharmacology with 27 years of teaching experience, including 14 years of dedicated association with Madha Dental College.  She completed her postgraduate degree in Pharmacology in 1996 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani, Chennai and honored with a Doctoral Degree from MAHER (Meenakshi Academy of Higher Education and Research) in 2012. Her research interests particularly focus on Herbal analgesics and anti-inflammatory drugs and she published eight research publications in high-impact-factor journals and also contributed three book chapters. She has been a resource person for colleges, with a special interest in translating pharmacological knowledge into clinically relevant applications."  },
   {
     department: "Department of Physiology",
     name: "Dr. C. Valarmathi BPT., M.Sc",
     designation: "Lecturer",
     image: valarmathiImage,
     description:
-      "Dr. C. Valarmathi completed her postgraduate degree in Physiology from Chettinad Academy of Research and Education, Chennai, and has 5 years and 1 month of teaching experience. She has published research articles in national and international journals. Her academic and research interests include Physiology, neurological disorders, and body mass index (BMI) in relation to pulmonary diseases. She is currently pursuing her Ph.D. in Physiology at Saveetha Institute of Medical and Technical Sciences (SIMATS), Chennai. She is actively involved in teaching and research and contributes to guiding students in scientific sessions and conference presentations.",
-  },
+    "Dr. C. Valarmathi completed her postgraduate degree in Physiology from Chettinad Academy of Research and Education, Chennai. She has published research articles in national and international journals. Her academic and research interests include Physiology, neurological disorders, and body mass index (BMI) in relation to pulmonary diseases. She is currently pursuing her Ph.D. in Physiology at Saveetha Institute of Medical and Technical Sciences (SIMATS), Chennai. She is actively involved in teaching and research and contributes to guiding students in scientific sessions and conference presentations."  },
 ];
 
 export default function BasicMedicalSciences() {

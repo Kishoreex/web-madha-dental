@@ -33,78 +33,67 @@ const faculty = [
     designation: "Professor Emeritus",
     image: sainathImage,
     description:
-      "Dr. M. C. Sainath, M.D.S., M.B.A., is a distinguished academician, clinician, researcher, and healthcare administrator with over 35 years of professional experience in dentistry, orthodontics, education, and institutional administration. He completed his B.D.S. and M.D.S. from Government Dental College, Madras, and served the institution in various academic and clinical capacities following selection through the Tamil Nadu Public Service Commission. He later joined Madha Dental College & Hospital, where he served as Head of the Department and Principal, and currently serves as Dean and Professor in the Department of Orthodontics and Dentofacial Orthopaedics. He holds an M.B.A. in Hospital Management and a Postgraduate Diploma in Health Science from Annamalai University and has contributed extensively to dental research with over 100 national and international publications. As an academic and institutional leader, his professional focus encompasses academic excellence, clinical competency, research, ethical practice, patient-centred care, and holistic student development.",
-  },
+    "Dr. M. C. Sainath, M.D.S., M.B.A., is a distinguished academician, clinician, researcher, and healthcare administrator with over 35 years of professional experience in dentistry, orthodontics, education, and institutional administration. He completed his B.D.S. and M.D.S. from Government Dental College, Madras, and served the institution in various academic and clinical capacities following selection through the Tamil Nadu Public Service Commission. He later joined Madha Dental College & Hospital, where he served as Head of the Department and Principal, and currently serves as Dean and Professor in the Department of Orthodontics and Dentofacial Orthopaedics. He holds an M.B.A. in Hospital Management and a Postgraduate Diploma in Health Science from Annamalai University and has contributed extensively to dental research with over 100 national and international publications. As an academic and institutional leader, his professional focus encompasses academic excellence, clinical competency, research, ethical practice, patient-centred care, and holistic student development."  },
   {
     name: "Dr. N R Shrinivaasan, MDS",
     designation: "Professor and Head",
     image: shrinivaasanImage,
     description:
-      "Dr. N. R. Shrinivaasan, M.D.S., is a distinguished academician and clinician with over 15 years of teaching experience in Orthodontics and Dentofacial Orthopaedics. He completed his postgraduate training at Sri Ramachandra Dental College, Chennai, and is a certified Lingual Orthodontist with expertise in contemporary aesthetic orthodontic treatment. He has authored and co-authored more than 10 publications in indexed national and international journals, including high-impact journals, and has presented his research at numerous national and international conferences. An invited speaker at scientific forums, his areas of special interest include clear aligner therapy, skeletal anchorage systems, and orthodontic research. He is committed to academic excellence, evidence-based clinical practice, research, and the professional development of students and clinicians.",
-  },
+     "Dr. N. R. Shrinivaasan, M.D.S., is a distinguished academician and clinician with over 15 years of teaching experience in Orthodontics and Dentofacial Orthopaedics. He completed his postgraduate training at Sri Ramachandra Dental College, Chennai, and is a certified Lingual Orthodontist with expertise in contemporary aesthetic orthodontic treatment. He has authored and co-authored more than 10 publications in indexed national and international journals, including high-impact journals, and has presented his research at numerous national and international conferences. An invited speaker at scientific forums, his areas of special interest include clear aligner therapy, skeletal anchorage systems, and orthodontic research. He is committed to academic excellence, evidence-based clinical practice, research, and the professional development of students and clinicians."  },
   {
     name: "Dr. Catherine Sunitha F, MDS",
     designation: "Professor",
     image: catherineImage,
     description:
-      "Dr. Catherine Sunitha F, M.D.S., is an accomplished academician and clinician with 11 years of teaching experience and over a decade of specialized experience in the multidisciplinary management of cleft lip and palate cases. She completed her postgraduate training at Sri Ramachandra Dental College, Chennai, and has contributed to orthodontic education, clinical practice, and research through more than 10 publications in reputed national and international journals. She has delivered guest lectures at various dental institutions and presented scientific papers at national conferences. Her areas of clinical and academic interest include clear aligner therapy, temporomandibular joint disorders, and orthognathic surgery, with a strong commitment to contemporary orthodontic care, evidence-based practice, and the training of students and young professionals.",
-  },
+     "Dr. Catherine Sunitha F, M.D.S., is an accomplished academician and clinician with 11 years of teaching experience and over a decade of specialized experience in the multidisciplinary management of cleft lip and palate cases. She completed her postgraduate training at Sri Ramachandra Dental College, Chennai, and has contributed to orthodontic education, clinical practice, and research through more than 10 publications in reputed national and international journals. She has delivered guest lectures at various dental institutions and presented scientific papers at national conferences. Her areas of clinical and academic interest include clear aligner therapy, temporomandibular joint disorders, and orthognathic surgery, with a strong commitment to contemporary orthodontic care, evidence-basedpractice, and the training of students and young professionals."  },
   {
     name: "Dr. Anbu V, MDS",
     designation: "Reader",
     image: anbuImage,
     description:
-      "Dr. Anbu V, M.D.S., is an accomplished academician. She completed her postgraduate training at Thai Moogambigai Dental College and Hospital and has been actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. Her primary areas of interest include clear aligner therapy and contemporary orthodontic practice. She has contributed to several national and international journal publications and is currently pursuing a Ph.D. in Dentistry, further strengthening her research and academic expertise. She remains committed to excellence in teaching, clinical practice, research, and the advancement of contemporary orthodontic education and patient care.",
-  },
+     "Dr. Anbu V, M.D.S., is an accomplished academician. She completed her postgraduate training at Thai Moogambigai Dental College and Hospital and has been actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. Her primary areas of interest include clear aligner therapy and contemporary orthodontic practice. She has contributed to several national and international journal publications and is currently pursuing a Ph.D. in Dentistry, further strengthening her research and academic expertise. She remains committed to excellence in teaching, clinical practice, research, and the advancement of contemporary orthodontic education and patient care."  },
   {
     name: "Dr. Naveen Kumar M, MDS",
     designation: "Reader",
     image: naveenImage,
     description:
-      "Dr. Naveen Kumar M, M.D.S., completed his postgraduate training at Saveetha Dental College and is actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. His areas of interest include orthodontic biomechanics, clear aligner therapy, surgical orthodontics, growth modification appliance therapy, and sports dentistry, with a focus on efficient orthodontic treatment and prevention of sports-related orofacial injuries. He has contributed to several national and international journal publications and remains committed to teaching, clinical excellence, research, and the professional development of students.",
-  },
+      "Dr. Naveen Kumar M, M.D.S., completed his postgraduate training at Saveetha Dental College and is actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. His areas of interest include orthodontic biomechanics, clear aligner therapy, surgical orthodontics, growth modification appliance therapy, and sports dentistry, with a focus on efficient orthodontic treatment and prevention of sports-related orofacial injuries. He has contributed to several national and international journal publications and remains committed to teaching, clinical excellence, research, and the professional development of students."  },
   {
     name: "Dr. Ajithkumar M, MDS",
     designation: "Reader",
     image: ajithkumarImage,
     description:
-      "Dr. Ajithkumar M, M.D.S., completed his postgraduate training at K.S.R. Institute of Dental Science and Research and is actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. His areas of interest include orthodontic biomechanics and functional appliance therapy, with a focus on growth modification and evidence-based orthodontic treatment. He has contributed to several national and international journal publications and remains committed to teaching, clinical excellence, research, and the academic development of students.",
-  },
+   'Dr. Ajithkumar M, M.D.S., completed his postgraduate training at K.S.R. Institute of Dental Science and Research and is actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. His areas of interest include orthodontic biomechanics and functional appliance therapy, with a focus on growth modification and evidence-based orthodontic treatment. He has contributed to several national and international journal publications and remains committed to teaching, clinical excellence, research, and the academic development of students.'  },
   {
     name: "Dr. Ilanchezhian J, MDS",
     designation: "Senior Lecturer",
     image: ilanchezhianImage,
     description:
-      "Dr. Ilanchezhian J, M.D.S., completed his postgraduate training at the same institution and is actively involved in undergraduate teaching, clinical training, and academic activities. His areas of interest include surgical orthodontics and clear aligner therapy, and he is currently pursuing an M.B.A. to further enhance his academic and professional expertise. He remains committed to teaching, clinical excellence, research, and the advancement of contemporary orthodontic care.",
-  },
+ "Dr. Ilanchezhian J, M.D.S., completed his postgraduate training at the same institution and is actively involved in undergraduate teaching, clinical training, and academic activities. His areas of interest include surgical orthodontics and clear aligner therapy, and he is currently pursuing an M.B.A. to further enhance his academic and professional expertise. He remains committed to teaching, clinical excellence, research, and the advancement of contemporary orthodontic care."  },
   {
     name: "Dr. Elamvaluthi M, MDS",
     designation: "Senior Lecturer",
     image: elamvaluthiImage,
     description:
-      "Dr. Elamvaluthi M, a MDS graduate from SRM Kattankulathur Dental College, Chennai. Currently, he is working as a Senior Lecturer at Madha Dental College and Hospital. He is particularly passionate about research and evidence-based dentistry, and continuously strives to expand his knowledge. He believes in combining clinical excellence, academic teaching, and innovative research to contribute to dentistry. His goal is to grow as a dedicated clinician, educator, and research enthusiast while delivering the highest standard of patient care.",
-  },
+     "Dr. Elamvaluthi. M, a MDS graduate from SRM Kattankulathur Dental College,Chennai. Currently, He’s working as a Senior Lecturer at Madha Dental College and Hospital. He’s particularly passionate about research and evidence-based dentistry, and he continuously strive to expand my knowledge. He believes in combining clinical excellence, academic teaching, and innovative research to contribute to dentistry. His goal is to grow as a dedicated clinician, educator, and research enthusiast while delivering the highest standard of patient care."  },
   {
     name: "Dr. Lasington P Rayen T, MDS",
     designation: "Senior Lecturer",
     image: lasingtonImage,
     description:
-      "Dr. Lasington P Rayen T, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed both BDS and MDS from Sathyabama Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. His clinical expertise includes clear aligners, fixed appliances, functional appliances, TAD-assisted procedures, and orthognathic treatment planning. He has a strong interest in orthodontic research, aligners and self-ligation. His goal is to grow as a clinician, educator, and researcher while contributing to quality patient care and orthodontic education.",
-  },
+    " Dr. LASINGTON P RAYEN T, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed both BDS and MDS from Sathyabama Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. His clinical expertise includes clear aligners, fixed appliances, functional appliances, TAD-assisted procedures, and orthognathic treatment planning. He has a strong interest in orthodontic research, aligners and self-ligation. His goal is to grow as a clinician, educator, and researcher while contributing to quality patient care and orthodontic education."  },
   {
     name: "Dr. Premila D, MDS",
     designation: "Senior Lecturer",
     image: premilaImage,
     description:
-      "Dr. Premila D, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Thai Moogambigai Dental College & Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital with more than two years of experience. Her clinical expertise includes clear aligners, fixed functional appliances, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students.",
-  },
+    "Dr. PREMILA. D, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Thai Moogambigai Dental College &Hosptial, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital with more than two years of experience. Her clinical expertise includes clear aligners, fixed functionalappliances, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students."  },
   {
     name: "Dr. Parvathi K, MDS",
     designation: "Senior Lecturer",
     image: parvathiImage,
     description:
-      "Dr. Parvathi K, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Madha Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. Her clinical expertise includes myofunctional appliances, frictionless mechanism, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students.",
-  },
+      "Dr. PARVATHI.K, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Madha Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. Her clinical expertise includes myofunctional appliances, frictionless mechanism, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students ."  },
 ];
 
 const focusAreas = [

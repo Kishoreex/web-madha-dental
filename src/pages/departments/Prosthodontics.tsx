@@ -96,99 +96,85 @@ const faculty = [
     qualifications: "Professor / Principal",
     image: anandKumarImage,
     description:
-      "Dr. V. Anand Kumar is currently serving as Principal and Professor in the Department of Prosthodontics at Madha Dental College & Hospital, Chennai, with 28 years of teaching experience. He is a Fellow of the International College of Oral Implantologists (ICOI) and has an impressive academic record comprising 90 publications, one authored book, five published patents, one granted patent, and one copyright. He has guided/co-guided 70 postgraduate students, served as a PhD guide and external PhD expert, and delivered numerous invited lectures and hands-on programmes at national and state levels. He currently serves as President of the Indian Prosthodontic Society (2026–present).",
-  },
+      "Dr. V. Anand Kumar is currently serving as Principal and Professor in the Department of Prosthodontics at Madha Dental College & Hospital, Chennai, with 28 years of teaching experience. He is a Fellow of the International College of Oral Implantologists (ICOI) and has an impressive academic record comprising 90 publications, one authored book, five published patents, one granted patent, and one copyright. He has guided/co-guided 70 postgraduate students, served as a PhD guide and external PhD expert, and delivered numerous invited lectures and hands-on programmes at national and state levels. A distinguished professional leader, he currently serves as President of the Indian Prosthodontic Society (2026–present) and has previously held several key positions in the IPS, its Tamil Nadu & Puducherry Branch, the Asian Academy of Prosthodontics, and the Indian Dental Association, including President of the IPS Tamil Nadu & Puducherry Branch and Regional Country Counsellor of the Asian Academy of Prosthodontics." },
   {
     name: "Dr. Sharmila Hussain",
     qualifications: "Professor and Head",
     image: sharmilaImage,
     description:
-      "Dr. Sharmila Hussain is a distinguished Prosthodontist and academician with over 23 years of teaching experience. She completed her B.D.S. from Saveetha Dental College in 1995 and M.D.S. from Government Dental College, Chennai, in 2000. She obtained her Ph.D. in Prosthodontics from Bharath University in 2017, specializing in Regenerative Medicine and bone mesenchymal stem cells. Her academic contributions include two books, multiple book chapters, over 50 indexed publications, 40+ conference presentations, and numerous invited lectures and hands-on workshops. Her research interests include stem cell technology, dental materials, and geriatric dentistry.",
-  },
+    "Dr. Sharmila Hussain is a distinguished Prosthodontist and academician with over 23 years of teaching experience. She completed her B.D.S. from Saveetha Dental College in 1995, securing first rank throughout and receiving the Gold Medal as Best Outgoing Student, followed by her M.D.S. from Government Dental College, Chennai, in 2000, where she secured First Rank. She obtained her Ph.D. in Prosthodontics from Bharath University in 2017, specializing in Regenerative Medicine and bone mesenchymal stem cells. She has served as Professor and Head of the Department of Prosthodontics at Madha Dental College and Hospital and as a Specialist at King Fahad Hospital, Saudi Arabia. Her academic contributions include two books, multiple book chapters, over 50 indexed publications, 40+ conference presentations, and numerous invited lectures and hands-on workshops. Her accolades include Best Paper Awards, the Best Research Paper Award, and the Pioneer in Prosthodontics Award from the Indian Dental Association in 2024. She has undergone advanced training at the University of Osaka, Japan, and has developed three patented prosthodontic devices. She is also a Ph.D. guide affiliated with five universities and serves on doctoral committees, with research interests in stem cell technology, dental materials, and geriatric dentistry." },
   {
     name: "Dr. S. Anand Selvaraj",
     qualifications: "Professor",
     image: anandSelvarajImage,
     description:
-      "Dr. S. Anand has completed his Bachelor of Dental Surgery (BDS) from SRM Dental College in 2008 and his Master of Dental Surgery (MDS) in Prosthodontics and Crown & Bridge from Saveetha University in 2011. His clinical and academic areas of interest include Full Mouth Rehabilitation, Dental Implants, and Digital Prosthodontics, with a focus on comprehensive treatment planning and contemporary restorative approaches. Dr. Anand has authored a textbook and has various publications in indexed national and international journals.",
-  },
+     "Dr. S. Anand has completed his Bachelor of Dental Surgery (BDS) from SRM Dental College in 2008 and his Master of Dental Surgery (MDS) in Prosthodontics and Crown & Bridge from Saveetha University in 2011. His clinical and academic areas of interest include Full Mouth Rehabilitation, Dental Implants, and Digital Prosthodontics, with a focus on comprehensive treatment planning and contemporary restorative approaches. Dr. Anand has authored a textbook and has various publications in indexed national and international journals."  },
   {
     name: "Dr. Sonal Jain",
     qualifications: "Reader",
     image: sonalImage,
     description:
-      "Dr. Sonal Jain is a highly accomplished and dedicated Prosthodontist with an excellent academic record. She completed her Bachelor of Dental Surgery (BDS) from Sharad Pawar Dental College, Wardha and her Master of Dental Surgery (MDS) in Prosthodontics from Rungta Dental College and Hospital, Bhilai in 2018, where she was honored as the University Gold Medallist. She has a keen and passionate interest in Implantology and Full Mouth Rehabilitation. She specializes in veneers, crowns and bridges, with a patient-centric approach and commitment to clinical excellence.",
-  },
+     "Dr. Sonal Jain is a highly accomplished and dedicated Prosthodontist with an excellent academic record. She completed her Bachelor of Dental Surgery (BDS) from Sharad Pawar Dental College, Wardha. She further pursued her Master of Dental Surgery (MDS) in Prosthodontics from Rungta Dental College and Hospital, Bhilai (Chhattisgarh) in 2018, where she was honored as the University Gold Medallist. She has a keen and passionate interest in Implantology and Full Mouth Rehabilitation. She is highly skilled and detail-oriented, with specialization in veneers, crowns and bridges, known for her precision, patient-centric approach, and commitment to clinical excellence, she continuously strives to deliver high-quality, esthetic, and functional dental care."  },
   {
     name: "Dr. Puja Harie Priya",
     qualifications: "Reader",
     image: pujaImage,
     description:
-      "Dr. Puja Harie Priya completed her Bachelor of Dental Surgery from Ragas Dental College and Hospital and MDS from SRM Dental College. Throughout her academic career, she actively participated in numerous national and international conferences, presenting her research and contributing to scientific discussion. She has published multiple research articles in reputed journals and has attended several continuing education programs to further enhance her clinical expertise. She is currently pursuing her PhD.",
-  },
+     "Dr. Puja Harie Priya completed her Bachelor of Dental Surgery from Ragas Dental college and hospital in and MDS from SRM Dental College. Throughout her academic career, she actively participated in numerous national and international conferences, presenting her research and contributing to scientific discussion. She has published multiple research articles in reputed journals and has attended several continuing education programs to further enhance her clinical expertise. She is currently pursuing her PhD." },
   {
     name: "Dr. S. Lakshmi Prasanna",
     qualifications: "Reader",
     image: lakshmiPrasannaImage,
     description:
-      "Dr. S. Lakshmi Prasanna, MDS, is a Prosthodontist and Associate Professor at Madha Dental College and Hospital, Chennai. She completed her BDS from Meghana Institute of Dental Sciences, Nizambad, and MDS in Prosthodontics, Crown and Bridge, from Sree Balaji Dental College and Hospital. She has 4½ years of teaching experience and has actively contributed to academics and research. She has one patent and has authored more than 11 publications. Her academic and clinical interests include Implantology, Full Mouth Rehabilitation, and Digital Dentistry.",
-  },
+     "Dr. S.Lakshmi Prasanna, MDS, is a Prosthodontist and Associate Professor at Madha Dental College and Hospital, Chennai. She completed her Bachelor of Dental Surgery (BDS) from Meghana Institute of Dental Sciences, Nizambad, and her Master of Dental Surgery (MDS) in Department of Prosthodontics, Crown and Bridge, from  Sree Balaji Dental College and Hospital. She has one patent, and has authored more than 11 publications in various national and International journals. She also has presented her research work at national and International conferences. Her academic and clinical interests include Implantology, Full mouth Rehabilitation , and Digital dentistry with particular interest in advancing contemporary prosthodontic treatment and patient-centred care." },
   {
     name: "Dr. R. Hemalatha",
     qualifications: "Senior Lecturer",
     image: hemalathaImage,
     description:
-      "Dr. Hemalatha, MDS, is a Prosthodontist and Associate Professor at Madha Dental College and Hospital, Chennai. She completed her BDS and MDS in Prosthodontics, Crown and Bridge, from Saveetha Dental College and Hospital. She has a keen and passionate interest in Implantology and Full Mouth Rehabilitation. She is highly skilled and detail-oriented, with specialization in veneers, crowns and bridges, and is committed to precision, patient-centric care, and clinical excellence.",
-  },
+    "Dr. Hemalatha MDS, is a Prosthodontist and Associate Professor at Madha Dental College and Hospital, Chennai. She completed her Bachelor of Dental Surgery (BDS) and her Master of Dental Surgery (MDS) in Department of Prosthodontics, Crown and Bridge, from  Saveetha Dental College and Hospital. She has a keen and passionate interest in Implantology and Full Mouth Rehabilitation. She is highly skilled and detail-oriented, with specialization in veneers, crowns and bridges, known for her precision, patient-centric approach, and commitment to clinical excellence, she continuously strives to deliver high-quality, esthetic, and functional dental care."  },
   {
     name: "Dr. R. Suganthi",
     qualifications: "Senior Lecturer",
     image: suganthiImage,
     description:
-      "Dr. Suganthi R, MDS (Prosthodontics), is a Senior Lecturer in the Department of Prosthodontics at Madha Dental College & Hospital, Chennai, with 3 years of teaching experience. She completed her BDS from Tamil Nadu Government Dental College in 2010 and MDS from KLE’s Institute of Dental Sciences in 2018 and is currently pursuing a part-time PhD at Saveetha Dental College, Chennai. Her academic interests include prosthodontic rehabilitation, implant-supported prostheses, dental materials, nano-biomedicine, and emerging technologies in dentistry.",
-  },
+      "Dr. Suganthi R, MDS (Prosthodontics), completed her BDS from Tamil Nadu Government Dental College in 2010 and MDS from KLE’s Institute of Dental Sciences in 2018 and is currently pursuing a part-time PhD at Saveetha Dental College, Chennai. She has completed NPTEL and SWAYAM courses in scientific research and attended several faculty development programmes and advanced workshops in prosthodontics and dental technology. She has seven indexed national and international publications, presented four scientific papers at national IPS conferences, and served as a co-mentor and chairperson at the 26th IPS PG Convention. She has completed two research projects and is currently involved in two projects in implant dentistry, with academic interests in prosthodontic rehabilitation, implant-supported prostheses, dental materials, nano-biomedicine, and emerging technologies in dentistry." },
   {
     name: "Dr. M. Pamila Mary Sabatini",
     qualifications: "Senior Lecturer",
     image: pamilaImage,
     description:
-      "Dr. Pamila Mary Sabatini M, MDS, DFA, completed MDS Prosthodontics from Karpaga Vinayaga Institute of Dental Sciences and BDS from Sri Ramachandra Institute of Higher Education and Research. She completed DFA from Ajantha School of Arts. She has published articles in international and national journals and has presented her research work at national and international conferences. She is extremely interested and passionate in Prosthodontics and Implantology.",
-  },
+    "Dr.Pamila Mary Sabatini M, MDS,DFA. completed her studies from Sri Ramachandra Institute of higher Education and Research. She has published articles in both international and national journals. She also has presented her research work at national and International conferences. Extremely interested and passionate in Prosthodontics and implantology . "  },
   {
     name: "Dr. A. Vinitha",
     qualifications: "Senior Lecturer",
     image: vinithaImage,
     description:
-      "Dr. Vinitha A., MDS, completed her postgraduate training in Prosthodontics and Crown & Bridge from Ragas Dental College and Hospital. She has 1 year and 6 months of teaching experience and is currently working as a Senior Lecturer at Madha Dental College and Hospital. She has published articles in international and national journals and has presented her research work at national and international conferences. Her academic and clinical interests include Implantology, Fixed Partial Dentures, and Complete Dentures.",
-  },
+     "Dr. Vinitha.A , MDS, completed her postgraduate training in Prosthodontics and Crown & Bridge from Ragas Dental College and Hospital. She has published articles in both international and national journals. She also has presented her research work at national and International conferences. Her academic and clinical interests include Implantology, Fixed Partial Dentures, and Complete Dentures with particular interest in advancing contemporary prosthodontic treatment and patient-centred care."  },
   {
     name: "Dr. B. Vignesh Manickam",
     qualifications: "Senior Lecturer",
     image: vigneshImage,
     description:
-      "Dr. Vignesh Manickam B., MDS, completed his postgraduate training in Prosthodontics and Crown & Bridge from Madha Dental College and Hospital. He has 1 year and 8 months of teaching experience and is currently working as a Senior Lecturer at Madha Dental College and Hospital. His academic interests are focused on Prosthodontics and Crown & Bridge, with a keen interest in clinical dentistry, academic research, and implantology.",
-  },
+    "Dr. Vignesh Manickam.B, MDS, completed his postgraduate training in Prosthodontics and Crown & Bridge from Madha Dental College and Hospital. His academic interests are focused on Prosthodontics and Crown & Bridge, with a keen interest in clinical dentistry and academic research, and implantology."  },
   {
     name: "Dr. Backer Abu Tariq",
     qualifications: "Senior Lecturer",
     image: backerImage,
     description:
-      "Dr. Backer Abu Tariq, MDS, completed his postgraduate training in Prosthodontics and Crown & Bridge from Meenakshi Ammal Dental College and Hospital. He has 3 years and 9 months of teaching experience and is currently working as a Senior Lecturer at Madha Dental College and Hospital. He has published one research article in an indexed journal and is credited with one patent. His academic and professional interests are focused on Prosthodontics and Crown & Bridge, with a keen interest in clinical dentistry, academic teaching, and research.",
-  },
+      "Dr. Backer Abu Tariq, MDS, completed his postgraduate training in Prosthodontics and Crown & Bridge from Meenakshi Ammal Dental College and Hospital. He is currently working as a Senior Lecturer at Madha Dental College and Hospital. He has published one research article in an indexed journal and is credited with one patent. His academic and professional interests are focused on Prosthodontics and Crown & Bridge, with a keen interest in clinical dentistry, academic teaching, and research. "  },
   {
     name: "Dr. Sandhia Sundaram",
     qualifications: "Senior Lecturer",
     image: sandhiaImage,
     description:
-      "Dr. Sandhia Sundaram, MDS, has 4 months of teaching experience and is currently working as Senior Lecturer in Madha Dental College. She has completed her PG from AB Shetty Memorial Institute of Dental Sciences, Mangalore and UG from Annamalai University. She has published articles in international and national journals. Her academic and clinical interests include Smile Designing, Digital Dentistry, Implantology, Fixed Partial Dentures, and Complete Dentures.",
-  },
+     "Dr. Sandhia Sundaram.,MDS, completed her postgraduation from AB SHETTY MEMORIAL INSTITUTE OF DENTAL SCIENCES, Mangalore and UG from ANNAMALAI UNIVERSITY. She has published articles in both international and national journals. Her academic and clinical interests include Smile designing,Digital dentistry, Implantology, Fixed Partial Dentures, and Complete Dentures with particular interest in advancing contemporary prosthodontic treatment and patient-centred care."  },
   {
     name: "Dr. Rathika J",
     qualifications: "Senior Lecturer",
     image: rathikaImage,
     description:
-      "Dr. Rathika J, MDS, completed her postgraduate training in Prosthodontics and Crown & Bridge from Madha Dental College and Hospital. She has 2 years and 5 months of teaching experience and is currently working as a Senior Lecturer at Madha Dental College and Hospital. She has published one article in an indexed journal and is credited with one patent. Her academic interests are focused on Prosthodontics and Crown & Bridge, with a keen interest in clinical dentistry and academic research.",
-  },
+     "Dr. Rathika J, MDS, completed her postgraduate training in Prosthodontics and Crown & Bridge from Madha Dental College and Hospital. She has published one article in an indexed journal and is credited with one patent. Her academic interests are focused on Prosthodontics and Crown & Bridge, with a keen interest in clinical dentistry and academic research. "  },
 ];
 
 const outreach = [

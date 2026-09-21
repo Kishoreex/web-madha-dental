@@ -78,78 +78,67 @@ const faculty = [
     designation: "Professor and Head",
     image: selvakumarImage,
     description:
-      "Dr. J. Selvakumar, M.D.S., completed BDS and MDS in Periodontics from Meenakshi Ammal Dental College. He holds fellowships in Implantology, Laser Dentistry, Orofacial Pain/TMJ/Sleep Apnoea from Rutgers University, USA and Dental Sleep Medicine. He has 50+ publications, two patents, presented 200+ papers and has authored chapters in reputed textbooks. He is a reviewer for IJDR, JISP, JIDAM, WJPR, and WJASR, and Editor of the International Journal of Dental Implants and Research. His awards include Best IDA President (State & National), ISDR Young Researcher, Best Academician, Best Young Periodontal Researcher, and the Global Outreach Healthcare Award (2021).",
-  },
+      "Dr. J. Selvakumar, M.D.S., completed BDS and MDS in Periodontics from Meenakshi Ammal Dental College. He holds fellowships in Implantology, Laser Dentistry, Orofacial Pain/TMJ/Sleep Apnoea from Rutgers University, USA and Dental Sleep Medicine. He has 50+ publications, two patents, presented 200+ papers and has authored chapters in reputed textbooks. He is a reviewer for IJDR, JISP, JIDAM, WJPR, and WJASR, and Editor of the International Journal of Dental Implants and Research. His awards include Best IDA President (State & National), ISDR Young Researcher, Best Academician, Best Young Periodontal Researcher, and the Global Outreach Healthcare Award (2021). "  },
   {
     name: "Dr. V. Menaka, MDS",
     designation: "Professor",
     image: menakaImage,
     description:
-      "Dr. V. Menaka, M.D.S., completed her BDS and MDS from the Tamil Nadu Dr. M.G.R Medical University and has over 15 years of teaching experience. She has contributed to several scientific publications and has actively participated in national conferences, workshops, and continuing dental education programmes. She is a member of the Indian Society of Periodontology, Indian Dental Association, and Indian Association of Oral Implantologists. Her areas of clinical expertise include advanced periodontal flap surgeries, regenerative periodontal procedures, mucogingival surgeries, gingival recession management, and implant-related periodontal therapy.",
-  },
+    "Dr. V. Menaka, M.D.S., completed her BDS and MDS from the Tamil Nadu Dr.M.G.R Medical University has over 15 years of teaching experience. She has contributed to several scientific publications and has actively participated in national conferences, workshops, and continuing dental education programmes. She is a member of the Indian Society of Periodontology, Indian Dental Association, and Indian Association of Oral Implantologists. Her areas of clinical expertise include advanced periodontal flap surgeries, regenerative periodontal procedures, mucogingival surgeries, gingival recession management, and implant-related periodontal therapy."  },
   {
     name: "Dr. P. Raja Priya, MDS",
     designation: "Reader",
     image: rajaPriyaImage,
     description:
-      "Dr. P. Raja Priya, MDS, completed her M.D.S. in Periodontics and Oral Implantology from Meenakshi Ammal Dental College & Hospitals, Chennai. She has over eight years of teaching experience in the field of Periodontology. She has several scientific publications in national and international dental journals, contributed to numerous national and international conferences, CDE programmes, and professional academic activities. She has presented scientific papers and posters at various professional forums in the areas of Periodontology and Implantology. Her research interests include periodontal inflammation, biomarkers, regenerative periodontal therapy, and periodontal diagnosis.",
-  },
+    "Dr. P. Raja Priya, MDS, completed her M.D.S. in Periodontics and Oral Implantology from Meenakshi Ammal Dental College & Hospitals, Chennai. She has several scientific publications in national and international dental journals, contributed to numerous national and international conferences, CDE programmes, and professional academic activities. She has presented scientific papers and posters at various professional forums in the areas of Periodontology and Implantology. Her research interests include periodontal inflammation, biomarkers, regenerative periodontal therapy, and periodontal diagnosis. " },
   {
     name: "Dr. Nikita Ravi, MDS",
     designation: "Reader",
     image: nikitaRaviImage,
     description:
-      "Dr. Nikita Ravi, MDS, completed her MDS from Meenakshi Ammal Dental College with seven years of experience in dental education, clinical practice, and research. She has contributed to 18 scientific publications, 8 published patents and actively participates in national and international conferences. Her expertise includes periodontal and implant therapy, surgical procedures, patient management, treatment planning, and digital dental imaging.",
-  },
+     "Dr. Nikita Ravi, MDS,completed her MDS from MeenakshiAmmal Dental College. She has contributed to 18 scientific publications, 8 published patents and actively participates in national and international conferences. Her expertise includes periodontal and implant therapy, surgical procedures, patient management, treatment planning, and digital dental imaging. "  },
   {
     name: "Dr. P.S. Viola Esther, MDS",
     designation: "Reader",
     image: violaEstherImage,
     description:
-      "Dr. P. S. Viola Esther, MDS, completed her under graduation at Government Dental College, Chennai and pursued her postgraduation in Periodontology at Vivekanandha Dental College for Women, Tiruchengode. She has a teaching experience of 5 years 10 months. She has been awarded fellowship from the International Congress of Oral Implantologists. She has authored 2 books, holds one patent and has published 15 scientific publications in peer reviewed journals. Her primary clinical interest lies in implantology and contemporary implant related research, with a particular focus on integrating evidence-based advances and emerging technologies into clinical practice and dental education.",
-  },
+      "Dr. P. S. Viola Esther, MDS, completed her under graduation at Government Dental College, Chennai and pursued her postgraduation in Periodontology at Vivekanandha Dental College for Women, Tiruchengode. She has been awarded fellowship from the International Congress of Oral Implantologists. She has authored 2 books, holds one patent and has published 15scientific publications in peer reviewed journals. Her primary clinical interest lies in implantology and contemporary implant related research, with a particular focus on integrating evidence-based advances and emerging technologies into clinical practice and dental education."  },
   {
     name: "Dr. N.K. Savithri, MDS",
     designation: "Reader",
     image: savithriImage,
     description:
-      "Dr. N. K. Savithri, earned her MDS from SRM Dental College, Ramapuram, Chennai, and her BDS from Manipal College of Dental Sciences, Manipal. She has 4 years and 7 months of teaching experience at Madha Dental College and Hospital. She has contributed to scientific literature through publications in PubMed, Scopus, and Web of Science indexed journals and holds a patent. She has participated in numerous national and international conferences and has presented scientific papers and posters at various national and professional forums in the fields of Periodontology and Implantology. Her primary areas of academic and research interest include periodontal regeneration, the pathogenesis of periodontal diseases, and periodontal plastic surgery.",
-  },
+    "Dr. N. K. Savithri, earned her MDS from SRM Dental College, Ramapuram, Chennai, and her BDS from Manipal College of Dental Sciences, Manipal. She has contributed to scientific literature through publications in PubMed, Scopus, and Web of Science indexed journals and holds a patent. She has participated in numerous national and international conferences and has presented scientific papers and posters at various national and professional forums in the fields of Periodontology and Implantology. Her primary areas of academic and research interest include periodontal regeneration, the pathogenesis of periodontal diseases, and periodontal plastic surgery. "  },
   {
     name: "Dr. Vinitha Nair, MDS",
     designation: "Senior Lecturer",
     image: vinithaNairImage,
     description:
-      "Dr. Vinitha Nair, MDS, completed her MDS from Sri Ramachandra Dental College. Her areas of professional and academic interest include periodontal regenerative procedures, and contemporary approaches to regenerative periodontal surgery. She has three research publications to her credit and is interested in further developing her research and academic pursuits in the field of Periodontics. She is passionate about fostering a student-centered learning environment and encouraging students to develop a strong foundation in periodontal diagnosis and evidence-based clinical practice.",
-  },
+     "Dr. Vinitha Nair, MDS, completed her MDS from Sri Ramachandra Dental College. Her areas of professional and academic interestinclude periodontal regenerative procedures, and contemporary approaches to regenerative periodontal surgery. She has three research publications to her credit and is interested in further developing her research and academic pursuits in the field of Periodontics. She is passionate about fostering a student-centered learning environment and encouraging students to develop a strong foundation in periodontal diagnosis and evidence-based clinical practice."  },
   {
     name: "Dr. D. Navin Kumar, MDS",
     designation: "Senior Lecturer",
     image: navinKumarImage,
     description:
-      "Dr. D. Navin Kumar, M.D.S., completed his post-graduation in Periodontics from Ragas Dental College and Hospital. He has 15 publications to his credit in indexed journals with a high impact factor and 8 patents reflecting a strong record of innovation within the specialty. He has authored one book, contributing to the academic literature. His areas of academic and clinical interest include periodontal regeneration and tissue-engineering-based approaches to periodontal repair. He has a particular focus on periodontal plastic and aesthetic surgery, dental implantology, peri-implant disease management and practices laser-assisted periodontal therapy, incorporating advanced technology into non-surgical and surgical periodontal care.",
-  },
+      "Dr. D. Navin Kumar, M.D.S., completed his post-graduation in Periodontics from Ragas Dental College and Hospital. He has 15 publications to his credit in indexed journals with a high impact factor and 8 patents reflecting a strong record of innovation within the specialty. He has authored one book, contributing to the academic literature. His areas of academic and clinical interest include periodontal regeneration and tissue-engineering-based approaches to periodontal repair. He has a particular focus on periodontal plastic and aesthetic surgery, dental implantology, peri-implant disease management and practices laser-assisted periodontal therapy, incorporating advanced technology into non-surgical and surgical periodontal care."  },
   {
     name: "Dr. Surthi. S, MDS",
     designation: "Senior Lecturer",
     image: surthiImage,
     description:
-      "Dr. Surthi. S, MDS, completed her postgraduate degree from Meenakshi Ammal Dental College and Hospital, Chennai. She has 10 scientific publications in both national and international journals and she has 2 patents. Her areas of include Periodontal plastic surgery, Periodontal regeneration and Implantology.",
-  },
+    "Dr. Surthi. S, MDS, completed her postgraduate degree from Meenakshi Ammal Dental College and Hospital, Chennai. She has 10 scientific publications in both national and international journals and she has 2 patents. Her areas of include Periodontal plastic surgery, Periodontal regeneration and Implantology."  },
   {
     name: "Dr. A.E. Poorani Balaraman, MDS",
     designation: "Senior Lecturer",
     image: pooraniBalaramanImage,
     description:
-      "Dr. A. E. Poorani Balaraman, MDS, pursued her post graduation in SRM Dental College, Ramapuram, Chennai with 3 months of teaching experience in Madha Dental College & Hospital. She has contributed to 5 publications and has actively participated in national and international conferences. Her areas of expertise include hard and soft tissue surgeries, implant dentistry, periodontal procedures, and laser-assisted surgical techniques.",
-  },
+     "Dr. A. E. Poorani Balaraman, MDS, pursued her post graduation in SRM Dental College, Ramapuram ,Chennai. She has contributed to 5 publications and has actively participated in national and international conferences. Her areas of expertise include hard and soft tissue surgeries, implant dentistry, periodontal procedures, and laser-assisted surgical techniques."  },
   {
     name: "Dr. P. Arun, MDS",
     designation: "Senior Lecturer",
     image: arunImage,
     description:
-      "Dr. P. Arun, M.D.S., completed his post-graduation in Periodontics from K.S.R. Institute of Dental Science & Research, Tiruchengode, Namakkal District. He has over 5 years of clinical experience in the field of Periodontology & Implantology. He has authored one scientific publication in an indexed journal. His areas of academic and clinical interest include Laser Dentistry, Implantology, Periodontal Regeneration, Clinical Diagnosis, and Flap Surgery.",
-  },
+     "Dr. P. Arun, M.D.S., completed his post-graduation in Periodontics from K.S.R. Institute of Dental Science & Research, Tiruchengode, Namakkal District. He has authored onescientific publication in an indexed journal. His areas of academic and clinical interest include Laser Dentistry, Implantology, Periodontal Regeneration, Clinical Diagnosis, and Flap Surgery. "  },
 ];
 
 const outreach = [

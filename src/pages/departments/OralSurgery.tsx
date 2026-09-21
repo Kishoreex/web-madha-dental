@@ -89,71 +89,61 @@ const faculty = [
     designation: "Professor & HOD",
     image: deepakImage,
     description:
-      "Dr. Deepak Abraham Pandyan has completed his MDS from Ragas Dental College and Hospital and pursued his fellowship in Temporomandibular Disorders and Sleep Apnea. He has specialized in maxillofacial trauma, orthognathic surgery and pathology. His field of interest is disorders of TMJ. He has publications in International PubMed and Scopus indexed journals and holds two patents.",
-  },
+      "Dr. Deepak Abraham Pandyan has completed his MDS from Ragas dental college and hospital and pursued his fellowship in Temporomandibular disorders and sleep apnea. He has specialized in maxillofacial trauma, orthognathic surgery and pathology. His field of interest is disorders of TMJ. He has publication in International Pubmed and Scopus indexed journal and holds two patents."  },
   {
     name: "Dr. Satheesh C, MDS",
     designation: "Professor",
     image: satheeshImage,
     description:
-      "Dr. Satheesh C, MDS, has completed his MDS from Annamalai University and specializes in orthognathic surgery, maxillofacial trauma, benign cysts and tumors, and dental implants. His field of interest is maxillofacial trauma and benign lesions. He has various publications in PubMed and Scopus indexed International and National journals and has one patent.",
-  },
+"Dr.Satheesh C, MDS., has completed hisMDS from Annamalai university and specializes in orthognathic surgery,maxillofacial trauma,benign cyst and tumors,dental implants.His field of interest is maxillofacial trauma and benign lesions.He has various publications in Pubmed and Scopus indexed International and National journals and has one patent."  },
   {
     name: "Dr. Deenadayalan N, MDS",
     designation: "Professor",
     image: deenadayalanImage,
     description:
-      "Dr. Deenadayalan has completed his MDS from Ragas Dental College and Hospital and pursued his MS in Implantology from Stenberg University and M.Dent from Vienna University, Austria. He specializes in oncology, implantology, laser and facial aesthetics. He has various publications in high impact journals and has two patents.",
-  },
+     "Dr.Deenadayalan has completed his MDS from Ragas dental college and hospital and pursued his MS in Implantology from Stenberg university,M.Dent from Vienna university, Austria.He specializes in oncology (skull base surgery),Implantology,  Laser, Facial aesthetics.He has various publications in high Impact journals and has two patents."  },
   {
     name: "Dr. Karthik K P, MDS",
     designation: "Reader",
     image: karthikImage,
     description:
-      "Dr. Karthik KP completed his MDS from Meenatchi Ammal Dental College in 2019. He has pursued fellowship in Craniomaxillofacial Trauma at PGIMS, Rohtak, Fellowship in Hair Transplant and Post Graduate Diploma in Facial Aesthetics. He specializes in maxillofacial trauma, pathology and implants, facial aesthetics and hair transplant. He has done various international and national publications in PubMed and Scopus indexed journals with high impact factor and holds a patent.",
-  },
+    "Dr.Karthik KP completed his MDS from Meenatchi Ammal Dental College in 2019.He has pursued fellowship in Craniomaxillofacial trauma at PGIMS,Rohtak, Fellowship in Hair transplant, Post Graduate Diploma in Facial Aesthetics. He specialises in maxillofacial trauma, Pathology and Implants, Facial aesthetics and Hair transplant.He has done various international and national publications in Pubmed and Scopus indexed journals with high impact factor and holds a patent."  },
   {
     name: "Dr. Thara Chandra S, MDS",
     designation: "Reader",
     image: tharaImage,
     description:
-      "Dr. Thara Chandra S completed her Master of Dental Surgery (MDS) from MES Dental College and Hospital in 2019. She has also completed a diploma in facial aesthetics and minimally invasive facial procedures. Her areas of interest include facial aesthetics and hair transplantation. She has various publications in national and international journals.",
-  },
+      "Dr Thara Chandra S completed her Master of Dental Surgery (MDS) from MES Dental College and Hospital in 2019.She has also completed a diploma in facial aesthetics and minimally invasive facial procedures. Her areas of interest include facial aesthetics and hair transplantation. She has various publications in national and international journals."  },
   {
     name: "Dr. George Samyo Stephenson, MDS",
     designation: "Senior Lecturer",
     image: georgeImage,
     description:
-      "Dr. George Samyo Stephenson has completed his post graduation from Madha Dental College and Hospital in 2023. His field of interest includes Orthognathic Surgery, Maxillofacial Trauma, Minor Oral Surgical Procedures and Dental Implantology. He has publications in PubMed and Scopus indexed international journals and holds a patent.",
-  },
+      "Dr.George Samyo Stephenson has completed his post graduation from Madha Dental college and Hospital in 2023. His field of interest in Orthognathic Surgery, Maxillofacial trauma, Minor oral surgical procedures & Dental implantology. He has publications in Pubmed and Scopus indexed international journal & he holds a Patent."  },
   {
     name: "Dr. Abhirami Srikanth, MDS",
     designation: "Senior Lecturer",
     image: abhiramiImage,
     description:
-      "Dr. Abhirami Srikanth has completed her MDS from SRM Institute of Science and Technology in 2023, following which she pursued a fellowship in Oral Oncology in Sri Ramachandra Institute of Higher Education and Research. Her interests include oral cancer, benign pathologies and facial trauma. She has published various research articles in both indexed National and International journals and has also published a book on Treatment Options in Head and Neck Cancer.",
-  },
+      "Dr. Abhirami Srikanth has completed her MDS from SRM Institute of Science and Technology in 2023 following which she pursued a fellowship in Oral Oncology in Sri Ramachandra Institute of Higher Education and Research. Her interests include Oral cancer, benign pathologies and facial trauma. She has published various research articles in both indexed National and International journals and has also published a book on Treatment Options in Head and Neck Cancer." },
   {
     name: "Dr. Padma Spandhana, MDS",
     designation: "Senior Lecturer",
     image: padmaImage,
     description:
-      "Dr. Padma Spandana completed her BDS from Government Dental College & Hospital, Vijayawada and MDS from Ragas Dental College and Hospital. Her field of interests is Trauma, Cleft lip and palate. She has various publications in national and international journals.",
-  },
+    "Dr Padma Spandana completed her BDS from Government Dental College&Hospital, Vijayawada and MDS from Ragas Dental College and Hospital.Her field of interests is Trauma,Cleft lip and palate. She has various publications in national and international journals." },
   {
     name: "Dr. Mohana Priya U, MDS",
     designation: "Senior Lecturer",
     image: mohanaImage,
     description:
-      "Dr. Mohana Priya U has completed her MDS from Madha Dental College & Hospital, following which she pursued International Fellowship in Aesthetic and Anti Aging Medicine. Her interests include Maxillofacial Trauma, Orthognathic Surgery, Temporomandibular Disorders, Aesthetic Procedures, Dental Implantology and Oral Oncology. She has published various research articles in both indexed National and International journals.",
-  },
+     "Dr. Mohana Priya. U has completed her MDS from Madha Dental college & hospital,following which she pursued International fellowship in Aesthetic and Anti aging medicine. Her interests include MaxilloFacial trauma, Orthognathic Surgery, Temporomandibular Disorders, Aesthetic procedures, Dental Implantology and Oral oncology. She has published various research articles in both indexed National and International journals."},
   {
     name: "Dr. Shashti Balaji S G",
     designation: "Faculty",
     image: shashtiImage,
     description:
-      "Dr. Shashti Balaji S G completed his BDS from Sree Balaji Dental Colleges and Hospital, Chennai and MDS from Madha Dental College and Hospital. His field of interests is Implantology and Minor Oral Surgical Procedures. He has various publications in national and international journals.",
-  },
+    "Dr Shashti Balaji S G completed  his BDS from Sree Balaji Dental Colleges and Hospital,Chennai and MDS from Madha Dental College and Hospital. His Field of interests is Implantology and Minor Oral Surgical Procudures. He has various publications in national and international journals."},
 ];
 
 export default function OralMaxillofacialSurgery() {

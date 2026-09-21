@@ -84,71 +84,61 @@ const faculty = [
   designation: "Professor and Head",
   image: arunImage,
     description:
-      "Dr. E. Arun has completed his MDS from Ragas Dental College, Tamil Nadu Dr. MGR Medical University. He was the University topper and has a 14-year career dedicated to clinical excellence, teaching, and academic leadership. He has over 30 publications in indexed journals with high impact factors and holds one patent. He is a renowned and frequently invited guest speaker at various dental colleges across the region. His primary fields of clinical and research interest include Cariology—focused on the prevention, diagnosis, and treatment of dental caries—and Pharmacological Behaviour Management.",
-  },
+     "Dr. E. Arun has completed his MDS from Ragas Dental College, Tamil Nadu Dr. MGR Medical Univeristy. Hewas the University topper and has a 14-year career dedicated to clinical excellence, teaching, and academic leadership. He has over 30 publications in indexed journals with high impact factors and holds one patent. He is a renowned and frequently invited guest speaker at various dental colleges across the region. His primary fields of clinical and research interest include Cariology—focused on the prevention, diagnosis, and treatment of dental caries—and Pharmacological Behaviour Management."  },
 {
   name: "Dr. C.G. Madhan, M.D.S",
   designation: "Professor",
   image: madhanImage,
     description:
-      "Dr. C. G. Madhan pursued his masters from Ragas Dental College and Hospital, Chennai. He has over 10 years of experience in dental education, clinical practice, and academic administration. He has authored and co-authored more than 15 national and international research publications, including articles published in indexed journals. His research interests include pediatric oral health, preventive dentistry, dental materials, behavior management, and contemporary approaches to pediatric dental care. He has received Best Scientific Paper Presentation Awards at national conferences of the Indian Society of Pedodontics and Preventive Dentistry. He is also a co-inventor of a pediatric syringe design patent registered with the Government of India.",
-  },
+     "Dr. C. G. Madhan pursued his masters from Ragas Dental College and Hospital, Chennai. He has over 10 years of experience in dental education, clinical practice, and academic administration. He has authored and co-authored more than 15 national and international research publications, including articles published in indexed journals. His research interests include pediatric oral health, preventive dentistry, dental materials, behavior management, and contemporary approaches to pediatric dental care. He has received Best Scientific Paper Presentation Awards at national conferences of the Indian Society of Pedodontics and Preventive Dentistry. He is also a co-inventor of a pediatric syringe design patent registered with the Government of India. "  },
 {
   name: "Dr. V. Ramesh, M.D.S",
   designation: "Reader",
   image: rameshImage,
     description:
-      "Dr. V. Ramesh pursued his masters from Rajah Muthiah Dental College and Hospital, Chidambaram. He has over 6 years of experience in dental education, clinical practice, and academic administration. His academic interests include teaching, research, innovation, and evidence-based clinical practice. He has authored 12 publications in reputed high-impact journals, holds 3 copyrights, and has been granted 1 registered design, relating to an innovative disposable biodegradable mouth mirror.",
-  },
+    "Dr. V. Ramesh pursued his masters from Rajah Muthiah Dental College and Hospital, Chidambaram. His academic interests include teaching, research, innovation, and evidence-based clinical practice. He has authored 12 publications in reputed high-impact journals, holds 3 copyrights, and has been granted 1 registered design, relating to an innovative disposable biodegradable mouth mirror. "  },
 {
   name: "Dr. S. Dhivya, M.D.S",
   designation: "Reader",
   image: dhivyaImage,
     description:
-      "Dr. S. DHIVYA, M.D.S., pursued her post graduation from Vivekanandha Dental College and Hospital. She has over 5 years and 2 of experience in dental education, clinical practice, and academic administration. She has authored 12 publications in reputed high-impact journals and credited with 1 copyright, one patent and has one published book. Her primary fields of clinical and research interest include non-pharmacological behaviour management.",
-  },
+    "Dr. S. DHIVYA, M.D.S.,pursued her post graduation from VivekanandhaDental College and Hospital. She has authored 12 publications in reputed high-impact journals and credited with 1 copyright,onepatent and has one published book .Her primary fields of clinical and research interest include non- pharmacological behaviour management."  },
 {
   name: "Dr. V. Dharini, M.D.S",
   designation: "Reader",
   image: dhariniImage,
     description:
-      "Dr. V. Dharini has completed her Post Graduation in Pediatric and Preventive Dentistry from Ragas Dental College and Hospital with 4 years of academic and clinical experience. She is actively involved in research, with publications in multiple national and international journals. Her academic interest is oriented towards Pediatric Endodontics and Behaviour management. Dr. Dharini is committed to advancing pediatric dental care while contributing to student education and professional development.",
-  },
+     "Dr. V. Dharini has completed her Post Graduation in Pediatric and Preventive Dentistry from Ragas Dental College and Hospital. She is actively involved in research, with publications in multiple national and international journals. Her academic interest is oriented towards Pediatric Endodontics and Behaviour management.Dr. Dharini is committed to advancing pediatric dental care while contributing to student education and professional development."  },
 {
   name: "Dr. Bilal Sheriff, M.D.S",
   designation: "Senior Lecturer",
   image: bilalSheriffImage,
     description:
-      "Dr. Bilal Sheriff completed his undergraduate studies (BDS) at SRM Kattankulathur Dental College and Hospital in 2017, followed by his post-graduation (MDS) in Pediatric Dentistry from Madha Dental College and Hospital in 2024. Driven by strong leadership qualities and a deep commitment to social service, Dr. Sheriff actively leads community outreach initiatives to improve accessible dental care alongside his clinical work. As a highly respected clinician and academician, he has built a formidable reputation in pediatric care—successfully performing one of the highest volumes of complex General Anesthesia cases with an unwavering focus on patient safety.",
-  },
+     "Dr. Bilal Sheriff completed his undergraduate studies (BDS) at SRM Kattankulathur Dental College and Hospital in 2017, followed by his post-graduation (MDS) in Pediatric Dentistry from Madha Dental College and Hospital in 2024. Driven by strong leadership qualities and a deep commitment to social service, Dr. Sheriff actively leads community outreach initiatives to improve accessible dental care alongside his clinical work. As a highly respected clinician and academician, he has built a formidable reputation in pediatric care—successfully performing one of the highest volumes of complex General Anesthesia cases with an unwavering focus on patient safety. " },
 {
   name: "Dr. S.S. Harish, M.D.S",
   designation: "Senior Lecturer",
   image: harishImage,
     description:
-      "Dr. Harish S. S. completed his undergraduate studies (BDS) at Karpaga Vinayaka Dental College and Hospital in 2019, followed by his post-graduation (MDS) in Pediatric Dentistry from Chettinad Dental College and Research Institute in 2020. With a keen interest in comprehensive pediatric dental care, he brings his clinical experience into teaching and mentoring students. He has actively participated in scientific conferences and continuing professional development programs, keeping abreast of advancements in pediatric dentistry. As a clinician and academician, Dr. Harish is committed to delivering quality patient care while contributing to dental education and the professional development of future dental practitioners.",
-  },
+     "Dr. Harish S. S. completed his undergraduate studies (BDS) at Karpaga Vinayaka Dental College and Hospital in 2019, followed by his post-graduation (MDS) in Pediatric Dentistry from Chettinad Dental College and Research Institute in 2020. With a keen interest in comprehensive pediatric dental care, he brings his clinical experience into teaching and mentoring students. He has actively participated in scientific conferences and continuing professional development programs, keeping abreast of advancements in pediatric dentistry. As a clinician and academician, Dr. Harish is committed to delivering quality patient care while contributing to dental education and the professional development of future dental practitioners." },
 {
   name: "Dr. Areef Farah Shehani, M.D.S",
   designation: "Senior Lecturer",
   image: areefImage,
     description:
-      "Dr. Areef Farah Shehani completed her undergraduate studies (BDS) at K.S.R. Institute of Dental Science and Research, Tiruchengode in 2019, followed by her post-graduation (MDS) in Pediatric and Preventive Dentistry from SRM Kattankulathur Dental College and Hospital in 2024. She is currently pursuing her PhD at Saveetha Dental College and Hospitals, with a research focus on innovative non-pharmacological approaches for pain, anxiety, and behaviour management in children. Her research has been published in international peer-reviewed journals, and she remains actively involved in scientific research, conferences, and academic activities. Her key areas of interest include brainwave entrainment, pediatric dental anxiety and pain management, behaviour management, and evidence-based pediatric dentistry.",
-  },
+   "Dr. Areef Farah Shehani completed her undergraduate studies (BDS) at K.S.R. Institute of Dental Science and Research, Tiruchengode in 2019, followed by her post-graduation (MDS) in Pediatric and Preventive Dentistry from SRM Kattankulathur Dental College and Hospital in 2024. She is currently pursuing her PhD at Saveetha Dental College and Hospitals, with a research focus on innovative non-pharmacological approaches for pain, anxiety, and behaviour management in children. Her research has been published in international peer-reviewed journals, and she remains actively involved in scientific research, conferences, and academic activities. Her key areas of interest include brainwave entrainment, pediatric dental anxiety and pain management, behaviour management, and evidence-based pediatric dentistry." },
 {
   name: "Dr. Mary Grace, M.D.S",
   designation: "Senior Lecturer",
   image: maryGraceImage,
     description:
-      "Dr. Mary Grace completed her undergraduate dental education at SRM Dental College, Ramapuram, and obtained her Master’s degree in Pediatric and Preventive Dentistry from Madha Dental College and Hospital in 2024. Her areas of interest include pediatric oral healthcare, preventive dentistry, behaviour management, and comprehensive dental rehabilitation. She has contributed to national and international journals and actively participates in scientific conferences and professional conventions.",
-  },
+     "Dr. Mary Grace completed her undergraduate dental education at SRM Dental College, Ramapuram, and obtained her Master’s degree in Pediatric and Preventive Dentistry from Madha Dental College and Hospital in 2024. Her areas of interest include pediatric oral healthcare, preventive dentistry, behaviour management, and comprehensive dental rehabilitation. She has contributed to national and international journals and actively participates in scientific conferences and professional conventions."  },
 {
   name: "Dr. Sinthuja, M.D.S",
   designation: "Senior Lecturer",
   image: sinthujaImage,
     description:
-      "Dr. Sinthuja completed her B.D.S from Indira Gandhi Institute of Dental Sciences (IGIDS), Pondicherry and obtained her MDS in Pediatric and Preventive Dentistry from Mahe Institute of Dental Sciences and Hospital (MINDS), Mahe, Pondicherry. She has one scientific publication and actively participates in pediatric national conferences and conventions. She has clinical experience of handling special health care patients. Her areas of interest include preventive dentistry, special care dentistry and trauma management.",
-  },
+     "Dr. Sinthuja completed her B.D.S from Indira Gandhi Institute of Dental Sciences(IGIDS), Pondicherry and obtained her MDS in Pediatric and Preventive Dentistry from Mahe Institute of Dental Sciences and Hospital (MINDS),Mahe, Pondicherry. She has one scientific publication and actively participates in pediatric national conferences and conventions. She has clinical experience of handling special health care patients. Her areas of interest include preventive dentistry, special care dentistry and trauma management. "  },
 ];
 
 const outreach = [
