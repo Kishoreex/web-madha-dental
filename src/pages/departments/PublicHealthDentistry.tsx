@@ -22,51 +22,44 @@ const faculty = [
     designation: "Professor & HOD",
     image: nandaBalanImage,
     description:
-      "Dr. Nanda Balan I completed his postgraduation from Ragas Dental College, Chennai and has a teaching experience of 12 years 10 months. He has more than 20 publications in PubMed and Scopus indexed National and International Journals and has one patent. Under his leadership, the Department has spearheaded impactful community outreach programmes, fostered a strong culture of research and innovation, successfully securing research grants, pursuing patents and copyrights for innovative academic and research contributions. His fields of interest include Tobacco Cessation, Indices for Oral diseases and Community outreach.",
-  },
+     "Dr. Nanda Balan I completed his postgraduation from Ragas Dental College, Chennai and has a teaching experience of 12 years 10 months. He has more than 20 publications in Pubmed and Scopus indexed National and International Journals and has one patent. Under his leadership, the Department has spearheaded impactful community outreach programmes, fostered a strong culture of research and innovation, successfully securing research grants, pursuing patents and copyrights for innovative academic and research contributions.His fields of interest include Tobacco Cessation, Indices for Oral diseases and Community outreach."  },
   {
     name: "Dr. Sugavanesh P, MDS",
     designation: "Reader",
     image: sugavaneshImage,
     description:
-      "Dr Sugavanesh P, M.D.S., has completed his post-graduation in Public Health Dentistry from M. S. Ramaiah Dental College and Hospital and has 11 years of teaching experience. He has publications in PubMed and Scopus indexed national and international journals. His key areas of interest are Epidemiology, Research Methodology, and Health Promotion.",
-  },
+   "Dr Sugavanesh P, M.D.S., has completed his post-graduation in Public Health Dentistry from M. S. Ramaiah Dental College and Hospital. He has publications in PubMed and Scopus indexed national and international journals. His key areas of interest are Epidemiology, Research Methodology, and Health Promotion." },
   {
     name: "Dr. Zoha Abdullah, MDS",
     designation: "Reader",
     image: zohaAbdullahImage,
     description:
-      "Dr. Zoha Abdullah completed her postgraduation from Saveetha Dental College, Chennai and has a teaching experience of 8 years 10 months. She has 20 publications in PubMed and Scopus indexed National and International Journals, one patent and has authored two book chapters. She has won the Best Paper award at a National level Conference (IAPHD). Her fields of interest include Minimally invasive dentistry, Preventive Dentistry and Epidemiology of Oral diseases.",
-  },
+     "Dr. Zoha Abdullah completed her postgraduation from Saveetha Dental College, Chennai. She has 20 publications in Pubmed and Scopus indexed National and International Journals, one patent and has authored two book chapters. She has won the Best Paper award at a National level Conference (IAPHD). Her fields of interest include Minimally invasive dentistry, Preventive Dentistry and Epidemiology of Oral diseases.   " },
   {
     name: "Dr. C. Rajkumar, MDS",
     designation: "Senior Lecturer",
     image: rajkumarImage,
     description:
-      "Dr. C. Rajkumar, M.D.S., is a Public Health Dentist, Academician, Researcher, and Clinician with 3 years and 4 months of teaching experience. He completed his postgraduate degree in Public Health Dentistry from Ragas Dental College and Hospital, Chennai. He has publications in PubMed and Scopus-indexed national and international journals and holds patents and copyrights for AI-based dental models. He possesses excellent clinical expertise and is actively involved in guiding postgraduate students. His areas of interest include Epidemiology, Research Methodology, Health Promotion, and AI in Dentistry.",
-  },
+     "Dr. C. Rajkumar, M.D.S., is a Public Health Dentist, Academician, Researcher, and Clinician. He completed his postgraduate degree in Public Health Dentistry from Ragas Dental College and Hospital, Chennai. He has publications in PubMed and Scopus-indexed national and international journals and holds patents and copyrights for AI-based dental models. He possesses excellent clinical expertise and is actively involved in guiding postgraduate students. His areas of interest include Epidemiology, Research Methodology, Health Promotion, and AI in Dentistry." },
   {
      name: "Dr. P. Kumaresh, M.D.S.",
     designation: "Senior Lecturer",
     image: kumareshImage,
     description:
-      "Dr. P. Kumaresh, M.D.S., completed his postgraduate degree in Public Health Dentistry from Madha Dental College and Hospital and has one year of teaching experience. He has published research articles in indexed national and international journals. His professional interests include conducting dental camps, Epidemiology, Research Methodology, Health Promotion, and Clinical Practice. He is committed to promoting community oral health through clinical practice, academic teaching, and public health initiatives.",
-  },
+     "Dr. P. Kumaresh, M.D.S., completed his postgraduation in Public Health Dentistry from Madha Dental College and Hospital. He has published research articles in indexed national and international journals. His professional interests include conducting dental camps, Epidemiology, Research Methodology, Health Promotion, and Clinical Practice. He is committed to promoting community oral health through clinical practice, academic teaching, and public health initiatives." },
   {
     name: "Dr. Keerthanasree V, MDS",
     designation: "Senior Lecturer",
     image: keerthanasreeImage,
 
     description:
-      "Dr. Keerthanasree V, MDS, completed post-graduation in Public Health Dentistry from Ragas Dental College and Hospital with 3 months of teaching experience. Her academic and research interests focus on preventive dentistry, community-based oral healthcare, and the application of Artificial Intelligence in dentistry. She has publications in national and international journals and has received awards at various conferences and conventions. Her research interests particularly include innovative and technology-driven approaches for early detection and prevention of oral diseases, with a focus on improving accessibility to oral healthcare.",
-  },
+      "Dr. Keerthanasree. V, MDS, completed post-graduation in Public Health Dentistry from Ragas Dental College and Hospital. Her academic and research interests focus on preventive dentistry, community-based oral healthcare, and the application of Artificial Intelligence in dentistry. She has publications in national and international journals and has received awards at various conferences and conventions. Her research interests particularly include the innovative and technology-driven approaches for early detection and prevention of oral diseases, with a focus on improving accessibility to oral healthcare." },
   {
     name: "Dr. Jerisha G. R, BDS",
     designation: "Lecturer",
     image: jerishaImage,
     description:
-      "Dr. Jerisha G. R, BDS is a lecturer in Department of Public Health Dentistry, she is Academician, and Clinician with 9 years of teaching experience. She completed her undergraduate degree from Rajas Dental College and Hospital, Tirunelveli. She has publications in national journals. She possesses excellent clinical expertise, and she is actively involved in guiding undergraduate students.",
-  },
+      "Dr. Jerisha.G.R. BDS completed her undergraduate degree from Rajas Dental College and Hospital, Tirunelveli. She has several publications in national journals. She possesses excellent clinical expertise, and is actively involved in guiding undergraduate students."  },
  
 ];
 

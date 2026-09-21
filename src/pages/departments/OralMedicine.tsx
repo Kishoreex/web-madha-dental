@@ -23,42 +23,37 @@ const faculty = [
   designation: "Professor and Head",
   image: kavithaImage,
   description:
-      "Dr. M. Kavitha M.D.S., has completed her post-graduation from the Government Dental College & Research Institute, Karnataka and has total teaching experience of 12 years and 5 months. She has 40 publications in indexed journals with a high impact factor, reviewer of various national and international journals, has 2 patents and 2 book chapters. She is a renowned invited speaker at various national scientific deliberations and has presented scientific papers at national conferences. Her field of interest are Salivary gland diseases and Radiographic differential diagnosis.",
-  },
+      "Dr. M. KavithaM.D.S., had completed her post-graduation from the Government DentalCollege&ResearchInstitute,Karnatakaandhastotalteachingexperienceof12 years5months.Shehas 40publicationsinindexedjournalswithahighimpactfactor, 2 patents and 2 book chapters. She is a renowned invited speaker at various national andinternationalscientificdeliberationsandhaspresentedscientificpapersatnational conferences Her field of interest are Salivary gland diseases and Radiographic differential diagnosis." },
 {
   name: "Dr. Niveditha.B, MDS",
   designation: "Reader",
   image: nivedithaImage,
   description:
-      "Dr. Niveditha.B MDS, has completed her post graduation in Oral Medicine and Radiology from Ragas Dental College and Hospital with 8 years of teaching experience. She has 4 book chapters to her credit. She has one patent, over 30 publications and reviewer of various national and International journals. She has also delivered guest lectures in various colleges and presented papers at national conferences. Her academic interest is oriented towards Orofacial pain and TMJ disorders.",
-  },
+    "Dr. Niveditha, MDS, has completed her post graduation in Oral Medicine and RadiologyfromRagasDentalCollegeandHospital. She has 4 book chapters to her credit. She has one patent, and over 30 publications in various national and International journals. She has also delivered guest lectures in variouscollegesandpresentedpapersatnationalconferences.Heracademicinterestis oriented towards Orofacial pain and TMJ disorders."  },
   {
   name: "Dr. M. Arivuselvi, MDS",
   designation: "Reader",
   image: arivuselviImage,
   description:
-      "Dr. M. Arivuselvi, is an MDS graduate from Raja Muthiah Dental College & Hospital, Annamalai University with 5 years teaching experience in Madha Dental College & Hospital. Her academic interest focuses on Temporomandibular Joint Disorders. She has authored several publications in national and international journals, contributing to evidence-based practice in oral medicine and radiology.",
-  },
+    "Dr.M.Arivuselvi,isanMDSgraduatefromRajaMuthiahDentalCollege&Hospital, Annamalai University.HeracademicinterestfocusesonTemporomandibularJointDisorders.Shehas authored several publications in national and international journals, contributing to evidence-based practice in oral medicine and radiology." },
  {
   name: "Dr. Pavithra Dhandapani, MDS",
   designation: "Senior Lecturer",
   image: pavithraImage,
   description:
-      "Dr. Pavithra Dhandapani, MDS, pursued her post graduation in Oral Medicine and Radiology from Vivekanandha Dental College and Hospital with 3 years 3 months of teaching experience in Madha Dental College & Hospital. She has authored 12 publications in indexed journals with high impact factor and is credited with 1 patent. Dr. Pavithra’s academic interest is focused on Oral Potentially Malignant Disorders.",
-  },
+   "Dr. Pavithra Dhandapani, MDS, pursued her post graduation in Oral Medicine and Radiology from Vivekanandha Dental College and Hospital. She has authored 12 publications in indexed journals with high impact factor and is credited with 1 patent. Dr. Pavithra’s academic interest is focused on Oral Potentially Malignant Disorders."  },
  {
   name: "Dr. A. I. Samu Fathima, MDS",
   designation: "Senior Lecturer",
   image: samuFathimaImage,
   description:
-      "Dr. A. I. Samu Fathima M.D.S, had completed her post-graduation from the Tamil Nadu Government Dental College and Hospital and has total teaching experience of 3 years. She has 10 publications in indexed journals. Her areas of interest include the early non-surgical intervention of Oral Potentially Malignant Disorders and Head & Neck Diagnostic Radiology (CT & MRI).",
-  },
+      "Dr.A. I. Samu FathimaM.D.S, completed her post-graduation from the Tamil Nadu Government Dental College and Hospital. She has 10 publications in indexed journals. Her areas of interest include the early non-surgical intervention of Oral Potentially Malignant Disorders and Head & Neck DiagnosticRadiology(CT&MRI)and wishestoenhanceherknowledgeonthe same in the future." },
  {
   name: "Dr. Devi S, MDS",
   designation: "Senior Lecturer",
   image: deviImage,
   description:
-      "Dr. Devi S, MDS, completed her postgraduate degree from The TN Dr. MGR Medical University, Chennai. She has published research articles in both national and international journals and she has 1 book chapter and 1 patent. Her academic interests include oral mucosal lesions, diagnostic imaging and advancements in CBCT.",
+      "Dr. Devi S, MDS,completedherpostgraduatedegreefromTheTNDr.MGRMedical University, Chennai. She has published research articles in both national and international journals and she has 1 book chapter and 1 patent. Her academic interests include diagnostic imaging and advancements in CBCT.",
   },
 ];
 
