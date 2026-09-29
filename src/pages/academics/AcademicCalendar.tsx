@@ -39,23 +39,23 @@ const AcademicCalendar = () => {
 
       {/* Hero */}
 
-      <section className="pt-32 pb-20 bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 text-white">
+    <section className="pt-24 pb-12 bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 text-white">
 
         <div
           className="container-custom text-center"
           data-aos="fade-up"
         >
 
-          <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-5 py-2 mb-6">
-            <CalendarDays className="w-5 h-5" />
+         <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5 mb-4 text-sm">
+         <CalendarDays className="w-4 h-4" />
             Academic Calendar
           </div>
 
-          <h1 className="text-5xl font-bold mb-5">
+         <h1 className="text-3xl md:text-4xl font-bold mb-3">
             Academic Calendar
           </h1>
 
-          <p className="max-w-3xl mx-auto text-lg text-white/90">
+     <p className="max-w-2xl mx-auto text-sm md:text-base text-white/90">
             Academic schedules and important dates for undergraduate
             and postgraduate programmes.
           </p>
@@ -66,7 +66,7 @@ const AcademicCalendar = () => {
 
       {/* Latest Calendar */}
 
-      <section className="py-20">
+  <section className="py-12">
 
         <div className="container-custom">
 
@@ -82,25 +82,25 @@ const AcademicCalendar = () => {
             .map((item) => (
               <div
                 key={item.year}
-                className="glass-card p-8 bg-gradient-to-r from-blue-900 to-cyan-700 text-white rounded-3xl mb-14"
+        className="glass-card p-6 md:p-7 bg-gradient-to-r from-blue-900 to-cyan-700 text-white rounded-2xl mb-10 shadow-lg"
                 data-aos="zoom-in"
               >
 
-                <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+             <div className="flex flex-col sm:flex-row justify-between items-center gap-5">
 
                   <div>
 
-                    <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-2 mb-2">
 
-                      <Star className="text-yellow-300" />
+                     <Star className="w-4 h-4 text-yellow-300" />
 
-                      <span className="uppercase text-sm tracking-wider">
+                    <span className="uppercase text-xs tracking-wider">
                         Latest
                       </span>
 
                     </div>
 
-                    <h3 className="text-3xl font-bold">
+                  <h3 className="text-xl md:text-2xl font-bold">
                       Academic Calendar {item.year}
                     </h3>
 
@@ -109,9 +109,9 @@ const AcademicCalendar = () => {
                   <a
                     href={item.file}
                     target="_blank"
-                    className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:scale-105 transition"
+className="bg-white text-blue-900 px-5 py-2.5 rounded-lg font-semibold text-sm flex items-center gap-2 hover:scale-105 transition"
                   >
-                    <Download className="w-5 h-5" />
+                  <Download className="w-4 h-4" />
                     Download PDF
                   </a>
 
@@ -122,20 +122,20 @@ const AcademicCalendar = () => {
 
           {/* Previous Calendars */}
 
-          <h2
-            className="heading-2 text-center mb-12"
-            data-aos="fade-up"
-          >
-           Academic Calendars
-          </h2>
+       <h2
+  className="heading-2 text-center mb-7 text-2xl md:text-3xl"
+  data-aos="fade-up"
+>
+  Academic Calendars
+</h2>
 
-   <div className="grid md:grid-cols-2 gap-5">
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
   {calendars.map((item, index) => (
 
     <div
       key={item.year}
-      className={`glass-card p-5 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ${
+      className={`glass-card p-5 rounded-2xl hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ${
         item.latest
           ? "border-2 border-blue-600 bg-blue-50"
           : ""
@@ -145,15 +145,15 @@ const AcademicCalendar = () => {
     >
 
       {item.latest && (
-        <span className="inline-flex items-center gap-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm mb-3">
-          <Star className="w-4 h-4" />
+<span className="inline-flex items-center gap-1.5 bg-blue-600 text-white px-2.5 py-1 rounded-full text-xs mb-3">
+         <Star className="w-3.5 h-3.5" />
           Latest
         </span>
       )}
 
-     <CalendarDays className="text-blue-700 w-8 h-8 mb-3" />
+   <CalendarDays className="text-blue-700 w-7 h-7 mb-3" />
 
-      <h3 className="text-lg font-semibold mb-3">
+     <h3 className="text-base font-semibold mb-3">
         Academic Calendar {item.year}
       </h3>
 
