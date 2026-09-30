@@ -2189,24 +2189,27 @@ const departments = [
     );
   };
 
-  // Main App Component
-  function HomePage() {
-    return (
-      <>
+function HomePage() {
+  return (
+    <>
+      {/* MOBILE VERSION */}
+      <div className="block md:hidden">
+        <MobileLayout />
+      </div>
+
+      {/* DESKTOP VERSION — DO NOT CHANGE */}
+      <div className="hidden md:block">
         <HeroSection />
         <AboutSection />
         <ProgramsSection />
         <DepartmentsSection />
-
         <AdmissionsSection />
-      
         <CampusLifeSection />
-      
         <ContactSection />
-      </>
-    );
-  }
-
+      </div>
+    </>
+  );
+}
   function App() {
 const [showTopButton, setShowTopButton] = useState(false);
 
