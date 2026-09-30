@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Menu,
@@ -15,7 +15,19 @@ import { IMAGES } from "../data/images";
 export default function MobileLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const mobileNavItems = [
   { name: "Home", href: "/" },
@@ -94,9 +106,17 @@ export default function MobileLayout() {
           MOBILE HEADER
       ===================================================== */}
 
-      <header className="fixed top-0 left-0 right-0 z-[9999] bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-md">
-
-        <div className="h-[64px] px-3 flex items-center justify-between">
+<header
+  className={`z-[9999] left-0 right-0 transition-all duration-500 ${
+    isScrolled
+      ? "fixed top-0 bg-white/95 backdrop-blur-xl border-b border-blue-100 shadow-md"
+      : "absolute top-0 bg-transparent border-transparent shadow-none"
+  }`}
+>   <div
+  className={`h-[64px] px-3 flex items-center justify-between transition-all duration-500 ${
+    isScrolled ? "bg-transparent" : "bg-transparent"
+  }`}
+>
 
           {/* LOGO + COLLEGE NAME */}
           <Link
@@ -115,8 +135,10 @@ export default function MobileLayout() {
 
             <div className="ml-2 min-w-0">
 
-              <h1
-                className="text-[12px] leading-[1.05] font-extrabold text-blue-950 whitespace-nowrap"
+             <h1
+  className={`text-[12px] leading-[1.05] font-extrabold whitespace-nowrap transition-colors duration-500 ${
+    isScrolled ? "text-blue-950" : "text-white"
+  }`}
                 style={{
                   fontFamily: "'Cinzel', serif",
                 }}
@@ -128,7 +150,11 @@ export default function MobileLayout() {
 
                 <div className="h-[2px] w-7 bg-gradient-to-r from-blue-600 to-cyan-400" />
 
-                <span className="text-[7px] font-bold tracking-[0.16em] text-blue-700">
+           <span
+  className={`text-[7px] font-bold tracking-[0.16em] transition-colors duration-500 ${
+    isScrolled ? "text-blue-700" : "text-white"
+  }`}
+>
                   & HOSPITAL
                 </span>
 
@@ -333,15 +359,14 @@ export default function MobileLayout() {
       {/* =====================================================
           MOBILE HOME
       ===================================================== */}
-
-      <main className="pt-[64px]">
+<main>
 
 
         {/* =================================================
             HERO
         ================================================= */}
 
-        <section className="relative min-h-[620px] overflow-hidden">
+<section className="relative min-h-[680px] overflow-hidden">
 
           <img
             src={IMAGES.heroBanner}
@@ -353,7 +378,7 @@ export default function MobileLayout() {
           <div className="absolute inset-0 bg-gradient-to-b from-blue-950/75 via-blue-950/50 to-blue-950/90" />
 
 
-          <div className="relative z-10 min-h-[620px] flex flex-col justify-end px-4 pb-8">
+       <div className="relative z-10 min-h-[680px] flex flex-col justify-end px-4 pb-10">
 
 
             {/* INSTITUTION RIBBON */}
