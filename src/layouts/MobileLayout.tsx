@@ -118,51 +118,89 @@ export default function MobileLayout() {
   }`}
 >
 
-          {/* LOGO + COLLEGE NAME */}
-          <Link
-            to="/"
-            onClick={closeMenu}
-            className="flex items-center min-w-0"
-          >
-
-            <div className="w-[48px] h-[48px] shrink-0">
-              <img
-                src={IMAGES.logo}
-                alt="Madha Dental College"
-                className="w-full h-full object-contain"
-              />
-            </div>
-
-            <div className="ml-2 min-w-0">
-
-             <h1
-  className={`text-[12px] leading-[1.05] font-extrabold whitespace-nowrap transition-colors duration-500 ${
-    isScrolled ? "text-blue-950" : "text-white"
-  }`}
-                style={{
-                  fontFamily: "'Cinzel', serif",
-                }}
-              >
-                MADHA DENTAL COLLEGE
-              </h1>
-
-              <div className="flex items-center gap-1.5 mt-[3px]">
-
-                <div className="h-[2px] w-7 bg-gradient-to-r from-blue-600 to-cyan-400" />
-
-           <span
-  className={`text-[7px] font-bold tracking-[0.16em] transition-colors duration-500 ${
-    isScrolled ? "text-blue-700" : "text-white"
-  }`}
+ {/* LOGO + COLLEGE BRANDING */}
+<Link
+  to="/"
+  onClick={closeMenu}
+  className="flex items-center min-w-0"
 >
-                  & HOSPITAL
-                </span>
+  {/* LOGO */}
+  <div className="w-[52px] h-[52px] shrink-0 flex items-center justify-center">
+    <img
+      src={IMAGES.logo}
+      alt="Madha Dental College"
+      className="w-full h-full object-contain rounded-full transition-all duration-500"
+      style={{
+        filter: `
+          drop-shadow(0 0 6px rgba(255,255,255,.95))
+          drop-shadow(0 0 14px rgba(255,255,255,.95))
+          drop-shadow(0 0 24px rgba(255,255,255,.9))
+        `,
+      }}
+    />
+  </div>
 
-              </div>
+  {/* COLLEGE NAME */}
+  <div className="ml-2 min-w-0 flex flex-col justify-center">
 
-            </div>
+    <h1
+      className={`uppercase whitespace-nowrap transition-all duration-500 ${
+        isScrolled
+          ? "text-black"
+          : "text-white"
+      }`}
+      style={{
+        fontFamily: "'Cinzel', serif",
+        fontWeight: 700,
+        fontSize: "13px",
+        letterSpacing: "0.055em",
+        lineHeight: "1",
+        textShadow: isScrolled
+          ? "none"
+          : "0 2px 10px rgba(0,0,0,.5)",
+      }}
+    >
+      MADHA DENTAL COLLEGE
+    </h1>
 
-          </Link>
+    {/* EXACT DESKTOP GOLD DIVIDER */}
+    <div className="flex items-center justify-center mt-[4px] mb-[3px]">
+      <div
+        className="w-[82px] h-[2px] rounded-full"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent 0%, #A67318 18%, #FDE68A 50%, #C8922A 82%, transparent 100%)",
+          boxShadow:
+            "0 0 5px rgba(200,146,42,.65)",
+        }}
+      />
+    </div>
+
+    {/* HOSPITAL */}
+    <p
+      className={`uppercase whitespace-nowrap transition-all duration-500 ${
+        isScrolled
+          ? "text-black"
+          : "text-white"
+      }`}
+      style={{
+        fontFamily: "'Inter', sans-serif",
+        fontWeight: 900,
+        fontSize: "7px",
+        letterSpacing: "0.55em",
+        lineHeight: "1",
+        textAlign: "center",
+        paddingLeft: "0.55em",
+        textShadow: isScrolled
+          ? "none"
+          : "0 2px 8px rgba(0,0,0,.45)",
+      }}
+    >
+      HOSPITAL
+    </p>
+
+  </div>
+</Link>
 
           {/* MENU BUTTON */}
           <button
