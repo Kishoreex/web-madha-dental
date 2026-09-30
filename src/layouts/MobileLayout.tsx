@@ -205,7 +205,11 @@ export default function MobileLayout() {
           {/* MENU BUTTON */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-blue-700 to-cyan-500 text-white flex items-center justify-center shadow-md"
+className={`w-10 h-10 shrink-0 rounded-xl flex items-center justify-center transition-all duration-500 ${
+  isScrolled
+    ? "bg-gradient-to-br from-blue-700 to-cyan-500 text-white shadow-md"
+    : "bg-white/15 backdrop-blur-md border border-white/40 text-white shadow-lg"
+}`}
           >
             {menuOpen ? (
               <X className="w-5 h-5" />
