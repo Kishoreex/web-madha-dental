@@ -10,7 +10,7 @@ export default function HospitalServices() {
         <div className="max-w-5xl mx-auto px-6">
 
           <div
-            className="text-center mb-12"
+            className="text-center mb-16"
             data-aos="fade-up"
           >
             <span className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">
@@ -24,7 +24,7 @@ export default function HospitalServices() {
               </span>
             </h2>
 
-            <p className="body-large text-neutral-600 max-w-4xl mx-auto mt-6">
+<p className="mt-5 font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
               Madha Dental College & Hospital stands as a contemporary
               multi-specialty dental institution offering comprehensive oral
               healthcare services. Boasting over 300 ergonomic and
@@ -221,7 +221,7 @@ export default function HospitalServices() {
       </span>
     </h2>
 
-    <p className="body-large text-neutral-600 max-w-3xl mx-auto mt-5">
+<p className="mt-5 font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
       Our hospital is equipped with modern diagnostic equipment and
       laboratory facilities to ensure accurate diagnosis and effective
       treatment planning.

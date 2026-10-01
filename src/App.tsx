@@ -27,7 +27,7 @@ import BasicMedicalSciences from "./pages/departments/BasicMedicalSciences";
   import {
     Menu, X, Phone, Mail, MapPin, Clock, ChevronDown, ChevronRight,
     Award, Users, BookOpen, Stethoscope, GraduationCap, Building2, Microscope,
-    Library, Bus, Utensils, Home, Trophy, ArrowRight, Play, Download,
+    Library as LibraryIcon, Bus, Utensils, Home, Trophy, ArrowRight, Play, Download,
     Heart, Target, Eye, Globe, Linkedin, Facebook, Twitter, Instagram,
     Youtube, Send, ExternalLink, CheckCircle, CircleDot, Sparkles, Activity,
     Pill, Syringe, Scan, Smile, Anchor, BadgeCheck,
@@ -45,6 +45,7 @@ import ISO from "./pages/affiliation/ISO";
 import Facilities from "./pages/campus/Facilities";
 import Sports from "./pages/campus/Sports";
 import NSS from "./pages/campus/NSS";
+import Library from "./pages/campus/Library";
 import CulturalEvents from "./pages/campus/CulturalEvents";
 //About
   import AboutMDCH from "./pages/about/AboutMDCH";
@@ -554,28 +555,15 @@ const isDepartmentPage =
   name: "NSS",
   href: "/nss",
 },
-       {
+     {
   name: "Library",
-  href: "#",
-  submenu: [
-    {
-      name: "Resources",
-      href: "/library/resources",
-    },
-    {
-      name: "eLibrary",
-      href: "/library/elibrary",
-    },
-  ],
+  href: "/library",
 },
-          {
-            name: "Hospital Services",
-            href: "/hospital/services",
-          },
+
         ],
       },
 
-      { name: "Outreach & Collaboration Activities", href: "#faculty" },
+    
       { name: "Outreach & Collaboration Activities", href: "#faculty" },
      {
   name: "Research",
@@ -1876,7 +1864,7 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
   const CampusLifeSection = () => {
     const facilities = [
       { icon: <Home className="w-6 h-6" />, title: 'Hostels', description: 'Separate hostels for boys and girls with modern amenities' },
-      { icon: <Library className="w-6 h-6" />, title: 'Central Library', description: 'Extensive collection of dental literature and digital resources' },
+      { icon: <LibraryIcon className="w-6 h-6" />, title: 'Central Library', description: 'Extensive collection of dental literature and digital resources' },
       { icon: <Utensils className="w-6 h-6" />, title: 'Cafeteria', description: 'Hygienic food services for students and staff' },
       { icon: <Bus className="w-6 h-6" />, title: 'Transport', description: 'Fleet of buses covering major routes in Chennai' },
       { icon: <Trophy className="w-6 h-6" />, title: 'Sports Complex', description: 'Indoor and outdoor sports facilities' },
@@ -2495,6 +2483,7 @@ if (!localStorage.getItem("mdch_loader_shown")) {
   path="/departments/prosthodontics"
   element={<Prosthodontics />}
 />
+<Route path="/library" element={<Library />} />
 <Route
   path="/departments/oral-medicine"
   element={<OralMedicine />}
