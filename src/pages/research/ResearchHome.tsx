@@ -67,15 +67,13 @@ export default function ResearchHome() {
 
         <div className="container-custom text-center">
 
-          <span className="badge bg-white/20 text-white border-white/30 mb-5">
-            Research
-          </span>
+        
 
-          <h1 className="heading-1">
+          <h1 className="heading-2">
             Research at MDCH
           </h1>
 
-          <p className="body-large text-blue-100 max-w-4xl mx-auto mt-6">
+          <p className="font-['Montserrat'] body-large text-blue-100 max-w-4xl mx-auto mt-6">
             Advancing Dental Science through Innovation, Ethics,
             Collaboration and Quality Research.
           </p>
@@ -101,7 +99,7 @@ export default function ResearchHome() {
                 Research Home
               </h2>
 
-              <p className="text-gray-700 leading-8">
+   <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
                 At Madha Dental College, we are committed to fostering a
                 culture of quality research in the field of dentistry.
                 Our faculty members and students engage in a wide range

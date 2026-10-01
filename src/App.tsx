@@ -47,6 +47,7 @@ import Sports from "./pages/campus/Sports";
 import NSS from "./pages/campus/NSS";
 import Library from "./pages/campus/Library";
 import CulturalEvents from "./pages/campus/CulturalEvents";
+import Alumni from "./pages/alumni/Alumni";
 //About
   import AboutMDCH from "./pages/about/AboutMDCH";
   import VisionMission from "./pages/about/VisionMission";
@@ -425,113 +426,7 @@ const isDepartmentPage =
     name: "More",
     href: "#",
     submenu: [
-          {
-  name: "Affiliation & Accreditation",
-  href: "#",
-  submenu: [
-   {
-  name: "University",
-  href: "/pdf/affiliation/university.pdf",
-  target: "_blank",
-},
-  {
-  name: "DCI",
-  href: "/pdf/affiliation/DCI.pdf",
-  target: "_blank",
-},
-    {
-      name: "ISO",
-      href: "/affiliation/iso",
-    },
-    {
-      name: "NIRF",
-      href: "#",
-      submenu: [
-        {
-          name: "2026",
-          href: "/pdf/nrif/2026.pdf",
-          target: "_blank",
-        },
-        {
-          name: "2025",
-          href: "/pdf/nrif/2025.pdf",
-          target: "_blank",
-        },
-        {
-          name: "2024",
-          href: "/pdf/nrif/2024.pdf",
-          target: "_blank",
-        },
-      ],
-    },
-{
-  name: "IQAC",
-  href: "#",
-  submenu: [
-    {
-      name: "IIQA",
-      href: "/pdf/iqac/IIQA.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Vision & Mission",
-      href: "/iqac/vision-mission",
-    },
-    {
-      name: "Composition of IQAC",
-      href: "/pdf/iqac/Composition_of_IQAC.pdf",
-      target: "_blank",
-    },
-    {
-      name: "IQAC Minutes",
-      href: "/pdf/iqac/IQAC_Minutes.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Self-Declaration",
-      href: "/pdf/iqac/Self_Declaration.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Undertaking",
-      href: "/pdf/iqac/Undertaking.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Criteria",
-      href: "/iqac/criteria",
-    },
-    {
-      name: "Self Study Report",
-      href: "/pdf/iqac/Self_Study_Report.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Policies",
-      href: "/iqac/policies",
-    },
-    {
-      name: "Committees",
-      href: "/iqac/committees",
-    },
-    {
-      name: "Annual Report",
-      href: "/iqac/annual-report",
-    },
-    {
-      name: "Institutional Distinctiveness",
-      href: "/pdf/iqac/Institutional_Distinctiveness.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Institutional Best Practices",
-      href: "/pdf/iqac/Institutional_Best_Practices.pdf",
-      target: "_blank",
-    },
-  ],
-},
-  ],
-},
+
       { name: "Gallery", href: "/gallery" },
    
 
@@ -621,10 +516,44 @@ const isDepartmentPage =
     },*/
   ],
 },
-      { name: "Student Support", href: "#campus" },
+  {
+  name: "Student Support",
+  href: "#",
+  submenu: [
+    {
+      name: "Master Time Table",
+      href: "/student-support/master-time-table",
+    },
+    {
+      name: "LMS",
+      href: "/student-support/lms",
+    },
+
+    {
+      name: "Code of Conduct",
+      href: "/student-support/code-of-conduct",
+    },
+    {
+      name: "Anti Ragging Cell",
+      href: "/student-support/anti-ragging-cell",
+    },
+    {
+      name: "Anti Ragging Complaint",
+      href: "/student-support/anti-ragging-complaint",
+    },
+    {
+      name: "Grievance Redressal Form",
+      href: "/student-support/grievance-redressal-form",
+    },
+    {
+      name: "E-Content",
+      href: "/student-support/e-content",
+    },
+  ],
+},
       
 
-  { name: "Alumni", href: "#contact" },
+{ name: "Alumni", href: "/alumni" },
 
       { name: "Contact Us", href: "#contact" },
     ],
@@ -2498,6 +2427,7 @@ if (!localStorage.getItem("mdch_loader_shown")) {
 <Route path="/nss" element={<NSS />} />
 <Route path="/facilities" element={<Facilities />} />
 <Route path="/admin/manage-news" element={<ManageNews />} />
+<Route path="/alumni" element={<Alumni />} />
 <Route
   path="/admissions/process"
   element={<AdmissionProcess />}
