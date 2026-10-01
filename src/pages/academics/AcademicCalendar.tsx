@@ -46,10 +46,7 @@ const AcademicCalendar = () => {
           data-aos="fade-up"
         >
 
-         <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5 mb-4 text-sm">
-         <CalendarDays className="w-4 h-4" />
-            Academic Calendar
-          </div>
+       
 
          <h1 className="text-3xl md:text-4xl font-bold mb-3">
             Academic Calendar

@@ -36,8 +36,17 @@ import BasicMedicalSciences from "./pages/departments/BasicMedicalSciences";
     Scissors
   } from 'lucide-react';
 // Afllication 
+
+
 import ISO from "./pages/affiliation/ISO";
-  //About
+
+
+//campus 
+import Facilities from "./pages/campus/Facilities";
+import Sports from "./pages/campus/Sports";
+import NSS from "./pages/campus/NSS";
+import CulturalEvents from "./pages/campus/CulturalEvents";
+//About
   import AboutMDCH from "./pages/about/AboutMDCH";
   import VisionMission from "./pages/about/VisionMission";
   import Organogram from "./pages/about/Organogram";
@@ -523,7 +532,50 @@ const isDepartmentPage =
   ],
 },
       { name: "Gallery", href: "/gallery" },
-      { name: "Campus Life & Facilities"},
+   
+
+      {
+        name: "Campus Life & Facilities",
+        href: "#",
+        submenu: [
+  {
+  name: "Facilities",
+  href: "/facilities",
+},
+       {
+  name: "Sports",
+  href: "/sports",
+},
+       {
+  name: "Cultural Events",
+  href: "/cultural-events",
+},
+   {
+  name: "NSS",
+  href: "/nss",
+},
+       {
+  name: "Library",
+  href: "#",
+  submenu: [
+    {
+      name: "Resources",
+      href: "/library/resources",
+    },
+    {
+      name: "eLibrary",
+      href: "/library/elibrary",
+    },
+  ],
+},
+          {
+            name: "Hospital Services",
+            href: "/hospital/services",
+          },
+        ],
+      },
+
+      { name: "Outreach & Collaboration Activities", href: "#faculty" },
       { name: "Outreach & Collaboration Activities", href: "#faculty" },
      {
   name: "Research",
@@ -585,7 +637,7 @@ const isDepartmentPage =
       
 
   { name: "Alumni", href: "#contact" },
-  { name: "Feedback", href: "#contact" },
+
       { name: "Contact Us", href: "#contact" },
     ],
   },
@@ -2451,7 +2503,11 @@ if (!localStorage.getItem("mdch_loader_shown")) {
   path="/departments/pediatric-dentistry"
   element={<PediatricDentistry />}
 />
+<Route path="/cultural-events" element={<CulturalEvents />} />
 
+<Route path="/sports" element={<Sports />} />
+<Route path="/nss" element={<NSS />} />
+<Route path="/facilities" element={<Facilities />} />
 <Route path="/admin/manage-news" element={<ManageNews />} />
 <Route
   path="/admissions/process"
