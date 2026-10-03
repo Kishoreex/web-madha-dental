@@ -37,7 +37,7 @@ import BasicMedicalSciences from "./pages/departments/BasicMedicalSciences";
   } from 'lucide-react';
 // Afllication 
 
-
+import AntiRaggingComplaint from "./pages/StudentSupport/AntiRaggingComplaint";
 import ISO from "./pages/affiliation/ISO";
 
 
@@ -529,18 +529,15 @@ const isDepartmentPage =
       href: "/student-support/lms",
     },
 
-    {
-      name: "Code of Conduct",
-      href: "/student-support/code-of-conduct",
-    },
-    {
-      name: "Anti Ragging Cell",
-      href: "/student-support/anti-ragging-cell",
-    },
-    {
-      name: "Anti Ragging Complaint",
-      href: "/student-support/anti-ragging-complaint",
-    },
+{
+  name: "Anti Ragging Cell",
+  href: "/pdf/student-support/Anti_Ragging_Cell.pdf",
+  target: "_blank",
+},
+  {
+  name: "Anti Ragging Complaint",
+  href: "/student-support/anti-ragging-complaint",
+},
     {
       name: "Grievance Redressal Form",
       href: "/student-support/grievance-redressal-form",
@@ -2365,6 +2362,10 @@ if (!localStorage.getItem("mdch_loader_shown")) {
 <Route
   path="/admissions/fee-refund-policy"
   element={<FeeRefundPolicy />}
+/>
+<Route
+  path="/student-support/anti-ragging-complaint"
+  element={<AntiRaggingComplaint />}
 />
 <Route
   path="/admissions/prospectus"
