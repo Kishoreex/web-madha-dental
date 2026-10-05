@@ -1,5 +1,5 @@
   import { useState, useEffect } from 'react';
- import MobileLayout from "./layouts/MobileLayout";
+
 
 import { Routes, Route, Link, useLocation } from "react-router-dom";
   import { IMAGES } from "./data/images";
@@ -105,8 +105,10 @@ import Publications from "./pages/research/Publications";
 import Books from "./pages/research/Books";
 import Seminars from "./pages/research/Seminars";
   // Navigation Component
-  const Navigation = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileOpenMenu, setMobileOpenMenu] = useState<string | null>(null);
     const location = useLocation();
 const isHospitalPage = location.pathname === "/hospital/services";
 
@@ -720,13 +722,13 @@ isScrolled
   className={`fixed left-1/2 -translate-x-1/2 z-50
   transition-all duration-500
   ${
-  isScrolled
-    ? "top-4 w-[90%] max-w-[1600px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-[0_12px_35px_rgba(0,0,0,0.12)] border border-white/30"
-    : "top-9 w-[90%] max-w-[1600px] bg-transparent shadow-none border-0"
+isScrolled
+  ? "top-2 sm:top-4 w-[94%] sm:w-[90%] max-w-[1600px] rounded-2xl bg-white/90 backdrop-blur-xl shadow-[0_12px_35px_rgba(0,0,0,0.12)] border border-white/30"
+  : "top-2 sm:top-9 w-[94%] sm:w-[90%] max-w-[1600px] bg-transparent shadow-none border-0"
 }`}
 >
 <div
-  className={`max-w-[1600px] mx-auto px-6 transition-all duration-500 ${
+  className={`max-w-[1600px] mx-auto px-3 sm:px-6 transition-all duration-500 ${
     isScrolled
       ? "rounded-2xl"
       : ""
@@ -737,6 +739,290 @@ className={`transition-all duration-500 ${
 isScrolled ? "py-1" : "py-2"
 }`}
 >
+
+  {/* ================= MOBILE NAVIGATION ================= */}
+<div className="flex xl:hidden items-center justify-between w-full py-2">
+
+  {/* Mobile Logo */}
+  <Link
+    to="/"
+    onClick={() => {
+      setMobileMenuOpen(false);
+      setMobileOpenMenu(null);
+    }}
+    className="flex items-center gap-2 min-w-0"
+  >
+    <img
+      src={IMAGES.logo}
+      alt="MDCH Logo"
+      className="w-14 h-14 object-contain rounded-full shrink-0"
+      style={{
+        filter: `
+          drop-shadow(0 0 6px rgba(255,255,255,.9))
+          drop-shadow(0 0 12px rgba(255,255,255,.8))
+        `,
+      }}
+    />
+
+    <div className="flex flex-col min-w-0">
+      <h1
+        className={`uppercase text-[14px] sm:text-[17px] font-bold leading-tight truncate ${
+          isScrolled ||
+          isHospitalPage ||
+          isPrincipalPage ||
+          isManagementPage ||
+          isGalleryPage ||
+          isDepartmentPage ||
+          isFeeRefundPage ||
+          isProspectusPage
+            ? "text-black"
+            : "text-white"
+        }`}
+        style={{
+          fontFamily: "'Cinzel', serif",
+          letterSpacing: "0.04em",
+        }}
+      >
+        MADHA DENTAL COLLEGE
+      </h1>
+
+      <div className="flex justify-center mt-1 mb-1">
+        <div className="premium-divider !w-20 !h-[3px]" />
+      </div>
+
+      <p
+        className={`uppercase text-[8px] sm:text-[9px] font-bold text-center ${
+          isScrolled ||
+          isHospitalPage ||
+          isPrincipalPage ||
+          isManagementPage ||
+          isGalleryPage ||
+          isDepartmentPage ||
+          isFeeRefundPage ||
+          isProspectusPage
+            ? "text-black"
+            : "text-white"
+        }`}
+        style={{
+          fontFamily: "'Inter', sans-serif",
+          letterSpacing: "0.45em",
+        }}
+      >
+        HOSPITAL
+      </p>
+    </div>
+  </Link>
+
+  {/* Mobile Menu Button */}
+  <button
+    type="button"
+    onClick={() => {
+      setMobileMenuOpen((prev) => !prev);
+      setMobileOpenMenu(null);
+    }}
+    className={`flex items-center justify-center w-11 h-11 rounded-xl shrink-0 transition-all ${
+      isScrolled ||
+      isHospitalPage ||
+      isPrincipalPage ||
+      isManagementPage ||
+      isGalleryPage ||
+      isDepartmentPage ||
+      isFeeRefundPage ||
+      isProspectusPage
+        ? "bg-blue-50 text-blue-700"
+        : "bg-white/15 text-white backdrop-blur-md"
+    }`}
+    aria-label="Toggle mobile menu"
+  >
+    {mobileMenuOpen ? (
+      <X className="w-6 h-6" />
+    ) : (
+      <Menu className="w-6 h-6" />
+    )}
+  </button>
+
+</div>
+
+{/* ================= MOBILE MENU PANEL ================= */}
+{mobileMenuOpen && (
+  <div className="xl:hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden max-h-[80vh] overflow-y-auto">
+
+    <div className="p-3">
+
+      {navItems.map((item: any) => {
+
+        const isOpen = mobileOpenMenu === item.name;
+
+        return (
+          <div
+            key={item.name}
+            className="border-b border-gray-100 last:border-b-0"
+          >
+
+            {/* Normal Menu Item */}
+            {!item.submenu ? (
+              item.target ? (
+                <a
+                  href={item.href}
+                  target={item.target}
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between w-full px-4 py-3.5 text-[15px] font-semibold text-gray-800 hover:bg-blue-50 hover:text-blue-700 rounded-xl"
+                >
+                  {item.name}
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              ) : (
+                <Link
+                  to={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between w-full px-4 py-3.5 text-[15px] font-semibold text-gray-800 hover:bg-blue-50 hover:text-blue-700 rounded-xl"
+                >
+                  {item.name}
+                </Link>
+              )
+            ) : (
+
+              /* Menu With Submenu */
+              <>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setMobileOpenMenu(isOpen ? null : item.name)
+                  }
+                  className="flex items-center justify-between w-full px-4 py-3.5 text-[15px] font-semibold text-gray-800 hover:bg-blue-50 hover:text-blue-700 rounded-xl"
+                >
+                  <span>{item.name}</span>
+
+                  <ChevronDown
+                    className={`w-5 h-5 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-blue-600" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* First Level */}
+                {isOpen && (
+                  <div className="ml-3 mb-2 pl-3 border-l-2 border-blue-100">
+
+                    {item.submenu.map((sub: any) => {
+
+                      const subKey = `${item.name}-${sub.name}`;
+                      const subOpen = mobileOpenMenu === subKey;
+
+                      return (
+                        <div key={sub.name}>
+
+                          {!sub.submenu ? (
+                            sub.target ? (
+                              <a
+                                href={sub.href}
+                                target={sub.target}
+                                rel="noopener noreferrer"
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="flex items-center justify-between w-full px-3 py-3 text-[14px] text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg"
+                              >
+                                {sub.name}
+                                <ExternalLink className="w-3.5 h-3.5" />
+                              </a>
+                            ) : (
+                              <Link
+                                to={sub.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="block w-full px-3 py-3 text-[14px] text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg"
+                              >
+                                {sub.name}
+                              </Link>
+                            )
+                          ) : (
+
+                            /* Second Level */
+                            <>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setMobileOpenMenu(
+                                    subOpen ? item.name : subKey
+                                  )
+                                }
+                                className="flex items-center justify-between w-full px-3 py-3 text-[14px] font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg"
+                              >
+                                <span>{sub.name}</span>
+
+                                <ChevronRight
+                                  className={`w-4 h-4 transition-transform duration-300 ${
+                                    subOpen
+                                      ? "rotate-90 text-blue-600"
+                                      : ""
+                                  }`}
+                                />
+                              </button>
+
+                              {subOpen && (
+                                <div className="ml-3 pl-3 border-l border-gray-200 mb-2">
+
+                                  {sub.submenu.map((child: any) => (
+                                    child.target ? (
+                                      <a
+                                        key={child.name}
+                                        href={child.href}
+                                        target={child.target}
+                                        rel="noopener noreferrer"
+                                        onClick={() =>
+                                          setMobileMenuOpen(false)
+                                        }
+                                        className="flex items-center justify-between w-full px-3 py-2.5 text-[13px] text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg"
+                                      >
+                                        {child.name}
+                                        <ExternalLink className="w-3.5 h-3.5" />
+                                      </a>
+                                    ) : (
+                                      <Link
+                                        key={child.name}
+                                        to={child.href}
+                                        onClick={() =>
+                                          setMobileMenuOpen(false)
+                                        }
+                                        className="block w-full px-3 py-2.5 text-[13px] text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg"
+                                      >
+                                        {child.name}
+                                      </Link>
+                                    )
+                                  ))}
+
+                                </div>
+                              )}
+
+                            </>
+                          )}
+
+                        </div>
+                      );
+                    })}
+
+                  </div>
+                )}
+
+              </>
+            )}
+
+          </div>
+        );
+      })}
+
+      {/* Mobile Apply Now */}
+      <Link
+        to="/admissions/process"
+        onClick={() => setMobileMenuOpen(false)}
+        className="flex items-center justify-center w-full mt-4 px-5 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[15px] font-semibold shadow-lg"
+      >
+        Apply Now
+        <ArrowRight className="w-4 h-4 ml-2" />
+      </Link>
+
+    </div>
+  </div>
+)}
       
 {/* Desktop Navigation */}
 <div className="hidden xl:flex items-center justify-between w-full -ml-6">
@@ -891,8 +1177,8 @@ const ScrollToTop = () => {
 
     return (
 <section
-id="home"
-className="relative min-h-screen flex items-center overflow-hidden pt-28"
+  id="home"
+  className="relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-28"
 >
         {/* Background Slider */}
         <div className="absolute inset-0">
@@ -924,15 +1210,18 @@ className="relative min-h-screen flex items-center overflow-hidden pt-28"
 
         {/* Content */}
 <div
-className="container-custom relative z-10 pt-24 pb-16 lg:pt-32 lg:pb-20"
+className="container-custom relative z-10 pt-20 sm:pt-24 pb-12 sm:pb-16 lg:pt-32 lg:pb-20"
     style={{
       transform: `translateY(${scrollY * 0.2}px)`,
       opacity: Math.max(1 - scrollY / 600, 0),
     }}
   >
-<div className="max-w-5xl lg:-ml-32 xl:-ml-40 2xl:-ml-48">
-            {/* Badge */}<div className="hero-reveal inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-xs mb-4"><Sparkles className="w-4 h-4 text-accent-gold" />
-              <span>DCI Recognized | TN Dr.M.G.R Medical University Affiliated</span>
+<div className="max-w-5xl mx-auto lg:mx-0 lg:-ml-32 xl:-ml-40 2xl:-ml-48">
+            {/* Badge */}
+            <div className="hero-reveal inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-[10px] sm:text-xs mb-4 max-w-full"><Sparkles className="w-4 h-4 text-accent-gold" />
+             <span className="leading-tight">
+  DCI Recognized | TN Dr.M.G.R Medical University Affiliated
+</span>
             </div>
 
             {/* Headline */}
@@ -1082,12 +1371,12 @@ max-w-3xl
                 <img
                   src={IMAGES.homeAbout}
                   alt="MDCH Campus"
-                  className="w-full h-[500px] object-cover"
+               className="w-full h-[280px] sm:h-[380px] lg:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-medical-navy/50 to-transparent" />
               </div>
               {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -right-6 lg:right-6 glass-card p-6 max-w-xs">
+            <div className="absolute -bottom-5 right-3 sm:-right-4 lg:right-6 glass-card p-4 sm:p-6 max-w-[calc(100%-24px)] sm:max-w-xs">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-medical-blue to-medical-sky flex items-center justify-center">
                     <Award className="w-8 h-8 text-white" />
@@ -2158,21 +2447,13 @@ const departments = [
 function HomePage() {
   return (
     <>
-      {/* MOBILE VERSION */}
-      <div className="block md:hidden">
-        <MobileLayout />
-      </div>
-
-      {/* DESKTOP VERSION — DO NOT CHANGE */}
-      <div className="hidden md:block">
-        <HeroSection />
-        <AboutSection />
-        <ProgramsSection />
-        <DepartmentsSection />
-        <AdmissionsSection />
-        <CampusLifeSection />
-        <ContactSection />
-      </div>
+      <HeroSection />
+      <AboutSection />
+      <ProgramsSection />
+      <DepartmentsSection />
+      <AdmissionsSection />
+      <CampusLifeSection />
+      <ContactSection />
     </>
   );
 }
@@ -2438,7 +2719,11 @@ if (!localStorage.getItem("mdch_loader_shown")) {
   <Route path="/gallery/:folder" element={<GalleryAlbum />} />
    </Routes>
 
-{!window.location.pathname.startsWith("/admin") && <Footer />}
+{!window.location.pathname.startsWith("/admin") && (
+  <div className="hidden md:block">
+    <Footer />
+  </div>
+)}
 
 {!window.location.pathname.startsWith("/admin") &&
 showTopButton && (
