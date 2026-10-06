@@ -218,10 +218,10 @@ const isDepartmentPage =
 
   
 
-    {
-      name: "Apply Now",
-      href: "#admissions",
-    },
+{
+  name: "Apply Now",
+  href: "#contact",
+},
   ],
 },
      {
@@ -755,18 +755,20 @@ isScrolled ? "py-1" : "py-2"
     <img
       src={IMAGES.logo}
       alt="MDCH Logo"
-      className="w-14 h-14 object-contain rounded-full shrink-0"
-      style={{
-        filter: `
-          drop-shadow(0 0 6px rgba(255,255,255,.9))
-          drop-shadow(0 0 12px rgba(255,255,255,.8))
-        `,
-      }}
+      className="w-16 h-16 object-contain rounded-full shrink-0"
+   style={{
+  filter: `
+    drop-shadow(0 0 7px rgba(255,255,255,1))
+    drop-shadow(0 0 15px rgba(255,255,255,.95))
+    drop-shadow(0 0 25px rgba(255,255,255,.85))
+    drop-shadow(0 0 38px rgba(120,210,255,.65))
+  `,
+}}
     />
 
     <div className="flex flex-col min-w-0">
       <h1
-        className={`uppercase text-[14px] sm:text-[17px] font-bold leading-tight truncate ${
+        className={`uppercase text-[16px] sm:text-[17px] font-bold leading-tight truncate ${
           isScrolled ||
           isHospitalPage ||
           isPrincipalPage ||
@@ -791,7 +793,7 @@ isScrolled ? "py-1" : "py-2"
       </div>
 
       <p
-        className={`uppercase text-[8px] sm:text-[9px] font-bold text-center ${
+       className={`uppercase text-[9px] sm:text-[9px] font-bold text-center ${
           isScrolled ||
           isHospitalPage ||
           isPrincipalPage ||
@@ -1011,14 +1013,14 @@ isScrolled ? "py-1" : "py-2"
       })}
 
       {/* Mobile Apply Now */}
-      <Link
-        to="/admissions/process"
+      <a
+  href="#contact"
         onClick={() => setMobileMenuOpen(false)}
         className="flex items-center justify-center w-full mt-4 px-5 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[15px] font-semibold shadow-lg"
       >
         Apply Now
         <ArrowRight className="w-4 h-4 ml-2" />
-      </Link>
+      </a>
 
     </div>
   </div>
@@ -1094,12 +1096,12 @@ isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGallery
 <div className="flex items-center gap-1 ml-6">
   <DesktopMenu items={navItems} />
 
-  <Link
-    to="/admissions/process"
+  <a
+    href="#contact"
   className="ml-6 px-5 py-2.5 whitespace-nowrap rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[14px] font-semibold hover:scale-105 transition"
   >
     Apply Now
-  </Link>
+</a>
 </div>
 
 </div>
@@ -2458,38 +2460,57 @@ function HomePage() {
   );
 }
   function App() {
+    const location = useLocation();
 const [showTopButton, setShowTopButton] = useState(false);
+
+const [showAdmissionPopup, setShowAdmissionPopup] = useState(false);
+const [showThankYouPopup, setShowThankYouPopup] = useState(false);
 
 const [loading, setLoading] = useState(
   !localStorage.getItem("mdch_loader_shown")
 );
-  useEffect(() => {
+useEffect(() => {
 
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out",
-      offset: 100,
-    });
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: "ease-in-out",
+    offset: 100,
+  });
 
-AOS.refresh();
+  AOS.refresh();
 
-if (!localStorage.getItem("mdch_loader_shown")) {
-  localStorage.setItem("mdch_loader_shown", "true");
+  // ================= LOADING SCREEN =================
+  if (!localStorage.getItem("mdch_loader_shown")) {
+    localStorage.setItem("mdch_loader_shown", "true");
 
-  setTimeout(() => {
-    setLoading(false);
-  }, 2000);
-}
-    const handleScroll = () => {
-      setShowTopButton(window.scrollY > 400);
-    };
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }
 
-    window.addEventListener("scroll", handleScroll);
+  // ================= ADMISSION POPUP =================
+  // Show ONLY when the website is freshly opened on HOME page
+  if (window.location.pathname === "/") {
+    const admissionTimer = setTimeout(() => {
+      setShowAdmissionPopup(true);
+    }, 50);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => clearTimeout(admissionTimer);
+  }
 
-  }, []);
+  // ================= SCROLL BUTTON =================
+  const handleScroll = () => {
+    setShowTopButton(window.scrollY > 400);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+
+}, []);
   const scrollToTop = () => {
 
     window.scrollTo({
@@ -2523,13 +2544,219 @@ if (!localStorage.getItem("mdch_loader_shown")) {
       </div>
     );
   }
-  return (
+return (
   <div className="min-h-screen bg-white">
 
     <ScrollToTop />
 
     {!window.location.pathname.startsWith("/admin") && <Navigation />}
 
+    {/* ================= ADMISSION ENQUIRY POPUP ================= */}
+{showAdmissionPopup &&
+  location.pathname === "/" && (
+        <div
+          className="fixed inset-0 z-[99998] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+          onClick={() => setShowAdmissionPopup(false)}
+        >
+
+          <div
+            className="relative w-full max-w-lg rounded-3xl bg-white shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={() => setShowAdmissionPopup(false)}
+              className="absolute right-4 top-4 z-10 w-9 h-9 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center transition"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Popup Header */}
+            <div className="bg-gradient-to-r from-blue-700 to-cyan-500 px-6 py-6 text-white">
+
+              <div className="flex items-center gap-3">
+
+                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                  <GraduationCap className="w-7 h-7" />
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold">
+                    Admission Enquiry
+                  </h2>
+
+                  <p className="text-sm text-white/80">
+                    Begin your journey with Madha Dental College
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* Popup Form */}
+     <form
+  onSubmit={(e) => {
+    e.preventDefault();
+
+    // Close Admission Enquiry popup
+    setShowAdmissionPopup(false);
+
+    // Show Thank You popup
+    setShowThankYouPopup(true);
+  }}
+  className="p-6 space-y-4"
+>
+
+              {/* Name */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter your full name"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+                />
+              </div>
+
+              {/* Phone + Email */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+91 XXXXX XXXXX"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">
+                    Email
+                  </label>
+
+                  <input
+                    type="email"
+                    required
+                    placeholder="your@email.com"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+                  />
+                </div>
+
+              </div>
+
+              {/* Course */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Interested Course
+                </label>
+
+                <select
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+                >
+                  <option value="">Select Course</option>
+                  <option value="BDS">BDS</option>
+                  <option value="MDS">MDS</option>
+                </select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Message
+                </label>
+
+                <textarea
+                  rows={3}
+                  placeholder="Your enquiry..."
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none resize-none"
+                />
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold shadow-lg hover:scale-[1.02] transition"
+              >
+                Submit Admission Enquiry
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+      )}
+{/* ================= THANK YOU POPUP ================= */}
+{showThankYouPopup &&
+  !window.location.pathname.startsWith("/admin") && (
+    <div
+      className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/70 backdrop-blur-md px-4"
+      onClick={() => setShowThankYouPopup(false)}
+    >
+      <div
+        className="relative w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-[0_30px_100px_rgba(0,0,0,0.35)]"
+        onClick={(e) => e.stopPropagation()}
+      >
+
+        {/* Top Gradient */}
+        <div className="h-2 w-full bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600" />
+
+        <div className="px-7 py-9 text-center sm:px-10">
+
+          {/* SUCCESS ICON */}
+          <div className="relative mx-auto mb-6 flex h-20 w-20 items-center justify-center">
+
+            {/* Glow */}
+            <div className="absolute inset-0 rounded-full bg-cyan-400/20 blur-xl" />
+
+            {/* Circle */}
+            <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 shadow-lg shadow-cyan-500/30">
+              <CheckCircle className="h-10 w-10 text-white" />
+            </div>
+
+          </div>
+
+          {/* TITLE */}
+          <h2 className="text-3xl font-bold text-gray-900">
+            Thank You!
+          </h2>
+
+          {/* DIVIDER */}
+          <div className="mx-auto my-4 h-1 w-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500" />
+
+          {/* MESSAGE */}
+          <p className="mx-auto max-w-sm text-sm leading-6 text-gray-600 sm:text-base">
+            Your admission enquiry has been submitted successfully.
+          </p>
+
+          <p className="mt-2 text-sm text-gray-500">
+            Our admissions team will contact you shortly.
+          </p>
+
+          {/* CLOSE BUTTON */}
+          <button
+            type="button"
+            onClick={() => setShowThankYouPopup(false)}
+            className="mt-7 w-full rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+          >
+            OK, Thank You
+          </button>
+
+        </div>
+      </div>
+    </div>
+  )}
     <Routes>
           <Route path="/" element={<HomePage />} />
           //iiaq

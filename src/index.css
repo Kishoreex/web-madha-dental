@@ -368,3 +368,16 @@
       left:130%;
   }
 }
+
+
+/* Professional dark autofill styling */
+.login-input:-webkit-autofill,
+.login-input:-webkit-autofill:hover,
+.login-input:-webkit-autofill:focus,
+.login-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #101a2b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+  background-color: #101a2b !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
