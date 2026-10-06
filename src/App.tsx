@@ -104,6 +104,46 @@ import ResearchProjects from "./pages/research/ResearchProjects";
 import Publications from "./pages/research/Publications";
 import Books from "./pages/research/Books";
 import Seminars from "./pages/research/Seminars";
+
+
+interface AdmissionEnquiryData {
+  name: string;
+  phone: string;
+  email: string;
+  course: string;
+  message: string;
+}
+
+const sendAdmissionEnquiry = async (
+  data: AdmissionEnquiryData
+): Promise<boolean> => {
+  try {
+    const response = await fetch(
+      "http://localhost:5232/api/AdmissionEnquiry/send",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      console.error("Backend error:", result);
+      return false;
+    }
+
+    console.log("Enquiry sent successfully:", result);
+
+    return true;
+  } catch (error) {
+    console.error("React → Backend connection error:", error);
+    return false;
+  }
+};
   // Navigation Component
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -2146,10 +2186,31 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
       message: '',
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      // Handle form submission
-    };
+const [isSendingEnquiry, setIsSendingEnquiry] = useState(false);
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  setIsSendingEnquiry(true);
+
+  const success = await sendAdmissionEnquiry(formData);
+
+  setIsSendingEnquiry(false);
+
+  if (success) {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      course: "BDS",
+      message: "",
+    });
+
+    alert("Your enquiry has been sent successfully!");
+  } else {
+    alert("Unable to send enquiry. Please try again.");
+  }
+};
 
     return (
     <section id="contact" className="pt-8 pb-16 bg-white">
@@ -2177,9 +2238,10 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-neutral-700 mb-1">Full Name</label>
-                    <input
-                      type="text"
-                      className="input-field"
+                 <input
+  type="text"
+  required
+  className="input-field"
                       placeholder="Your Name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -2187,9 +2249,10 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-neutral-700 mb-1">Email</label>
-                    <input
-                      type="email"
-                      className="input-field"
+                <input
+  type="email"
+  required
+  className="input-field"
                       placeholder="your@email.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -2199,9 +2262,10 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-neutral-700 mb-1">Phone Number</label>
-                    <input
-                      type="tel"
-                      className="input-field"
+              <input
+  type="tel"
+  required
+  className="input-field"
                       placeholder="+91 XXXXX XXXXX"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -2209,8 +2273,9 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-neutral-700 mb-1">Course</label>
-                    <select
-                      className="input-field"
+        <select
+  required
+  className="input-field"
                       value={formData.course}
                       onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                     >
@@ -2465,7 +2530,15 @@ const [showTopButton, setShowTopButton] = useState(false);
 
 const [showAdmissionPopup, setShowAdmissionPopup] = useState(false);
 const [showThankYouPopup, setShowThankYouPopup] = useState(false);
+const [popupFormData, setPopupFormData] = useState({
+  name: "",
+  phone: "",
+  email: "",
+  course: "",
+  message: "",
+});
 
+const [isSendingEnquiry, setIsSendingEnquiry] = useState(false);
 const [loading, setLoading] = useState(
   !localStorage.getItem("mdch_loader_shown")
 );
@@ -2597,15 +2670,30 @@ return (
             </div>
 
             {/* Popup Form */}
-     <form
-  onSubmit={(e) => {
+<form
+  onSubmit={async (e) => {
     e.preventDefault();
 
-    // Close Admission Enquiry popup
-    setShowAdmissionPopup(false);
+    setIsSendingEnquiry(true);
 
-    // Show Thank You popup
-    setShowThankYouPopup(true);
+    const success = await sendAdmissionEnquiry(popupFormData);
+
+    setIsSendingEnquiry(false);
+
+    if (success) {
+      setPopupFormData({
+        name: "",
+        phone: "",
+        email: "",
+        course: "",
+        message: "",
+      });
+
+      setShowAdmissionPopup(false);
+      setShowThankYouPopup(true);
+    } else {
+      alert("Unable to send enquiry. Please try again.");
+    }
   }}
   className="p-6 space-y-4"
 >
@@ -2616,12 +2704,19 @@ return (
                   Full Name
                 </label>
 
-                <input
-                  type="text"
-                  required
-                  placeholder="Enter your full name"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
-                />
+             <input
+  type="text"
+  required
+  placeholder="Enter your full name"
+  value={popupFormData.name}
+  onChange={(e) =>
+    setPopupFormData({
+      ...popupFormData,
+      name: e.target.value,
+    })
+  }
+  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+/>
               </div>
 
               {/* Phone + Email */}
@@ -2632,25 +2727,38 @@ return (
                     Phone Number
                   </label>
 
-                  <input
-                    type="tel"
-                    required
-                    placeholder="+91 XXXXX XXXXX"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
-                  />
+        <input
+  type="tel"
+  required
+  placeholder="+91 XXXXX XXXXX"
+  value={popupFormData.phone}
+  onChange={(e) =>
+    setPopupFormData({
+      ...popupFormData,
+      phone: e.target.value,
+    })
+  }
+  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+/>
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-1">
                     Email
                   </label>
-
-                  <input
-                    type="email"
-                    required
-                    placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
-                  />
+<input
+  type="email"
+  required
+  placeholder="your@email.com"
+  value={popupFormData.email}
+  onChange={(e) =>
+    setPopupFormData({
+      ...popupFormData,
+      email: e.target.value,
+    })
+  }
+  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+/>
                 </div>
 
               </div>
@@ -2660,15 +2768,22 @@ return (
                 <label className="block text-sm font-semibold text-gray-700 mb-1">
                   Interested Course
                 </label>
-
-                <select
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
-                >
-                  <option value="">Select Course</option>
-                  <option value="BDS">BDS</option>
-                  <option value="MDS">MDS</option>
-                </select>
+<select
+  required
+  value={popupFormData.course}
+  onChange={(e) =>
+    setPopupFormData({
+      ...popupFormData,
+      course: e.target.value,
+    })
+  }
+  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+>
+  <option value="">Select Course</option>
+  <option value="BDS">BDS</option>
+  <option value="MDS">MDS</option>
+</select>
+                
               </div>
 
               {/* Message */}
@@ -2677,20 +2792,28 @@ return (
                   Message
                 </label>
 
-                <textarea
-                  rows={3}
-                  placeholder="Your enquiry..."
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none resize-none"
-                />
+         <textarea
+  rows={3}
+  placeholder="Your enquiry..."
+  value={popupFormData.message}
+  onChange={(e) =>
+    setPopupFormData({
+      ...popupFormData,
+      message: e.target.value,
+    })
+  }
+  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none resize-none"
+/>
               </div>
 
               {/* Submit */}
-              <button
-                type="submit"
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold shadow-lg hover:scale-[1.02] transition"
-              >
-                Submit Admission Enquiry
-              </button>
+   <button
+  type="submit"
+  disabled={isSendingEnquiry}
+  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold shadow-lg hover:scale-[1.02] transition disabled:opacity-60 disabled:cursor-not-allowed"
+>
+  {isSendingEnquiry ? "Sending..." : "Submit Admission Enquiry"}
+</button>
 
             </form>
 
