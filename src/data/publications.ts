@@ -54,20 +54,20 @@ export const publications: Publication[] = [
   },
     {
     sno: 5,
-    pubmedId: "",
-    category: "",
-    type: "",
-    title: "",
-    authors: "",
-    journal: "",
-    year: ""
+    pubmedId: "https://doi.org/10.4103/jisppd.jisppd_180_17",
+    category: "national",
+    type: "study",
+    title: "	A clinicoradiographic comparison of the effects of platelet rich fibrin gel and platelet rich fibrin membrane as scaffolds in the apexification treatment of young permanent teeth",
+    authors: "Madhu Santhakumar, Shivsankar Yayathi , N Retnakumari",
+    journal: "Journal of Indian society of pedodontics and preventive dentistry",
+    year: "2018"
   },
     {
     sno: 6,
-    pubmedId: "",
-    category: "",
-    type: "",
-    title: "",
+    pubmedId: "	https://doi.org/10.17796/1053-4625-42.5.6",
+    category: "national",
+    type: "Original research",
+    title: " ",
     authors: "",
     journal: "",
     year: ""
@@ -84,13 +84,13 @@ export const publications: Publication[] = [
   },
     {
     sno: 8,
-    pubmedId: "",
-    category: "",
-    type: "",
-    title: "",
-    authors: "",
-    journal: "",
-    year: ""
+    pubmedId: "	http://dx.doi.org/10.22159/ajpcr.2018.v11i11.27593",
+    category: "international",
+    type: "Review article",
+    title: "Antioxidant Studiesof One Ayurvedic Medicine Aswagantharishtam Vol 11 Issue 2 2018",
+    authors: "Kotteswari M, Mudiganti Ram Krishna Rao, Prabhu K, Siva Kumar, Sampad Shil",
+    journal: "Asian Journal Of Pharmaceutical And Clinical Research Vol 11 Issue II 2018.",
+    year: "2018"
   },
     {
     sno: 9,
