@@ -44,13 +44,13 @@ export const publications: Publication[] = [
   },
    {
     sno: 4,
-    pubmedId: "",
+    pubmedId: "https://doi.org/10.5005/jp-journals-10005-1548",
     category: "",
-    type: "",
-    title: "",
-    authors: "",
-    journal: "",
-    year: ""
+    type: "Study",
+    title: "Assessment of coronal leakage with two intracanal medicaments after exposure to human saliva – an in vitro study",
+    authors: "Balaji S, Kumar K, Venkatesan R, Krishnamoorthy S, Manoharan V, Marimuthu Senthilkumar",
+    journal: "International journal of clin pediatr dent",
+    year: "2018"
   },
     {
     sno: 5,
