@@ -480,10 +480,7 @@ const isDepartmentPage =
   name: "Facilities",
   href: "/facilities",
 },
-       {
-  name: "Sports",
-  href: "/sports",
-},
+
        {
   name: "Cultural Events",
   href: "/cultural-events",
