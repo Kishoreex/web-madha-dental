@@ -113,7 +113,7 @@ export const publications: Publication[] = [
     year: ""
   },
     {
-    sno: 4,
+    sno: 11,
     pubmedId: "",
     category: "",
     type: "",
@@ -123,7 +123,7 @@ export const publications: Publication[] = [
     year: ""
   },
     {
-    sno: 4,
+    sno: 12,
     pubmedId: "",
     category: "",
     type: "",
@@ -133,7 +133,7 @@ export const publications: Publication[] = [
     year: ""
   },
     {
-    sno: 4,
+    sno: 13,
     pubmedId: "",
     category: "",
     type: "",
@@ -143,7 +143,17 @@ export const publications: Publication[] = [
     year: ""
   },
     {
-    sno: 4,
+    sno: 14,
+    pubmedId: "",
+    category: "",
+    type: "",
+    title: "",
+    authors: "",
+    journal: "",
+    year: ""
+  },
+    { 
+    sno: 15,
     pubmedId: "",
     category: "",
     type: "",
@@ -153,7 +163,7 @@ export const publications: Publication[] = [
     year: ""
   },
     {
-    sno: 4,
+    sno: 16,
     pubmedId: "",
     category: "",
     type: "",
@@ -163,17 +173,7 @@ export const publications: Publication[] = [
     year: ""
   },
     {
-    sno: 4,
-    pubmedId: "",
-    category: "",
-    type: "",
-    title: "",
-    authors: "",
-    journal: "",
-    year: ""
-  },
-    {
-    sno: 4,
+    sno: 17,
     pubmedId: "",
     category: "",
     type: "",

@@ -1,6 +1,6 @@
   import { useState, useEffect } from 'react';
-
-
+import Campus from "./pages/outreach/Campus";
+import MoUs from "./pages/outreach/MoUs";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
   import { IMAGES } from "./data/images";
   import AOS from "aos";
@@ -501,7 +501,25 @@ const isDepartmentPage =
       },
 
     
-      { name: "Outreach & Collaboration Activities", href: "#faculty" },
+{
+  name: "Outreach & Collaboration Activities",
+  href: "#",
+  submenu: [
+    {
+      name: "MoUs",
+      href: "/outreach/mous",
+    },
+    {
+      name: "Campus",
+      href: "/outreach/campus",
+
+    },
+        {
+      name: "Events",
+      href: "/outreach/events",
+    },
+  ],
+},
      {
   name: "Research",
   href: "#",
@@ -3049,6 +3067,8 @@ return (
   path="/departments/oral-medicine"
   element={<OralMedicine />}
 />
+<Route path="/outreach/campus" element={<Campus />} />
+<Route path="/outreach/mous" element={<MoUs />} />
 <Route
   path="/departments/pediatric-dentistry"
   element={<PediatricDentistry />}
