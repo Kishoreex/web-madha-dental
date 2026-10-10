@@ -514,10 +514,10 @@ const isDepartmentPage =
       href: "/outreach/campus",
 
     },
-        {
+       /* {
       name: "Events",
       href: "/outreach/events",
-    },
+    },*/
   ],
 },
      {
