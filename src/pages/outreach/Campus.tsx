@@ -86,6 +86,22 @@ const november2023Camps: OutreachCamp[] = [
     ],
   },
 ];
+const october2023Camps: OutreachCamp[] = [
+  {
+    venue: "RESCUE FOUNDATION, AVADI",
+    details: [
+      "Camp date: 14/10/23",
+      "Patients benefited: 36",
+    ],
+    description:
+      "The Department of Public Health Dentistry organized a transformative dental camp for Rescue Foundation patients in Avadi, a rehabilitation center for addiction recovery. The initiative targeted oral health challenges during recovery, offering essential services like screenings, treatments, and education. The camp contributed to residents’ overall health, aligning with the department’s commitment to community well-being and supporting the dental health needs of those in addiction recovery.",
+    photos: [
+      "/images/campus/october-2023/1.jpg",
+      "/images/campus/october-2023/2.jpg",
+      "/images/campus/october-2023/3.jpg",
+    ],
+  },
+];
 const january2024Camps: OutreachCamp[] = [
   {
     venue: "NEW CAMBRIDGE SCHOOL",
@@ -141,12 +157,7 @@ const campusMonths: CampusMonth[] = [
   { name: "JANUARY 2024", folder: "january-2024", cover: "/images/campus/january-2024/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/january-2024/${i + 1}.jpg`) },
   { name: "NOVEMBER 2023", folder: "november-2023", cover: "/images/campus/november-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/november-2023/${i + 1}.jpg`) },
   { name: "OCTOBER 2023", folder: "october-2023", cover: "/images/campus/october-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/october-2023/${i + 1}.jpg`) },
-  { name: "AUGUST 2023", folder: "august-2023", cover: "/images/campus/august-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/august-2023/${i + 1}.jpg`) },
-  { name: "JULY 2023", folder: "july-2023", cover: "/images/campus/july-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/july-2023/${i + 1}.jpg`) },
-  { name: "JUNE 2023", folder: "june-2023", cover: "/images/campus/june-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/june-2023/${i + 1}.jpg`) },
-  { name: "MAY 2023", folder: "may-2023", cover: "/images/campus/may-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/may-2023/${i + 1}.jpg`) },
-  { name: "MARCH 2023", folder: "march-2023", cover: "/images/campus/march-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/march-2023/${i + 1}.jpg`) },
-  { name: "FEBRUARY 2023", folder: "february-2023", cover: "/images/campus/february-2023/1.jpg", photos: Array.from({ length: 8 }, (_, i) => `/images/campus/february-2023/${i + 1}.jpg`) },
+
 ];
 
 export default function Campus() {
@@ -163,6 +174,8 @@ const january2024 =
   activeMonth?.folder === "january-2024";
 const november2023 =
   activeMonth?.folder === "november-2023";
+  const october2023 =
+  activeMonth?.folder === "october-2023";
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-blue-50/50 pb-16">
@@ -223,7 +236,7 @@ const november2023 =
               <ArrowLeft size={17} /> Back to months
             </button>
 
-{february2024 || january2024 || november2023 ? (
+{february2024 || january2024 || november2023 || october2023 ? (
               <>
                 <div className="mb-7 text-center">
                   <p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-blue-700">Campus Outreach Gallery</p>
@@ -234,7 +247,14 @@ const november2023 =
                   In February, the Department of Public Health Dentistry observed National Children’s Dental Health Month and Gum Disease Awareness Month to raise awareness about oral health. The department conducted treatment camps offering preventive and treatment services to school children, children in orphanages, and elderly residents, promoting good oral health practices for all age groups.
                 </p>
                 <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
-                  {february2024Camps.map((camp) => (
+               {(october2023
+  ? october2023Camps
+  : november2023
+  ? november2023Camps
+  : january2024
+  ? january2024Camps
+  : february2024Camps
+).map((camp) => (
                     <article key={camp.venue} className="rounded-2xl border border-slate-100 bg-white p-4 shadow-[0_8px_25px_rgba(15,23,42,0.07)]">
                       <h3 className="mb-3 text-sm font-bold leading-6 text-blue-900">{camp.venue}</h3>
                       <div className="mb-4 space-y-1">
