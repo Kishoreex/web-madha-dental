@@ -43,7 +43,7 @@ import ISO from "./pages/affiliation/ISO";
 
 //campus 
 import Facilities from "./pages/campus/Facilities";
-import Sports from "./pages/campus/Sports";
+
 import NSS from "./pages/campus/NSS";
 import Library from "./pages/campus/Library";
 import CulturalEvents from "./pages/campus/CulturalEvents";
@@ -240,11 +240,11 @@ const isDepartmentPage =
       href: "/admissions/process",
     }, 
 
-    {
+    /*{
       name: "Brochure",
       href: "/pdf/Brochure.pdf",
       target: "_blank",
-    },
+    },*/
 
 {
   name: "Prospectus",
@@ -260,7 +260,7 @@ const isDepartmentPage =
 
 {
   name: "Apply Now",
-  href: "#contact",
+  href: "/#contact",
 },
   ],
 },
@@ -503,9 +503,9 @@ const isDepartmentPage =
     
 {
   name: "Outreach & Collaboration Activities",
-  href: "#",
-  submenu: [
-    {
+ href: "/outreach/campus",
+  /*  submenu: [
+   {
       name: "MoUs",
       href: "/outreach/mous",
     },
@@ -514,11 +514,11 @@ const isDepartmentPage =
       href: "/outreach/campus",
 
     },
-       /* {
+       {
       name: "Events",
       href: "/outreach/events",
-    },*/
-  ],
+    },
+  ],*/
 },
      {
   name: "Research",
@@ -612,7 +612,7 @@ const isDepartmentPage =
 
 { name: "Alumni", href: "/alumni" },
 
-      { name: "Contact Us", href: "#contact" },
+    { name: "Contact Us", href: "/#contact" },
     ],
   },
     ];
@@ -1072,7 +1072,7 @@ isScrolled ? "py-1" : "py-2"
 
       {/* Mobile Apply Now */}
       <a
-  href="#contact"
+  href="/#contact"
         onClick={() => setMobileMenuOpen(false)}
         className="flex items-center justify-center w-full mt-4 px-5 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[15px] font-semibold shadow-lg"
       >
@@ -1155,7 +1155,7 @@ isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGallery
   <DesktopMenu items={navItems} />
 
   <a
-    href="#contact"
+  href="/#contact"
   className="ml-6 px-5 py-2.5 whitespace-nowrap rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[14px] font-semibold hover:scale-105 transition"
   >
     Apply Now
@@ -1881,110 +1881,8 @@ className="w-full h-6 lg:h-8 fill-neutral-50"
     );
   };
 
-  // Departments Section
-  const DepartmentsSection = () => {
-    const departments = [
-      { name: 'Conservative Dentistry & Endodontics', icon: <Pill className="w-6 h-6" />, description: 'Advanced restorative procedures and root canal treatments' },
-      { name: 'Prosthodontics & Crown Bridge', icon: <Gem className="w-6 h-6" />, description: 'Complete and partial dentures, implants, and aesthetic dentistry' },
-      { name: 'Orthodontics & Dentofacial Orthopedics', icon: <Anchor className="w-6 h-6" />, description: 'Teeth alignment and facial growth modification' },
-      { name: 'Periodontology', icon: <Leaf className="w-6 h-6" />, description: 'Gum disease treatment and implant placement' },
-      { name: 'Oral & Maxillofacial Surgery', icon: <Scissors className="w-6 h-6" />, description: 'Surgical procedures for oral diseases and trauma' },
-      { name: 'Oral Medicine & Radiology', icon: <Scan className="w-6 h-6" />, description: 'Diagnosis and imaging of oral diseases' },
-      { name: 'Pediatric & Preventive Dentistry', icon: <Smile className="w-6 h-6" />, description: 'Comprehensive dental care for children' },
-      { name: 'Oral Pathology & Microbiology', icon: <Microscope className="w-6 h-6" />, description: 'Laboratory diagnosis of oral diseases' },
-      { name: 'Public Health Dentistry', icon: <Globe className="w-6 h-6" />, description: 'Community oral health and preventive programs' },
-      {
-    name: 'Basic Medical Sciences',
-    icon: <BookOpen className="w-6 h-6" />,
-    description: 'Foundation sciences supporting dental education'
-  },
-    ];
-    const [showAll, setShowAll] = useState(false);
 
-  const visibleDepartments = showAll
-    ? departments
-    : departments.slice(0, 9);
 
-    return (
-<section id="departments" className="pt-10 pb-4 bg-neutral-50">
-        <div className="container-custom">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="mb-3 font-['Montserrat'] text-[17px] font-semibold uppercase tracking-[0.28em] text-blue-700">Departments</div>
-            <h2 className="heading-2 text-neutral-900 mb-4">
-              Academic <span className="gradient-text">Departments</span>
-            </h2>
-           <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
-              State-of-the-art facilities across all dental specializations ensuring comprehensive
-              education and patient care.
-            </p>
-          </div>
-
-          {/* Departments Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {visibleDepartments.map((dept, idx) => (
-      <div
-        data-aos="fade-up"
-        data-aos-delay={idx * 100} key={idx} className="group bg-white rounded-2xl p-6 shadow-card card-hover cursor-pointer">
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-medical-blue/10 to-medical-sky/10 flex items-center justify-center text-medical-blue group-hover:bg-medical-blue group-hover:text-white transition-all duration-300">
-                    {dept.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-neutral-900 mb-2 group-hover:text-medical-blue transition-colors">{dept.name}</h3>
-                    <p className="text-sm text-neutral-600">{dept.description}</p>
-                  </div>
-                </div>
-             <div className="mt-4 pt-4 border-t border-neutral-100 opacity-0 group-hover:opacity-100 transition-opacity">
-<Link
-  to={
-    dept.name === "Conservative Dentistry & Endodontics"
-      ? "/departments/conservative-dentistry"
-      : dept.name === "Prosthodontics & Crown Bridge"
-      ? "/departments/prosthodontics"
-      : dept.name === "Orthodontics & Dentofacial Orthopedics"
-      ? "/departments/orthodontics"
-      : dept.name === "Periodontology"
-      ? "/departments/periodontology"
-      : dept.name === "Oral & Maxillofacial Surgery"
-      ? "/departments/oral-surgery"
-      : dept.name === "Oral Medicine & Radiology"
-      ? "/departments/oral-medicine"
-      : dept.name === "Pediatric & Preventive Dentistry"
-      ? "/departments/pediatric-dentistry"
-      : dept.name === "Oral Pathology & Microbiology"
-      ? "/departments/oral-pathology"
-      : dept.name === "Public Health Dentistry"
-      ? "/departments/public-health-dentistry"
-      : dept.name === "Basic Medical Sciences"
-      ? "/departments/basic-medical-sciences"
-      : "/departments"
-  }
-  className="text-sm text-medical-blue font-medium flex items-center gap-2 hover:gap-3 transition-all"
->
-  Explore Department
-  <ArrowRight className="w-4 h-4" />
-</Link>
-</div>
-              </div>
-            ))}
-          </div>
-        </div>
-       <div className="mt-6 text-center">
-    {!showAll && (
-      <button
-        onClick={() => setShowAll(true)}
-        className="premium-button"
-      >
-        View All Departments →
-      </button>
-    )}
-  </div>
-      </section>
-    );
-  };
-
-  // Hospital Section
 
 
   // Admissions Section
@@ -2535,7 +2433,7 @@ function HomePage() {
       <HeroSection />
       <AboutSection />
       <ProgramsSection />
-      <DepartmentsSection />
+  
       <AdmissionsSection />
       <CampusLifeSection />
       <ContactSection />
@@ -3075,7 +2973,7 @@ return (
 />
 <Route path="/cultural-events" element={<CulturalEvents />} />
 
-<Route path="/sports" element={<Sports />} />
+
 <Route path="/nss" element={<NSS />} />
 <Route path="/facilities" element={<Facilities />} />
 <Route path="/admin/manage-news" element={<ManageNews />} />

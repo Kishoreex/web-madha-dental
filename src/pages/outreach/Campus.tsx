@@ -187,7 +187,7 @@ const november2023 =
             Madha Dental College &amp; Hospital
           </p>
           <h1 className="font-['Cormorant_Garamond'] text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Campus Outreach Activities
+            Camps Outreach Activities
           </h1>
           <div className="mx-auto mt-5 h-[3px] w-16 rounded-full bg-gradient-to-r from-cyan-300 to-white" />
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">

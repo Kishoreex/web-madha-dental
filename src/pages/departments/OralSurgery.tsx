@@ -103,17 +103,19 @@ const faculty = [
     description:
      "Dr.Deenadayalan has completed his MDS from Ragas dental college and hospital and pursued his MS in Implantology from Stenberg university,M.Dent from Vienna university, Austria.He specializes in oncology (skull base surgery),Implantology,  Laser, Facial aesthetics.He has various publications in high Impact journals and has two patents."  },
   {
-    name: "Dr. Karthik K P, MDS",
-    designation: "Reader",
-    image: karthikImage,
-    description:
-    "Dr.Karthik KP completed his MDS from Meenatchi Ammal Dental College in 2019.He has pursued fellowship in Craniomaxillofacial trauma at PGIMS,Rohtak, Fellowship in Hair transplant, Post Graduate Diploma in Facial Aesthetics. He specialises in maxillofacial trauma, Pathology and Implants, Facial aesthetics and Hair transplant.He has done various international and national publications in Pubmed and Scopus indexed journals with high impact factor and holds a patent."  },
-  {
     name: "Dr. Thara Chandra S, MDS",
     designation: "Reader",
     image: tharaImage,
     description:
       "Dr Thara Chandra S completed her Master of Dental Surgery (MDS) from MES Dental College and Hospital in 2019.She has also completed a diploma in facial aesthetics and minimally invasive facial procedures. Her areas of interest include facial aesthetics and hair transplantation. She has various publications in national and international journals."  },
+ 
+     {
+    name: "Dr. Karthik K P, MDS",
+    designation: "Reader",
+    image: karthikImage,
+    description:
+    "Dr.Karthik KP completed his MDS from Meenatchi Ammal Dental College in 2019.He has pursued fellowship in Craniomaxillofacial trauma at PGIMS,Rohtak, Fellowship in Hair transplant, Post Graduate Diploma in Facial Aesthetics. He specialises in maxillofacial trauma, Pathology and Implants, Facial aesthetics and Hair transplant.He has done various international and national publications in Pubmed and Scopus indexed journals with high impact factor and holds a patent."  },
+ 
   {
     name: "Dr. George Samyo Stephenson, MDS",
     designation: "Senior Lecturer",
