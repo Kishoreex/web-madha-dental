@@ -12,6 +12,8 @@ import Login from "./admin/pages/Login";
 import Dashboard from "./admin/pages/Dashboard";
 import AddNews from "./admin/pages/AddNews";
 import ManageNews from "./admin/pages/ManageNews";
+import NewsDetail from "./pages/NewsDetail";
+
   //Menu 
   import Departments from "./pages/departments/Departments";
   import OralMedicine from "./pages/departments/OralMedicine";
@@ -171,7 +173,7 @@ const isDepartmentPage =
   location.pathname === "/departments" ||
   location.pathname.startsWith("/departments/");
 
-
+const isNewsDetailPage = location.pathname.startsWith("/news/");
   const [scrollProgress, setScrollProgress] = useState(0);
     
   useEffect(() => {
@@ -581,10 +583,6 @@ const isDepartmentPage =
       name: "Master Time Table",
       href: "/student-support/master-time-table",
     },
-    {
-      name: "LMS",
-      href: "/student-support/lms",
-    },
 
 {
   name: "Anti Ragging Cell",
@@ -625,7 +623,7 @@ const DesktopMenu = ({ items }: { items: any[] }) => (
   <button
     type="button"
     className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
+isNewsDetailPage || isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
   ? "text-black hover:text-blue-700"
   : "text-white hover:text-cyan-300"
     }`}
@@ -639,7 +637,7 @@ isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGallery
     target={item.target}
     rel="noopener noreferrer"
 className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
+isNewsDetailPage || isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
     ? "text-black hover:text-blue-700"
     : "text-white hover:text-cyan-300"
 }`}
@@ -651,7 +649,7 @@ isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGallery
   <Link
     to={item.href}
 className={`flex items-center gap-1 px-2.5 py-2 text-[14px] font-semibold font-['Manrope'] tracking-tight rounded-lg transition-all duration-300 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
+isNewsDetailPage || isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
     ? "text-black hover:text-blue-700"
     : "text-white hover:text-cyan-300"
 }`}
@@ -733,44 +731,111 @@ className="block px-2.5 py-1.5 text-[13px] font-medium font-['Manrope'] tracking
     }}
   />
         {/* Top Bar */}
-       <div
-className={`hidden lg:block
-bg-gradient-to-r from-medical-navy to-medical-blue
-text-white
-transition-all duration-500
-overflow-hidden
-${
-isScrolled
-? "-translate-y-full opacity-0 h-0"
-: "translate-y-0 opacity-100 py-2"
-}`}
+
+{/* ================= PREMIUM TOP CONTACT BAR ================= */}
+<div
+  className={`hidden lg:block overflow-hidden transition-all duration-500 ${
+    isScrolled
+      ? "-translate-y-full opacity-0 h-0"
+      : "translate-y-0 opacity-100"
+  }`}
 >
- <div className="container-custom flex justify-between items-center text-sm">
-            <div className="flex items-center gap-6">
-              <a href="tel:+917273901234" className="flex items-center gap-2 hover:text-medical-sky transition-colors">
-                <Phone className="w-4 h-4" />
-                +91 72739 01234 / 72749 01234
-              </a>
-              <a href="mailto:info@mdch.in" className="flex items-center gap-2 hover:text-medical-sky transition-colors">
-                <Mail className="w-4 h-4" />
-                info@mdch.in
-              </a>
-            </div>
-            <div className="flex items-center gap-6">
-              <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                Mon - Sat: 9:00 AM - 5:00 PM
-              </span>
-              <div className="flex items-center gap-3">
-                <a href="#" className="hover:text-medical-sky transition-colors"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-medical-sky transition-colors"><Instagram className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-medical-sky transition-colors"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-medical-sky transition-colors"><Youtube className="w-4 h-4" /></a>
-                
-              </div>
-            </div>
-          </div>
+  <div className="relative bg-gradient-to-r from-[#071a3d] via-[#1047a9] to-[#087eaa] text-white border-b border-white/15">
+    {/* Subtle decorative glow */}
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-transparent to-blue-300/10" />
+
+<div className="container-custom relative flex min-h-[32px] items-center justify-between gap-4 py-1">
+
+      {/* CONTACT INFORMATION */}
+      <div className="flex items-center gap-5 xl:gap-7">
+
+        {/* Phone */}
+        <a
+          href="tel:+917273901234"
+          className="group flex items-center gap-2.5 text-[12px] xl:text-[13px] font-medium tracking-wide text-white/90 transition-colors duration-300 hover:text-cyan-200"
+        >
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/15 bg-white/10 transition-all duration-300 group-hover:border-cyan-300/40 group-hover:bg-cyan-300/15">
+            <Phone className="h-3.5 w-3.5 text-cyan-200" />
+          </span>
+          <span>+91 72739 01234 / 72749 01234</span>
+        </a>
+
+        {/* Email */}
+        <a
+          href="mailto:info@mdch.in"
+          className="group flex items-center gap-2.5 text-[12px] xl:text-[13px] font-medium tracking-wide text-white/90 transition-colors duration-300 hover:text-cyan-200"
+        >
+          <span className="flex h-5 w-5 items-center justify-center rounded-md border border-white/15 bg-white/10 transition-all duration-300 group-hover:border-cyan-300/40 group-hover:bg-cyan-300/15">
+            <Mail className="h-3.5 w-3.5 text-cyan-200" />
+          </span>
+          <span>info@mdch.in</span>
+        </a>
+
+      </div>
+
+      {/* HOURS AND SOCIAL LINKS */}
+      <div className="flex items-center gap-4 xl:gap-6">
+
+        {/* Opening Hours */}
+        <div className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.08] px-2.5 py-1">
+          <Clock className="h-3.5 w-3.5 text-cyan-200" />
+          <span className="text-[11px] xl:text-xs font-medium tracking-wide text-white/90">
+            Mon – Sat
+          </span>
+          <span className="h-3 w-px bg-white/25" />
+          <span className="text-[11px] xl:text-xs font-semibold text-white">
+            9:00 AM – 5:00 PM
+          </span>
         </div>
+
+        {/* Social Media */}
+        <div className="flex items-center gap-1.5 border-l border-white/20 pl-4">
+
+          <a
+            href="#"
+            aria-label="Facebook"
+            className="flex h-7 w-7 items-center justify-center rounded-lg text-white/85 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/15 hover:text-cyan-200"
+          >
+            <Facebook className="h-4 w-4" />
+          </a>
+
+    
+<a
+  href="https://www.instagram.com/madha_dental?psln=MTg3d3Fqa2htYmh5cw=="
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+  className="flex h-7 w-7 items-center justify-center rounded-lg text-white/85 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/15 hover:text-cyan-200"
+>
+  <Instagram className="h-4 w-4" />
+</a>
+
+
+          <a
+            href="#"
+            aria-label="Twitter"
+            className="flex h-7 w-7 items-center justify-center rounded-lg text-white/85 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/15 hover:text-cyan-200"
+          >
+            <Twitter className="h-4 w-4" />
+          </a>
+
+<a
+  href="https://youtube.com/@madhagroupofinstitutions?si=ApWLAMjxEIJsuzqG"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+  className="flex h-7 w-7 items-center justify-center rounded-lg text-white/85 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/15 hover:text-cyan-200"
+>
+  <Youtube className="h-4 w-4" />
+</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         {/* Main Navigation */}
 <nav
@@ -1106,7 +1171,7 @@ style={{
 <div className="flex flex-col -ml-2">
 <h1
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
+isNewsDetailPage || isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
   ? "text-black text-[23px]"
   : "text-white text-[23px]"
   }`}
@@ -1129,7 +1194,7 @@ isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGallery
 </div>
 <p
   className={`uppercase transition-all duration-500 ${
-isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
+isNewsDetailPage || isScrolled || isHospitalPage || isPrincipalPage || isManagementPage || isGalleryPage || isDepartmentPage || isFeeRefundPage || isProspectusPage
   ? "text-black text-[12px]"
   : "text-white text-[12px]"
   }`}
@@ -1200,6 +1265,53 @@ const ScrollToTop = () => {
   const HeroSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [scrollY, setScrollY] = useState(0);
+
+type HomepageNews = {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  publishedDate: string;
+  isActive: boolean;
+};
+
+const [latestNews, setLatestNews] = useState<HomepageNews[]>([]);
+const [newsSlide, setNewsSlide] = useState(0);
+
+useEffect(() => {
+  const fetchLatestNews = async () => {
+    try {
+      const response = await fetch("http://localhost:5232/api/News");
+      if (!response.ok) throw new Error("Could not load news");
+
+      const data: HomepageNews[] = await response.json();
+
+      setLatestNews(
+        data
+          .filter((item) => item.isActive)
+          .sort(
+            (a, b) =>
+              new Date(b.publishedDate).getTime() -
+              new Date(a.publishedDate).getTime()
+          )
+      );
+    } catch (error) {
+      console.error("Homepage news loading failed:", error);
+    }
+  };
+
+  fetchLatestNews();
+}, []);
+
+useEffect(() => {
+  if (latestNews.length < 2) return;
+
+  const timer = setInterval(() => {
+    setNewsSlide((current) => (current + 1) % latestNews.length);
+}, 4500);
+
+  return () => clearInterval(timer);
+}, [latestNews.length]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1357,6 +1469,120 @@ max-w-3xl
           </div>
         </div>
 
+{/* ================= HOMEPAGE LATEST NEWS SLIDER ================= */}
+{latestNews.length > 0 && latestNews[newsSlide] && (
+<div className="absolute right-5 top-[56%] z-20 hidden w-[290px] -translate-y-1/2 xl:block 2xl:right-12 2xl:w-[320px]">
+ 
+
+<div className="news-glow-frame overflow-hidden rounded-2xl bg-transparent">
+
+
+
+  <div className="flex items-center justify-between px-1 py-3">
+        <div>
+ 
+      <h3 className="mt-1 bg-gradient-to-r from-white via-cyan-100 to-blue-300 bg-clip-text text-lg font-extrabold tracking-wide text-transparent drop-shadow-[0_0_10px_rgba(34,211,238,0.25)]">
+  Latest News
+</h3>
+<div className="mt-2 h-[2px] w-16 rounded-full bg-gradient-to-r from-cyan-300 via-blue-500 to-transparent shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+        </div>
+
+
+      </div>
+<Link
+  key={latestNews[newsSlide].id}
+  to={`/news/${latestNews[newsSlide].id}`}
+  className="news-slide-content group block"
+>
+<div className="relative h-[145px] overflow-hidden rounded-xl bg-transparent">
+          {latestNews[newsSlide].imageUrl ? (
+            <img
+              src={
+                latestNews[newsSlide].imageUrl.startsWith("http")
+                  ? latestNews[newsSlide].imageUrl
+                  : `http://localhost:5232${latestNews[newsSlide].imageUrl.startsWith("/") ? "" : "/"}${latestNews[newsSlide].imageUrl}`
+              }
+              alt={latestNews[newsSlide].title}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          ) : (
+            <div className="flex h-full items-center justify-center text-sm text-white/50">
+              Madha Dental College
+            </div>
+          )}
+
+
+          <span className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[10px] text-white backdrop-blur-md">
+            {new Date(
+              latestNews[newsSlide].publishedDate
+            ).toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+            })}
+          </span>
+        </div>
+
+ <div className="px-1 py-4">
+     <h4 className="line-clamp-2 min-h-0 text-base font-bold leading-5 text-white transition-colors group-hover:text-cyan-300">
+            {latestNews[newsSlide].title}
+          </h4>
+<p className="mt-2 line-clamp-2 text-xs leading-5 text-white/90">
+            {latestNews[newsSlide].description}
+          </p>
+
+      
+<div className="mt-3 flex justify-end">
+  <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-gradient-to-r from-blue-600/30 to-cyan-500/20 px-3 py-1.5 text-[10px] font-semibold text-cyan-200 shadow-[0_0_12px_rgba(34,211,238,0.12)] transition-all duration-300 group-hover:border-cyan-200 group-hover:shadow-[0_0_18px_rgba(34,211,238,0.3)]">
+    Read Full Story
+    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </span>
+</div>
+
+        </div>
+      </Link>
+
+      {latestNews.length > 1 && (
+      <div className="flex items-center justify-between border-t border-white/20 px-1 py-3">
+          <span className="text-[10px] text-white/50">
+            {String(newsSlide + 1).padStart(2, "0")} /{" "}
+            {String(latestNews.length).padStart(2, "0")}
+          </span>
+
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              aria-label="Previous news"
+              onClick={() =>
+                setNewsSlide(
+                  (newsSlide - 1 + latestNews.length) %
+                    latestNews.length
+                )
+              }
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-white transition hover:bg-white/10"
+            >
+              ←
+            </button>
+
+            <button
+              type="button"
+              aria-label="Next news"
+              onClick={() =>
+                setNewsSlide((newsSlide + 1) % latestNews.length)
+              }
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-white transition hover:bg-white/10"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+)}
+
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {slides.map((_, index) => (
@@ -1503,7 +1729,7 @@ max-w-3xl
                   <div className="text-sm text-neutral-600">Accredited</div>
                 </div>
                 <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
-                  <div className="text-2xl font-bold text-medical-blue">Dr.M.G.R</div>
+                  <div className="text-2xl font-bold text-medical-blue">The Tamil Nadu Dr.M.G.R</div>
                   <div className="text-sm text-neutral-600">University Affiliated</div>
                 </div>
                 <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
@@ -2286,143 +2512,250 @@ const handleSubmit = async (e: React.FormEvent) => {
     );
   };
 
-  // Footer
-  const Footer = () => {
+  
+// Footer
+const Footer = () => {
+
 const quickLinks = [
-  { name: 'About Us', href: '/about/mdch' },
-  { name: 'Admissions', href: '/admissions/process' },
-  { name: 'Programs', href: '/admissions/bds' },
-  { name: 'Departments', href: '/departments' },
-  { name: 'Hospital', href: '/hospital/services' },
-  { name: 'Gallery', href: '/gallery' },
+  { name: "RTI Details of CPIO", href: "/pdf/RTI_Information.pdf" },
+  { name: "Alumni Association", href: "/alumni" },
+  { name: "Committees", href: "/iqac/committees" },
+  {
+    name: "Details of Students Grievance Redressal committee",
+    href: "/student-support/grievance-redressal-form",
+  },
+  { name: "Reservation Roster", href: "/pdf/Reservation_Roster.pdf" },
+  { name: "Careers at MDCH", href: "/#contact" },
+  { name: "News, Recent events and Achievements", href: "/#news" },
+  {
+    name: "Prevention of Sexual Harassment Committee",
+    href: "/pdf/Prevention_of_Sexual_Harassment_Committee.pdf",
+  },
+  { name: "UGC - Public Self-Disclosure", href: "/pdf/UGC_Public_Self_Disclosure.pdf" },
+  { name: "Contact us", href: "/#contact" },
 ];
 
-const departments = [
-  {
-    name: 'Conservative Dentistry',
-    href: '/departments/conservative-dentistry',
-  },
-  {
-    name: 'Prosthodontics',
-    href: '/departments/prosthodontics',
-  },
-  {
-    name: 'Orthodontics',
-    href: '/departments/orthodontics',
-  },
-  {
-    name: 'Periodontology',
-    href: '/departments/periodontology',
-  },
-  {
-    name: 'Oral Surgery',
-    href: '/departments/oral-surgery',
-  },
-  {
-    name: 'Pedodontics',
-    href: '/departments/pediatric-dentistry',
-  },
-];
 
-    return (
-      <footer className="bg-gradient-to-b from-medical-navy to-neutral-900 text-white">
-        {/* Main Footer */}
-        <div className="container-custom py-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* About */}
-            <div>
+  const departments = [
+    { name: "Conservative Dentistry", href: "/departments/conservative-dentistry" },
+    { name: "Prosthodontics", href: "/departments/prosthodontics" },
+    { name: "Orthodontics", href: "/departments/orthodontics" },
+    { name: "Periodontology", href: "/departments/periodontology" },
+    { name: "Oral Surgery", href: "/departments/oral-surgery" },
+    { name: "Pedodontics", href: "/departments/pediatric-dentistry" },
+  ];
 
-              <p className="text-white/70 mb-6">
-                Madha Dental College & Hospital - Premier dental institution offering world-class
-                dental education since 2006.
-              </p>
-              <div className="flex gap-3">
-                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-medical-blue transition-colors">
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-medical-blue transition-colors">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-medical-blue transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-medical-blue transition-colors">
-                  <Youtube className="w-5 h-5" />
-                </a>
+  const footerLink =
+    "group flex items-center gap-2 text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-cyan-300";
+
+  const heading =
+    "mb-5 text-sm font-bold uppercase tracking-[0.16em] text-white";
+
+  return (
+    <footer className="relative overflow-hidden border-t border-cyan-400/20 bg-gradient-to-br from-[#07152d] via-[#0b2344] to-[#06101f] text-white">
+
+      {/* Subtle background accents */}
+      <div className="pointer-events-none absolute -left-32 top-0 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-cyan-400/10 blur-3xl" />
+
+      {/* Main Footer */}
+      <div className="container-custom relative mx-auto px-5 py-10 sm:px-8 sm:py-12 lg:py-14">
+
+        <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+
+          {/* College Information */}
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-white/5 shadow-lg shadow-cyan-950/30">
+                <GraduationCap className="h-6 w-6 text-cyan-300" />
+              </div>
+
+              <div>
+                <h3 className="text-sm font-bold tracking-wide text-white">
+                  MADHA DENTAL COLLEGE
+                </h3>
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-cyan-300">
+                  & Hospital
+                </p>
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-           {quickLinks.map((link, idx) => (
-  <li key={idx}>
-    <Link
-      to={link.href}
-      className="text-white/70 hover:text-medical-sky transition-colors"
-    >
-      {link.name}
-    </Link>
-  </li>
-))}
-              </ul>
-            </div>
-
-            {/* Departments */}
-            <div>
-              <h4 className="font-semibold text-lg mb-6">Departments</h4>
-              <ul className="space-y-3">
-        {departments.map((dept, idx) => (
-  <li key={idx}>
-    <Link
-      to={dept.href}
-      className="text-white/70 hover:text-medical-sky transition-colors"
-    >
-      {dept.name}
-    </Link>
-  </li>
-))}
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="font-semibold text-lg mb-6">Contact Us</h4>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-medical-sky flex-shrink-0 mt-1" />
-                  <span className="text-white/70">Madha Nagar, Kundrathur, Chennai, India</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-medical-sky" />
-                  <a href="tel:+917273901234" className="text-white/70 hover:text-medical-sky transition-colors">
-                    +91 72739 01234
-                  </a>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-medical-sky" />
-                  <a href="mailto:info@mdch.in" className="text-white/70 hover:text-medical-sky transition-colors">
-                    info@mdch.in
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10">
-          <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-sm text-center md:text-left">
-              &copy; 2026 Madha Dental College & Hospital. All Rights Reserved.
+            <p className="mb-5 max-w-xs text-sm leading-6 text-slate-300">
+              A premier dental institution offering world-class dental
+              education and compassionate healthcare since 2006.
             </p>
-         
+
+            <div className="flex gap-2.5">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-blue-600 hover:text-white"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/madha_dental/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-pink-600 hover:text-white"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-slate-700 hover:text-white"
+              >
+                <Twitter className="h-4 w-4" />
+              </a>
+
+              <a
+                href="https://youtube.com/@madhagroupofinstitutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-red-600 hover:text-white"
+              >
+                <Youtube className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className={heading}>Quick Links</h4>
+
+        <ul className="space-y-2">
+
+{quickLinks.map((link) => (
+  <li key={link.name}>
+    {link.href.toLowerCase().endsWith(".pdf") ? (
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={footerLink}
+      >
+        <ChevronRight className="h-3.5 w-3.5 shrink-0 text-cyan-400" />
+        {link.name}
+      </a>
+    ) : (
+      <Link to={link.href} className={footerLink}>
+        <ChevronRight className="h-3.5 w-3.5 shrink-0 text-cyan-400" />
+        {link.name}
+      </Link>
+    )}
+  </li>
+))}
+
+            </ul>
+          </div>
+
+          {/* Departments */}
+          <div>
+            <h4 className={heading}>Departments</h4>
+
+            <ul className="space-y-3">
+              {departments.map((dept) => (
+                <li key={dept.name}>
+                  <Link to={dept.href} className={footerLink}>
+                    <ChevronRight className="h-3.5 w-3.5 shrink-0 text-cyan-400 transition-transform group-hover:translate-x-0.5" />
+                    {dept.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div>
+            <h4 className={heading}>Contact Us</h4>
+
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-300/10">
+                  <MapPin className="h-4 w-4 text-cyan-300" />
+                </div>
+
+                <span className="pt-1 text-sm leading-6 text-slate-300">
+                  Madha Nagar, Kundrathur,
+                  <br />
+                  Chennai, India
+                </span>
+              </li>
+
+              <li className="flex items-center gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-300/10">
+                  <Phone className="h-4 w-4 text-cyan-300" />
+                </div>
+
+                <a
+                  href="tel:+917273901234"
+                  className="text-sm text-slate-300 transition-colors hover:text-cyan-300"
+                >
+                  +91 72739 01234
+                </a>
+              </li>
+
+              <li className="flex items-center gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-300/10">
+                  <Mail className="h-4 w-4 text-cyan-300" />
+                </div>
+
+                <a
+                  href="mailto:info@mdch.in"
+                  className="break-all text-sm text-slate-300 transition-colors hover:text-cyan-300"
+                >
+                  info@mdch.in
+                </a>
+              </li>
+            </ul>
+
+            <Link
+              to="/#contact"
+              className="mt-5 inline-flex items-center gap-2 rounded-lg border border-cyan-300/30 bg-cyan-300/10 px-4 py-2.5 text-xs font-semibold text-cyan-200 transition-all duration-300 hover:border-cyan-300/60 hover:bg-cyan-300/20"
+            >
+              Get in Touch
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
         </div>
-      </footer>
-    );
-  };
+      </div>
+
+      {/* Copyright Bar */}
+      <div className="relative border-t border-white/10 bg-black/20">
+        <div className="container-custom mx-auto flex flex-col items-center justify-between gap-3 px-5 py-4 text-center sm:flex-row sm:px-8 sm:text-left">
+          <p className="text-xs leading-5 text-slate-400">
+            © {new Date().getFullYear()} Madha Dental College & Hospital.
+            All Rights Reserved.
+          </p>
+
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="inline-flex items-center gap-2 text-xs font-medium text-slate-300 transition-colors hover:text-cyan-300"
+          >
+            Back to Top
+            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-300/10">
+              <ArrowRight className="h-3.5 w-3.5 -rotate-90" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 
 function HomePage() {
   return (
@@ -2957,6 +3290,8 @@ return (
   path="/departments/prosthodontics"
   element={<Prosthodontics />}
 />
+
+<Route path="/news/:id" element={<NewsDetail />} />
 <Route path="/library" element={<Library />} />
 <Route
   path="/departments/oral-medicine"
