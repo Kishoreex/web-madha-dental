@@ -385,9 +385,11 @@ export default function PediatricDentistry() {
                       </p>
                     </div>
 
-                    <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px]">
-                      {member.description}
-                    </p>
+             
+<p className="font-['Montserrat'] text-[13px] sm:text-sm leading-7 text-neutral-700 text-justify [text-align-last:left] break-words">
+  {member.description}
+</p>
+
                   </div>
 
                 </div>

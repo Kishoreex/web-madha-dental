@@ -345,9 +345,11 @@ export default function PublicHealthDentistry() {
 
                 </div>
 
-                <p className="text-[15px] leading-7 text-neutral-700">
-                  {member.description}
-                </p>
+       
+<p className="font-['Montserrat'] text-[13px] sm:text-sm leading-7 text-neutral-700 text-justify [text-align-last:left] break-words">
+  {member.description}
+</p>
+
 
               </div>
             ))}

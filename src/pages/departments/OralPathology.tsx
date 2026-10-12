@@ -79,13 +79,13 @@ const faculty = [
     designation: "Professor and Head",
     image: sivakumarImage,
     description:
-   "Dr.G.SIVAKUMARMDS, MBA (Hospital Management), PhD, MSWhad completed his post-graduation from the Ragas Dental college,Chennai. With overof28 years of experience in academics, clinical practice, research and administration.He has 67publicationsinindexedjournalswithahighimpactfactor.Dr. Sivakumar is the recipient of several prestigious awards and fellowships, including the ISDR Dr. J.G. Kannappan Award for Best Paper Published in the Indian Journal of Dental Research and the Research Excellence Award in recognition of his contributions to Oral Pathology and dental research. His field of interest are Oral Cancers, OPMDs, Skin Lesions and Forensic Odontology."  },
+   "Dr.G.SIVAKUMARMDS, MBA (Hospital Management), PhD, MSWhad completed his post-graduation from the Ragas Dental college,Chennai. With overof28 years of experience in academics, clinical practice, research and administration.He has 67 publications in indexed journal switha high impact factor.Dr. Sivakumar is the recipient of several prestigious awards and fellowships, including the ISDR Dr. J.G. Kannappan Award for Best Paper Published in the Indian Journal of Dental Research and the Research Excellence Award in recognition of his contributions to Oral Pathology and dental research. His field of interest are Oral Cancers, OPMDs, Skin Lesions and Forensic Odontology."  },
    {
     name: "Dr. M. Sivakumar, MDS",
     designation: "Professor / Reader",
     image: mSivakumarImage,
     description:
-   "Dr.M. SIVAKUMAR, MDS, has completed his post graduation fromRajah Muthaiah DentalCollegeandHospitalwith13 yearsofteachingexperience. He has over 30 publications in various national and International journals. He has also delivered guest lectures in variouscollegesandpresentedpapersatnationalconferences.Hisacademicinterestis oriented towards Oral Oncology and Forensic Odontology."  },
+   "Dr.M.SIVAKUMAR, MDS, has completed his post graduation from Rajah Muthaiah Dental College and Hospital with 13 year softeachingexperience. He has over 30 publications in various national and International journals. He has also delivered guest lectures in various colleges and presented papers at national conferences. His academic interest is oriented towards Oral Oncology and Forensic Odontology."  },
   {
      name: "Dr. R. Raghini, MDS",
     designation: "Reader",
@@ -371,9 +371,11 @@ export default function OralPathology() {
                       </p>
                     </div>
 
-                    <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px]">
-                      {member.description}
-                    </p>
+              
+<p className="font-['Montserrat'] text-[13px] sm:text-sm leading-7 text-neutral-700 text-justify [text-align-last:left] break-words">
+  {member.description}
+</p>
+
                   </div>
 
                 </div>

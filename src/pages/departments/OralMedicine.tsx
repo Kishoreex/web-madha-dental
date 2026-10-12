@@ -23,19 +23,19 @@ const faculty = [
   designation: "Professor and Head",
   image: kavithaImage,
   description:
-      "Dr. M. KavithaM.D.S., had completed her post-graduation from the Government DentalCollege&ResearchInstitute,Karnatakaandhastotalteachingexperienceof12 years5months.Shehas 40publicationsinindexedjournalswithahighimpactfactor, 2 patents and 2 book chapters. She is a renowned invited speaker at various national andinternationalscientificdeliberationsandhaspresentedscientificpapersatnational conferences Her field of interest are Salivary gland diseases and Radiographic differential diagnosis." },
+      "Dr.M.Kavitha M.D.S, had completed her post-graduation from the Government Dental College & Research Institute,Karnatakaand has total teaching experience of 12 years 5 months.She has 40 publications in indexed journal switha high impact factor,2 patents and 2 book chapters. She is a renowned invited speaker at various national and international scientific deliberations and has presented scientific papers at national conferences Her field of interest are Salivary gland diseases and Radiographic differential diagnosis." },
 {
   name: "Dr. Niveditha.B, MDS",
   designation: "Reader",
   image: nivedithaImage,
   description:
-    "Dr. Niveditha, MDS, has completed her post graduation in Oral Medicine and RadiologyfromRagasDentalCollegeandHospital. She has 4 book chapters to her credit. She has one patent, and over 30 publications in various national and International journals. She has also delivered guest lectures in variouscollegesandpresentedpapersatnationalconferences.Heracademicinterestis oriented towards Orofacial pain and TMJ disorders."  },
+    "Dr. Niveditha, MDS has completed her post graduation in Oral Medicine and Radiology from Ragas Dental College and Hospital. She has 4 book chapters to her credit. She has one patent, and over 30 publications in various national and International journals. She has also delivered guest lectures in various colleges and presented papers at national conferences. Her academic interest is oriented towards Orofacial pain and TMJ disorders."  },
   {
   name: "Dr. M. Arivuselvi, MDS",
   designation: "Reader",
   image: arivuselviImage,
   description:
-    "Dr.M.Arivuselvi,isanMDSgraduatefromRajaMuthiahDentalCollege&Hospital, Annamalai University.HeracademicinterestfocusesonTemporomandibularJointDisorders.Shehas authored several publications in national and international journals, contributing to evidence-based practice in oral medicine and radiology." },
+    "Dr.M.Arivuselvi,is an MDS graduate from Raja Muthiah Dental College & Hospital,Annamalai University.Her academic interest focuses on Temporomandibular Joint Disorders.Shehas authored several publications in national and international journals, contributing to evidence-based practice in oral medicine and radiology." },
  {
   name: "Dr. Pavithra Dhandapani, MDS",
   designation: "Senior Lecturer",
@@ -341,9 +341,11 @@ data-aos="fade-up"
           </p>
         </div>
 
-        <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px]">
-          {member.description}
-        </p>
+    
+<p className="font-['Montserrat'] text-[13px] sm:text-sm leading-7 text-neutral-700 text-justify [text-align-last:left] break-words">
+  {member.description}
+</p>
+
       </div>
 
     </div>
