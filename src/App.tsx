@@ -70,6 +70,9 @@ import FeeRefundPolicy from "./pages/admissions/FeeRefundPolicy";
 //Acadamics
 import AcademicCalendar from "./pages/academics/AcademicCalendar";
 import AcademicRegulations from "./pages/academics/AcademicRegulations";
+import UGCPublicSelfDisclosure from "./pages/academics/UGCPublicSelfDisclosure";
+import CareersAtMDCH from "./pages/academics/CareersAtMDCH";
+import Committee from "./pages/academics/Committee";
 import CircularsNotices from "./pages/academics/CircularsNotices";
 import AcademicCurriculum from "./pages/academics/AcademicCurriculum";
 import CareerGuidance from "./pages/academics/CareerGuidance";
@@ -1385,7 +1388,11 @@ className="container-custom relative z-10 pt-20 sm:pt-24 pb-12 sm:pb-16 lg:pt-32
       opacity: Math.max(1 - scrollY / 600, 0),
     }}
   >
-<div className="max-w-5xl mx-auto lg:mx-0 lg:-ml-32 xl:-ml-40 2xl:-ml-48">
+
+<div className="max-w-5xl mx-auto lg:mx-0 lg:-ml-48 xl:-ml-64 2xl:-ml-72">
+
+
+
             {/* Badge */}
             <div className="hero-reveal inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-[10px] sm:text-xs mb-4 max-w-full"><Sparkles className="w-4 h-4 text-accent-gold" />
              <span className="leading-tight">
@@ -2519,19 +2526,27 @@ const Footer = () => {
 const quickLinks = [
   { name: "RTI Details of CPIO", href: "/pdf/RTI_Information.pdf" },
   { name: "Alumni Association", href: "/alumni" },
-  { name: "Committees", href: "/iqac/committees" },
+
+{ name: "Committees", href: "/academics/committee" },
+
   {
     name: "Details of Students Grievance Redressal committee",
-    href: "/student-support/grievance-redressal-form",
-  },
+     href: "/pdf/grievance-redressal-form.pdf" },
+  
   { name: "Reservation Roster", href: "/pdf/Reservation_Roster.pdf" },
-  { name: "Careers at MDCH", href: "/#contact" },
-  { name: "News, Recent events and Achievements", href: "/#news" },
+
+{ name: "Careers at MDCH", href: "/careers" },
+
+
   {
     name: "Prevention of Sexual Harassment Committee",
     href: "/pdf/Prevention_of_Sexual_Harassment_Committee.pdf",
   },
-  { name: "UGC - Public Self-Disclosure", href: "/pdf/UGC_Public_Self_Disclosure.pdf" },
+{
+  name: "UGC - Public Self-Disclosure",
+  href: "/ugc-public-self-disclosure",
+},
+
   { name: "Contact us", href: "/#contact" },
 ];
 
@@ -3197,6 +3212,10 @@ return (
   element={<AcademicRegulations />}
 />
 <Route
+  path="/ugc-public-self-disclosure"
+  element={<UGCPublicSelfDisclosure />}
+/>
+<Route
   path="/academics/notices"
   element={<CircularsNotices />}
 />
@@ -3224,10 +3243,17 @@ return (
   element={<ISO />}
 />
 <Route path="/research/books" element={<Books />} />
+
 <Route
   path="/academics/committee"
+  element={<Committee />}
+/>
+
+<Route
+  path="/academics/academic-committee"
   element={<AcademicCommittee />}
 />
+
 <Route
   path="/academics/curriculum"
   element={<AcademicCurriculum />}
@@ -3305,7 +3331,10 @@ return (
 />
 <Route path="/cultural-events" element={<CulturalEvents />} />
 
-
+<Route
+  path="/careers"
+  element={<CareersAtMDCH />}
+/>
 <Route path="/nss" element={<NSS />} />
 <Route path="/facilities" element={<Facilities />} />
 <Route path="/admin/manage-news" element={<ManageNews />} />
