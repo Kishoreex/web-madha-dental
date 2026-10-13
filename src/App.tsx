@@ -1351,12 +1351,10 @@ useEffect(() => {
 
     return (
 
-
 <section
   id="home"
-  className="relative min-h-[100svh] w-full max-w-none min-w-0 flex items-center overflow-hidden pt-24 sm:pt-28"
+  className="relative min-h-[100svh] w-full min-w-0 flex items-center overflow-hidden pt-20 sm:pt-28"
 >
-
 
         {/* Background Slider */}
   <div className="absolute inset-0 h-full w-full">
@@ -1391,7 +1389,7 @@ className="h-full w-full object-cover object-[center_35%] md:object-center"
 
         {/* Content */}
 <div
-className="relative z-10 mx-auto w-full max-w-[1600px] px-4 sm:px-6 pt-8 pb-16 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-20"
+className="container-custom relative z-10 pt-28 sm:pt-24 pb-16 sm:pb-16 lg:pt-32 lg:pb-20"
     style={{
       transform: `translateY(${scrollY * 0.2}px)`,
       opacity: Math.max(1 - scrollY / 600, 0),
@@ -1634,7 +1632,7 @@ max-w-3xl
     ];
 
     return (
-<section id="about" className="w-full min-w-0 overflow-x-clip pt-10 pb-8 sm:pt-24 bg-gradient-to-b from-white to-neutral-50">
+  <section id="about" className="pt-16 pb-8 sm:pt-24 bg-gradient-to-b from-white to-neutral-50">
       <div className="max-w-[1600px] mx-auto px-4 lg:px-6">
           {/* Section Header */}
          <div
@@ -1659,7 +1657,7 @@ max-w-3xl
 </div>
 
           {/* Main Content Grid */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center mb-12 sm:mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             {/* Image Side */}
           <div
     className="relative"
@@ -1676,7 +1674,7 @@ max-w-3xl
               </div>
               {/* Floating Stats Card */}
 
-<div className="absolute -bottom-7 left-3 right-3 sm:left-auto sm:-bottom-5 sm:right-3 lg:right-6 glass-card p-3 sm:p-6 max-w-none sm:max-w-xs">
+<div className="absolute -bottom-10 left-3 right-3 sm:left-auto sm:-bottom-5 sm:right-3 lg:right-6 glass-card p-3 sm:p-6 max-w-none sm:max-w-xs">
 
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-medical-blue to-medical-sky flex items-center justify-center">
