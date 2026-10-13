@@ -1350,12 +1350,14 @@ useEffect(() => {
     ];
 
     return (
+
 <section
   id="home"
-  className="relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-28"
+  className="relative min-h-[100svh] w-full min-w-0 flex items-center overflow-hidden pt-20 sm:pt-28"
 >
+
         {/* Background Slider */}
-        <div className="absolute inset-0">
+  <div className="absolute inset-0 h-full w-full">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -1630,7 +1632,7 @@ max-w-3xl
     ];
 
     return (
-     <section id="about" className="pt-24 pb-8 bg-gradient-to-b from-white to-neutral-50">
+  <section id="about" className="pt-16 pb-8 sm:pt-24 bg-gradient-to-b from-white to-neutral-50">
       <div className="max-w-[1600px] mx-auto px-4 lg:px-6">
           {/* Section Header */}
          <div
@@ -1671,7 +1673,9 @@ max-w-3xl
                 <div className="absolute inset-0 bg-gradient-to-t from-medical-navy/50 to-transparent" />
               </div>
               {/* Floating Stats Card */}
-            <div className="absolute -bottom-5 right-3 sm:-right-4 lg:right-6 glass-card p-4 sm:p-6 max-w-[calc(100%-24px)] sm:max-w-xs">
+
+<div className="absolute -bottom-10 left-3 right-3 sm:left-auto sm:-bottom-5 sm:right-3 lg:right-6 glass-card p-3 sm:p-6 max-w-none sm:max-w-xs">
+
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-medical-blue to-medical-sky flex items-center justify-center">
                     <Award className="w-8 h-8 text-white" />
