@@ -1359,15 +1359,17 @@ useEffect(() => {
               key={index}
               className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             >
-              <img
-    src={slide}
-    alt={`MDCH Campus ${index + 1}`}
-    className="w-full h-full object-cover"
-    style={{
-      transform: `translateY(${scrollY * 0.35}px) scale(1.08)`,
-      transition: "transform 0.1s linear",
-    }}
-  />
+
+<img
+  src={slide}
+  alt={`MDCH Campus ${index + 1}`}
+  className="w-full h-full object-contain md:object-cover"
+  style={{
+    transform: `translateY(${scrollY * 0.35}px) scale(1)`,
+    transition: "transform 0.1s linear",
+  }}
+/>
+
               <div className="absolute inset-0 bg-gradient-to-r from-medical-navy/80 via-medical-navy/50 to-medical-blue/30" />
             </div>
           ))}
