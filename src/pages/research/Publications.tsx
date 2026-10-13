@@ -1,7 +1,8 @@
 
 import { publications } from "../../data/publications";
 
-
+console.log("Total publications loaded:", publications.length);
+console.log("Publication records:", publications);
 const Publications = () => {
 
 
@@ -36,7 +37,7 @@ const Publications = () => {
 
        <div className="rounded-2xl shadow-lg bg-white overflow-hidden">
 
-  <div className="overflow-auto max-h-[700px]">
+ <div className="overflow-x-auto">
 
     <table className="min-w-full">
 

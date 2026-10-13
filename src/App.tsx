@@ -152,8 +152,11 @@ const sendAdmissionEnquiry = async (
   // Navigation Component
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileOpenMenu, setMobileOpenMenu] = useState<string | null>(null);
+
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [mobileOpenMenu, setMobileOpenMenu] = useState<string | null>(null);
+const [mobileOpenSubMenu, setMobileOpenSubMenu] = useState<string | null>(null);
+
     const location = useLocation();
 const isHospitalPage = location.pathname === "/hospital/services";
 
@@ -1012,9 +1015,10 @@ isScrolled ? "py-1" : "py-2"
               <>
                 <button
                   type="button"
-                  onClick={() =>
-                    setMobileOpenMenu(isOpen ? null : item.name)
-                  }
+               onClick={() => {
+  setMobileOpenMenu(isOpen ? null : item.name);
+  setMobileOpenSubMenu(null);
+}}
                   className="flex items-center justify-between w-full px-4 py-3.5 text-[15px] font-semibold text-gray-800 hover:bg-blue-50 hover:text-blue-700 rounded-xl"
                 >
                   <span>{item.name}</span>
@@ -1033,7 +1037,7 @@ isScrolled ? "py-1" : "py-2"
                     {item.submenu.map((sub: any) => {
 
                       const subKey = `${item.name}-${sub.name}`;
-                      const subOpen = mobileOpenMenu === subKey;
+                 const subOpen = mobileOpenSubMenu === subKey;
 
                       return (
                         <div key={sub.name}>
@@ -1065,11 +1069,9 @@ isScrolled ? "py-1" : "py-2"
                             <>
                               <button
                                 type="button"
-                                onClick={() =>
-                                  setMobileOpenMenu(
-                                    subOpen ? item.name : subKey
-                                  )
-                                }
+                             onClick={() =>
+  setMobileOpenSubMenu(subOpen ? null : subKey)
+}
                                 className="flex items-center justify-between w-full px-3 py-3 text-[14px] font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg"
                               >
                                 <span>{sub.name}</span>
@@ -1363,12 +1365,13 @@ useEffect(() => {
 <img
   src={slide}
   alt={`MDCH Campus ${index + 1}`}
-  className="w-full h-full object-contain md:object-cover"
+className="h-full w-full object-cover object-[center_35%] md:object-center"
   style={{
-    transform: `translateY(${scrollY * 0.35}px) scale(1)`,
+    transform: `translateY(${scrollY * 0.15}px)`,
     transition: "transform 0.1s linear",
   }}
 />
+
 
               <div className="absolute inset-0 bg-gradient-to-r from-medical-navy/80 via-medical-navy/50 to-medical-blue/30" />
             </div>
@@ -1384,7 +1387,7 @@ useEffect(() => {
 
         {/* Content */}
 <div
-className="container-custom relative z-10 pt-20 sm:pt-24 pb-12 sm:pb-16 lg:pt-32 lg:pb-20"
+className="container-custom relative z-10 pt-28 sm:pt-24 pb-16 sm:pb-16 lg:pt-32 lg:pb-20"
     style={{
       transform: `translateY(${scrollY * 0.2}px)`,
       opacity: Math.max(1 - scrollY / 600, 0),
