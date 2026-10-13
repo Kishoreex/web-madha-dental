@@ -466,3 +466,23 @@ border: 1.5px solid rgba(96, 165, 250, 0.45);
     --news-angle: 360deg;
   }
 }
+
+/* Mobile responsive width fix */
+@media (max-width: 767px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #root {
+    padding: 0;
+  }
+}
