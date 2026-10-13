@@ -1,7 +1,7 @@
   import { useState, useEffect } from 'react';
 import Campus from "./pages/outreach/Campus";
 import MoUs from "./pages/outreach/MoUs";
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route, Link, Navigate, useLocation } from "react-router-dom";
   import { IMAGES } from "./data/images";
   import AOS from "aos";
   import "aos/dist/aos.css";
@@ -3339,6 +3339,16 @@ return (
   element={<PediatricDentistry />}
 />
 <Route path="/cultural-events" element={<CulturalEvents />} />
+
+<Route
+  path="/student-support/grievance-redressal-form"
+  element={
+    <Navigate
+      to="https://docs.google.com/forms/d/e/1FAIpQLScDvvlIscwVM-ogCJvOxHVOdbeuXvqDAGbfzksnb221ythPAA/viewform"
+      replace
+    />
+  }
+/>
 
 <Route
   path="/careers"
