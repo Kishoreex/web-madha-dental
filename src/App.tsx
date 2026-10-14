@@ -876,7 +876,7 @@ isScrolled ? "py-1" : "py-2"
       setMobileMenuOpen(false);
       setMobileOpenMenu(null);
     }}
-    className="flex items-center gap-2 min-w-0"
+    className="flex items-center gap-2 min-w-0 flex-1"
   >
     <img
       src={IMAGES.logo}
@@ -891,10 +891,9 @@ isScrolled ? "py-1" : "py-2"
   `,
 }}
     />
-
-    <div className="flex flex-col min-w-0">
+<div className="flex flex-col min-w-0 flex-1">
       <h1
-        className={`uppercase text-[16px] sm:text-[17px] font-bold leading-tight truncate ${
+      className={`uppercase text-[clamp(10px,3.4vw,17px)] font-bold leading-tight whitespace-nowrap ${
           isScrolled ||
           isHospitalPage ||
           isPrincipalPage ||
