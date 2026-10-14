@@ -504,11 +504,4 @@ border: 1.5px solid rgba(96, 165, 250, 0.45);
     max-width: 100%;
   }
 }
-/* Mobile paragraph readability — desktop unchanged */
-@media screen and (max-width: 767px) {
-  p {
-    text-align: left !important;
-    word-spacing: normal !important;
-    letter-spacing: normal !important;
-  }
-}
+
