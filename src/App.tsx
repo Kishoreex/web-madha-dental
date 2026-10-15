@@ -1708,6 +1708,7 @@ max-w-3xl
                 <div>
                   <h3 className="heading-4 text-neutral-900 mb-2">Our Vision</h3>
                 <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
+                  
                     Madha Dental College and Hospital is committed to foster students with an updated
                     knowledge of recent technological advances and state-of-art dental skills to provide
                     comprehensive quality oral healthcare to all patients including the underprivileged
