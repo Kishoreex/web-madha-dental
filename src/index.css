@@ -513,27 +513,3 @@ border: 1.5px solid rgba(96, 165, 250, 0.45);
     letter-spacing: normal !important;
   }
 }
-
-/* About section — clean paragraph alignment */
-#about .space-y-6 > div > div > p {
-  text-align: left !important;
-  word-spacing: normal !important;
-  letter-spacing: normal !important;
-  line-height: 1.7;
-}
-
-/* Intro paragraph — keep centered */
-#about .text-center.mb-14 > p:last-child {
-  text-align: center !important;
-  word-spacing: normal !important;
-  letter-spacing: normal !important;
-}
-
-/* Mobile paragraph readability */
-@media screen and (max-width: 767px) {
-  #about .space-y-6 > div > div > p {
-    text-align: left !important;
-    word-spacing: normal !important;
-    letter-spacing: normal !important;
-  }
-}
