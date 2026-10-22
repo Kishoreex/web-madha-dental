@@ -599,10 +599,11 @@ const isNewsDetailPage = location.pathname.startsWith("/news/");
   name: "Anti Ragging Complaint",
   href: "/student-support/anti-ragging-complaint",
 },
-    {
-      name: "Grievance Redressal Form",
-      href: "/student-support/grievance-redressal-form",
-    },
+ {
+  name: "Grievance Redressal Form",
+  href: "https://docs.google.com/forms/d/e/1FAIpQLScDvvlIscwVM-ogCJvOxHVOdbeuXvqDAGbfzksnb221ythPAA/viewform",
+  target: "_blank",
+},
     {
       name: "E-Content",
       href: "/student-support/e-content",
@@ -3344,7 +3345,7 @@ return (
   path="/student-support/grievance-redressal-form"
   element={
     <Navigate
-      to="https://docs.google.com/forms/d/e/1FAIpQLScDvvlIscwVM-ogCJvOxHVOdbeuXvqDAGbfzksnb221ythPAA/viewform"
+      to="/student-support/grievance-redressal-form-redirect"
       replace
     />
   }
