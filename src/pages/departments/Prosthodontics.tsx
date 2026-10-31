@@ -92,18 +92,19 @@ const pillars = [
 
 const faculty = [
   {
-    name: "Dr. V. Anand Kumar",
-    qualifications: "Professor / Principal",
-    image: anandKumarImage,
-    description:
-      "Dr. V. Anand Kumar is currently serving as Principal and Professor in the Department of Prosthodontics at Madha Dental College & Hospital, Chennai, with 28 years of teaching experience. He is a Fellow of the International College of Oral Implantologists (ICOI) and has an impressive academic record comprising 90 publications, one authored book, five published patents, one granted patent, and one copyright. He has guided/co-guided 70 postgraduate students, served as a PhD guide and external PhD expert, and delivered numerous invited lectures and hands-on programmes at national and state levels. A distinguished professional leader, he currently serves as President of the Indian Prosthodontic Society (2026–present) and has previously held several key positions in the IPS, its Tamil Nadu & Puducherry Branch, the Asian Academy of Prosthodontics, and the Indian Dental Association, including President of the IPS Tamil Nadu & Puducherry Branch and Regional Country Counsellor of the Asian Academy of Prosthodontics." },
-  {
     name: "Dr. Sharmila Hussain",
     qualifications: "Professor and Head",
     image: sharmilaImage,
     description:
     "Dr. Sharmila Hussain is a distinguished Prosthodontist and academician with over 23 years of teaching experience. She completed her B.D.S. from Saveetha Dental College in 1995, securing first rank throughout and receiving the Gold Medal as Best Outgoing Student, followed by her M.D.S. from Government Dental College, Chennai, in 2000, where she secured First Rank. She obtained her Ph.D. in Prosthodontics from Bharath University in 2017, specializing in Regenerative Medicine and bone mesenchymal stem cells. She has served as Professor and Head of the Department of Prosthodontics at Madha Dental College and Hospital and as a Specialist at King Fahad Hospital, Saudi Arabia. Her academic contributions include two books, multiple book chapters, over 50 indexed publications, 40+ conference presentations, and numerous invited lectures and hands-on workshops. Her accolades include Best Paper Awards, the Best Research Paper Award, and the Pioneer in Prosthodontics Award from the Indian Dental Association in 2024. She has undergone advanced training at the University of Osaka, Japan, and has developed three patented prosthodontic devices. She is also a Ph.D. guide affiliated with five universities and serves on doctoral committees, with research interests in stem cell technology, dental materials, and geriatric dentistry." },
   {
+    name: "Dr. V. Anand Kumar",
+    qualifications: "Professor / Principal",
+    image: anandKumarImage,
+    description:
+      "Dr. V. Anand Kumar is currently serving as Principal and Professor in the Department of Prosthodontics at Madha Dental College & Hospital, Chennai, with 28 years of teaching experience. He is a Fellow of the International College of Oral Implantologists (ICOI) and has an impressive academic record comprising 90 publications, one authored book, five published patents, one granted patent, and one copyright. He has guided/co-guided 70 postgraduate students, served as a PhD guide and external PhD expert, and delivered numerous invited lectures and hands-on programmes at national and state levels. A distinguished professional leader, he currently serves as President of the Indian Prosthodontic Society (2026–present) and has previously held several key positions in the IPS, its Tamil Nadu & Puducherry Branch, the Asian Academy of Prosthodontics, and the Indian Dental Association, including President of the IPS Tamil Nadu & Puducherry Branch and Regional Country Counsellor of the Asian Academy of Prosthodontics." },
+ 
+    {
     name: "Dr. S. Anand Selvaraj",
     qualifications: "Professor",
     image: anandSelvarajImage,

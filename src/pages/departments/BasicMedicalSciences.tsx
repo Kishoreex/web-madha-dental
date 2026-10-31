@@ -83,7 +83,7 @@ const pillars = [
 const faculty = [
   {
     department: "Department of Anatomy",
-    name: "Dr. S. Abilasha, MSc., PhD., M.B.A",
+    name: "Dr. S. Abilasha, MSc., PhD., M.B.A, FBMS",
     designation: "Associate Professor",
     image: abilashaImage,
     description:

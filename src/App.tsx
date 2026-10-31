@@ -3302,7 +3302,7 @@ return (
 />
 <Route path="/admin" element={<Login />} />
 
-<Route path="/admin/dashboard" element={<Dashboard />} />
+<Route path="/admin/dashboard" element={<Dashboard  />} />
 <Route path="/admin/add-news" element={<AddNews />} />
 <Route path="/departments" element={<Departments />} />
 
