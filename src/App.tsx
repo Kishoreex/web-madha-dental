@@ -413,10 +413,7 @@ const isNewsDetailPage = location.pathname.startsWith("/news/");
       href: "/pdf/iqac/IIQA.pdf",
       target: "_blank",
     },
-    {
-      name: "Vision & Mission",
-      href: "/iqac/vision-mission",
-    },
+
     {
       name: "Composition of IQAC",
       href: "/pdf/iqac/Composition_of_IQAC.pdf",
@@ -427,29 +424,8 @@ const isNewsDetailPage = location.pathname.startsWith("/news/");
       href: "/pdf/iqac/IQAC_Minutes.pdf",
       target: "_blank",
     },
-    {
-      name: "Self-Declaration",
-      href: "/pdf/iqac/Self_Declaration.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Undertaking",
-      href: "/pdf/iqac/Undertaking.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Criteria",
-      href: "/iqac/criteria",
-    },
-    {
-      name: "Self Study Report",
-      href: "/pdf/iqac/Self_Study_Report.pdf",
-      target: "_blank",
-    },
-    {
-      name: "Policies",
-      href: "/iqac/policies",
-    },
+
+
     {
       name: "Committees",
       href: "/iqac/committees",
