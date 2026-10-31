@@ -158,7 +158,7 @@ const faculty = [
     description:
      "Dr. Preethi, BDS, MDS, completed her undergraduate and postgraduate studies from SRM Dental College, Ramapuram, Chennai. She has presented scientific papers at various national and international conferences, contributing to academic and professional development in the field of Conservative Dentistry and Endodontics. Her field of interest iscontemporary clinical and academic advancements inconservative Dentistry and Endodontics."  },
   {
-    name: "Dr. Arvind Kumar D",
+    name: "Dr. Aravind Kumar D",
     qualification: "MDS",
     designation: "Reader",
     image: arvindImage,
@@ -186,22 +186,22 @@ const faculty = [
     description:
      "Dr. Jayanthi G, M.D.S, completed her postgraduate studies from Adhiparasakthi Dental College and Hospital and currently pursuing Ph.D.  She has 8 publications in indexed journals. She was awarded with Best Paper in CEATALENT 2020, in 36th IACDE National Conference 2021 and also got best poster in World dental and oral health congress in 2021. Her field of interest is Clinical Endodontics, Endodontic Retreatment and Regenerative Endodontics."  },
   {
-    name: "Dr. Nikitha Khalla",
+    name: "Dr. Nikitha Kalla",
     qualification: "MDS",
     designation: "Senior Lecturer",
     image: nikithaImage,
     description:
-    "Dr. Nikhita Kalla, BDS, MDS, completed her BDS and postgraduate studies from G. Pulla Reddy Dental College & Hospital, Vijayawada and Kurnool, respectively. She has 5 publications in the field of Endodontics. Her field of interest include Minimally Invasive Endodontics, with a focus on contemporary advancements in endodontic treatment and research." },
+    "Dr. Nikhita Kalla, BDS, MDS, completed her BDS and postgraduate studies from G. Pulla Reddy Dental College & Hospital,Kurnool, respectively. She has 5 publications in the field of Endodontics. Her field of interest include Minimally Invasive Endodontics, with a focus on contemporary advancements in endodontic treatment and research." },
   {
     name: "Dr. Joy Shoba",
-    qualification: "BDS, MDS",
+    qualification: "MDS",
     designation: "Senior Lecturer",
     image: joyShobaImage,
     description:
      "Dr. Joy Shoba, BDS, MDS, completed her BDS from Ragas Dental College, Chennai, and her MDS in Conservative Dentistry and Endodontics from Sri Ramakrishna Dental College, Coimbatore. She has presented scientific papers at several national and international conferences and has received multiple accolades, including First Prize at the 8th CEAT PG Colloquium and Second Prizes at the 22nd and 23rd IACDE National PG Conventions. She has published research papers in both indexed and non-indexed journals. Her areas of interest are Management of complex Endodontic cases, with a focus on contemporary clinical approaches and advanced endodontic treatment."  },
   {
     name: "Dr. Preetha G",
-    qualification: "BDS, MDS",
+    qualification: "MDS",
     designation: "Senior Lecturer",
     image: preethaImage,
     description:
@@ -215,32 +215,32 @@ const faculty = [
   "Dr. Joshil Adolf, BDS, MDS, completed his undergraduate studies from Sree Balaji Dental College & Hospital, Chennai, and postgraduate studies from Madha Dental College & Hospital, Chennai. He has presented at national and international conferences. His professional interests include Minimally Invasive Endodontics, Aesthetic Dentistry, and contemporary advancements in Conservative Dentistry and Endodontics. His field of Interest include Minimally Invasive Endodontics, Aesthetic Dentistry, and Contemporary Endodontics."  },
   {
     name: "Dr. Vivekkanan C",
-    qualification: "BDS, MDS",
+    qualification: "MDS",
     designation: "Senior Lecturer",
     image: vivekkananImage,
     description:
       "Dr. Vivekkanan C, BDS, MDS, completed his undergraduate studies from JKKN Dental College & Hospital and his postgraduate studies from Madha Dental College & Hospital, Chennai, specializing in Conservative Dentistry and Endodontics. He is actively involved in academic teaching and clinical practice, with an interest in contemporary approaches to restorative and endodontic treatment. His area of interest are Conservative Dentistry and Endodontics, with a focus on contemporary restorative techniques, aesthetic dentistry, and advancements in endodontic treatment."  },
   {
     name: "Dr. Sahil Choudhari",
-    qualification: "BDS, MDS",
+    qualification: "MDS",
     designation: "Senior Lecturer",
     image: sahilImage,
     description:
     "Dr. Sahil, BDS, MDS, is a specialist in Conservative Dentistry and Endodontics and a Gold Medalist in his postgraduate studies from Saveetha Dental College and Hospital, Chennai. He has received several accolades, including a prestigious national research award, and has over 50 publications in indexed journals. He is a Fellow of the Pierre Fauchard Academy, USA, and is currently pursuing his Ph.D.He is also recognized for his expertise in dental photography and conducts workshops on dental photography, rubber dam isolation, and teeth whitening across India. His field of interest are Conservative Dentistry and Endodontics, with a focus on dental photography, minimally invasive clinical practice, rubber dam isolation, and aesthetic dentistry."  },
   {
     name: "Dr. Praveen R",
-    qualification: "BDS, MDS",
+    qualification: "MDS",
     designation: "Senior Lecturer",
     image: praveenImage,
     description:
       "Dr. Praveen  BDS, MDS, completed his undergraduate studies from Saveetha Dental College and postgraduate studies from Meenakshi Ammal Dental College, Chennai. He has presented at national and international conferences and has delivered CDE lectures through the Indian Dental Association (IDA). His area of interest is Minimally Invasive Endodontics."  },
   {
     name: "Dr. Shalini Maria Sebastian",
-    qualification: "BDS",
+    qualification: "MDS",
     designation: "Lecturer",
     image: shaliniImage,
     description:
-     "Dr. Shalini Maria Sebastian, BDS, is a dedicated academician and educator committed to excellence in teaching, clinical training, student mentoring, and academic development. She completed her studies from Ragas Dental College, Chennai.Her approach to dental education emphasizes evidence-based learning, ethical clinical practice, and the development of competent and compassionate dental professionals. Her field of interestinclude Dental Education, Clinical Training, Student Mentoring, and Evidence-Based Dentistry."  },
+     "Dr. Shalini Maria Sebastian, BDS, MDS, is a dedicated academician and educator committed to excellence in teaching, clinical training, student mentoring, and academic development. She completed her studies from Ragas Dental College, Chennai.Her approach to dental education emphasizes evidence-based learning, ethical clinical practice, and the development of competent and compassionate dental professionals. Her field of interestinclude Dental Education, Clinical Training, Student Mentoring, and Evidence-Based Dentistry."  },
 ];
 
 const outreach = [
