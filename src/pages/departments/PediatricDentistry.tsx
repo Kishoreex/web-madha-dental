@@ -225,7 +225,7 @@ export default function PediatricDentistry() {
             {/* Right */}
             <div className="relative">
               <div className="border-l-2 border-blue-100 pl-7">
-                <p className="font-['Montserrat'] text-[14px] leading-8 text-neutral-700 sm:text-[17px]">
+    <p className="font-['Montserrat'] text-[16px] leading-7 text-neutral-600 sm:text-[17px] text-justify [text-align-last:left]">
                   Pediatric and Preventive Dentistry is a specialized branch
                   dedicated to providing comprehensive oral health care for
                   infants, children, adolescents, and individuals with special

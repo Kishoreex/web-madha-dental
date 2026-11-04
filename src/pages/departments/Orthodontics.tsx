@@ -257,7 +257,7 @@ export default function Orthodontics() {
 
               <div className="border-l-2 border-blue-100 pl-7">
 
-                <p className="font-['Montserrat'] text-[14px] leading-8 text-neutral-700 sm:text-[17px]">
+                    <p className="font-['Montserrat'] text-[16px] leading-7 text-neutral-600 sm:text-[17px] text-justify [text-align-last:left]">
                   The Department of Orthodontics and Dentofacial Orthopaedics
                   is a specialized dental department dedicated to the
                   diagnosis, prevention, interception, and correction of
@@ -266,7 +266,7 @@ export default function Orthodontics() {
                   facial structures.
                 </p>
 
-                <p className="mt-5 font-['Montserrat'] text-[14px] leading-8 text-neutral-700 sm:text-[17px]">
+              <p className="font-['Montserrat'] text-[16px] leading-7 text-neutral-600 sm:text-[17px] text-justify [text-align-last:left]">
                   The department provides comprehensive orthodontic care for
                   children, adolescents, and adults, with an emphasis on
                   achieving functional occlusion, facial harmony, dental

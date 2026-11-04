@@ -179,7 +179,7 @@ export default function OralMedicine() {
       {/* Right Content */}
       <div className="relative">
         <div className="border-l-2 border-blue-100 pl-7">
-          <p className="font-['Montserrat'] text-[14px] leading-8 text-neutral-700 sm:text-[17px]">
+    <p className="font-['Montserrat'] text-[16px] leading-7 text-neutral-600 sm:text-[17px] text-justify [text-align-last:left]">
             Oral Medicine & Radiology is dentistry’s primary diagnostic
             specialty, providing comprehensive clinical evaluation,
             advanced imaging, and non-surgical management of oral and
@@ -379,7 +379,7 @@ data-aos="fade-up"
                 Blood Donation Camp
               </h3>
 
-              <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px]">
+             <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px] text-justify [text-align-last:left]">
                 Organized yearly in collaboration with The Tamil Nadu Dr.
                 M.G.R. Medical University (Department of Transfusion Medicine)
                 to promote voluntary blood donation and support lifesaving
@@ -392,7 +392,7 @@ data-aos="fade-up"
                 Drug Awareness Program
               </h3>
 
-              <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px]">
+              <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px] text-justify [text-align-last:left]">
                 Yearly substance abuse prevention education and drug awareness
                 rally in coordination with Tambaram Commissionarate police to
                 achieve Madha Dental College and Hospital a “drug free
@@ -405,7 +405,7 @@ data-aos="fade-up"
                 National OM&R Day
               </h3>
 
-              <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px]">
+              <p className="font-['Montserrat'] text-[13px] leading-6 text-neutral-600 sm:text-[15px] text-justify [text-align-last:left]">
                 National OM&R Day is marked on April 24 with specific
                 activities highlighting the importance of oral and overall
                 health. The department considers every single day as OM&R day

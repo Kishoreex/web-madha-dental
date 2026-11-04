@@ -158,7 +158,7 @@ export default function OralPathology() {
               Oral & Maxillofacial Pathology
             </h1>
 
-            <p className="mt-6 max-w-3xl font-['Montserrat'] text-[14px] leading-7 text-neutral-700 sm:text-[17px]">
+            <p className="mt-6 max-w-3xl font-['Montserrat'] text-[14px] leading-7 text-neutral-700 sm:text-[17px] text-justify [text-align-last:left]">
               Dentistry’s diagnostic specialty for the microscopic and
               laboratory-based evaluation of diseases affecting the oral
               cavity and maxillofacial region, providing comprehensive tissue
@@ -205,7 +205,7 @@ export default function OralPathology() {
             {/* Right */}
             <div className="relative">
               <div className="border-l-2 border-blue-100 pl-7">
-                <p className="font-['Montserrat'] text-[14px] leading-8 text-neutral-700 sm:text-[17px]">
+                  <p className="font-['Montserrat'] text-[16px] leading-7 text-neutral-600 sm:text-[17px] text-justify [text-align-last:left]">
                   Oral & Maxillofacial Pathology is dentistry’s diagnostic
                   specialty for the microscopic and laboratory-based
                   evaluation of diseases affecting the oral cavity and

@@ -344,7 +344,7 @@ export default function ConservativeDentistry() {
 
             <div className="border-l-2 border-blue-100 pl-7">
 
-              <p className="font-['Montserrat'] text-[14px] leading-8 text-neutral-700 sm:text-[17px]">
+                  <p className="font-['Montserrat'] text-[16px] leading-7 text-neutral-600 sm:text-[17px] text-justify [text-align-last:left]">
                 The Department of Conservative Dentistry & Endodontics is
                 committed to the preservation of natural dentition through
                 comprehensive diagnosis, minimally invasive treatment,
