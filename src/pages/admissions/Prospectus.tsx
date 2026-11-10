@@ -33,12 +33,12 @@ const Prospectus = () => {
     },
     {
       title: "MDS",
-      text: "BDS degree from a DCI-recognized institution with completed internship. Permanent or provisional registration with the State Dental Council / DCI is required. NEET-MDS qualification is mandatory.",
+      text: "BDS degree from a NDC-recognized institution with completed internship. Permanent or provisional registration with the State Dental Council / NDC is required. NEET-MDS qualification is mandatory.",
     },
   ];
 
   const whyChoose = [
-    "DCI recognized UG & PG programs",
+    "NDC recognized UG & PG programs",
     "Experienced and dedicated faculty",
     "Excellent clinical exposure",
     "Strong research and academic culture",
@@ -100,12 +100,12 @@ const Prospectus = () => {
                     </h2>
                   </div>
                 </div>
-
-                <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
+ <p className="font-['Montserrat'] text-[12px] leading-7 text-neutral-600 sm:text-[17px] text-justify [text-align-last:left]">
+              
                   Madha Dental College &amp; Hospital (MDCH), established in
                   2006 by the Soosaiya Peter Educational Trust, is affiliated
                   with The Tamil Nadu Dr. M.G.R. Medical University, Chennai
-                  and recognized by the Dental Council of India (DCI). The
+                  and recognized by the National  Dental Commission (NDC). The
                   institution is committed to excellence in dental education,
                   clinical training, research, and community service.
                 </p>
@@ -323,7 +323,7 @@ const Prospectus = () => {
               <div className="space-y-4">
 
                 {[
-                  "Admissions are conducted through Tamil Nadu State Government Counselling based on NEET merit.",
+                  "Admissions are offered through the counselling conducted by the Tamil Nadu Medical Selection Committee, based on NEET merit.",
                   "Candidates must register at tnmedicalselection.net.",
                   "Candidates should participate in counselling and select Madha Dental College & Hospital during choice filling.",
                   "Candidates must report to the college upon allotment with the required documents and fees.",
@@ -501,7 +501,7 @@ const Prospectus = () => {
 
               </div>
 
-              <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px]">
+              <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[16px]">
                 The college offers modern dental clinics, advanced laboratories,
                 digital radiology facilities, central library, hostels,
                 transport, and extensive hands-on clinical training. Over
@@ -627,36 +627,7 @@ const Prospectus = () => {
             </div>
           </div>
 
-          {/* ================= BOTTOM PDF BUTTON ================= */}
-          <div
-            className="mx-auto mt-10 max-w-5xl text-center"
-            data-aos="fade-up"
-          >
-
-            <div className="rounded-2xl bg-gradient-to-r from-[#102f69] to-[#087d91] p-8 shadow-xl">
-
-              <h2 className="font-['Cormorant_Garamond'] text-3xl font-bold text-white sm:text-4xl">
-                Need the Complete Prospectus?
-              </h2>
-
-              <p className="mx-auto mt-3 max-w-2xl font-['Montserrat'] text-[14px] leading-7 text-white/85 sm:text-[16px]">
-                Download the official Madha Dental College &amp; Hospital
-                prospectus for complete information.
-              </p>
-
-              <a
-                href="/pdf/Madha_Dental_College_Prospectus.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-['Montserrat'] text-[13px] font-bold text-[#163b72] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <Download className="h-4 w-4" />
-                Open Official Prospectus
-              </a>
-
-            </div>
-
-          </div>
+     
 
         </div>
       </section>

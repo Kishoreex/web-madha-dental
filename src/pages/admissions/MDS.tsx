@@ -23,7 +23,7 @@ const MDS = () => {
     },
     {
       title: "Recognition",
-      value: "DCI Approved",
+      value: "NDC Approved",
       icon: <BadgeCheck className="w-7 h-7" />,
     },
     {
@@ -34,12 +34,12 @@ const MDS = () => {
   ];
 
   const specializations = [
-    { name: "Conservative Dentistry & Endodontics", seats: 3 },
-    { name: "Oral & Maxillofacial Surgery", seats: 3 },
-    { name: "Orthodontics & Dentofacial Orthopaedics", seats: 3 },
-    { name: "Prosthodontics & Crown Bridge", seats: 3 },
-    { name: "Pedodontics & Preventive Dentistry", seats: 3 },
-    { name: "Periodontics", seats: 3 },
+    { name: "Conservative Dentistry & Endodontics", seats: 6 },
+    { name: "Oral & Maxillofacial Surgery", seats: 6 },
+    { name: "Orthodontics & Dentofacial Orthopaedics", seats: 6 },
+    { name: "Prosthodontics & Crown Bridge", seats: 6 },
+    { name: "Pedodontics & Preventive Dentistry", seats: 6 },
+    { name: "Periodontics", seats: 6 },
     { name: "Public Health Dentistry", seats: 2 },
     { name: "Oral Medicine & Radiology", seats: 2 },
     { name: "Oral Pathology & Microbiology", seats: 2 },

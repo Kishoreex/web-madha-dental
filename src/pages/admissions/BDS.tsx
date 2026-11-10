@@ -24,7 +24,7 @@ const BDS = () => {
     },
     {
       title: "Recognition",
-      value: "Dental Council of India (DCI)",
+      value: "National Dental Commission (NDC) Approved",
       icon: <BadgeCheck className="w-8 h-8" />,
     },
     {
@@ -74,7 +74,7 @@ const BDS = () => {
 
   <div className="flex items-center gap-2">
     <BadgeCheck className="w-5 h-5" />
-    <span>DCI Approved</span>
+    <span>NDC Approved</span>
   </div>
 
 </div>
@@ -105,13 +105,13 @@ const BDS = () => {
                   About BDS
                 </h2>
 
-                <p className="text-neutral-600 leading-8">
+                 <p className="font-['Montserrat'] text-[14px] leading-7 text-black sm:text-[17px] text-justify [text-align-last:left]">
+                
                   The Bachelor of Dental Surgery (BDS) is a
                   comprehensive undergraduate dental programme
                   consisting of four academic years followed by
                   one year of compulsory rotatory internship.
-                  The programme is approved by the Dental Council
-                  of India (DCI) and affiliated with The Tamil Nadu
+                  The programme is approved by the National Dental Commission (NDC) and affiliated with The Tamil Nadu
                   Dr. M.G.R. Medical University.
 
                   Students receive extensive theoretical knowledge,

@@ -94,7 +94,7 @@ const faculty = [
     designation: "Professor",
     image: deepaImage,
     description:
-    "Dr.Deepa R.completed her post-graduation in Medical Biochemistry at the Dr. A.L.M. PG Institute of Basic Medical Sciences, University of Madras, and was awarded her Ph.D. by Bharathiar University. She also holds an MBA in Health Service Management from Anna University and qualified the Tamil Nadu State Eligibility Test (TNSET) for Lectureship in Life Sciences in 2016. Her scholarly contributions include 27 research and review articles published in peer-reviewed national and international journals, along with 15 book chapters. She has successfully supervised an ICMR-STS-funded student research project. Her professional contributions include serving as the Editor of the textbook ‘Current Advances in Biosciences’ and as a peer reviewer for Elsevier’s ‘Nutrition for Nurses’. She has also completed training in Laboratory Management Systems and Internal Audit in accordance with ISO 15189:2022, with a focus on NABL accreditation. Her academic contributions have been recognized through the Best Paper Presentation, Young Scientist, and Outstanding Faculty Awards. Her key areas of research interest include diabetes mellitus, antioxidants, and phytomedicine." },
+    "Dr. Deepa R. serves as a Professor of Biochemistry at Madha Dental College and Hospital, with over 18 years of academic and teaching experience at the institution. She completed her post-graduation in Medical Biochemistry at the Dr. A.L.M. PG Institute of Basic Medical Sciences, University of Madras, and was awarded her Ph.D. by Bharathiar University. She also holds an MBA in Health Service Management from Anna University and qualified for the Tamil Nadu State Eligibility Test (TNSET) for Lectureship in Life Sciences in 2016. Her scholarly contributions include 27 research and review articles published in peer-reviewed national and international journals, along with 15 book chapters. She has successfully guided an ICMR-STS-funded student research project, which received a “Good” grade. Her professional contributions include serving as the editor of the textbook ‘Current Advances in Biosciences’ and as a peer reviewer for Elsevier’s ‘Nutrition for Nurses’. She has also completed training in Laboratory Management Systems and Internal Audit in accordance with ISO 15189:2022, with a focus on NABL accreditation. Her academic contributions have been recognized through the Best Paper Presentation, Young Scientist, and Outstanding Faculty Awards. Her key areas of research interest include diabetes mellitus, antioxidant research, and phytomedicine." },
   {
     department: "Department of Biochemistry",
     name: "Mrs. Lakshmi Priya K, M.Sc",
@@ -102,7 +102,15 @@ const faculty = [
     image: lakshmiImage,
     description:
     "Mrs. Lakshmi Priya K. completed her postgraduate degree in Medical Biochemistry in 2023 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani. Her postgraduate research project focused on oral cancer, contributing to her research interests in cancer biology and scientific research. Her areas of academic and research interest include oral cancer, biochemistry laboratory techniques, and molecular biology techniques."  },
-  {
+ 
+   {
+    department: "Department of Physiology",
+    name: "Dr. C. Valarmathi BPT., M.Sc",
+    designation: "Lecturer",
+    image: valarmathiImage,
+    description:
+    "Dr. C. Valarmathi completed her postgraduate degree in Physiology from Chettinad Academy of Research and Education, Chennai. She has published research articles in national and international journals. Her academic and research interests include Physiology, neurological disorders, and body mass index (BMI) in relation to pulmonary diseases. She is currently pursuing her Ph.D. in Physiology at Saveetha Institute of Medical and Technical Sciences (SIMATS), Chennai. She is actively involved in teaching and research and contributes to guiding students in scientific sessions and conference presentations."  },
+    {
     department: "Department of Microbiology",
     name: "Ms. A. Iswarya M.Sc.,",
     designation: "Lecturer",
@@ -123,13 +131,7 @@ const faculty = [
     image: vidyalakshmiImage,
     description:
     "Dr. Vidyalakshmi K. is an accomplished academician and Professor of Pharmacology with 27 years of teaching experience, including 14 years of dedicated association with Madha Dental College.  She completed her postgraduate degree in Pharmacology in 1996 from the Dr. A. L. M. Post Graduate Institute of Basic Medical Sciences, University of Madras, Taramani, Chennai and honored with a Doctoral Degree from MAHER (Meenakshi Academy of Higher Education and Research) in 2012. Her research interests particularly focus on Herbal analgesics and anti-inflammatory drugs and she published eight research publications in high-impact-factor journals and also contributed three book chapters. She has been a resource person for colleges, with a special interest in translating pharmacological knowledge into clinically relevant applications."  },
-  {
-    department: "Department of Physiology",
-    name: "Dr. C. Valarmathi BPT., M.Sc",
-    designation: "Lecturer",
-    image: valarmathiImage,
-    description:
-    "Dr. C. Valarmathi completed her postgraduate degree in Physiology from Chettinad Academy of Research and Education, Chennai. She has published research articles in national and international journals. Her academic and research interests include Physiology, neurological disorders, and body mass index (BMI) in relation to pulmonary diseases. She is currently pursuing her Ph.D. in Physiology at Saveetha Institute of Medical and Technical Sciences (SIMATS), Chennai. She is actively involved in teaching and research and contributes to guiding students in scientific sessions and conference presentations."  },
+
 ];
 
 export default function BasicMedicalSciences() {
