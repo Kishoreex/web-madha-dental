@@ -20,6 +20,7 @@ import shrinivaasanImage from "../../assets/images/departments/orthodontics/shri
 import catherineImage from "../../assets/images/departments/orthodontics/catherine.jpg";
 import anbuImage from "../../assets/images/departments/orthodontics/anbu.jpg";
 import naveenImage from "../../assets/images/departments/orthodontics/naveen.jpg";
+import swathyImage from "../../assets/images/departments/orthodontics/swathy.jpg";
 import ajithkumarImage from "../../assets/images/departments/orthodontics/ajithkumar.jpg";
 import ilanchezhianImage from "../../assets/images/departments/orthodontics/ilanchezhian.jpg";
 import elamvaluthiImage from "../../assets/images/departments/orthodontics/elamvaluthi.jpg";
@@ -58,7 +59,16 @@ const faculty = [
     image: naveenImage,
     description:
       "Dr. Naveen Kumar M, M.D.S., completed his postgraduate training at Saveetha Dental College and is actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. His areas of interest include orthodontic biomechanics, clear aligner therapy, surgical orthodontics, growth modification appliance therapy, and sports dentistry, with a focus on efficient orthodontic treatment and prevention of sports-related orofacial injuries. He has contributed to several national and international journal publications and remains committed to teaching, clinical excellence, research, and the professional development of students."  },
-  {
+  
+    {
+    name: "DR. Swathy S, M.D.S.",
+    designation: "Reader",
+    image: swathyImage,
+    description:
+      "Dr. Swathy Selvaraj, M.D.S., is an academician and clinician with nearly 7 years of teaching experience and substantial clinical experience in Orthodontics and Dentofacial Orthopaedics. She completed her postgraduate training at Ragas Dental College, Chennai, and has been actively involved in undergraduate and postgraduate teaching, clinical training, and academic activities. Her academic and clinical interests include orthodontic diagnosis and treatment planning, fixed orthodontic appliance therapy, clear aligner therapy, orthodontic biomechanics, and functional appliance therapy. She has co-authored articles published in national and international journals. She has also delivered guest lectures as part of Continuing Dental Education (CDE) programmes.Through her commitment to teaching, clinical practice, and continuous professional development, she strives to contribute to evidence-based orthodontic education, clinical excellence, and the professional development of students."  },
+  
+  
+      {
     name: "Dr. Ajithkumar M, MDS",
     designation: "Reader",
     image: ajithkumarImage,
@@ -69,7 +79,7 @@ const faculty = [
     designation: "Senior Lecturer",
     image: ilanchezhianImage,
     description:
- "Dr. Ilanchezhian J, M.D.S., completed his postgraduate training at the same institution and is actively involved in undergraduate teaching, clinical training, and academic activities. His areas of interest include surgical orthodontics and clear aligner therapy, and he is currently pursuing an M.B.A. to further enhance his academic and professional expertise. He remains committed to teaching, clinical excellence, research, and the advancement of contemporary orthodontic care."  },
+ "Dr. Ilanchezhian J, M.D.S., completed his postgraduate training at the same institution and is actively involved in undergraduate teaching, clinical training, and academic activities. His areas of interest include surgical orthodontics and clear aligner therapy, and he is currently pursuing M.B.A. to further enhance his academic and professional expertise. He remains committed to teaching, clinical excellence, research, and the advancement of contemporary orthodontic care."  },
   {
     name: "Dr. Elamvaluthi M, MDS",
     designation: "Senior Lecturer",
