@@ -31,7 +31,7 @@ import parvathiImage from "../../assets/images/departments/orthodontics/parvathi
 const faculty = [
   {
     name: "Dr. M. C. Sainath, M.D.S., M.B.A.",
-    designation: "Professor Emeritus",
+    designation: "DEAN and Professor",
     image: sainathImage,
     description:
     "Dr. M. C. Sainath, M.D.S., M.B.A., is a distinguished academician, clinician, researcher, and healthcare administrator with over 35 years of professional experience in dentistry, orthodontics, education, and institutional administration. He completed his B.D.S. and M.D.S. from Government Dental College, Madras, and served the institution in various academic and clinical capacities following selection through the Tamil Nadu Public Service Commission. He later joined Madha Dental College & Hospital, where he served as Head of the Department and Principal, and currently serves as Dean and Professor in the Department of Orthodontics and Dentofacial Orthopaedics. He holds an M.B.A. in Hospital Management and a Postgraduate Diploma in Health Science from Annamalai University and has contributed extensively to dental research with over 100 national and international publications. As an academic and institutional leader, his professional focus encompasses academic excellence, clinical competency, research, ethical practice, patient-centred care, and holistic student development."  },
