@@ -91,19 +91,19 @@ const faculty = [
     designation: "Senior Lecturer",
     image: lasingtonImage,
     description:
-    " Dr. LASINGTON P RAYEN T, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed both BDS and MDS from Sathyabama Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. His clinical expertise includes clear aligners, fixed appliances, functional appliances, TAD-assisted procedures, and orthognathic treatment planning. He has a strong interest in orthodontic research, aligners and self-ligation. His goal is to grow as a clinician, educator, and researcher while contributing to quality patient care and orthodontic education."  },
+    " Dr. Lasington P Rayen T, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed both BDS and MDS from Sathyabama Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. His clinical expertise includes clear aligners, fixed appliances, functional appliances, TAD-assisted procedures, and orthognathic treatment planning. He has a strong interest in orthodontic research, aligners and self-ligation. His goal is to grow as a clinician, educator, and researcher while contributing to quality patient care and orthodontic education."  },
   {
     name: "Dr. Premila D, MDS",
     designation: "Senior Lecturer",
     image: premilaImage,
     description:
-    "Dr. PREMILA. D, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Thai Moogambigai Dental College &Hosptial, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital with more than two years of experience. Her clinical expertise includes clear aligners, fixed functionalappliances, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students."  },
+    "Dr. Premila D, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Thai Moogambigai Dental College &Hosptial, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital with more than two years of experience. Her clinical expertise includes clear aligners, fixed functionalappliances, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students."  },
   {
     name: "Dr. Parvathi K, MDS",
     designation: "Senior Lecturer",
     image: parvathiImage,
     description:
-      "Dr. PARVATHI.K, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Madha Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. Her clinical expertise includes myofunctional appliances, frictionless mechanism, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students ."  },
+      "Dr. Parvathi K, an MDS graduate in Orthodontics and Dentofacial Orthopaedics, completed MDS from Madha Dental College and Hospital, Chennai. Currently, working as an Assistant Professor at Madha Dental College and Hospital. Her clinical expertise includes myofunctional appliances, frictionless mechanism, TAD-assisted procedures, and self-ligation. Her goal is to grow as a clinician, educator, researcher, and a good mentor for students ."  },
 ];
 
 const focusAreas = [
