@@ -524,7 +524,7 @@ export default function ConservativeDentistry() {
       </section>
 
       {/* ================= FACULTY ================= */}
-      <section className="bg-white py-16">
+       <section className="bg-neutral-50 py-16">
         <div className="container-custom">
 
           <div className="mb-12">
@@ -541,46 +541,48 @@ export default function ConservativeDentistry() {
 
           <div className="grid gap-6 md:grid-cols-2">
 
-            {faculty.map((member, index) => (
+            {faculty.map((member) => (
 
               <div
                 key={member.name}
+                className="rounded-2xl bg-white p-7 shadow-card"
                 data-aos="fade-up"
-                data-aos-delay={(index % 2) * 100}
-                className="rounded-2xl bg-neutral-50 p-7 shadow-card"
               >
 
                 <div className="flex flex-col gap-6 sm:flex-row">
 
-                  <div className="h-40 w-32 shrink-0 overflow-hidden rounded-xl bg-neutral-100">
+                  {/* Faculty Image */}
+                  <div className="shrink-0">
 
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="h-full w-full object-cover object-top"
+                      className="h-40 w-32 rounded-xl object-cover"
                     />
 
                   </div>
 
+                  {/* Faculty Details */}
                   <div className="flex-1">
 
-                    <h3 className="font-['Cormorant_Garamond'] text-[28px] font-semibold leading-tight text-neutral-900">
-                      {member.name}
-                    </h3>
+                    <div className="mb-4">
 
-                    <p className="mt-1 font-['Montserrat'] text-[12px] font-semibold uppercase tracking-[0.14em] text-blue-700">
-                      {member.qualification}
-                    </p>
+                   
 
-                    <p className="mt-1 font-['Montserrat'] text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-500">
-                      {member.designation}
-                    </p>
+                      <h3 className="font-['Cormorant_Garamond'] text-[28px] font-semibold leading-tight text-neutral-900">
+                        {member.name}
+                      </h3>
 
-             
+                      <p className="mt-1 font-['Montserrat'] text-[12px] font-semibold uppercase tracking-[0.16em] text-blue-700">
+                        {member.designation}
+                      </p>
+
+                    </div>
+
+            
 <p className="font-['Montserrat'] text-[13px] sm:text-sm leading-7 text-neutral-700 text-justify [text-align-last:left] break-words">
   {member.description}
 </p>
-
 
                   </div>
 
@@ -591,6 +593,7 @@ export default function ConservativeDentistry() {
             ))}
 
           </div>
+
         </div>
       </section>
 

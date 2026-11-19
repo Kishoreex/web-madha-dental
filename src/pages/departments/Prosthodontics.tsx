@@ -105,7 +105,7 @@ const faculty = [
       "Dr. V. Anand Kumar is currently serving as Principal and Professor in the Department of Prosthodontics at Madha Dental College & Hospital, Chennai, with 28 years of teaching experience. He is a Fellow of the International College of Oral Implantologists (ICOI) and has an impressive academic record comprising 90 publications, one authored book, five published patents, one granted patent, and one copyright. He has guided/co-guided 70 postgraduate students, served as a PhD guide and external PhD expert, and delivered numerous invited lectures and hands-on programmes at national and state levels. A distinguished professional leader, he currently serves as President of the Indian Prosthodontic Society (2026–present) and has previously held several key positions in the IPS, its Tamil Nadu & Puducherry Branch, the Asian Academy of Prosthodontics, and the Indian Dental Association, including President of the IPS Tamil Nadu & Puducherry Branch and Regional Country Counsellor of the Asian Academy of Prosthodontics." },
  
     {
-    name: "Dr. S. Anand Selvaraj",
+    name: "Dr. S. Anand",
     qualifications: "Professor",
     image: anandSelvarajImage,
     description:
@@ -453,10 +453,11 @@ export default function Prosthodontics() {
       </section>
 
       {/* ================= FACULTY ================= */}
-      <section className="bg-white py-16">
+       <section className="bg-neutral-50 py-16">
         <div className="container-custom">
 
           <div className="mb-12">
+
             <p className="mb-3 font-['Montserrat'] text-[15px] font-semibold uppercase tracking-[0.25em] text-blue-700">
               Faculty
             </p>
@@ -464,34 +465,38 @@ export default function Prosthodontics() {
             <h2 className="font-['Cormorant_Garamond'] text-[36px] font-semibold text-neutral-900 sm:text-[46px]">
               Department Faculty
             </h2>
+
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
 
-            {faculty.map((member, index) => (
+            {faculty.map((member) => (
 
               <div
                 key={member.name}
+                className="rounded-2xl bg-white p-7 shadow-card"
                 data-aos="fade-up"
-                data-aos-delay={(index % 2) * 120}
-                className="rounded-2xl bg-neutral-50 p-7 shadow-card"
               >
 
                 <div className="flex flex-col gap-6 sm:flex-row">
 
-                  <div className="h-40 w-32 shrink-0 overflow-hidden rounded-xl bg-neutral-100">
+                  {/* Faculty Image */}
+                  <div className="shrink-0">
 
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="h-full w-full object-cover object-top"
+                      className="h-40 w-32 rounded-xl object-cover"
                     />
 
                   </div>
 
+                  {/* Faculty Details */}
                   <div className="flex-1">
 
                     <div className="mb-4">
+
+                
 
                       <h3 className="font-['Cormorant_Garamond'] text-[28px] font-semibold leading-tight text-neutral-900">
                         {member.name}
@@ -503,11 +508,10 @@ export default function Prosthodontics() {
 
                     </div>
 
-                   
+            
 <p className="font-['Montserrat'] text-[13px] sm:text-sm leading-7 text-neutral-700 text-justify [text-align-last:left] break-words">
   {member.description}
 </p>
-
 
                   </div>
 
@@ -518,6 +522,7 @@ export default function Prosthodontics() {
             ))}
 
           </div>
+
         </div>
       </section>
 

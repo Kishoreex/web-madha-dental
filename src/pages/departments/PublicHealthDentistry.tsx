@@ -298,60 +298,72 @@ export default function PublicHealthDentistry() {
       </section>
 
       {/* FACULTY */}
-      <section className="py-16 bg-neutral-50">
+      <section className="bg-neutral-50 py-16">
         <div className="container-custom">
 
-          <div className="mb-10" data-aos="fade-up">
+          <div className="mb-12">
 
-            <div className="mb-3 font-['Montserrat'] text-[15px] font-semibold uppercase tracking-[0.28em] text-blue-700">
+            <p className="mb-3 font-['Montserrat'] text-[15px] font-semibold uppercase tracking-[0.25em] text-blue-700">
               Faculty
-            </div>
+            </p>
 
-            <h2 className="font-serif text-4xl md:text-5xl text-neutral-900">
-              Our Faculty
+            <h2 className="font-['Cormorant_Garamond'] text-[36px] font-semibold text-neutral-900 sm:text-[46px]">
+              Department Faculty
             </h2>
 
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid gap-6 md:grid-cols-2">
 
-            {faculty.map((member, index) => (
+            {faculty.map((member) => (
+
               <div
                 key={member.name}
+                className="rounded-2xl bg-white p-7 shadow-card"
                 data-aos="fade-up"
-                data-aos-delay={index * 80}
-                className="rounded-2xl bg-white border border-neutral-200 p-7"
               >
 
-                <div className="flex items-center gap-5 mb-6">
+                <div className="flex flex-col gap-6 sm:flex-row">
 
-      <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full border-2 border-blue-100 bg-white">
-  <img
-    src={member.image}
-    alt={member.name}
-    className="h-full w-full object-cover object-top"
-  />
-</div>
+                  {/* Faculty Image */}
+                  <div className="shrink-0">
 
-                  <div>
-                    <h3 className="font-serif text-2xl text-neutral-900">
-                      {member.name}
-                    </h3>
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="h-40 w-32 rounded-xl object-cover"
+                    />
 
-                    <p className="mt-1 font-['Montserrat'] text-sm font-semibold uppercase tracking-wider text-blue-700">
-                      {member.designation}
-                    </p>
                   </div>
 
-                </div>
+                  {/* Faculty Details */}
+                  <div className="flex-1">
 
-       
+                    <div className="mb-4">
+
+            
+
+                      <h3 className="font-['Cormorant_Garamond'] text-[28px] font-semibold leading-tight text-neutral-900">
+                        {member.name}
+                      </h3>
+
+                      <p className="mt-1 font-['Montserrat'] text-[12px] font-semibold uppercase tracking-[0.16em] text-blue-700">
+                        {member.designation}
+                      </p>
+
+                    </div>
+
+            
 <p className="font-['Montserrat'] text-[13px] sm:text-sm leading-7 text-neutral-700 text-justify [text-align-last:left] break-words">
   {member.description}
 </p>
 
+                  </div>
+
+                </div>
 
               </div>
+
             ))}
 
           </div>
